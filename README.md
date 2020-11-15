@@ -7,7 +7,6 @@ Our school name doesn't mean, we are the coldest people on the earth... We are h
 _"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."_ \
 **Jeremy Jones**
 
-
 ## Table Of Contents
 
 - [Arctic School](#arctic-school)
@@ -40,7 +39,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     + [Media](#media)
     + [Acknowledgements](#acknowledgements)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+###### [Table of contents generated with markdown-toc](http://ecotrust-canada.github.io/markdown-toc/)
 
 ## UX
 
