@@ -54,6 +54,11 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 * As a User, I want to be able to create my own account, which will give me possibility store, view and edit my profile information.
 
 #### Returning Users
+* As a User, I want to be able to login back anytime.
+* As a User, I want to be able to make quicker pruchases for products/services/lessons by using previously saved personal information.
+* As a User, I want to be able to change my password from my profile account, in case I my account was hacked, to protect my personal details.
+* As a User, I want to be able to fully changed my personal details, home address, name (in case I'm married now), phone number, e-mail address etc.
+* As a User, I want to be able to view my ordering history.
 
 ### Site Owner Goals
 
