@@ -68,11 +68,11 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 To create wireframes I've used [Axure RP9](https://www.axure.com) software.
 If you don't want to buy the software, you can use the 30 days free trail version (Exactly like I did).
 
-To veiw all wireframes for this project please use this link. \
-[Arctic School Wireframes](https://2u83gc.axshare.com)
+To veiw all wireframes for this project please use this link - 
+[Arctic School Wireframes](https://2u83gc.axshare.com) \
 Please use side navigation to view all wireframes and connections.
 
-__*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes. 
+__*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes.
 
 
 ## Design
