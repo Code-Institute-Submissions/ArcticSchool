@@ -1,5 +1,7 @@
 # Arctic School
 
+## Table Of Contents
+
 ## UX
 
 ### User Goals
