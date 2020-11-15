@@ -46,6 +46,11 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ### Site Owner Goals
 
+* As a User, I want to receive email from website users/customers when they fill out online contact form, so I can replay on their queries
+* As a User, I want to have possibility to Add, Edit and Delete products/lessons.
+* As a User, I want to be able to provide secure payment method/service for my clients/website users.
+* As a User, I want to have a secure admin interface, easy to use. Important thing is this interface have to be available only for admins.
+
 ### User Requirements and Expectations
 
 ### Wireframes
