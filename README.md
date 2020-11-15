@@ -4,8 +4,9 @@
 
 Our school name doesn't mean, we are the coldest people on the earth... We are happy, funny and we've got big warm hearts, waiting for you. Our passion is to help you in your new beautiful journey with learnign how to snowbaording. Our worlds best trainers/teachers are here for you!
 
-<span style="color:#059CD9"><i>"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."</i></span> \
+<span style="color:lightblue"><i>"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."</i></span> \
 **Jeremy Jones**
+
 
 ## Table Of Contents
 
