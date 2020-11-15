@@ -110,6 +110,8 @@ To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast 
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
 
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors.png" style="widt:100%;">
+
 ### Fonts
 
 ### Structures
