@@ -24,6 +24,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
   - [Design](#design)
     - [Colors](#colors)
     - [Fonts](#fonts)
+    - [Icons](#icons)
     - [Structures](#structures)
     - [Database Structure](#database-structure)
     - [Wireframes](#wireframes)
@@ -115,8 +116,7 @@ To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast 
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
 
-
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors.png" style="widt:100%;">
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors.png" style="widt:100%;" alt="Arctic School Coloristic">
 
 ### Fonts
 
@@ -126,6 +126,10 @@ Fonts have been selected carefully to separate main titles from contet text. Thi
 As a main title and subtitle font I've used - 
 [Montserrat](https://fonts.google.com/specimen/Montserrat?thickness=7&preview.text=&preview.text_type=custom&query=Montserrat) font. \
 For other text I've used - [Lato](https://fonts.google.com/specimen/Lato?thickness=7&preview.text=&preview.text_type=custom&query=Lato) font.
+
+### Icons
+ [](https://icons8.com/icons)
+
 
 ### Structures
 
@@ -150,6 +154,8 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Features Left to Implement
 
+---
+
 ## Technologies Used
 
 ### Languages
@@ -158,9 +164,15 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Tools
 
+---
+
 ## Testing
 
+---
+
 ## Bugs
+
+---
 
 ## Deployment
 
@@ -170,6 +182,8 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 To deploy your project please use following steps:
 
+---
+
 ## Credits
 
 ### Content
@@ -178,4 +192,6 @@ To deploy your project please use following steps:
 
 ### Acknowledgements
 
-[Back to Top](#arctic-school)
+---
+
+[Back to Top](#arctic-school-)
