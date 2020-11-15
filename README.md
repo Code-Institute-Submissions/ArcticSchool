@@ -7,6 +7,7 @@ Our school name doesn't mean, we are the coldest people on the earth... We are h
 _"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."_\
 **Jeremy Jones**
 
+---
 
 ## Table Of Contents
 
@@ -42,6 +43,8 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Content](#content)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
+
+---
 
 ## UX
 
@@ -99,6 +102,8 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 * To be able to provide secure payment method for my clients/website users.
 * To have a secure admin interface, easy to use. Important thing is, this interface must be available only for admins.
 
+---
+
 ## Design
 
 
@@ -110,9 +115,17 @@ To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast 
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
 
+
 <img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors.png" style="widt:100%;">
 
 ### Fonts
+
+In this project I've decied to use two different fonts.
+Fonts have been selected carefully to separate main titles from contet text. This should help user read the smaller text on different type of devices
+
+As a main title and subtitle font I've used - 
+[Montserrat](https://fonts.google.com/specimen/Montserrat?thickness=7&preview.text=&preview.text_type=custom&query=Montserrat) font. \
+For other text I've used - [Lato](https://fonts.google.com/specimen/Lato?thickness=7&preview.text=&preview.text_type=custom&query=Lato) font.
 
 ### Structures
 
@@ -128,6 +141,8 @@ To veiw all wireframes for this project please use this link -
 Please use side navigation to view all wireframes and interactive connections.
 
 __*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes.
+
+---
 
 ## Features
 
