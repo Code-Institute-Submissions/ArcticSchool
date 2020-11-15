@@ -11,7 +11,8 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 - [Arctic School !](#arctic-school-)
   - [Table Of Contents](#table-of-contents)
   - [UX](#ux)
-    - [User Goals](#user-goals)
+    - [Project Goals](#project-goals)
+      - [Audience](#audience)
     - [User Stories](#user-stories)
       - [Common User Stories](#common-user-stories)
       - [New Users](#new-users)
@@ -42,7 +43,19 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ## UX
 
-### User Goals
+### Project Goals
+
+#### Audience
+
+* People who want to learn snowboarding - Age is not a limit!
+* People who want to improve their snowboarding skills.
+* People interested in winter time activities.
+* People who want to try something new in their live.
+* People who are passionate about snowboarding.
+* People who want to be trained by the top class world instructors.
+* People who want to be trained safely, well motivated and achive their goals.
+* People who want to have fun.
+* People who want to feel a bit of adrenaline while training on the highest level.
 
 ### User Stories
 
