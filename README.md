@@ -8,6 +8,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 **Jeremy Jones**
 
 ## Table Of Contents
+
 - [Arctic School !](#arctic-school-)
   - [Table Of Contents](#table-of-contents)
   - [UX](#ux)
@@ -37,6 +38,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Local Deployment](#local-deployment)
     - [Deployment on Heroku pages](#deployment-on-heroku-pages)
   - [Credits](#credits)
+    - [VS Code Plugin](#vs-code-plugin)
     - [Content](#content)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
@@ -102,12 +104,11 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 To create wireframes I've used [Axure RP9](https://www.axure.com) software.
 If you don't want to buy the software, you can use the 30 days free trail version (Exactly like I did).
 
-To veiw all wireframes for this project please use this link - 
+To veiw all wireframes for this project please use this link -
 [Arctic School Wireframes](https://2u83gc.axshare.com) \
 Please use side navigation to view all wireframes and interactive connections.
 
 __*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes.
-
 
 ## Design
 
@@ -146,6 +147,10 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 To deploy your project please use following steps:
 
 ## Credits
+
+### VS Code Plugin
+
+While writing README.md file I was using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) plugin created by [Yu Zhang](https://marketplace.visualstudio.com/publishers/yzhang). I strongly recommend to use this plugin, as it will help you creating new README.md files. It is updating automatically the 'Table Of Contents' when changing headers or adding new headers. It allows you to use Command Palette tricks to create different file elements.
 
 ### Content
 
