@@ -50,6 +50,8 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 #### Common User Stories
 
 #### New Users
+* As a User, I want to be able to view all products/lessons and make a safe purchase.
+* As a User, I want to be able to create my own account, which will give me possibility store, view and edit my profile information.
 
 #### Returning Users
 
