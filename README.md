@@ -20,12 +20,12 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
       - [New Users](#new-users)
       - [Returning Users](#returning-users)
     - [Site Owner Goals](#site-owner-goals)
-    - [Wireframes](#wireframes)
   - [Design](#design)
     - [Colors](#colors)
     - [Fonts](#fonts)
     - [Structures](#structures)
     - [Database Structure](#database-structure)
+    - [Wireframes](#wireframes)
   - [Features](#features)
     - [Existing Features](#existing-features)
     - [Features Left to Implement](#features-left-to-implement)
@@ -99,6 +99,16 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 * To be able to provide secure payment method for my clients/website users.
 * To have a secure admin interface, easy to use. Important thing is, this interface must be available only for admins.
 
+## Design
+
+### Colors
+
+### Fonts
+
+### Structures
+
+### Database Structure
+
 ### Wireframes
 
 To create wireframes I've used [Axure RP9](https://www.axure.com) software.
@@ -109,16 +119,6 @@ To veiw all wireframes for this project please use this link -
 Please use side navigation to view all wireframes and interactive connections.
 
 __*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes.
-
-## Design
-
-### Colors
-
-### Fonts
-
-### Structures
-
-### Database Structure
 
 ## Features
 
