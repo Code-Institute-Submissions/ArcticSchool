@@ -49,23 +49,40 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 #### Common User Stories
 
+* As a User, I want to be able to access webiste from my phone as I'm using it most often, also from desktop and tablet.
+* As a User, I want to be notified when I successfully finished registration process.
+* As a User, I expect nice and clean website navigation so I can easily move around all pages.
+* As a User, I want to find more infomration abuot company, to understand more about what they are doing, where lesson/s take place, how flexible thier are with providing lesson/s.
+* As a User, I want to be able to access company social media links, so I can read more about events, new lesson/s, sales or promo codes.
+* As a User, I want to be able to contact the owner/lesson/s provider, so I can ask questions or write additional query about their services.
+* As a User, I want to be able to view all lesson/s details such as: image (if there is one), description, time, who will be my instructor, skills level, time and price, so that I can choose the best lesson type.
+* As a User, I want to be able to search from all the lesson/s, filter and adjust price value to fina a specific to pick one I can afford.
+* As a User, I want to be able to view my chosen lesson/s, total price in the cart before purchasing, so I can make my last changes if needed.
+* As a User, I expect to purchase lesson/s in safe and secure way by using card method payments.
+* As a User, I want to receive email confirmations after I successfully purchased my lesson/s.
+* As a User, I want to receive email reminder of upcoming lesson/s, so I can prepare myself.
+* As a User, I want to be able to rent additional snowboard equipment, If my is damaged or I forgot to pack it before attending the lesson/s.
+
 #### New Users
-* As a User, I want to be able to view all products/lessons and make a safe purchase.
+
+* As a User, I want to be able to view all lesson/s and make a safe purchase.
 * As a User, I want to be able to create my own account, which will give me possibility store, view and edit my profile information.
 
 #### Returning Users
+
 * As a User, I want to be able to login back anytime.
-* As a User, I want to be able to make quicker pruchases for products/services/lessons by using previously saved personal information.
+* As a User, I want to be able to make quicker pruchases for lesson/s by using previously saved personal information.
 * As a User, I want to be able to change my password from my profile account, in case I my account was hacked, to protect my personal details.
 * As a User, I want to be able to fully changed my personal details, home address, name (in case I'm married now), phone number, e-mail address etc.
 * As a User, I want to be able to view my ordering history.
 
 ### Site Owner Goals
 
-* To have a well design, with easy to use interface so the clients will not feel frustraied when using they're using website.
+* To provide creative, safe and interactive lessons for customer/s.
+* To have a well design, with easy to use interface so the custmoer/s will not feel frustraied when using they're using website.
 * To receive email from website users/customers when they fill out online contact form, so I can replay on their queries
-* To have possibility to Add, Edit and Delete products/lessons.
-* To be able to provide secure payment method/service for my clients/website users.
+* To have possibility to Add, Edit and Delete lesson/s.
+* To be able to provide secure payment method for my clients/website users.
 * To have a secure admin interface, easy to use. Important thing is, this interface must be available only for admins.
 
 ### User Requirements and Expectations
