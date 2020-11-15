@@ -17,7 +17,6 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
       - [New Users](#new-users)
       - [Returning Users](#returning-users)
     - [Site Owner Goals](#site-owner-goals)
-    - [User Requirements and Expectations](#user-requirements-and-expectations)
     - [Wireframes](#wireframes)
   - [Design](#design)
     - [Colors](#colors)
@@ -84,8 +83,6 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 * To have possibility to Add, Edit and Delete lesson/s.
 * To be able to provide secure payment method for my clients/website users.
 * To have a secure admin interface, easy to use. Important thing is, this interface must be available only for admins.
-
-### User Requirements and Expectations
 
 ### Wireframes
 
