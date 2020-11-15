@@ -101,7 +101,14 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ## Design
 
+
 ### Colors
+
+Whole application coloristic was selected based on the projecet name and my personal style of design. Name **Arcitc** will always reminds us winter and cold climate. That's why I've decided to use two main colors: white and blue. I've also used different additonals tones of blue color to accent different elements of page. To break white and blue colors I've used black and tones of black colour.
+
+To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast color schemes generator!
+
+If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
 
 ### Fonts
 
