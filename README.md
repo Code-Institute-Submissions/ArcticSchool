@@ -38,7 +38,6 @@ Our school name doesn't mean, we are the coldest people on the earth... We are h
     - [Local Deployment](#local-deployment)
     - [Deployment on Heroku pages](#deployment-on-heroku-pages)
   - [Credits](#credits)
-    - [VS Code Plugin](#vs-code-plugin)
     - [Content](#content)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
@@ -147,10 +146,6 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 To deploy your project please use following steps:
 
 ## Credits
-
-### VS Code Plugin
-
-While writing README.md file I was using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) plugin created by [Yu Zhang](https://marketplace.visualstudio.com/publishers/yzhang). I strongly recommend to use this plugin, as it will help you creating new README.md files. It is updating automatically the 'Table Of Contents' when changing headers or adding new headers. It allows you to use Command Palette tricks to create different file elements.
 
 ### Content
 
