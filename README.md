@@ -1,4 +1,4 @@
-# Arctic School
+# Arctic School ![]()
 
 ![ArcticSchoolMockup]()
 
@@ -86,6 +86,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 ### Local Deployment
 
 ### Deployment on Heroku pages
+
 To deploy your project please use following steps:
 
 ## Credits
@@ -95,3 +96,5 @@ To deploy your project please use following steps:
 ### Media
 
 ### Acknowledgements
+
+[Back to Top](#arctic-school)
