@@ -47,6 +47,8 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Content](#content)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
+  - [Contact](#contact)
+  - [Disclaimer](#disclaimer)
 
 ---
 
@@ -242,6 +244,16 @@ To deploy your project please use following steps:
 ### Media
 
 ### Acknowledgements
+
+---
+
+## Contact
+If you've got any questions about this project please contact me via email: <a href="mailto:contact@karolsliwka.com">contact@karolsliwka.com</a>
+
+---
+
+## Disclaimer
+This web app was made for educational purposes only.
 
 ---
 
