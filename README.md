@@ -173,11 +173,11 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Languages
 
-* [HTML]()
-* [CSS]()
-* [JavaScript]()
-* [Python]()
-* [Jinja]()
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://www.javascript.com)
+* [Python](https://www.python.org)
+* [Jinja](https://jinja.palletsprojects.com/en/2.10.x/)
 
 ### Libraries and Frameworks
 
