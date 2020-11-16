@@ -172,6 +172,7 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 ## Technologies Used
 
 ### Languages
+
 * [HTML]()
 * [CSS]()
 * [JavaScript]()
@@ -180,8 +181,31 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Libraries and Frameworks
 
+* [Bootstrap v4.5](https://getbootstrap.com)
+* [Fontawesome](https://fontawesome.com)
+* [Google Fonts](https://fonts.google.com)
+* [Django](https://www.djangoproject.com)
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+* [Psycopg2](https://pypi.org/project/psycopg2/)
+* [Gunicorn](https://pypi.org/project/gunicorn/)
+* [Stripe](https://stripe.com/ie)
+* [jQuery](https://jquery.com)
+* [-]()
 
 ### Tools
+
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+* []()
+
 
 ---
 
