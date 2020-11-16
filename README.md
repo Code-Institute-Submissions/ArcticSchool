@@ -17,6 +17,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Project Goals](#project-goals)
       - [Audience](#audience)
       - [Users](#users)
+      - [Site Owner/Business](#site-ownerbusiness)
     - [User Stories](#user-stories)
       - [Common User Stories](#common-user-stories)
       - [New Users](#new-users)
@@ -69,6 +70,15 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 * Purchase selected lesson/s in easy and secure way.
 * Contact website owner/administrator for more information about lesson/s, if needed.
 * Get information about COVID-19, all restrictions and protection information.
+
+#### Site Owner/Business
+
+* Engage people to start learning and discover their new limits.
+* Engage people to do outdoor winter sports.
+* Help people improve their snowboarding skills.
+* Let people know about 'Arctic School' - real school for everybody, "Age is not a limit!".
+* Provide fully secure, well designed and easy to use e-commerce platform to purchase snowboarding lesson/s.
+* Make profit from selling/providing lesson/s for customers from whole world.
 
 ### User Stories
 
