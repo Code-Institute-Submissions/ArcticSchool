@@ -248,12 +248,12 @@ To deploy your project please use following steps:
 ---
 
 ## Contact
-If you've got any questions about this project please contact me via email: <a href="mailto:contact@karolsliwka.com">contact@karolsliwka.com</a>
+If you've got any questions about this project please contact me via email: *<a href="mailto:contact@karolsliwka.com">contact@karolsliwka.com</a>*
 
 ---
 
 ## Disclaimer
-This web app was made for educational purposes only.
+__This web app was made for educational purposes only.__
 
 ---
 
