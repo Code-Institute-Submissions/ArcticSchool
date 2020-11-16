@@ -16,6 +16,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
   - [UX](#ux)
     - [Project Goals](#project-goals)
       - [Audience](#audience)
+      - [Users](#users)
     - [User Stories](#user-stories)
       - [Common User Stories](#common-user-stories)
       - [New Users](#new-users)
@@ -61,6 +62,13 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 * People who want to be trained safely, well motivated and achive their goals.
 * People who want to have fun.
 * People who want to feel a bit of adrenaline while training on the highest level.
+
+#### Users
+
+* Get information about lesson/s provided in offers.
+* Purchase selected lesson/s in easy and secure way.
+* Contact website owner/administrator for more information about lesson/s, if needed.
+* Get information about COVID-19, all restrictions and protection information.
 
 ### User Stories
 
