@@ -107,7 +107,6 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ## Design
 
-
 ### Colors
 
 Whole application coloristic was selected based on the projecet name and my personal style of design. Name **Arcitc** will always reminds us winter and cold climate. That's why I've decided to use two main colors: white and blue. I've also used different additonals tones of blue color to accent different elements of page. To break white and blue colors I've used black and tones of black colour.
@@ -123,13 +122,14 @@ If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolC
 In this project I've decied to use two different fonts.
 Fonts have been selected carefully to separate main titles from contet text. This should help user read the smaller text on different type of devices
 
-As a main title and subtitle font I've used - 
+As a main title and subtitle font I've used -
 [Montserrat](https://fonts.google.com/specimen/Montserrat?thickness=7&preview.text=&preview.text_type=custom&query=Montserrat) font. \
 For other text I've used - [Lato](https://fonts.google.com/specimen/Lato?thickness=7&preview.text=&preview.text_type=custom&query=Lato) font.
 
 ### Icons
- [](https://icons8.com/icons)
 
+I've used different type, shapes and style of icons in this project to separate important elements from main content. Part of my icons are static files which you can download by registering on [icons8](https://icons8.com/icons). \
+I have also used a [Fontawesome](https://fontawesome.com) for handy and most common icons.
 
 ### Structures
 
