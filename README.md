@@ -2,7 +2,7 @@
 
 # Arctic School
 
-![ArcticSchoolMockup]()
+![ArcticSchoolMockup](https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchool_Mockup.png)
 
 Our school name doesn't mean, we are the coldest people on the earth... We are happy, funny and we've got big warm hearts, waiting for you. Our passion is to help you in your new beautiful journey with learnign how to snowbaording. Our worlds best trainers/teachers are here for you!
 
