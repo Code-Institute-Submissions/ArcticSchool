@@ -1,4 +1,6 @@
-# Arctic School ![]()
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchool_Logo.png" style="widt:50%;" alt="Arctic School Coloristic">
+
+# Arctic School
 
 ![ArcticSchoolMockup]()
 
@@ -11,7 +13,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ## Table Of Contents
 
-- [Arctic School !](#arctic-school-)
+- [Arctic School](#arctic-school)
   - [Table Of Contents](#table-of-contents)
   - [UX](#ux)
     - [Project Goals](#project-goals)
