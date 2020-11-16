@@ -216,7 +216,7 @@ Also I've used tools listed below :
 * [Axure RP9](https://www.axure.com)  - To Create Wireframes
 * [AWS S3 Bucket]() - Store Media and Static Files (Production)
 * [WhiteNoise]() - Store Static Files (Developement)
-* [Adobe Photoshop 2021](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1jtO-lYjtAhWRtu0KHVSdBuIYABAMGgJkZw&ae=2&ohost=www.google.com&cid=CAESQeD26XjYo-QzyoB2wcpxICKBRcP9GrB4c8gAn9paIaX33r0xVThzoIuEVAd5W9NMGzIpEnaxYR6rGHmVm3Xs6HqK&sig=AOD64_0qloXz9J7Jl2Hmpb5xL3Ar0APH5w&q&adurl&ved=2ahUKEwiXncq-lYjtAhV-ShUIHTryBD0Q0Qx6BAgSEAE&dct=1)
+* [Adobe Photoshop 2021](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1jtO-lYjtAhWRtu0KHVSdBuIYABAMGgJkZw&ae=2&ohost=www.google.com&cid=CAESQeD26XjYo-QzyoB2wcpxICKBRcP9GrB4c8gAn9paIaX33r0xVThzoIuEVAd5W9NMGzIpEnaxYR6rGHmVm3Xs6HqK&sig=AOD64_0qloXz9J7Jl2Hmpb5xL3Ar0APH5w&q&adurl&ved=2ahUKEwiXncq-lYjtAhV-ShUIHTryBD0Q0Qx6BAgSEAE&dct=1) - creating and editing images/logotype/icons.
 
 
 To create colour pallete and image compressing I've used :
