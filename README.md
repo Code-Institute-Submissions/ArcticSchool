@@ -1,4 +1,4 @@
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchool_Logo.png" style="widt:50%;" alt="Arctic School Coloristic">
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchool_Logo_v1.png" style="widt:50%;" alt="Arctic School Coloristic">
 
 # Arctic School
 
@@ -137,7 +137,7 @@ To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast 
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
 
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors.png" style="widt:100%;" alt="Arctic School Coloristic">
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors_v1.png" style="widt:100%;" alt="Arctic School Coloristic">
 
 ### Fonts
 
