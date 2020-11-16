@@ -210,7 +210,7 @@ Also I've used tools listed below :
 * [WhiteNoise]() - Store Static Files (Developement)
 
 
-To create colour pallete and for image compressing sized I've used :
+To create colour pallete and image compressing I've used :
 * [Coloors.co]()
 * [TinyPng]()
 
