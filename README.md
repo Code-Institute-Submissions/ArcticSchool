@@ -280,7 +280,7 @@ If you've got any questions about this project please contact me via email: *<a 
 If you're intersted in my other projects please visit
 * [Mariocarparts.co.uk](https://mariocarparts.co.uk) - First online store project on Shopify platform.
 * [Balticgold.co.uk](https://balticgold.co.uk) - Second online store project on Shopify platform (my personal store).
-* [Spsservice.uk](https://spsservice.uk) - First website created at the begining of the Code Institute course, static only (hostep on personal server).
+* [Spsservice.uk](https://spsservice.uk) - First website created at the begining of the Code Institute course, static only (hosted on personal server).
 
 ---
 
