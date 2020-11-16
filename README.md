@@ -1,4 +1,4 @@
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchool_Logo_v1.png" style="widt:50%;" alt="Arctic School Coloristic">
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/Arctic_Logo.png" style="widt:50%;" alt="Arctic School Coloristic">
 
 # Arctic School
 
@@ -26,6 +26,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
       - [Returning Users](#returning-users)
     - [Site Owner Goals](#site-owner-goals)
   - [Design](#design)
+    - [Logotype](#logotype)
     - [Colors](#colors)
     - [Fonts](#fonts)
     - [Icons](#icons)
@@ -129,6 +130,11 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ## Design
 
+### Logotype
+
+I've used [Provicali](https://www.dafont.com/provicali.font) to create a logotype.
+To create mountian effect inside logotype font I've used image from []().
+
 ### Colors
 
 Whole application coloristic was selected based on the projecet name and my personal style of design. Name **Arcitc** will always reminds us winter and cold climate. That's why I've decided to use two main colors: white and blue. I've also used different additonals tones of blue color to accent different elements of page. To break white and blue colors I've used black and tones of black colour.
@@ -137,7 +143,7 @@ To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast 
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
 
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/ArcticSchoolCoolors_v1.png" style="widt:100%;" alt="Arctic School Coloristic">
+<img src="https://www.abovewave.kylos.pl/ArcticSchool/Arcitic_Coloristic.png" style="widt:100%;" alt="Arctic School Coloristic">
 
 ### Fonts
 
@@ -254,6 +260,8 @@ To deploy your project please use following steps:
 ### Content
 
 ### Media
+
+Images were taken from [Unsplash.com](https://unsplash.com/s/photos/snowboard)
 
 ### Acknowledgements
 
