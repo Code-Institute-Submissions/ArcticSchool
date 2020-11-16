@@ -219,4 +219,6 @@ To deploy your project please use following steps:
 
 ---
 
-[Back to Top](#arctic-school-)
+<div align="right">
+    <b><a href="#table-of-contents">Back To Top</a></b>
+</div>
