@@ -25,8 +25,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Colors](#colors)
     - [Fonts](#fonts)
     - [Icons](#icons)
-    - [Structures](#structures)
-    - [Database Structure](#database-structure)
+    - [Framework](#framework)
     - [Wireframes](#wireframes)
   - [Features](#features)
     - [Existing Features](#existing-features)
@@ -131,9 +130,11 @@ For other text I've used - [Lato](https://fonts.google.com/specimen/Lato?thickne
 I've used different type, shapes and style of icons in this project to separate important elements from main content. Part of my icons are static files which you can download by registering on [icons8](https://icons8.com/icons). \
 I have also used a [Fontawesome](https://fontawesome.com) for handy and most common icons.
 
-### Structures
+### Framework
 
-### Database Structure
+From the first time when I've started to using [jQuery](https://jquery.com), I just felt in love with this JavaScript Library designed to simplify tree traversal and manipulation. By using it I've created lots of different mouse events, css animiation and other very nice looking features. Because of jQuery I believe user interraction with the page is on the next level. This is making my project more attractive for users and make their experience better.
+
+I have used [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly desinged and customized responsive application with mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which hepled me create nice pages layout and structure. I've used components to create navbar, cards, forms etc.
 
 ### Wireframes
 
@@ -159,6 +160,11 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 ## Technologies Used
 
 ### Languages
+* [HTML]()
+* [CSS]()
+* [JavaScript]()
+* [Python]()
+* [Jinja]()
 
 ### Libraries and Frameworks
 
