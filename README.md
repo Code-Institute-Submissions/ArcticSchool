@@ -162,6 +162,10 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Libraries and Frameworks
 
+From the first time when I've started to using [jQuery](https://jquery.com), I just felt in love with this JavaScript Library designed to simplify tree traversal and manipulation. By using it I've created lots of different mouse events, css animiation and other very nice looking features. Because of jQuery I believe user interraction with the page is on the next level. This is making my project more attractive for users and make their experience better.
+
+I have used [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly desinged and customized responsive application with mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which hepled me create nice pages layout and structure. I've used components to create navbar, cards, forms etc.
+
 ### Tools
 
 ---
