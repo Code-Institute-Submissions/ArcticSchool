@@ -220,5 +220,5 @@ To deploy your project please use following steps:
 ---
 
 <div align="right">
-    <b><a href="#table-of-contents">Back To Top</a></b>
+    <b><a href="#arctic-school-">Back To Top</a></b>
 </div>
