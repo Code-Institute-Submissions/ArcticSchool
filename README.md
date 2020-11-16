@@ -35,6 +35,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Languages](#languages)
     - [Libraries and Frameworks](#libraries-and-frameworks)
     - [Tools](#tools)
+    - [Databases](#databases)
   - [Features](#features)
     - [Existing Features](#existing-features)
     - [Features Left to Implement](#features-left-to-implement)
@@ -192,22 +193,33 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 * [Gunicorn](https://pypi.org/project/gunicorn/)
 * [Stripe](https://stripe.com/ie)
 * [jQuery](https://jquery.com)
-* [-]()
 
 ### Tools
 
-* []()
-* []()
-* []()
-* []()
-* []()
-* []()
-* []()
-* []()
-* []()
-* []()
-* []()
+To create this web application, I've decided to change my IDE from [AWS Cloud 9](https://aws.amazon.com/cloud9/) to [VS Code](https://code.visualstudio.com). 
 
+Also I've used tools listed below :
+
+* [Git]() - Version Control
+* [GitHub]() - Store Remote Repository
+* [Heroku]() - Project Hosting
+* [PIP]() - Installation of Tools
+* [Boto3]() - AWS Compatibility
+* [Axure RP9](https://www.axure.com)  - To Create Wireframes
+* [AWS S3 Bucket]() - Store Media and Static Files (Production)
+* [WhiteNoise]() - Store Static Files (Developement)
+
+
+To create colour pallete and for image compressing sized I've used :
+* [Coloors.co]()
+* [TinyPng]()
+
+__*All images in README file are hosted on my private server.*__
+
+### Databases
+
+* [PostgreSQL](https://www.postgresql.org)
+* [SQLite3](https://www.sqlite.org/index.html)
 
 ---
 
