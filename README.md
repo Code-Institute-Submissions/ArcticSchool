@@ -46,8 +46,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Local Deployment](#local-deployment)
     - [Deployment on Heroku pages](#deployment-on-heroku-pages)
   - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
+    - [Content and Media](#content-and-media)
     - [Acknowledgements](#acknowledgements)
   - [Contact](#contact)
   - [Disclaimer](#disclaimer)
@@ -217,6 +216,7 @@ Also I've used tools listed below :
 * [Axure RP9](https://www.axure.com)  - To Create Wireframes
 * [AWS S3 Bucket]() - Store Media and Static Files (Production)
 * [WhiteNoise]() - Store Static Files (Developement)
+* [Adobe Photoshop 2021](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1jtO-lYjtAhWRtu0KHVSdBuIYABAMGgJkZw&ae=2&ohost=www.google.com&cid=CAESQeD26XjYo-QzyoB2wcpxICKBRcP9GrB4c8gAn9paIaX33r0xVThzoIuEVAd5W9NMGzIpEnaxYR6rGHmVm3Xs6HqK&sig=AOD64_0qloXz9J7Jl2Hmpb5xL3Ar0APH5w&q&adurl&ved=2ahUKEwiXncq-lYjtAhV-ShUIHTryBD0Q0Qx6BAgSEAE&dct=1)
 
 
 To create colour pallete and image compressing I've used :
@@ -260,11 +260,15 @@ To deploy your project please use following steps:
 
 ## Credits
 
-### Content
+### Content and Media
 
-### Media
-
-Images were taken from [Unsplash.com](https://unsplash.com/s/photos/snowboard)
+* Whole website content is written by the project author.
+* Project logo was created by the project author in Photoshop by using [Provicali Font](https://www.dafont.com/provicali.font) and some special layer effects.
+* Favicon was created from exisitng logotype by the author as basic icon 64px x 64px.
+* Images and icons used in this project were taken from :
+  1. [Unsplash.com](https://unsplash.com/s/photos/snowboard)
+  2. [Pexels](https://www.pexels.com)
+  3. [Icons8](https://icons8.com)
 
 ### Acknowledgements
 
