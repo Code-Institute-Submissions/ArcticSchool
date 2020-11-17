@@ -269,6 +269,7 @@ To deploy your project please use following steps:
   - [Unsplash.com](https://unsplash.com/s/photos/snowboard)
   - [Pexels](https://www.pexels.com)
   - [Icons8](https://icons8.com)
+* Scroll down button code snippet was taken from [Codepen/nxworld](https://codepen.io/nxworld/pen/OyRrGy)
 
 ### Acknowledgements
 
