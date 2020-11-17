@@ -20,3 +20,9 @@ nav {
 nav > a > img {
     width : 120px;
 }
+
+.nav-link {
+    color: #00D4F5 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
