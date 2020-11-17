@@ -11,6 +11,7 @@ header {
     background-color: #fff;
 }
 nav {
+    min-height: 60px;
     background-color: #fff;
 }
 nav > a > img {
@@ -26,6 +27,12 @@ nav > a > img {
 .special-nav-lnik {
     color: #f60f13 !important;
 }
+
+
+/*
+Code snipped used from https://codepen.io/nxworld/pen/OyRrGy
+Classes and ID's names modified to suits main project style
+*/
 
 section {
     position: relative;
@@ -50,12 +57,11 @@ section h1 {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: #FFF;
-    font: normal 300 64px/1 "Josefin Sans", sans-serif;
     text-align: center;
     white-space: nowrap;
 }
 
-#section10 {
+#top-bg {
     background: url("/media/main_bg/mainpage_bg.jpg") no-repeat center center fixed; /*center center / cover no-repeat;*/
 }
 
@@ -68,7 +74,6 @@ section h1 {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: #FFF;
-    font: normal 400 20px/1 "Josefin Sans", sans-serif;
     letter-spacing: 0.1em;
     text-decoration: none;
     transition: opacity 0.3s;
@@ -77,10 +82,10 @@ section h1 {
     opacity: 0.5;
 }
 
-#section10 a {
+#top-bg  a {
     padding-top: 60px;
 }
-#section10 a span {
+#top-bg  a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -91,7 +96,7 @@ section h1 {
     border-radius: 50px;
     box-sizing: border-box;
 }
-#section10 a span::before {
+#top-bg  a span::before {
     position: absolute;
     top: 10px;
     left: 50%;
