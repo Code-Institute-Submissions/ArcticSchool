@@ -15,4 +15,8 @@ header {
 }
 nav {
     background-color: #fff;
+
+}
+nav > a > img {
+    width : 120px;
 }
