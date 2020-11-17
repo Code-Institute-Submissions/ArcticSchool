@@ -3,9 +3,9 @@ html{
 }
 
 body {
-    background: url('/media/mainpage_bg.jpg') no-repeat center center fixed;
+    background: url('media/mainpage_bg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 60px);
     color: #000;
-    font-family: 'Lato', 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
