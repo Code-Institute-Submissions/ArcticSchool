@@ -15,14 +15,17 @@ header {
 }
 nav {
     background-color: #fff;
-
 }
 nav > a > img {
-    width : 120px;
+    width: 120px;
 }
 
 .nav-link {
-    color: #00D4F5 !important;
-    font-family: 'Montserrat', sans-serif;
+    color: #00d4f5 !important;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
+}
+
+.special-nav-lnik {
+    color: #f60f13 !important;
 }
