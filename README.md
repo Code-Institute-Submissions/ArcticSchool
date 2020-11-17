@@ -264,7 +264,7 @@ To deploy your project please use following steps:
 
 * Whole website content was written by the project author.
 * Project logo was created by the project author in Photoshop by using [Provicali Font](https://www.dafont.com/provicali.font) and some special layer effects.
-* Favicon was created from exisitng logotype by the author as basic icon 64px x 64px via using the [Favicon-Generator](https://www.favicon-generator.org).
+* Favicon was created from exisitng logotype by the author as basic icon 64px x 64px via using the [Realfavicongenerator](https://realfavicongenerator.net).
 * Images and icons used in this project were taken from :
   - [Unsplash.com](https://unsplash.com/s/photos/snowboard)
   - [Pexels](https://www.pexels.com)
