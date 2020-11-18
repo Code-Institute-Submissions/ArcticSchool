@@ -1,5 +1,5 @@
 venv/
-arctic_school/__pycache__/
+!**/__pycache__/
 __pycache__/
 .DS_Store
 *.py[cod]
