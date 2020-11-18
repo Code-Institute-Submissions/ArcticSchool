@@ -142,3 +142,14 @@ section h1 {
         opacity: 0;
     }
 }
+
+/* Mainpage - Motivation Banner */
+#motivation-banner {
+    height: 400px;
+    background-color: #00d4f5;
+}
+
+/* Mainpage - About Us section */
+#about-us {
+    background-color: #FFF;
+}
