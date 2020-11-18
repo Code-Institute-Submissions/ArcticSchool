@@ -11,7 +11,6 @@ header {
     background-color: #fff;
 }
 nav {
-    min-height: 60px;
     background-color: #fff;
 }
 nav > a > img {
@@ -27,7 +26,6 @@ nav > a > img {
 .special-nav-lnik {
     color: #f60f13 !important;
 }
-
 
 /*
 Code snipped used from https://codepen.io/nxworld/pen/OyRrGy
@@ -46,8 +44,6 @@ section::after {
     content: "";
     width: 100%;
     height: 80%;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.8) 100%);
 }
 section h1 {
     position: absolute;
@@ -56,47 +52,47 @@ section h1 {
     z-index: 2;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: #FFF;
+    color: #fff;
     text-align: center;
     white-space: nowrap;
 }
 
 #top-bg {
-    background: url("/media/main_bg/mainpage_bg.jpg") no-repeat center center fixed; /*center center / cover no-repeat;*/
+    background: url("/media/main_bg/mainpage_bg.jpg") center center / cover no-repeat;
 }
 
-.demo a {
+.scroll-js-button a {
     position: absolute;
-    bottom: 20px;
+    bottom: -30px;
     left: calc(50% - 25px);
     z-index: 2;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    color: #FFF;
+    color: #00d4f5;
     letter-spacing: 0.1em;
     text-decoration: none;
     transition: opacity 0.3s;
 }
-.demo a:hover {
+.scroll-js-button a:hover {
     opacity: 0.5;
 }
 
-#top-bg  a {
+#top-bg a {
     padding-top: 60px;
 }
-#top-bg  a span {
+#top-bg a span {
     position: absolute;
     top: 0;
     left: 50%;
     width: 30px;
     height: 50px;
     margin-left: -15px;
-    border: 2px solid #FFF;
+    border: 2px solid #00d4f5;
     border-radius: 50px;
     box-sizing: border-box;
 }
-#top-bg  a span::before {
+#top-bg a span::before {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -104,7 +100,7 @@ section h1 {
     width: 6px;
     height: 6px;
     margin-left: -3px;
-    background-color: #FFF;
+    background-color: #00d4f5;
     border-radius: 100%;
     -webkit-animation: sdb10 2s infinite;
     animation: sdb10 2s infinite;
