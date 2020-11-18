@@ -11,7 +11,11 @@ header {
     background-color: #fff;
 }
 nav {
+    min-height: 59px;
     background-color: #fff;
+}
+.navbar {
+    padding: 0.55rem 1rem;
 }
 nav > a > img {
     width: 120px;
@@ -35,7 +39,7 @@ Classes and ID's names modified to suits main project style
 section {
     position: relative;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 59px);
 }
 section::after {
     position: absolute;
