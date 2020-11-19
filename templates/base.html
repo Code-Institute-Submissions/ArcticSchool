@@ -13,7 +13,7 @@
 
     <!-- Favicon | Generated at https://realfavicongenerator.net -->
     <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
     <link rel="manifest" href="media/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -74,7 +74,7 @@
     <title>Arctic School {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body id="{{ request.resolver_match.url_name }}">
     <header class="container-fluid">
         <div class="d-xs-flex d-sm-block d-md-none d-lg-none d-xl-none">
             {% include 'includes/mobile-navigation.html' %}
