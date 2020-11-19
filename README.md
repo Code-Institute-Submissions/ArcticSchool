@@ -270,7 +270,7 @@ To deploy your project please use following steps:
   - [Pexels](https://www.pexels.com)
   - [Icons8](https://icons8.com)
 * Scroll down button code snippet was taken from [Codepen/nxworld](https://codepen.io/nxworld/pen/OyRrGy)
-* Particles library - example used was created by __Mamboleoo__ [Code source](https://codepen.io/Mamboleoo/pen/obWGYr) and edited to match an author design.
+* Particles library - example used was created by [Mamboleoo](https://codepen.io/Mamboleoo) - [code snippet](https://codepen.io/Mamboleoo/pen/obWGYr), edited to match an author design.
 
 ### Acknowledgements
 
