@@ -9,8 +9,8 @@ var colors = ["#059CD9", "#1CA5DC", "#00D4F5", "#9DEEFB", "#FFFFFF"];
 
 var copy = document.querySelector("#paraticles_text");
 
-var ww = canvas.width = $('#motivation-banner').Width;
-var wh = canvas.height = $('#motivation-banner').Height;
+var ww = canvas.width;
+var wh = canvas.height;
 
 function Particle(x, y) {
     this.x = Math.random() * ww;
@@ -78,8 +78,8 @@ function onTouchEnd(e) {
 }
 
 function initScene() {
-    var ww = canvas.width = $('#motivation-banner').Width;
-    var wh = canvas.height = $('#motivation-banner').Height;
+    var ww = canvas.width;
+    var wh = canvas.height;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
