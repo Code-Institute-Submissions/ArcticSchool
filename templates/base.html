@@ -30,7 +30,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Main CSS Files -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -53,6 +55,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
+
+    <!-- Particles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.1/tsparticles.min.js"
+        integrity="sha512-PYHWDEuXOTJ9MZ+/QHqkbgiEYZ+LImQv3i/9NyYOABFvK37e4q4Wg7aQDN1JpoGiEu1TYZh6JMrZluZox2gbDA=="
+        crossorigin="anonymous"></script>
+
     {% endblock %}
 
     {% block extra_js %}
@@ -63,13 +71,15 @@
 
 <body>
     <header class="container-fluid">
-        <!--{% if device.is_xsmall or device.is_small %}
+        <div class="d-xs-flex d-sm-block d-md-none d-lg-none d-xl-none">
             {% include 'includes/mobile-navigation.html' %}
-        {% elif device.is_medium %}
+        </div>
+        <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none">
             {% include 'includes/tablet-navigation.html' %}
-        {% else %}-->
+        </div>
+        <div class="d-none d-lg-block d-xl-block">
             {% include 'includes/main-navigation.html' %}
-        <!--{% endif %}-->
+        </div>
     </header>
 
     {% if messages %}
@@ -82,7 +92,7 @@
     {% block content %}
     {% endblock %}
 
-    {% block postladjs %}
+    {% block postloadjs %}
     {% endblock %}
 
 </body>
