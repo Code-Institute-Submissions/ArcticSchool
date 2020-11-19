@@ -258,6 +258,10 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
   Display classes applied to index.html header code.
 - <strong>Verdict</strong>: Result as expected. Different navigation bars presented on different device size.
 
+- <strong>Bug</strong>: Navigation hamburger button not working on medium devices.
+- <strong>Fix</strong>: Different ID selector added to medium size / tablet nav bar, script.js function extended.
+- <strong>Verdict</strong>: Hamburger button anmiation working as expected.
+
 ---
 
 ## Deployment
