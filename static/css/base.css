@@ -358,6 +358,12 @@ canvas {
     height: auto;
 }
 
+/*  Footer */
+footer {
+    min-height: 400px;
+    background-color: #059cd9;
+}
+
 /* Media quieries - Mainpage */
 @media (max-width: 575.98px) {
     header {
