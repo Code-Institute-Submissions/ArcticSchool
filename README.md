@@ -42,6 +42,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Features Left to Implement](#features-left-to-implement)
   - [Testing](#testing)
   - [Bugs](#bugs)
+      - [Bugs During Development:](#bugs-during-development)
   - [Deployment](#deployment)
     - [Local Deployment](#local-deployment)
     - [Deployment on Heroku pages](#deployment-on-heroku-pages)
@@ -245,6 +246,12 @@ __*All images in README file are hosted on my private server.*__
 ---
 
 ## Bugs
+
+#### Bugs During Development:
+
+During development of this project I've faced my lack of knowledge and lots of challenging issues that makes my life 10000 times harder then it actually was.. Most of the solutions were so simply that I couldn't believe in it.
+
+Verdict? Don't waist your time trying re-invent the wheel. Take a small break and try to release all the stress and bad thinking. Ask for advice, don't be afriad to do it. There is plenty of people with bigger knowledge and great, great solutions!
 
 ---
 
