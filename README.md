@@ -253,6 +253,11 @@ During development of this project I've faced my lack of knowledge and lots of c
 
 Verdict? Don't waist your time trying re-invent the wheel. Take a small break and try to release all the stress and bad thinking. Ask for advice, don't be afriad to do it. There is plenty of people with bigger knowledge and great, great solutions!
 
+- <strong>Bug</strong>: Issues with setting up django-responsive2, show different navigation bar on different device size.
+- <strong>Fix</strong>: Removed all django-responsive2 code and information. I've asked Code Institute - Tutors section for help/solution, advice given : try to use Bootstrap breakpoints and classes instead of django-responsive2. \
+  Display classes applied to index.html header code.
+- <strong>Verdict</strong>: Result as expected. Different navigation bars presented on different device size.
+
 ---
 
 ## Deployment
