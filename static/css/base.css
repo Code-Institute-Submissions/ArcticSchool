@@ -235,10 +235,15 @@ section h1 {
     height: 400px;
     background-color: #00d4f5;
 }
-
 /* Mainpage - About Us section */
 #about-us {
     background-color: #fff;
+}
+
+canvas{
+    background: black;
+    width: auto;
+    height: auto;
 }
 
 /* Media quieries - Mainpage */
