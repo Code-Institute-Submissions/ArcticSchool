@@ -4,13 +4,13 @@
     </a>
     <ul class="nav navbar-nav ml-auto flex-row">
         <li class="nav-item">
-            <a class="nav-link mr-3 hvr-bounce-to-top" href="#">LESSONS</a>
+            <a class="nav-link mr-3 {% if request.get_full_path == 'lessons' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">LESSONS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link mr-3 hvr-bounce-to-top-red special-nav-lnik" href="#">BOOKINGS</a>
+            <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == 'bookings' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}" href="#">BOOKINGS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link mr-3 hvr-bounce-to-top" href="#">ACCOUNT</a>
+            <a class="nav-link mr-3 {% if request.get_full_path == 'account' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">ACCOUNT</a>
         </li>
     </ul>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -25,10 +25,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav ml-auto mt-3 flex-column">
             <li class="nav-item">
-                <a class="nav-link mr-3 hvr-bounce-to-top" href="#">TEAMS</a>
+                <a class="nav-link mr-3 {% if request.get_full_path == 'teams' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">TEAMS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3 hvr-bounce-to-top" href="#">RESORTS</a>
+                <a class="nav-link mr-3 {% if request.get_full_path == 'resorts' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">RESORTS</a>
             </li>
         </ul>
     </div>

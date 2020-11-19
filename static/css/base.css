@@ -32,12 +32,61 @@ nav > a > img {
 .special-nav-lnik {
     color: #f60f13 !important;
 }
+
+/* normal | blue - nav active link : hover.css*/
+.nav-link-active {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;;
+}
+
+.nav-link-active:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 36px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9px;
+    background: #00d4f5 !important;
+}
+
+/* special | red - nav active link : hover.css*/
+.nav-link-active-red {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;;
+}
+
+.nav-link-active-red:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 36px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 9px;
+    background: #f60f13 !important;
+}
+
 /*
 Nav links hover style - code used/modified
 from https://ianlunn.github.io/Hover/
 */
 .hvr-bounce-to-top:before {
-    top: 37px !important;
+    top: 36px !important;
     background: #00d4f5 !important;
     border-radius: 9px;
 }
@@ -75,12 +124,6 @@ from https://ianlunn.github.io/Hover/
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-}
-
-.hvr-bounce-to-top-red:active,
-.hvr-bounce-to-top-red:focus,
-.hvr-bounce-to-top-red:hover {
-    color: #fff;
 }
 
 .hvr-bounce-to-top-red:active:before,
