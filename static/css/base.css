@@ -18,6 +18,7 @@ nav {
 .navbar {
     padding: 0.55rem 1rem;
 }
+
 nav > a > img {
     width: 120px;
 }
@@ -30,6 +31,19 @@ nav > a > img {
 
 .special-nav-lnik {
     color: #f60f13 !important;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+}
+
+/* bootstrap hamburger button style  */
+.navbar-light .navbar-toggler {
+    border: 2px solid #00d4f5;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,212,245, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /*
