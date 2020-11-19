@@ -42,10 +42,10 @@ nav > a > img {
     box-shadow: 0 0 1px transparent;
     position: relative;
     -webkit-transition-property: color;
-    transition-property: color;;
+    transition-property: color;
 }
 
-.nav-link-active:before{
+.nav-link-active:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -66,10 +66,10 @@ nav > a > img {
     box-shadow: 0 0 1px transparent;
     position: relative;
     -webkit-transition-property: color;
-    transition-property: color;;
+    transition-property: color;
 }
 
-.nav-link-active-red:before{
+.nav-link-active-red:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -147,7 +147,8 @@ from https://ianlunn.github.io/Hover/
 Hamburger button style - code adapted to fit page style
 Code Snippet from https://codepen.io/designcouch/pen/Atyop
 */
-#hamburger-button {
+#hamburger-button,
+#hamburger-button-medium {
     width: 25px;
     height: 20px;
     position: relative;
@@ -162,7 +163,8 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
     cursor: pointer;
 }
 
-#hamburger-button span {
+#hamburger-button span,
+#hamburger-button-medium span {
     display: block;
     position: absolute;
     height: 3px;
@@ -181,40 +183,48 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
     transition: 0.25s ease-in-out;
 }
 
-#hamburger-button span:nth-child(1) {
+#hamburger-button span:nth-child(1),
+#hamburger-button-medium span:nth-child(1) {
     top: 0px;
 }
 
 #hamburger-button span:nth-child(2),
-#hamburger-button span:nth-child(3) {
+#hamburger-button span:nth-child(3),
+#hamburger-button-medium span:nth-child(2),
+#hamburger-button-medium span:nth-child(3) {
     top: 7px;
 }
 
-#hamburger-button span:nth-child(4) {
+#hamburger-button span:nth-child(4),
+#hamburger-button-medium span:nth-child(4) {
     top: 14px;
 }
 
-#hamburger-button.open span:nth-child(1) {
+#hamburger-button.open span:nth-child(1),
+#hamburger-button-medium.open span:nth-child(1) {
     top: 18px;
     width: 0%;
     left: 50%;
 }
 
-#hamburger-button.open span:nth-child(2) {
+#hamburger-button.open span:nth-child(2),
+#hamburger-button-medium.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-#hamburger-button.open span:nth-child(3) {
+#hamburger-button.open span:nth-child(3),
+#hamburger-button-medium.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
-#hamburger-button.open span:nth-child(4) {
+#hamburger-button.open span:nth-child(4),
+#hamburger-button-medium.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%;
