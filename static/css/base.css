@@ -368,34 +368,42 @@ footer {
 }
 
 footer .form-control {
-    height: calc(2em + .75rem + 2px);
+    height: calc(2em + 0.75rem + 2px);
     color: #000 !important;
     border: 2px solid #31addf;
     border-radius: 1.5rem !important;
     padding: 0rem 1.25rem;
     outline: none;
 }
+
+footer textarea:focus,
+input[type="text"]:focus,
+.uneditable-input:focus {
+    border-color: #059cd9;
+    outline: 0 none;
+}
+
 /* subscirbe section */
 .btn-outline-secondary {
-    color: #FFF;
+    color: #fff;
     background-color: #31addf;
     border: none;
     position: absolute;
     top: 7px;
     right: 7px;
     border-radius: 1.5rem;
-    padding: .265rem .75rem;
+    padding: 0.265rem 0.75rem;
     z-index: 999;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:active,
 .btn-outline-secondary:focus,
-.btn-outline-secondary:visited  {
-    color: #FFF !important;
-    border-color: #059CD9 !important;
-    background-color: #059CD9 !important;
-
+.btn-outline-secondary:visited {
+    color: #fff !important;
+    border-color: #059cd9 !important;
+    background-color: #059cd9 !important;
+}
 /* Media quieries - Mainpage */
 @media (max-width: 575.98px) {
     header {
