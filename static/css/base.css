@@ -360,7 +360,7 @@ canvas {
 
 /*  Footer */
 footer {
-    background-color: #000;
+    background-color: #00d4f5;
 }
 
 .connect-container {
@@ -368,14 +368,24 @@ footer {
 }
 
 footer .form-control {
+    height: calc(2em + .75rem + 2px);
     color: #000 !important;
-    border: 1px solid #00d4f5;
+    border: 2px solid #31addf;
+    border-radius: 1.5rem !important;
+    padding: 0rem 1.25rem;
+    outline: none;
 }
 /* subscirbe section */
 .btn-outline-secondary {
-    color: #fff;
-    background-color: #00d4f5;
-    border-color: #059cd9;
+    color: #FFF;
+    background-color: #31addf;
+    border: none;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    border-radius: 1.5rem;
+    padding: .265rem .75rem;
+    z-index: 999;
 }
 
 .btn-outline-secondary:hover,
