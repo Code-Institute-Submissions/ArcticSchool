@@ -376,13 +376,20 @@ section h1 {
 /* Top social media icons set */
 .icons {
     z-index: 99;
-    right: 20px;
+    right: 40px;
     position: absolute;
     top: calc((100vh - 280px) / 2);
 }
+
 .icons a {
-    margin-right: 0;
+    margin-right: 0 !important;
     margin-bottom: 20px;
+}
+
+.icons .social-button {
+    color: #059cd9 !important;
+    text-decoration: none;
+    background: white;
 }
 
 /* Motivation Banner */
@@ -492,6 +499,12 @@ Media quieries
     header {
         padding-left: 0 !important;
         padding-right: 0 !important;
+    }
+
+}
+@media (max-width: 414px) {
+    .icons {
+        right: 10px;
     }
 }
 
