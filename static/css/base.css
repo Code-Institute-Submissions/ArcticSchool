@@ -503,3 +503,9 @@ Media quieries
         text-align: center;
     }
 }
+
+@media (min-width: 325px){
+    .copyright-break {
+        display: none !important;
+    }
+}
