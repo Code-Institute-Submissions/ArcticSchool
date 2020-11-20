@@ -413,8 +413,9 @@ input[type="text"]:focus,
 
 /* copyrights container */
 .copyrights {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -447,6 +448,9 @@ input[type="text"]:focus,
 
 /* Footer */
 @media (max-width: 767.98px) {
+    .copyrights {
+        flex-direction: column;
+    }
     .social-media {
         margin-top: 20px;
         margin-bottom: 20px;
