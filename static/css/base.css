@@ -238,7 +238,7 @@ Classes and ID's names modified to suits main project style
 section {
     position: relative;
     width: 100%;
-    height: calc(100vh - 59px);
+    height: 100vh;
 }
 section::after {
     position: absolute;
