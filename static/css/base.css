@@ -267,7 +267,7 @@ section h1 {
     white-space: nowrap;
 }
 
-.scroll-js-button a {
+.scroll-js-button .scroll-icon {
     position: absolute;
     bottom: -30px;
     left: calc(50% - 25px);
@@ -280,18 +280,18 @@ section h1 {
     text-decoration: none;
     transition: opacity 0.3s;
 }
-.scroll-js-button a:hover {
-    opacity: 0.5;
+.scroll-js-button .scroll-icon:hover {
+    color: #059cd9;
 }
 
 #top-bg {
     background: url("/media/main_bg/mainpage_bg.jpg") center center / cover no-repeat;
 }
 
-#top-bg a {
+#top-bg .scroll-icon {
     padding-top: 60px;
 }
-#top-bg a span {
+#top-bg .scroll-icon span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -302,7 +302,7 @@ section h1 {
     border-radius: 50px;
     box-sizing: border-box;
 }
-#top-bg a span::before {
+#top-bg .scroll-icon span::before {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -370,6 +370,11 @@ section h1 {
     font-size: 1.2rem;
     text-align: right;
     color: #f60f13;
+}
+
+/* Top social media icons set */
+.top-social-set {
+    flex-direction: row;
 }
 
 /* Motivation Banner */
