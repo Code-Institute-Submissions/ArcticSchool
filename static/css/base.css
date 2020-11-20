@@ -448,9 +448,12 @@ input[type="text"]:focus,
 @media (max-width: 767.98px) {
     .social-media {
         margin-top: 20px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
     }
     .media-fluid {
         justify-content: center !important;
+    }
+    .media-fluid p {
+        text-align: center;
     }
 }
