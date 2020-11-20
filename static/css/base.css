@@ -376,6 +376,7 @@ footer .form-control {
     outline: none;
 }
 
+/* inpiut field outline active style */
 footer textarea:focus,
 input[type="text"]:focus,
 .uneditable-input:focus {
