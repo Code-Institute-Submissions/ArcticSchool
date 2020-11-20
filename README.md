@@ -262,6 +262,10 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
 - <strong>Fix</strong>: Different ID selector added to medium size / tablet nav bar, script.js function extended.
 - <strong>Verdict</strong>: Hamburger button anmiation working as expected.
 
+- <strong>Bug</strong>: Social media style seems to be incorect after moving social media icons code snippet to speparate html file/includes.
+- <strong>Fix</strong>: CSS classes adapted to match previous stlye.
+- <strong>Verdict</strong>: Social media icons section presented in the same way, as before moving code to outside html file. Social-media-set.html file can be used as includes when building homepnage.
+
 ---
 
 ## Deployment
