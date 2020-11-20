@@ -368,7 +368,7 @@ footer {
 }
 
 footer .container {
-    min-height: 100px;
+    min-height: 80px;
     height: auto;
 }
 
@@ -428,6 +428,7 @@ input[type="text"]:focus,
     border: 3;
     border: 2px solid #fff;
     border-radius: 25px;
+    padding: 12px;
 }
 
 .social-button:hover {
