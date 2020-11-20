@@ -360,8 +360,11 @@ canvas {
 
 /*  Footer */
 footer {
-    min-height: 400px;
     background-color: #059cd9;
+}
+
+.connect-container {
+    height: 300px;
 }
 
 /* Media quieries - Mainpage */
