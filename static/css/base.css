@@ -267,7 +267,7 @@ section h1 {
     white-space: nowrap;
 }
 
-.scroll-js-button .scroll-icon {
+.scroll-icon {
     position: absolute;
     bottom: -30px;
     left: calc(50% - 25px);
@@ -280,8 +280,9 @@ section h1 {
     text-decoration: none;
     transition: opacity 0.3s;
 }
-.scroll-js-button .scroll-icon:hover {
+.scroll-icon:hover {
     color: #059cd9;
+    text-decoration: none;
 }
 
 #top-bg {
@@ -351,7 +352,7 @@ section h1 {
 
 /* Qoute text */
 .quote-bg {
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     padding: 1.25rem;
     max-width: 500px;
@@ -373,8 +374,15 @@ section h1 {
 }
 
 /* Top social media icons set */
-.top-social-set {
-    flex-direction: row;
+.icons {
+    z-index: 99;
+    right: 20px;
+    position: absolute;
+    top: calc((100vh - 280px) / 2);
+}
+.icons a {
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 
 /* Motivation Banner */
@@ -504,7 +512,7 @@ Media quieries
     }
 }
 
-@media (min-width: 325px){
+@media (min-width: 325px) {
     .copyright-break {
         display: none !important;
     }

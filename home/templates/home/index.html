@@ -5,10 +5,10 @@
 
 <h1 class="d-none">Home page</h1>
 
-<section id="top-bg" class="scroll-js-button">
-  <div class="container h-100">
+<section id="top-bg">
+  <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 my-auto mx-3 quote-bg shadow-sm">
+      <div class="quote-bg shadow-sm my-auto">
         <p class="quote-text font-weight-light"><i>
             "The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the
             limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."
@@ -16,12 +16,15 @@
         <hr class="quote-hr">
         <p class="quote-author m-0">Jeremy Jones</p>
       </div>
-      <div class="top-social-set">
-        <!-- social media code snipped -->
-        {% include 'includes/social-media-set.html' %}
+      <div class="icons my-auto">
+        <div class="social-media d-flex flex-column">
+          <!-- social media code snipped -->
+          {% include 'includes/social-media-set.html' %}
+        </div>
       </div>
     </div>
-    <a href="#" class="scroll-icon"><span></span>Scroll</a>
+  </div>
+  <a href="#" class="scroll-icon"><span></span>Scroll</a>
 </section>
 <section id="motivation-banner">
 </section>
