@@ -7,6 +7,9 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/*
+Header / Navigation
+*/
 header {
     background-color: #fff;
 }
@@ -33,7 +36,7 @@ nav > a > img {
     color: #f60f13 !important;
 }
 
-/* normal | blue - nav active link : hover.css*/
+/* Normal | blue - nav active link : hover.css*/
 .nav-link-active {
     display: inline-block;
     vertical-align: middle;
@@ -57,7 +60,7 @@ nav > a > img {
     background: #00d4f5 !important;
 }
 
-/* special | red - nav active link : hover.css*/
+/* Special | red - nav active link : hover.css*/
 .nav-link-active-red {
     display: inline-block;
     vertical-align: middle;
@@ -235,6 +238,10 @@ Code snipped used from https://codepen.io/nxworld/pen/OyRrGy
 Classes and ID's names modified to suits main project style
 */
 
+/*
+Mainpage
+*/
+
 section {
     position: relative;
     width: 100%;
@@ -260,10 +267,6 @@ section h1 {
     white-space: nowrap;
 }
 
-#top-bg {
-    background: url("/media/main_bg/mainpage_bg.jpg") center center / cover no-repeat;
-}
-
 .scroll-js-button a {
     position: absolute;
     bottom: -30px;
@@ -279,6 +282,10 @@ section h1 {
 }
 .scroll-js-button a:hover {
     opacity: 0.5;
+}
+
+#top-bg {
+    background: url("/media/main_bg/mainpage_bg.jpg") center center / cover no-repeat;
 }
 
 #top-bg a {
@@ -342,12 +349,12 @@ section h1 {
     }
 }
 
-/* Mainpage - Motivation Banner */
+/* Motivation Banner */
 #motivation-banner {
     height: 400px;
     background-color: #00d4f5;
 }
-/* Mainpage - About Us section */
+/* About Us section */
 #about-us {
     background-color: #fff;
 }
@@ -358,7 +365,9 @@ canvas {
     height: auto;
 }
 
-/*  Footer */
+/*
+Footer
+*/
 footer {
     background-color: #00d4f5;
 }
@@ -381,7 +390,7 @@ footer .form-control {
     outline: none;
 }
 
-/* inpiut field outline active style */
+/* Inpiut field outline active style */
 footer textarea:focus,
 input[type="text"]:focus,
 .uneditable-input:focus {
@@ -389,7 +398,7 @@ input[type="text"]:focus,
     outline: 0 none;
 }
 
-/* subscirbe section */
+/* Subscirbe section */
 .btn-outline-secondary {
     color: #fff;
     background-color: #31addf;
@@ -411,7 +420,7 @@ input[type="text"]:focus,
     background-color: #059cd9 !important;
 }
 
-/* copyrights container */
+/* Copyrights container */
 .copyrights {
     width: 100%;
     display: flex;
@@ -419,7 +428,7 @@ input[type="text"]:focus,
     align-items: center;
 }
 
-/* social media icons */
+/* Social media icons */
 .social-button {
     color: #fff;
     width: 50px;
@@ -438,7 +447,11 @@ input[type="text"]:focus,
     background: white;
 }
 
-/* Media quieries - Mainpage */
+/*
+Media quieries
+*/
+
+/* Mainpage */
 @media (max-width: 575.98px) {
     header {
         padding-left: 0 !important;
