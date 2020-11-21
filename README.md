@@ -292,8 +292,8 @@ To deploy your project please use following steps:
 * Scroll down button code snippet was taken from [Codepen/nxworld](https://codepen.io/nxworld/pen/OyRrGy)
 * Particles library - example used was created by [Mamboleoo](https://codepen.io/Mamboleoo) - [code snippet](https://codepen.io/Mamboleoo/pen/obWGYr), edited to match an author design.
 * Navbar links hover sryle - code used from [Hoover.css](https://ianlunn.github.io/Hover). Code was edited to match an author design.
-
-
+* [Hero pattern](https://www.heropatterns.com) was used to create background pattern in promo banner section.
+o
 
 ### Acknowledgements
 
