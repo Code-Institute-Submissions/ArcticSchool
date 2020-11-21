@@ -302,6 +302,7 @@ section h1 {
     border: 2px solid #00d4f5;
     border-radius: 50px;
     box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.4);
 }
 #top-bg .scroll-icon span::before {
     position: absolute;
@@ -319,15 +320,15 @@ section h1 {
 }
 @-webkit-keyframes sdb10 {
     0% {
-        -webkit-transform: translate(0, 0);
+        -webkit-transform: translate(0, 20px);
         opacity: 0;
     }
     40% {
         opacity: 1;
     }
     80% {
-        -webkit-transform: translate(0, 20px);
-        opacity: 0;
+        -webkit-transform: translate(0, 0);
+        opacity: 1;
     }
     100% {
         opacity: 0;
@@ -335,15 +336,15 @@ section h1 {
 }
 @keyframes sdb10 {
     0% {
-        transform: translate(0, 0);
+        transform: translate(0, 20px);
         opacity: 0;
     }
     40% {
         opacity: 1;
     }
     80% {
-        transform: translate(0, 20px);
-        opacity: 0;
+        transform: translate(0, 0);
+        opacity: 1;
     }
     100% {
         opacity: 0;
@@ -563,6 +564,20 @@ Media quieries
     }
     .icons a {
         margin-bottom: 10px;
+    }
+}
+
+@media (max-height: 658px) {
+    #top-bg .scroll-icon span {
+        width: 25px;
+        height: 40px;
+    }
+    .scroll-icon {
+        bottom: -45px;
+        left: calc(50%);
+    }
+    .scroll-text {
+        display: none !important;
     }
 }
 
