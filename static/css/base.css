@@ -14,6 +14,7 @@ h4,
 h5,
 h6 {
     font-family: "Montserrat", sans-serif;
+    color: #FFF;
 }
 
 /*
@@ -436,11 +437,6 @@ Interactive elements
 /*
 Promo banner section
 */
-.promo-title {
-    position: relative;
-    margin-top: 30px;
-}
-
 .promo-banner {
     margin-top: 20px;
     border-radius: 1rem;
@@ -452,6 +448,7 @@ Promo banner section
     color: #fff;
     font-weight: 300;
     text-align: left;
+    padding: 0.5rem;
 }
 
 /* About Us section */
