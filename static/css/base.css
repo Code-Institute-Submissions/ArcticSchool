@@ -14,7 +14,7 @@ h4,
 h5,
 h6 {
     font-family: "Montserrat", sans-serif;
-    color: #FFF;
+    color: #fff;
 }
 
 /*
@@ -453,7 +453,19 @@ Promo banner section
 
 /* About Us section */
 #about-us {
-    background-color: #fff;
+    background-color: red;
+}
+#why-our-lessons {
+    background-color: red;
+}
+#booking-banner {
+    background-color: red;
+}
+#my-level {
+    background-color: red;
+}
+#map {
+    background-color: red;
 }
 
 /*
