@@ -251,29 +251,18 @@ Classes and ID's names modified to suits main project style
 Mainpage
 */
 
-section {
+.bg-section {
     position: relative;
     width: 100%;
     height: 100vh;
 }
-section::after {
+.bg-section::after {
     position: absolute;
     bottom: 0;
     left: 0;
     content: "";
     width: 100%;
     height: 80%;
-}
-section h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
 }
 
 .scroll-icon {
@@ -459,6 +448,7 @@ Promo banner section
 }
 
 .promo-text {
+    font-size: 1.25rem;
     color: #fff;
     font-weight: 300;
     text-align: left;
