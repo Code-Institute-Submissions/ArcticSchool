@@ -521,3 +521,19 @@ input[type="text"]:focus,
     text-decoration: none;
     background: white;
 }
+
+/*
+Promo banner section
+*/
+.promo-title {
+    position: absolute;
+    top: 50px;
+}
+
+.promo-banner {
+    width: auto;
+    max-width: 80%;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
