@@ -281,7 +281,7 @@ section h1 {
     transition: opacity 0.3s;
 }
 .scroll-icon:hover {
-    color: #059cd9;
+    color: #00d4f5 !important;
     text-decoration: none;
 }
 
@@ -324,7 +324,7 @@ section h1 {
         opacity: 0;
     }
     40% {
-        opacity: 1;
+        opacity: 0;
     }
     80% {
         -webkit-transform: translate(0, 0);
