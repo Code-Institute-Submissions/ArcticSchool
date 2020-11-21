@@ -392,6 +392,24 @@ section h1 {
     background: white;
 }
 
+.icons .social-button:hover {
+    color: #FFF !important;
+}
+
+.icons .facebook-icon:hover {
+    background-color: #1877f2; /* facebook */
+}
+.icons .instagram-icon:hover {
+    background-image: linear-gradient(45deg, #feda75,#fa7e1e,#d62976, #962fbf, #4f5bd5); /* instagram */
+}
+.icons .twitter-icon:hover {
+    background-color: #1DA1F2; /* twitter */
+}
+.icons .snapchat-icon:hover {
+    background-color: #FFFC00; /* snapchat */
+}
+
+
 /* Motivation Banner */
 #motivation-banner {
     height: 400px;
