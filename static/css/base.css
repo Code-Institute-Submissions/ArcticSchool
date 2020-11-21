@@ -366,7 +366,7 @@ Interactive elements
     margin-left: 40px;
     position: absolute;
     top: calc(100vh / 5);
-    left: calc((100vw/2) - 500px);
+    left: calc((100vw / 2) - 500px);
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     padding: 1.25rem;
@@ -392,12 +392,12 @@ Interactive elements
     z-index: 99;
     right: 40px;
     position: absolute;
-    top: calc(((100vh - 270px) + 59px)/ 2);
+    top: calc(((100vh - 320px) + 59px) / 2);
 }
 
 .icons a {
     margin-right: 0 !important;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .icons .social-button {
@@ -539,7 +539,7 @@ Media quieries
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
     .quote-bg {
         left: 0;
     }
@@ -556,7 +556,15 @@ Media quieries
     }
 }
 
-/**/
+/* Social media icons - height query */
+@media (max-height: 375px) {
+    .icons {
+        top: calc(((100vh - 270px) + 59px) / 2);
+    }
+    .icons a {
+        margin-bottom: 10px;
+    }
+}
 
 /* Footer */
 @media (max-width: 767.98px) {
