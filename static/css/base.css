@@ -350,12 +350,26 @@ section h1 {
     }
 }
 
+/*
+Interactive elements
+*/
+
+/* Main container */
+.interactive-top {
+    display: flex;
+    justify-content: space-between;
+}
 /* Qoute text */
 .quote-bg {
+    max-width: 500px;
+    width: auto;
+    margin-left: 40px;
+    position: absolute;
+    top: calc(100vh / 5);
+    left: calc((100vw/2) - 500px);
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     padding: 1.25rem;
-    max-width: 500px;
 }
 
 .quote-text {
@@ -378,37 +392,36 @@ section h1 {
     z-index: 99;
     right: 40px;
     position: absolute;
-    top: calc((100vh - 280px) / 2);
+    top: calc(((100vh - 270px) + 59px)/ 2);
 }
 
 .icons a {
     margin-right: 0 !important;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .icons .social-button {
-    color: #059cd9 !important;
+    color: #00d4f5 !important;
     text-decoration: none;
     background: white;
 }
 
 .icons .social-button:hover {
-    color: #FFF !important;
+    color: #fff !important;
 }
 
 .icons .facebook-icon:hover {
     background-color: #1877f2; /* facebook */
 }
 .icons .instagram-icon:hover {
-    background-image: linear-gradient(45deg, #feda75,#fa7e1e,#d62976, #962fbf, #4f5bd5); /* instagram */
+    background-image: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); /* instagram */
 }
 .icons .twitter-icon:hover {
-    background-color: #1DA1F2; /* twitter */
+    background-color: #1da1f2; /* twitter */
 }
 .icons .snapchat-icon:hover {
-    background-color: #FFFC00; /* snapchat */
+    background-color: #fffc00; /* snapchat */
 }
-
 
 /* Motivation Banner */
 #motivation-banner {
@@ -518,13 +531,32 @@ Media quieries
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-
 }
+/* Quote text position */
+@media (max-width: 665px) {
+    .quote-bg {
+        width: calc(100% - 160px);
+    }
+}
+
+@media (max-width: 1024px){
+    .quote-bg {
+        left: 0;
+    }
+}
+
+/* Social media icons position */
 @media (max-width: 414px) {
     .icons {
         right: 10px;
     }
+    /* Change quote width on smaller devices */
+    .quote-bg {
+        width: calc(100% - 110px);
+    }
 }
+
+/**/
 
 /* Footer */
 @media (max-width: 767.98px) {
