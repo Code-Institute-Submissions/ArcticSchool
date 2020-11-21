@@ -427,24 +427,35 @@ Interactive elements
 /* Motivation Banner */
 #motivation-banner {
     height: 400px;
-    background-color: #00d4f5;
+    background-color: #31ADDF;
 }
+
+/*
+Promo banner section
+*/
+.promo-title {
+    position: absolute;
+    top: 50px;
+}
+
+.promo-banner {
+    width: auto;
+    max-width: 80%;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
 /* About Us section */
 #about-us {
     background-color: #fff;
-}
-
-canvas {
-    background: black;
-    width: auto;
-    height: auto;
 }
 
 /*
 Footer
 */
 footer {
-    background-color: #00d4f5;
+    background-color: #000;
 }
 
 .connect-container {
@@ -520,20 +531,4 @@ input[type="text"]:focus,
     color: #059cd9 !important;
     text-decoration: none;
     background: white;
-}
-
-/*
-Promo banner section
-*/
-.promo-title {
-    position: absolute;
-    top: 50px;
-}
-
-.promo-banner {
-    width: auto;
-    max-width: 80%;
-    height: 300px;
-    border-radius: 1rem;
-    padding: 1.25rem;
 }
