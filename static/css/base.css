@@ -7,6 +7,9 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/*
+Standard Style
+*/
 h1,
 h2,
 h3,
@@ -288,6 +291,9 @@ Mainpage
     text-decoration: none;
 }
 
+/*
+Mainpage Top Section
+*/
 #top-bg {
     background: url("/media/main_bg/mainpage_bg.jpg") center center / cover no-repeat;
 }
@@ -354,10 +360,7 @@ Mainpage
     }
 }
 
-/*
-Interactive elements
-*/
-
+/* Interactive Elements */
 /* Main container */
 .interactive-top {
     display: flex;
@@ -439,7 +442,7 @@ Interactive elements
 }
 
 /*
-Promo banner section
+Promo Banner Section
 */
 .promo-banner {
     border-radius: 1rem;
@@ -454,7 +457,9 @@ Promo banner section
     padding: 0.5rem;
 }
 
-/* About Us section */
+/*
+About Us Section
+*/
 #about-us {
     display: flex;
     padding-top: 1.25rem;
@@ -502,19 +507,37 @@ Promo banner section
     width: 100%;
 }
 
+/*
+Why Our Lessons Section
+*/
 #why-our-lessons {
     background-color: #1ca5dc;
 }
 
+#why-our-lessons  h1 {
+    padding-top: 1.25rem;
+}
 .our-proof {
-    
+    background-color: #FFF;
 }
 
+.square-block {
+    background-color: #FFF;
+}
+
+/*
+Booking Banner Section
+*/
 #booking-banner {
 }
+
+/*
+My Level Section
+*/
 #my-level {
 }
 #map {
+    border-bottom: 3px solid #f60f13;
 }
 
 /*
