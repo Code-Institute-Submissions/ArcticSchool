@@ -514,15 +514,24 @@ Why Our Lessons Section
     background-color: #1ca5dc;
 }
 
-#why-our-lessons  h1 {
+#why-our-lessons h1 {
     padding-top: 1.25rem;
 }
-.our-proof {
-    background-color: #FFF;
+
+#why-our-lessons .container-fluid,
+#why-our-lessons .row {
+    margin: 0;
+    padding: 0;
 }
 
-.square-block {
-    background-color: #FFF;
+.our-proof {
+    max-width: 100%;
+}
+
+.card {
+    border: none;
+    border-radius: none !important;
+    background: linear-gradient(#9deefb, #059cd9);
 }
 
 /*
