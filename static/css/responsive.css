@@ -1,25 +1,20 @@
-/* Mainpage */
-@media (max-width: 575.98px) {
-    header {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-}
-/* Quote text position */
-@media (max-width: 665px) {
-    .quote-bg {
-        width: calc(100% - 160px);
+@media (min-width: 325px) {
+    .copyright-break {
+        display: none !important;
     }
 }
 
-@media (max-width: 1024px) {
-    .quote-bg {
-        left: 0;
+@media (max-height: 375px) {
+    /* Social media icons - height query */
+    .icons {
+        top: calc(((100vh - 270px) + 59px) / 2);
+    }
+    .icons a {
+        margin-bottom: 10px;
     }
 }
-
-/* Social media icons position */
 @media (max-width: 414px) {
+    /* Social media icons position */
     .icons {
         right: 10px;
     }
@@ -29,13 +24,11 @@
     }
 }
 
-/* Social media icons - height query */
-@media (max-height: 375px) {
-    .icons {
-        top: calc(((100vh - 270px) + 59px) / 2);
-    }
-    .icons a {
-        margin-bottom: 10px;
+@media (max-width: 575.98px) {
+    /* Mainpage */
+    header {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
@@ -53,8 +46,17 @@
     }
 }
 
-/* Footer */
+@media (max-width: 665px) {
+    /* Quote text position */
+    .quote-bg {
+        width: calc(100% - 160px);
+    }
+}
+
 @media (max-width: 767.98px) {
+    /* About Us Section - Mountain graphic */
+
+    /* Footer */
     .copyrights {
         flex-direction: column;
     }
@@ -70,8 +72,9 @@
     }
 }
 
-@media (min-width: 325px) {
-    .copyright-break {
-        display: none !important;
+@media (max-width: 1024px) {
+    /* Quote text position */
+    .quote-bg {
+        left: 0;
     }
 }
