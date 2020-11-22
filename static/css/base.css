@@ -494,6 +494,7 @@ About Us Section
 .bottom-hnh p {
     font-size: 1.25rem;
     text-align: left;
+    margin-bottom: 30px;
 }
 
 /* Static bottom image */
@@ -524,14 +525,26 @@ Why Our Lessons Section
     padding: 0;
 }
 
+/* Cards Style */
 .our-proof {
     max-width: 100%;
 }
 
-.card {
+.our-proof .card {
     border: none;
-    border-radius: none !important;
-    background: linear-gradient(#9deefb, #059cd9);
+    border-radius: 0;
+    background: #1ca5dc;
+}
+
+.our-proof .card h5 {
+    color: #f60f13;
+}
+
+
+.white-border {
+    background-color: #FFF;
+    border-radius: .5rem;
+    padding: 2rem;
 }
 
 /*
