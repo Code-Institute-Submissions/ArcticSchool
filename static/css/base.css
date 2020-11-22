@@ -512,7 +512,8 @@ About Us Section
 Why Our Lessons Section
 */
 #why-our-lessons {
-    background-color: #1ca5dc;
+    background-color: #31addf;
+    padding-bottom: 30px;
 }
 
 #why-our-lessons h1 {
@@ -533,17 +534,20 @@ Why Our Lessons Section
 .our-proof .card {
     border: none;
     border-radius: 0;
-    background: #1ca5dc;
+    background: #31addf;
+}
+
+.our-proof .card-body {
+    padding: 0.5rem;
 }
 
 .our-proof .card h5 {
     color: #f60f13;
 }
 
-
 .white-border {
-    background-color: #FFF;
-    border-radius: .5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
     padding: 2rem;
 }
 
@@ -551,6 +555,8 @@ Why Our Lessons Section
 Booking Banner Section
 */
 #booking-banner {
+    padding: 1.25rem;
+    background-color: #000;
 }
 
 /*
@@ -559,6 +565,7 @@ My Level Section
 #my-level {
 }
 #map {
+    width: 100%;
     border-bottom: 3px solid #f60f13;
 }
 
