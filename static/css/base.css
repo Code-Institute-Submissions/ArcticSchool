@@ -468,9 +468,9 @@ Promo banner section
 
 /* Static bottom image */
 .mountain-graphic img {
-    width: 50%;
+    width: 100%;
     text-align: right;
-    margin-bottom: -35px;
+    margin-bottom: -50px;
 }
 
 #why-our-lessons {
