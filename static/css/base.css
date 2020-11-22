@@ -15,6 +15,7 @@ h5,
 h6 {
     font-family: "Montserrat", sans-serif;
     color: #fff;
+    margin-bottom: 1.5rem;
 }
 
 /*
@@ -438,7 +439,6 @@ Interactive elements
 Promo banner section
 */
 .promo-banner {
-    margin-top: 20px;
     border-radius: 1rem;
     padding: 1.25rem;
 }
@@ -452,20 +452,35 @@ Promo banner section
 }
 
 /* About Us section */
-#about-us {
-    background-color: red;
+#about-us .row {
+    justify-content: center;
+    text-align: center;
+    padding: 1.25rem;
 }
+
+#about-us h1 {
+    color: #1ca5dc;
+}
+
+.mountain-graphic {
+    text-align: right;
+}
+
+/* Static bottom image */
+.mountain-graphic img {
+    width: 50%;
+    text-align: right;
+    margin-bottom: -35px;
+}
+
 #why-our-lessons {
-    background-color: red;
+    background-color: #1ca5dc;
 }
 #booking-banner {
-    background-color: red;
 }
 #my-level {
-    background-color: red;
 }
 #map {
-    background-color: red;
 }
 
 /*
