@@ -18,6 +18,9 @@ h6 {
     margin-bottom: 1.5rem;
 }
 
+.blue-text {
+    color: #059cd9 !important;
+}
 /*
 Header / Navigation
 */
@@ -452,7 +455,14 @@ Promo banner section
 }
 
 /* About Us section */
-#about-us .row {
+#about-us {
+    display: flex;
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+#about-us .about-us-text {
     justify-content: center;
     text-align: center;
     padding: 1.25rem;
@@ -462,20 +472,40 @@ Promo banner section
     color: #1ca5dc;
 }
 
-.mountain-graphic {
-    text-align: right;
+#about-us h4 {
+    color: #000;
+}
+
+.about-us-text .promo-text {
+    color: #000 !important;
+}
+
+.bottom-hnh {
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.bottom-hnh p {
+    font-size: 1.25rem;
+    text-align: left;
 }
 
 /* Static bottom image */
+.mountain-graphic {
+    position: relative;
+}
 .mountain-graphic img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    text-align: right;
-    margin-bottom: -50px;
 }
 
 #why-our-lessons {
     background-color: #1ca5dc;
 }
+
 #booking-banner {
 }
 #my-level {
