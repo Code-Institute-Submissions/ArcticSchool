@@ -253,15 +253,19 @@ During development of this project I've faced my lack of knowledge and lots of c
 
 Verdict? Don't waist your time trying re-invent the wheel. Take a small break and try to release all the stress and bad thinking. Ask for advice, don't be afriad to do it. There is plenty of people with bigger knowledge and great, great solutions!
 
+
+Django-responsive2
 - <strong>Bug</strong>: Issues with setting up django-responsive2, show different navigation bar on different device size.
 - <strong>Fix</strong>: Removed all django-responsive2 code and information. I've asked Code Institute - Tutors section for help/solution, advice given : try to use Bootstrap breakpoints and classes instead of django-responsive2. \
   Display classes applied to index.html header code.
 - <strong>Verdict</strong>: Result as expected. Different navigation bars presented on different device size.
 
+Navigation Hamburger Button
 - <strong>Bug</strong>: Navigation hamburger button not working on medium devices.
 - <strong>Fix</strong>: Different ID selector added to medium size / tablet nav bar, script.js function extended.
 - <strong>Verdict</strong>: Hamburger button anmiation working as expected.
 
+Social Media Icons
 - <strong>Bug</strong>: Social media style seems to be incorect after moving social media icons code snippet to speparate html file/includes.
 - <strong>Fix</strong>: CSS classes adapted to match previous stlye.
 - <strong>Verdict</strong>: Social media icons section presented in the same way, as before moving code to outside html file. Social-media-set.html file can be used as includes when building homepnage.
