@@ -59,6 +59,12 @@
         position: relative;
 
     }
+
+    /* */
+    #booking-banner {
+        text-align: center;
+    }
+
     /* Footer */
     .copyrights {
         flex-direction: column;
