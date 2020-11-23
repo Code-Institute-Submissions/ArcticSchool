@@ -11,11 +11,19 @@ $(document).ready(function () {
 	$('#hamburger-button-medium').click(function () {
 		$(this).toggleClass('open');
 	});
-
 	/**
 	 * This fucntion was found on https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1, traget - element changed also added -=57px to scrollTop function to adjust navigation size to scrolled elemenet
 	 */
 	$(".scroll-icon").on('click', function (event) {
+		// animate button and close navbar medium devices
+		if ($('#hamburger-button-medium').hasClass('open')){
+			$('#hamburger-button-medium').click();
+		}
+		// animate button and close navbar small devices
+		if ($('#hamburger-button').hasClass('open')){
+			$('#hamburger-button').click();
+		}
+
 		if (this.hash !== "") {
 			event.preventDefault();
 			let hash = this.hash;
