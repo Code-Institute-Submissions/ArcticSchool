@@ -16,23 +16,19 @@ $(document).ready(function () {
 	 */
 	$(".scroll-icon").on('click', function (event) {
 		// animate button and close navbar medium devices
-		if ($('#hamburger-button-medium').hasClass('open')){
+		if ($('#hamburger-button-medium').hasClass('open')) {
 			$('#hamburger-button-medium').click();
 		}
 		// animate button and close navbar small devices
-		if ($('#hamburger-button').hasClass('open')){
+		if ($('#hamburger-button').hasClass('open')) {
 			$('#hamburger-button').click();
 		}
-
 		if (this.hash !== "") {
 			event.preventDefault();
 			let hash = this.hash;
-
 			$('html, body').animate({
 				scrollTop: $(hash).offset().top -= 57
-			}, 800, function () {
-				window.location.hash = hash;
-			});
+			}, 800);
 		}
 	});
 });

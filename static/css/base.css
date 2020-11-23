@@ -433,8 +433,7 @@ Mainpage Top Section
 /* Motivation Banner */
 #motivation-banner {
     height: auto;
-    background-color: #31addf;
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: #059CD9;
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -512,7 +511,7 @@ About Us Section
 Why Our Lessons Section
 */
 #why-our-lessons {
-    background-color: #31addf;
+    background-color: #059CD9;
     padding-bottom: 30px;
 }
 
@@ -534,7 +533,7 @@ Why Our Lessons Section
 .our-proof .card {
     border: none;
     border-radius: 0;
-    background: #31addf;
+    background: #059CD9;
 }
 
 .our-proof .card-body {
@@ -595,7 +594,7 @@ My Level Section
 }
 
 #my-level h1 {
-    color: #000;
+    color: #059CD9;
 }
 #my-level h4 {
     color: #00d4f5;
@@ -634,18 +633,11 @@ My Level Section
 .level-none {
     color: #ebebeb !important;
 }
-
-#map {
-    text-align: center;
-    width: 100%;
-    border-bottom: 3px solid #f60f13;
-}
-
 /*
 Footer
 */
 footer {
-    background-color: #000;
+    background-color: #00d4f5;
 }
 
 .connect-container {
