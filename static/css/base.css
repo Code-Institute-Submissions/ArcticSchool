@@ -594,29 +594,45 @@ My Level Section
     padding: 1.25rem;
 }
 
-#my-level h1,h3 {
+#my-level h1 {
     color: #000;
 }
+#my-level h4 {
+    color: #00d4f5;
+    font-weight: 300;
+}
 
-#my-level p{
-    color: blue;
+#my-level p {
+    color: #9a9a9a;
     margin-top: 20px;
+    font-weight: 300;
 }
 
 /* Level container */
 .level-container {
+    border: 3px solid #00d4f5;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Score container and grey out score clas styles */
 .score-container {
+    min-width: 210px;
 }
 
 .fa-snowflake {
     font-size: 2.25rem;
     color: #9deefb;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .level-none {
-    color: #EBEBEB!important;
+    color: #ebebeb !important;
 }
 
 #map {
