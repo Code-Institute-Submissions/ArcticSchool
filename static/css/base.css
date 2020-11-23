@@ -433,7 +433,7 @@ Mainpage Top Section
 /* Motivation Banner */
 #motivation-banner {
     height: auto;
-    background-color: #059CD9;
+    background-color: #059cd9;
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -511,7 +511,7 @@ About Us Section
 Why Our Lessons Section
 */
 #why-our-lessons {
-    background-color: #059CD9;
+    background-color: #059cd9;
     padding-bottom: 30px;
 }
 
@@ -533,7 +533,7 @@ Why Our Lessons Section
 .our-proof .card {
     border: none;
     border-radius: 0;
-    background: #059CD9;
+    background: #059cd9;
 }
 
 .our-proof .card-body {
@@ -594,17 +594,22 @@ My Level Section
 }
 
 #my-level h1 {
-    color: #059CD9;
+    color: #059cd9;
 }
 #my-level h4 {
     color: #00d4f5;
     font-weight: 300;
 }
-
 #my-level p {
     color: #9a9a9a;
     margin-top: 20px;
     font-weight: 300;
+    text-align: left;
+}
+
+#my-level div[class^="col-"], #my-level div[class^=" col-"] {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }
 
 /* Level container */
@@ -619,13 +624,8 @@ My Level Section
     align-items: center;
 }
 
-/* Score container and grey out score clas styles */
-.score-container {
-    min-width: 210px;
-}
-
 .fa-snowflake {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     color: #9deefb;
     margin-left: 5px;
     margin-right: 5px;
