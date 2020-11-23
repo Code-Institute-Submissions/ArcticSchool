@@ -577,14 +577,50 @@ h6 {
 #booking-banner .boooking-button .btn-danger {
     min-width: 250px;
     height: 50px;
+    background-color: #f60f13;
+    opacity: 0.9;
+}
+
+#booking-banner .boooking-button .btn-danger:hover {
+    opacity: 1;
 }
 
 /*
 My Level Section
 */
 #my-level {
+    color: #000;
+    text-align: center;
+    padding: 1.25rem;
 }
+
+#my-level h1,h3 {
+    color: #000;
+}
+
+#my-level p{
+    color: blue;
+    margin-top: 20px;
+}
+
+/* Level container */
+.level-container {
+}
+
+/* Score container and grey out score clas styles */
+.score-container {
+}
+
+.fa-snowflake {
+    font-size: 2.25rem;
+    color: #9deefb;
+}
+.level-none {
+    color: #EBEBEB!important;
+}
+
 #map {
+    text-align: center;
     width: 100%;
     border-bottom: 3px solid #f60f13;
 }
