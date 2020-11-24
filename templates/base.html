@@ -78,13 +78,13 @@
 <body id="{{ request.resolver_match.url_name }}">
     <header class="container-fluid">
         <div class="d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
-            {% include 'includes/mobile-navigation.html' %}
+            {% include 'layout/mobile-navigation.html' %}
         </div>
         <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none">
-            {% include 'includes/tablet-navigation.html' %}
+            {% include 'layout/tablet-navigation.html' %}
         </div>
         <div class="d-none d-lg-block d-xl-block">
-            {% include 'includes/main-navigation.html' %}
+            {% include 'layout/main-navigation.html' %}
         </div>
     </header>
 
