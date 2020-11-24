@@ -1,0 +1,23 @@
+.our-proof {
+    max-width: 100%;
+    .card-body {
+        padding: 0.5rem;
+    }
+    .card {
+        border: none;
+        border-radius: 0;
+        background: #059cd9;
+        h5 {
+            color: #f60f13;
+        }
+        p{
+            color: #000;
+        }
+    }
+}
+
+.white-border {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}

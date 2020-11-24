@@ -1,12 +1,33 @@
 // Import Fonts Style
-@import 'fonts/fonts.scss';
+@import "fonts/fonts.scss";
 
-// Import Forms Style
-//@import '';
+// Import Base Style
+@import "base/base.scss";
+
+// Import Header - Navigation
+@import "components/header/navigation.scss";
 
 // Import Pages Style
-@import 'pages/index.scss';
+@import "pages/index.scss";
+@import "pages/lessons.scss";
+@import "pages/team.scss";
+@import "pages/resorts.scss";
+@import "pages/booking.scss";
+@import "pages/contact.scss";
+@import "pages/account.scss";
 
+// Import Components - Cards
+@import "components/cards/level-cards.scss";
+@import "components/cards/our-lessons-cards.scss";
+
+// Import Components - Forms
+@import "components/forms/forms.scss";
+@import "components/forms/login-form.scss";
+@import "components/forms/register-form.scss";
+@import "components/forms/contact-form.scss";
+
+// Import Components - Footer
+@import "components/footer/footer.scss";
 
 // Import Responsive
-@import 'responsive/responsive.scss';
+@import "responsive/responsive.scss";
