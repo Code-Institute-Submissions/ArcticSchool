@@ -1,0 +1,38 @@
+[
+  {
+    "pk": 1,
+    "model": "home.Levels",
+    "fields": {
+      "title": "Beginner",
+      "level": 1,
+      "description": "I've never ride on a snowboard before or just from time to time. I want to learn starting from easy steps and low slopes."
+    }
+  },
+  {
+    "pk": 2,
+    "model": "home.Levels",
+    "fields": {
+      "title": "Intermediate",
+      "level": 2,
+      "description": "I'm feeling good when riding on easy slopes, I know how to turn, but if it gets steep or narrow then I'm just give up."
+    }
+  },
+  {
+    "pk": 3,
+    "model": "home.Levels",
+    "fields": {
+      "title": "Advance",
+      "level": 3,
+      "description": "I'm good on all slopes but I think I stuck and can't progress. I think I still missing something really important."
+    }
+  },
+  {
+    "pk": 4,
+    "model": "home.Levels",
+    "fields": {
+      "title": "Expert",
+      "level": 4,
+      "description": "I can ride from top of mountain, I'm feelin like I'm flying when I'm riding downhill. I want to push my limits."
+    }
+  }
+]
