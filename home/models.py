@@ -31,7 +31,7 @@ class Social(models.Model):
     class levelChoices(models.TextChoices):
         Facebook = 'fa-facebook-f',
         YouTube = 'fa-youtube',
-        Pintereset = 'fa-pintereset-p',
+        Pintereset = 'fa-pinterest-p',
         Snapchat = 'fa-snapchat-ghost',
         Twitter = 'fa-twitter',
         Instagram = 'fa-instagram',
