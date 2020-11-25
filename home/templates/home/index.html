@@ -111,58 +111,19 @@
     <!-- Container with cards -->
     <div class="container">
       <div class="row our-proof">
+        {% for lesson in lessons %}
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-0">
           <div class="card text-center">
             <div class="card-body">
               <div class="white-border shadow-sm">
-                <h5 class="card-title">Your Safety</h5>
+                <h5 class="card-title">{{ lesson.title }}</h5>
                 <hr>
-                <p class="card-text font-weight-light text-left">Your safety is a number one on our priority list. We
-                  always looking after our students and we make sure they will be safe all the time during the lessons.
-                  We want you to have fun and focus on all snow activities with peacfull mind.</p>
+                <p class="card-text font-weight-light text-left">{{ lesson.description }}</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-0">
-          <div class="card text-center">
-            <div class="card-body">
-              <div class="white-border shadow-sm">
-                <h5 class="card-title">Our Instructors</h5>
-                <hr>
-                <p class="card-text font-weight-light text-left">Our instructors are the top instructors of the world.
-                  They spent whole life ridin on snowboard on all kind of slopes. They are here to teach you, so you can
-                  develope your snowboarding skills and to help you become a top class snowboarder.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-0">
-          <div class="card text-center">
-            <div class="card-body">
-              <div class="white-border shadow-sm">
-                <h5 class="card-title">Your Expectations</h5>
-                <hr>
-                <p class="card-text font-weight-light text-left">Our crew is here for you 24h/7 days a week to answer
-                  your queries. We are constantly changing. We are building new resorts, creating new lessons
-                  deals/offer to make it more affordable and fitted for you and your time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-0">
-          <div class="card text-center">
-            <div class="card-body">
-              <div class="white-border shadow-sm">
-                <h5 class="card-title">Your Money</h5>
-                <hr>
-                <p class="card-text font-weight-light text-left">Because we all don't want to spend too much money on
-                  the things we love. That is why we adapt our offers and change prices to make them more affordable for
-                  you. We also have a promotional offers every month to make it even cheaper.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -192,50 +153,54 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
         <div class="level-container shadow-sm">
-        <h4>Beginner</h4>
-        <div class="score-container">
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake level-none"></i>
-          <i class="fas fa-snowflake level-none"></i>
-          <i class="fas fa-snowflake level-none"></i>
-        </div>
-        <p>I've never ride on a snowboard before or just from time to time. I want to learn starting from easy steps and low slopes.</p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-        <div class="level-container shadow-sm">
-        <h4>Intermediate</h4>
-        <div class="score-container">
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake level-none"></i>
-          <i class="fas fa-snowflake level-none"></i>
-        </div>
-        <p>I'm feeling good when riding on easy slopes, I know how to turn, but if it gets steep or narrow then I'm just give up.</p>
+          <h4>Beginner</h4>
+          <div class="score-container">
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake level-none"></i>
+            <i class="fas fa-snowflake level-none"></i>
+            <i class="fas fa-snowflake level-none"></i>
+          </div>
+          <p>I've never ride on a snowboard before or just from time to time. I want to learn starting from easy steps
+            and low slopes.</p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
         <div class="level-container shadow-sm">
-        <h4>Advance</h4>
-        <div class="score-container">
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake level-none"></i>
-        </div>
-        <p>I'm good on all slopes but I think I stuck and can't progress. I think I still missing something really important.</p>
+          <h4>Intermediate</h4>
+          <div class="score-container">
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake level-none"></i>
+            <i class="fas fa-snowflake level-none"></i>
+          </div>
+          <p>I'm feeling good when riding on easy slopes, I know how to turn, but if it gets steep or narrow then I'm
+            just give up.</p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
         <div class="level-container shadow-sm">
-        <h4>Expert</h4>
-        <div class="score-container">
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake"></i>
-          <i class="fas fa-snowflake"></i>
+          <h4>Advance</h4>
+          <div class="score-container">
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake level-none"></i>
+          </div>
+          <p>I'm good on all slopes but I think I stuck and can't progress. I think I still missing something really
+            important.</p>
         </div>
-        <p>I can ride from top of mountain, I'm feelin like I'm flying when I'm riding downhill. I want to push my limits.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+        <div class="level-container shadow-sm">
+          <h4>Expert</h4>
+          <div class="score-container">
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake"></i>
+            <i class="fas fa-snowflake"></i>
+          </div>
+          <p>I can ride from top of mountain, I'm feelin like I'm flying when I'm riding downhill. I want to push my
+            limits.</p>
         </div>
       </div>
     </div>
