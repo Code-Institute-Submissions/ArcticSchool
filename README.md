@@ -270,6 +270,12 @@ Social Media Icons
 - <strong>Fix</strong>: CSS classes adapted to match previous stlye.
 - <strong>Verdict</strong>: Social media icons section presented in the same way, as before moving code to outside html file. Social-media-set.html file can be used as includes when building homepnage.
 
+Fixture and migrations issue
+- <strong>Bug</strong>: Python3 manage.py loaddata fiel.json command not working and showin the error message. I couldn't make a migrations properly.
+- <strong>Fix</strong>: Command found on []() \
+    python manage.py migrate --run-syn
+- <strong>Verdict</strong>: Database synchronized, all unmigrated migrations applied. Fixtures loaded. Working as expected. Beautifully !
+
 ---
 
 ## Deployment
