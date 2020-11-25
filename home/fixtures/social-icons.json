@@ -1,0 +1,38 @@
+[
+    {
+      "pk": 1,
+      "model": "home.Social",
+      "fields": {
+        "title": "Facebook",
+        "icon": "fa-facebook-f",
+        "url": ""
+      }
+    },
+    {
+      "pk": 2,
+      "model": "home.Social",
+      "fields": {
+        "title": "Instagram",
+        "icon": "fa-instagram",
+        "url": ""
+      }
+    },
+    {
+      "pk": 3,
+      "model": "home.Social",
+      "fields": {
+        "title": "Twitter",
+        "icon": "fa-twitter",
+        "url": ""
+      }
+    },
+    {
+      "pk": 4,
+      "model": "home.Social",
+      "fields": {
+        "title": "Snapchat",
+        "icon": "fa-snapchat-ghost",
+        "url": ""
+      }
+    }
+  ]
