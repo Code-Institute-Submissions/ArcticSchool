@@ -1,0 +1,34 @@
+[
+  {
+    "pk": 1,
+    "model": "home.Lesson",
+    "fields": {
+      "title": "Your Safety",
+      "description": "Your safety is a number one on our priority list. We always looking after our students and we make sure they will be safe all the time during the lessons. We want you to have fun and focus on all snow activities with peacfull mind."
+    }
+  },
+  {
+    "pk": 2,
+    "model": "home.Lesson",
+    "fields": {
+      "title": "Our Instructors",
+      "description": "Our instructors are the top instructors of the world. They spent whole life ridin on snowboard on all kind of slopes. They are here to teach you, so you can develope your snowboarding skills and to help you become a top class snowboarder."
+    }
+  },
+  {
+    "pk": 3,
+    "model": "home.Lesson",
+    "fields": {
+      "title": "Your Expectations",
+      "description": "Our crew is here for you 24h/7 days a week to answer your queries. We are constantly changing. We are building new resorts, creating new lessons deals/offer to make it more affordable and fitted for you and your time."
+    }
+  },
+  {
+    "pk": 4,
+    "model": "home.Lesson",
+    "fields": {
+      "title": "Your Money",
+      "description": "Because we all don't want to spend too much money on the things we love. That is why we adapt our offers and change prices to make them more affordable for you. We also have a promotional offers every month to make it even cheaper."
+    }
+  }
+]
