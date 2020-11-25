@@ -1,12 +1,6 @@
-<a href="https://www.facebook.com" target="_blank" class="btn btn-default social-button mr-3 facebook-icon">
-    <i class="fab fa-facebook-f"></i>
+{% for social in socials %}
+<a href="{{ social.url }}"" target=" _blank"
+    class="btn btn-default social-button {% if forloop.last %} mr-0 {% else %} mr-3 {% endif %} {{ social.title }}-icon">
+    <i class="fab {{ social.icon }}"></i>
 </a>
-<a href="https://www.instagram.com/?hl=en" target="_blank" class="btn btn-default social-button mr-3 instagram-icon">
-    <i class="fab fa-instagram"></i>
-</a>
-<a href="https://twitter.com/?lang=en-gb" target="_blank" class="btn btn-default social-button mr-3 twitter-icon">
-    <i class="fab fa-twitter"></i>
-</a>
-<a href="https://www.snapchat.com/l/en-gb/" target="_blank" class="btn btn-default social-button snapchat-icon">
-    <i class="fab fa-snapchat-ghost"></i>
-</a>
+{% endfor %}
