@@ -2,9 +2,40 @@
     height: calc(100vh - 59px);
     margin-top: 59px;
 
-    .card {
-        background-color: #059cd9;
+    .info-container {
+        display: flex;
+        padding: 0.75rem;
+
+        .info {
+            margin-left: 20px;
+        }
+
+        .card-img-top {
+            border-radius: 10px;
+        }
     }
+
+    .card {
+        border-radius: 0;
+        border: none;
+        background-color: #fff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        p {
+            font-size: 0.85rem;
+        }
+
+        .card-body {
+            padding: 0.75rem;
+        }
+
+        .main-card {
+            border-radius: 10px;
+            background-color: #059cd9;
+        }
+    }
+
     .card-img-top {
         width: 150px;
     }
@@ -22,5 +53,14 @@
         border-radius: 25px;
         background-color: #fff;
         margin-left: 10px;
+    }
+
+    .card-text {
+        font-weight: 300;
+    }
+
+    .white-hr {
+        margin-top: 5px;
+        background-color: #fff;
     }
 }
