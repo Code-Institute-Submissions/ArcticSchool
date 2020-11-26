@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'team',
+
+
+    # other
+    'django_countries',
 ]
 
 MIDDLEWARE = [
