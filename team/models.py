@@ -9,11 +9,11 @@ class InstructorProfile(models.Model):
         verbose_name_plural = 'Instructors Profiles'
 
     name = models.CharField(max_length=254)
-    age = models.CharField(max_length=2)
-    about = models.TextField(max_length=1024)
-    riding_style = models.CharField(max_length=100)
-    favourite_trick = models.TextField(max_length=100)
-    qualifications = models.CharField(max_length=254)
+    age = models.CharField(max_length=2,null=True, blank=True)
+    about = models.TextField(null=True, blank=True)
+    style = models.CharField(max_length=100,null=True, blank=True)
+    trick = models.TextField(null=True, blank=True)
+    qualifications = models.TextField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
