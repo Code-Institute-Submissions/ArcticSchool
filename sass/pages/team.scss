@@ -1,0 +1,26 @@
+#team-container {
+    height: calc(100vh - 59px);
+    margin-top: 59px;
+
+    .card {
+        background-color: #059cd9;
+    }
+    .card-img-top {
+        width: 150px;
+    }
+
+    .card-title {
+        margin-bottom: 0.5rem;
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .age {
+        color: #f60f13;
+        border: 5px solid #fff;
+        border-radius: 25px;
+        background-color: #fff;
+        margin-left: 10px;
+    }
+}

@@ -4,8 +4,40 @@
 {% block content %}
 
 <h1 class="d-none">Team</h1>
-<div class="container-fluid">
-
+<div id="team-container">
+    {% for instructor in instructors %}
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 card">
+        <img class="card-img-top" src="{{ instructor.image_url }}" alt="{{ instructor.image }}">
+        <div class="card-body">
+            <h5 class="card-title text-underline">
+                <u>
+                    {{ instructor.name }}
+                </u>
+                <span class="age">
+                    {{ instructor.age }}
+                </span>
+            </h5>
+            <p class="card-title">Style :
+                <span class="style">
+                    {{ instructor.style }}
+                </span>
+                </p>
+                <p class="card-title">Favourite Trick :
+                    <span class="fav-trick">
+                        {{ instructor.trick }}
+                    </span>
+                </p>
+                <p class="card-title">Qualifications :
+                    <span class="qual">
+                        {{ instructor.qualifications }}
+                    </span>
+                </p>
+                <p class="card-text">
+                    {{ instructor.about }}
+                </p>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
