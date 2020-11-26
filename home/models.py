@@ -4,6 +4,10 @@ from django.db import models
 
 
 class Levels(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Level'
+
     class levelChoices(models.TextChoices):
         Level_1 = '1',
         Level_2 = '2',
