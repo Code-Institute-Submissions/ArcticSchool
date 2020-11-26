@@ -2,7 +2,32 @@ from django.contrib import admin
 from .models import Levels, Lesson, Social
 # Register your models here.
 
+class LevelsAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'level',
+        'description',
+    )
 
-admin.site.register(Levels)
-admin.site.register(Lesson)
-admin.site.register(Social)
+    ordering = ('level',)
+
+class LessonsAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'description',
+    )
+
+    ordering = ('title',)
+
+class SocialsAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'icon',
+        'url',
+    )
+
+    ordering = ('title',)
+
+admin.site.register(Levels, LevelsAdmin)
+admin.site.register(Lesson, LessonsAdmin)
+admin.site.register(Social, SocialsAdmin)

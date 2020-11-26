@@ -40,7 +40,7 @@ class Social(models.Model):
 
     title = models.TextField(max_length=40)
     icon = models.CharField(choices=levelChoices.choices,max_length=30)
-    url = models.URLField(max_length=1024, default='#', null=True, blank=True)
+    url = models.URLField(max_length=1024, default='', null=True, blank=True)
 
     def __str__(self):
         return self.title
