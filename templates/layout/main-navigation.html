@@ -12,7 +12,7 @@
                 <a class="nav-link mr-3 {% if request.get_full_path == 'lessons' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">LESSONS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == 'teams' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">TEAM</a>
+                <a class="nav-link mr-3 {% if request.get_full_path == 'teams' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="{% url 'team' %}">TEAM</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == 'resorts' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">RESORTS</a>
