@@ -1,20 +1,43 @@
 #team-container {
-    height: calc(100vh - 59px);
+    height: auto;
     margin-top: 59px;
 
-    .info-container {
+    h4 {
         display: flex;
-        padding: 0.75rem;
+        justify-content: center;
+        color: #059cd9;
+    }
 
-        .info {
-            margin-left: 20px;
+    .our-team-bg {
+        height: 500px;
+        background: url("/media/bg_images/our_team_bg.jpg") center center / cover no-repeat;
+    }
+
+    .about-team-container {
+        color: #059cd9;
+        margin-top: 20px;
+        padding: 1.25rem;
+
+        h2 {
+            color: #059cd9;
         }
 
-        .card-img-top {
-            border-radius: 10px;
+        .about-team {
+            color: #000;
+            font-weight: 300;
         }
     }
 
+    .about-hr {
+        margin-bottom: 30px;
+        border: 2px solid #059cd9;
+        width: 50%;
+    }
+
+    .instructor-cards-container {
+        margin-top: 20px;
+        background-color: #059cd9;
+    }
     .card {
         border-radius: 0;
         border: none;
@@ -25,21 +48,27 @@
         p {
             font-size: 0.85rem;
         }
-
-        .card-body {
-            padding: 0.75rem;
-        }
-
-        .main-card {
-            border-radius: 10px;
-            background-color: #059cd9;
-        }
+    }
+    .card-body {
+        padding: 0.75rem;
     }
 
+    .main-card {
+        border-radius: 10px;
+        background-color: #059cd9;
+    }
+    .info-container {
+        display: flex;
+        padding: 0.75rem;
+    }
     .card-img-top {
         width: 150px;
+        border-radius: 10px;
     }
 
+    .info {
+        margin-left: 20px;
+    }
     .card-title {
         margin-bottom: 0.5rem;
         span {
@@ -54,11 +83,9 @@
         background-color: #fff;
         margin-left: 10px;
     }
-
     .card-text {
         font-weight: 300;
     }
-
     .white-hr {
         margin-top: 5px;
         background-color: #fff;
