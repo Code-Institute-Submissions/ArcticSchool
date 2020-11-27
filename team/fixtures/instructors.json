@@ -3,11 +3,88 @@
     "pk": 1,
     "model": "team.InstructorProfile",
     "fields": {
-      "name": "",
-      "age": "",
+      "name": "Charles Simons",
+      "age": "28",
       "about": "",
-      "image_url": "",
-      "image": ""
+      "image_url": "https://images.unsplash.com/photo-1522056615691-da7b8106c665?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2552&q=80",
+      "image": "charles-simons"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "Jhon Smith",
+      "age": "32",
+      "about": "",
+      "image_url": "https://images.unsplash.com/photo-1478700485868-972b69dc3fc4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80",
+      "image": "jhon-smith"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "Carla Gibson",
+      "age": "29",
+      "about": "",
+      "image_url": "https://images.unsplash.com/photo-1604797515072-a46ea467d1f3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80",
+      "image": "carla-gibson"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "Carl Norton",
+      "age": "31",
+      "about": "",
+      "image_url": "https://images.unsplash.com/photo-1600356604219-84058a7b2bce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2549&q=80",
+      "image": "carl-norton"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "David Bright",
+      "age": "45",
+      "about": "",
+      "image_url": "https://images.unsplash.com/photo-1522445263200-1b4b91053db8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80",
+      "image": "david-bright"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "Garry McGregor",
+      "age": "36",
+      "about": "",
+      "image_url": "https://images.unsplash.com/photo-1547987324-0711739d61dd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80",
+      "image": "garry-mc-gregor"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "Katie Olson",
+      "age": "32",
+      "about": "As you all probably seen my picture above.. yes I am always responding on all your emails, always. Even when I am riding, hehe. As much as I love riding, I also love helping and staying connect with all of you guys. Maybe I am not the best in training, but I can asure you all, I'm the best from this team, to make your life easier, when you booking your lessons or when making queries. Hope to see you soon on snowy slopes!",
+      "image_url": "https://images.unsplash.com/photo-1521702463994-9fa24cae458e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80",
+      "image": "katie-olson"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "team.InstructorProfile",
+    "fields": {
+      "name": "Jake Blake",
+      "age": "40",
+      "about": "",
+      "image_url": "https://images.unsplash.com/photo-1488580923008-6f98dfbd7a25?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80",
+      "image": "jake-blake"
     }
   }
 ]
