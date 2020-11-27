@@ -37,50 +37,53 @@
     .instructor-cards-container {
         margin-top: 20px;
         background-color: #059cd9;
+
+        div[class^="col-"],
+        div[class^=" col-"] {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
     }
     .card {
         border-radius: 0;
         border: none;
-        background-color: #fff;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        background-color: #059cd9;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         p {
             font-size: 0.85rem;
         }
     }
     .card-body {
-        padding: 0.75rem;
+        color: #000;
+        padding: 1rem;
+        h5 {
+            color: #059cd9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .main-card {
         border-radius: 10px;
-        background-color: #059cd9;
+        background-color: #fff;
     }
     .info-container {
         display: flex;
         padding: 0.75rem;
     }
     .card-img-top {
-        width: 150px;
         border-radius: 10px;
-    }
-
-    .info {
-        margin-left: 20px;
-    }
-    .card-title {
-        margin-bottom: 0.5rem;
-        span {
-            font-weight: 300;
-        }
+        height: 100%;
     }
 
     .age {
-        color: #f60f13;
-        border: 5px solid #fff;
+        color: #fff;
+        border: 5px solid #f60f13;
         border-radius: 25px;
-        background-color: #fff;
+        background-color: #f60f13;
         margin-left: 10px;
     }
     .card-text {
