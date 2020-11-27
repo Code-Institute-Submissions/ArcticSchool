@@ -9,9 +9,6 @@ class InstructorProfileAdmin(admin.ModelAdmin):
         'name',
         'age',
         'about',
-        'style',
-        'trick',
-        'qualifications',
         'image_url',
         'image',
     )
