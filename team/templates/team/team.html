@@ -19,12 +19,13 @@
                         when riding!
                     </i>
                 </p>
-                <p class="blue-text text-uppercase">If you still curious who they are, see thier info on cards below.</p>
+                <p class="blue-text text-uppercase">If you still curious who they are, see thier info on cards below.
+                </p>
             </div>
         </div>
     </div>
     <div class="container-fluid">
-        <h4 class="">It's all about us. We're huge familly.</h4>
+        <h4 class="">It's all about us. <br class="br-small">We're huge familly.</h4>
         <div class="container">
             <hr class="about-hr">
         </div>
@@ -38,23 +39,12 @@
                         {% else %}
                         <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
                         {% endif %}
-                        <div class="info">
-                            <p class="card-title">Style
-                                <br><span class="">{{ instructor.style }}</span>
-                            </p>
-                            <p class="card-title">Favourite Trick
-                                <br><span class="">{{ instructor.trick }}</span>
-                            </p>
-                            <p class="card-title">Qualifications
-                                <br><span class="">{{ instructor.qualifications }}</span>
-                            </p>
-                        </div>
                     </div>
                     <div class="card-body">
+                        <hr class="white-hr">
                         <h5 class="card-title text-underline"><u>{{ instructor.name }}</u>
                             <span class="age">{{ instructor.age }}</span></h5>
                         <p class="card-text">{{ instructor.about }}</p>
-                        <hr class="white-hr">
                     </div>
                 </div>
             </div>

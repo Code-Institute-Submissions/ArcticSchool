@@ -1,6 +1,5 @@
 #team-container {
     height: auto;
-    margin-top: 59px;
 
     h4 {
         display: flex;
@@ -8,8 +7,13 @@
         color: #059cd9;
     }
 
+    .br-small {
+        display: none;
+    }
+
     .our-team-bg {
         height: 500px;
+        height: calc(100vh/2.45);
         background: url("/media/bg_images/our_team_bg.jpg") center center / cover no-repeat;
     }
 
@@ -37,12 +41,8 @@
     .instructor-cards-container {
         margin-top: 20px;
         background-color: #059cd9;
-
-        div[class^="col-"],
-        div[class^=" col-"] {
-            padding-left: 10px !important;
-            padding-right: 10px !important;
-        }
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     .card {
         border-radius: 0;
@@ -92,5 +92,16 @@
     .white-hr {
         margin-top: 5px;
         background-color: #fff;
+    }
+}
+
+@media (max-width: 737px) {
+    .br-small {
+        display: flex !important;
+        text-align: center;
+    }
+
+    .about-hr {
+        width: 80% !important;
     }
 }
