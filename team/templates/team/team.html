@@ -45,9 +45,13 @@
                     </div>
                     <div class="card-body">
                         <hr class="white-hr">
-                        <h5 class="card-title text-underline"><u>{{ instructor.name }}</u>
-                            <span class="age">{{ instructor.age }}</span></h5>
-                        <p class="card-text">{{ instructor.about }}</p>
+                        <h5 class="card-title text-underline"><u>{{ instructor.name }}</u><span
+                                class="age">{{ instructor.age }}</span></h5>
+                        <div id="{{ instructor.image }}" class="collapse">
+                            <p class="card-text">{{ instructor.about }}</p>
+                        </div>
+                        <button type="button" class="btn btn-info" data-toggle="collapse"
+                            data-target="#{{ instructor.image }}">Read more</button>
                     </div>
                 </div>
             </div>
