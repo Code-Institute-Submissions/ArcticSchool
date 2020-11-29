@@ -1,0 +1,26 @@
+#booking-banner {
+    padding: 1.25rem;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    h1,
+    h6 {
+        margin: 0;
+    }
+    .boooking-button {
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-danger {
+        min-width: 250px;
+        height: 50px;
+        background-color: #f60f13;
+        opacity: 0.9;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
