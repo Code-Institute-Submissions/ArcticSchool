@@ -13,20 +13,24 @@
 @import "pages/contact.scss";
 @import "pages/account.scss";
 
-// Import Components - Cards
+// Import Components
+//  Cards
 @import "components/cards/level-cards.scss";
 @import "components/cards/our-lessons-cards.scss";
 
-// Import Components - Forms
+// Forms
 @import "components/forms/forms.scss";
 @import "components/forms/login-form.scss";
 @import "components/forms/register-form.scss";
 @import "components/forms/contact-form.scss";
 
-// Import Components - Social Icons
+// Social Icons
 @import "components/social/icons.scss";
 
-// Import Components - Footer
+// Booking Banner
+@import "components/banner/banner.scss";
+
+//  Footer
 @import "components/footer/footer.scss";
 
 // Import Responsive
