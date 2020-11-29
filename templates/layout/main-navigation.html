@@ -15,7 +15,7 @@
                 <a class="nav-link mr-3 {% if request.get_full_path == 'teams' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="{% url 'team' %}">TEAM</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == 'resorts' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">RESORTS</a>
+                <a class="nav-link mr-3 {% if request.get_full_path == 'resorts' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="{% url 'resorts' %}">RESORTS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == 'bookings' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}" href="#">BOOKING</a>
