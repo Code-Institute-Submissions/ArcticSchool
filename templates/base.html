@@ -97,7 +97,10 @@
     {% block content %}
     {% endblock %}
 
-    {% include 'includes/back-to-top.html' %}
+    <!-- Code Snippet from https://codepen.io/joshuamasen/pen/OYaYbL -->
+    <a class="top-link hide" href="" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     {% block postloadjs %}
     {% endblock %}

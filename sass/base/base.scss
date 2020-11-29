@@ -21,3 +21,47 @@ h6 {
 .blue-text {
     color: #059cd9 !important;
 }
+
+/*
+* Back to top button , code snippet from https://codepen.io/joshuamasen/pen/OYaYbL
+*/
+.top-link {
+    transition: all 0.25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1em 0;
+    border-color: #f60f13;
+    border-style: solid;
+    border-width: 2px 0 2px 2px;
+    border-radius: 20% 0 0 20%;
+    padding: 0.25em;
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+
+    &.show {
+        visibility: visible;
+        opacity: .8;
+    }
+
+    &.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: #FFF;
+        opacity: 1;
+    }
+
+    i {
+        color: #f60f13
+    }
+}
