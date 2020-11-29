@@ -1,24 +1,20 @@
 #resorts-container {
+    height: auto;
     background-color: #059cd9;
 
     .resorts-bg {
-        height: 500px;
         height: calc(100vh / 2.45);
         background: url("/media/bg_images/resorts_bg.jpg") center center / cover no-repeat;
     }
 
-    .resort {
-        height: 400px;
-        display: flex;
+    .resorts-container {
+        height: 300px;
+        background: linear-gradient(90deg, #31addf, #1ca5dc, #059cd9);
+        border-top: 3px solid #31addf;
+        border-bottom: 3px solid #059cd9;
     }
 
-    .resort-image {
-        margin-left: 30;
-        max-height: 300px;
-        height: auto;
-
-        img {
-            height: 100%;
-        }
+    .reverse-background {
+        background: linear-gradient(90deg, #059cd9, #1ca5dc, #31addf);
     }
 }
