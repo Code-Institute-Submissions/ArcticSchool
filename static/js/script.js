@@ -31,4 +31,30 @@ $(document).ready(function () {
 			}, 800);
 		}
 	});
+
+	/**
+	 * This function will show the 'go to the top' button and scroll smoothly to the top of the page when button is clicked
+	 * Code Snippet from https://codepen.io/joshuamasen/pen/OYaYbL
+	 */
+	const scrollToTopButton = document.getElementById('back-to-top');
+	const scrollFunc = () => {
+		let y = window.scrollY;
+		if (y > 0) {
+			scrollToTopButton.className = "top-link show";
+		} else {
+			scrollToTopButton.className = "top-link hide";
+		}
+	};
+	window.addEventListener("scroll", scrollFunc);
+	const scrollToTop = () => {
+		const c = document.documentElement.scrollTop || document.body.scrollTop;
+		if (c > 0) {
+			window.requestAnimationFrame(scrollToTop);
+			window.scrollTo(0, c - c / 10);
+		}
+	};
+	scrollToTopButton.onclick = function (e) {
+		e.preventDefault();
+		scrollToTop();
+	}
 });
