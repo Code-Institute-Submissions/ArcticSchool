@@ -12,9 +12,6 @@ class ResortsAdmin(admin.ModelAdmin):
         'levels',
         'styles',
         'instructors',
-        'map_link',
-        'image_url',
-        'image',
     )
 
     ordering = ('name',)
