@@ -1,17 +1,47 @@
 #resorts-container {
     height: auto;
-    background-color: #059cd9;
+    background-color: #fff;
 
     .resorts-bg {
         height: calc(100vh / 2.45);
         background: url("/media/bg_images/resorts_bg.jpg") center center / cover no-repeat;
     }
 
+    .about-resorts-container {
+        margin-top: 20px;
+        padding: 1.25rem;
+        flex-direction: column;
+
+        h2,
+        h5 {
+            color: #059cd9;
+
+            span {
+                color: #f60f13;
+            }
+        }
+
+        .about-resorts {
+            font-weight: 300;
+
+            .about-resorts-text {
+                color: #000;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
     .resorts-container {
-        height: 300px;
         background: linear-gradient(90deg, #31addf, #1ca5dc, #059cd9);
         border-top: 3px solid #31addf;
         border-bottom: 3px solid #059cd9;
+        padding: 1.25rem;
+
+        img {
+            max-width: 100%;
+            border: 3px solid #FFF;
+            border-radius: 25px;
+        }
     }
 
     .reverse-background {

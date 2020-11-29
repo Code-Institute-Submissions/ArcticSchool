@@ -9,22 +9,27 @@
     <div class="resorts-bg"></div>
     <div class="container mt-3">
         <!-- -->
-        <div class="row about-resorts-container justify-content-center">
-            <h2>Our Resorts</h2>
+        <div class="row about-resorts-container">
+            <h2 class="d-flex justify-content-center">Our Resorts</h2>
             <div class="about-resorts">
-                <p class="abou-resorts-text">
-                    <i>We are trying to increase number of our resorts. We want to provide  the best locations and the most affordable prices for you. We are currently planning to build our 3rd, the biggest resort.
+                <p class="about-resorts-text">
+                    <i>We are trying to increase number of our resorts. We want to provide the best locations and the
+                        most affordable prices for you. We are currently planning to build our 3rd, the biggest resort.
                     </i>
                 </p>
             </div>
+            <h5>We are currently running
+                <span>{{ resorts.count }}</span>
+                resort{% if resorts.count > 1 %}s{% endif %}, have a look.
+            </h5>
         </div>
     </div>
     <div class="container-fluid">
-        <h4 class="">We are currently running {{ resorts.count }} resort{% if resorts.count > 1 %}s{% endif %}</h4>
         {% for resort in resorts %}
         <!--  -->
         <div class="row resorts-container {% if forloop.counter|divisibleby:2 %}reverse-background{% endif %}">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}">
             </div>
             <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
             </div>
