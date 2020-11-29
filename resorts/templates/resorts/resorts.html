@@ -7,6 +7,47 @@ a{% extends 'base.html' %}
 <h1 class="d-none">Resorts</h1>
 <div id="resorts-container">
     <div class="resorts-bg"></div>
+    <div class="resorts">
+        <div class="container-fluid">
+            <div class="about-resorts">
+                <h2 class="">Our Resorts</h2>
+            </div>
+            {% for resort in resorts %}
+            {% if forloop.counter|divisibleby:1 %}
+            <div class="row">
+                <div class="resort {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
+                    <div class="resort-image">
+                        <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}-image">
+                    </div>
+                    <div class="resort-info">
+                        {{ resort.name }}
+                        {{ resort.country }}
+                        {{ resort.street_address }}
+                        {{ resort.about }}
+                    </div>
+                    <div class="resort-footer">
+                        <p class="">
+                            <span class="">{{ resort.levels }}
+                            </span>
+                        </p>
+                        <p class="">
+                            <span class="">{{ resort.styles }}
+                            </span>
+                        </p>
+                        <p class="">
+                            <span class="">{{ resort.instructors }}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {% else %}
+
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
 <!-- Footer -->
 {% include 'layout/footer.html' %}

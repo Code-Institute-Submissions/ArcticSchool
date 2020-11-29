@@ -1,7 +1,24 @@
 #resorts-container {
+    background-color: #059cd9;
+
     .resorts-bg {
         height: 500px;
         height: calc(100vh / 2.45);
         background: url("/media/bg_images/resorts_bg.jpg") center center / cover no-repeat;
+    }
+
+    .resort {
+        height: 400px;
+        display: flex;
+    }
+
+    .resort-image {
+        margin-left: 30;
+        max-height: 300px;
+        height: auto;
+
+        img {
+            height: 100%;
+        }
     }
 }
