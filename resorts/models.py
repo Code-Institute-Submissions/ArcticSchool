@@ -17,8 +17,7 @@ class Resort(models.Model):
         default="Type styles as example: Freestyle Riding, Carving, Off-Psite, etc.")
     instructors = models.IntegerField(default=0)
     map_link = models.URLField(max_length=1024, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to="resorts",null=True, blank=True)
 
     def __str__(self):
         return self.name
