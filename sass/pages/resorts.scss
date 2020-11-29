@@ -1,0 +1,7 @@
+#resorts-container {
+    .resorts-bg {
+        height: 500px;
+        height: calc(100vh / 2.45);
+        background: url("/media/bg_images/resorts_bg.jpg") center center / cover no-repeat;
+    }
+}
