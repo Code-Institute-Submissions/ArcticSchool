@@ -29,36 +29,41 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <h4 class="">It's all about us. <br class="br-small">We're huge family.</h4>
-        <div class="container">
-            <hr class="about-hr">
+    <div class="container-fluid instructor-cards-container">
+        <div class="row white-box">
+            <h4 class="">It's all about us. <br class="br-small">We're huge family.</h4>
+            <div class="container">
+                <hr class="about-hr">
+            </div>
         </div>
         <!-- Team cards container -->
-        <div class="row instructor-cards-container">
-            {% for instructor in instructors %}
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 card">
-                <div class="main-card shadow-sm">
-                    <div class="info-container">
-                        {% if instructor.image %}
-                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ instructor.image }}" alt="{{ instructor.image }}">
-                        {% else %}
-                        <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
-                        {% endif %}
-                    </div>
-                    <div class="card-body">
-                        <hr class="white-hr">
-                        <h5 class="card-title text-underline"><u>{{ instructor.name }}</u><span
-                                class="age">{{ instructor.age }}</span></h5>
-                        <div id="readmore-button-{{ forloop.counter }}" class="collapse">
-                            <p class="card-text">{{ instructor.about }}</p>
+        <div class="container card-container">
+            <div class="row">
+                {% for instructor in instructors %}
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 card">
+                    <div class="main-card shadow-sm">
+                        <div class="info-container">
+                            {% if instructor.image %}
+                            <img class="card-img-top" src="{{ MEDIA_URL }}{{ instructor.image }}"
+                                alt="{{ instructor.image }}">
+                            {% else %}
+                            <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                            {% endif %}
                         </div>
-                        <button type="button" class="btn btn-info" data-toggle="collapse"
-                            data-target="#readmore-button-{{ forloop.counter }}">Read more</button>
+                        <div class="card-body">
+                            <hr class="white-hr">
+                            <h5 class="card-title text-underline"><u>{{ instructor.name }}</u><span
+                                    class="age">{{ instructor.age }}</span></h5>
+                            <div id="readmore-button-{{ forloop.counter }}" class="collapse">
+                                <p class="card-text">{{ instructor.about }}</p>
+                            </div>
+                            <button type="button" class="btn btn-info" data-toggle="collapse"
+                                data-target="#readmore-button-{{ forloop.counter }}">Read more</button>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>

@@ -42,11 +42,22 @@
     }
 
     .instructor-cards-container {
-        margin-top: 20px;
         background-color: #059cd9;
+    }
+
+    .white-box {
+        margin-top: 20px;
+        background: white;
+        flex-direction: column;
+    }
+
+    .card-container {
         padding-top: 40px;
         padding-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
     }
+
     .card {
         border-radius: 0;
         border: none;
