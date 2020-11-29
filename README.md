@@ -276,6 +276,11 @@ Fixture and migrations issue
     python manage.py migrate --run-syn
 - <strong>Verdict</strong>: Database synchronized, all unmigrated migrations applied. Fixtures loaded. Working as expected. Beautifully !
 
+Team cards - read more button
+- <strong>Bug</strong>: When button is clicked on random card, description on all cards is shoew.
+- <strong>Fix</strong>: Forloop iterate number added to ID and target ID -  '{{ forloop.counter }}'
+- <strong>Verdict</strong>: Dropdown description field shows only on card where button was clicked. Work as expected!
+
 ---
 
 ## Deployment
