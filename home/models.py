@@ -3,11 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Levels(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Level'
-
+class LevelCard(models.Model):
     class levelChoices(models.TextChoices):
         Level_1 = '1',
         Level_2 = '2',
@@ -23,7 +19,7 @@ class Levels(models.Model):
         return self.title
 
 
-class Lesson(models.Model):
+class LessonCard(models.Model):
     title = models.TextField(max_length=40)
     description = models.TextField(max_length=130)
 
@@ -31,7 +27,7 @@ class Lesson(models.Model):
         return self.title
 
 
-class Social(models.Model):
+class SocialIcon(models.Model):
     class levelChoices(models.TextChoices):
         Facebook = 'fa-facebook-f',
         YouTube = 'fa-youtube',
@@ -43,7 +39,7 @@ class Social(models.Model):
         Vimeo = 'fa-viemo-v'
 
     title = models.TextField(max_length=40)
-    icon = models.CharField(choices=levelChoices.choices,max_length=30)
+    icon = models.CharField(choices=levelChoices.choices, max_length=30)
     url = models.URLField(max_length=1024, default='', null=True, blank=True)
 
     def __str__(self):

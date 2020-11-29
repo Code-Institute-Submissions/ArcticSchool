@@ -9,8 +9,6 @@ class InstructorProfileAdmin(admin.ModelAdmin):
         'name',
         'age',
         'about',
-        'image_url',
-        'image',
     )
 
     ordering = ('name',)

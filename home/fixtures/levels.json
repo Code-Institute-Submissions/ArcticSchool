@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "home.Levels",
+    "model": "home.LevelCard",
     "fields": {
       "title": "Beginner",
       "level": 1,
@@ -10,7 +10,7 @@
   },
   {
     "pk": 2,
-    "model": "home.Levels",
+    "model": "home.LevelCard",
     "fields": {
       "title": "Intermediate",
       "level": 2,
@@ -19,7 +19,7 @@
   },
   {
     "pk": 3,
-    "model": "home.Levels",
+    "model": "home.LevelCard",
     "fields": {
       "title": "Advance",
       "level": 3,
@@ -28,7 +28,7 @@
   },
   {
     "pk": 4,
-    "model": "home.Levels",
+    "model": "home.LevelCard",
     "fields": {
       "title": "Expert",
       "level": 4,

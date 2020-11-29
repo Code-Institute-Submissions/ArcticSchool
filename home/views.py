@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Lesson, Levels, Social
+from .models import LevelCard, LessonCard, SocialIcon
 
 # Create your views here.
 
@@ -7,9 +7,9 @@ from .models import Lesson, Levels, Social
 def index(request):
     """ A view to return index page """
 
-    lesson = Lesson.objects.all()
-    levels = Levels.objects.all()
-    social = Social.objects.all()
+    lesson = LessonCard.objects.all()
+    levels = LevelCard.objects.all()
+    social = SocialIcon.objects.all()
 
     context = {
         'lessons': lesson,

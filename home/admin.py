@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Levels, Lesson, Social
+from .models import LevelCard, LessonCard, SocialIcon
 # Register your models here.
 
 class LevelsAdmin(admin.ModelAdmin):
@@ -28,6 +28,6 @@ class SocialsAdmin(admin.ModelAdmin):
 
     ordering = ('title',)
 
-admin.site.register(Levels, LevelsAdmin)
-admin.site.register(Lesson, LessonsAdmin)
-admin.site.register(Social, SocialsAdmin)
+admin.site.register(LevelCard, LevelsAdmin)
+admin.site.register(LessonCard, LessonsAdmin)
+admin.site.register(SocialIcon, SocialsAdmin)
