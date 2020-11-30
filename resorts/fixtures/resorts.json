@@ -1,0 +1,41 @@
+[
+    {
+        "pk":1,
+        "model":"resorts.Resort",
+        "fields":{
+            "name":"Avoriaz",
+            "country":"France",
+            "about":"",
+            "levels":"Intermediate, Advance, Expert",
+            "styles":"",
+            "instructors":"2",
+            "image":""
+        }
+    },
+    {
+        "pk":2,
+        "model":"resorts.Resort",
+        "fields":{
+            "name":"Davos",
+            "country":"Switzerland",
+            "about":"",
+            "levels":"Beinner, Intermediate, Advance",
+            "styles":"",
+            "instructors":"4",
+            "image":""
+        }
+    },
+    {
+        "pk":3,
+        "model":"resorts.Resort",
+        "fields":{
+            "name":"Les Gets",
+            "country":"France",
+            "about":"",
+            "levels":"Beinner, Intermediate, Advance",
+            "styles":"",
+            "instructors":"2",
+            "image":""
+        }
+    }
+]
