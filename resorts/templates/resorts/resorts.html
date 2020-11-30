@@ -37,18 +37,21 @@
                         <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
                         {% endif %}
                     </div>
-                    <div
-                        class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8 {% if forloop.counter|divisibleby:2 %}text-left{% else %}text-right{% endif %}">
+                    <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
                         <div class="resort-info">
                             <div class="main-info">
-                                <h3><u>{{ resort.name }}</u></h3>
-                                <p>Address : {{ resort.country.name }}</p>
-                                <p class="">{{ resort.about }}</p>
+                                <h3><u>{{ resort.name }}</u> <span>({{ resort.country.name }})</span></h3>
+                                <p class="">Few words about resort : <br><span>{{ resort.about }}</span></p>
+                                <p class="">Resort is open : <span>{{ resort.open_season }}</span></p>
+                                <p class="">Top altitude : <span>{{ resort.top_altitude }}</span></p>
+                                <p class="">Bottom altitude : <span>{{ resort.bottom_altitude }}</span></p>
+                                <p class="">Resort altitude : <span>{{ resort.resort_altitude }}</span></p>
                             </div>
                             <div class="bottom-info">
-                                <p class="bottom-info-title"><span>{{ resort.levels }}</span></p>
-                                <p class="bottom-info-title"><span>{{ resort.styles }}</span></p>
-                                <p class="bottom-info-title"><span>{{ resort.instructors }}</span></p>
+                                <p class="bottom-info-title">Instructors in resort :
+                                    <span>{{ resort.instructors }}</span></p>
+                                <p class="bottom-info-title">Recommended levels :
+                                    <span>{{ resort.levels }}</span></p>
                             </div>
                         </div>
                     </div>
