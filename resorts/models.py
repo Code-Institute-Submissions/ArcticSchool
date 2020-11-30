@@ -7,15 +7,16 @@ from django_countries.fields import CountryField
 
 class Resort(models.Model):
 
-    name = models.CharField(max_length=120, default='Resort Name')
+    name = models.CharField(max_length=120)
     country = CountryField(blank_label="(Select Country)")
-    about = models.TextField(default="Some text about resort")
-    levels = models.TextField(
-        default="Type levels as example: Beginner, Intermediate, Advance, etc.")
-    styles = models.TextField(
-        default="Type styles as example: Freestyle Riding, Carving, Off-Psite, etc.")
+    about = models.TextField()
+    open_season = models.CharField(max_length=120, default="December - April")
+    top_altitude = models.IntegerField(default=0)
+    bottom_altitude = models.IntegerField(default=0)
+    resort_altitude = models.IntegerField(default=0)
+    levels = models.TextField()
     instructors = models.IntegerField(default=0)
-    image = models.ImageField(upload_to="resorts",null=True, blank=True)
+    image = models.ImageField(upload_to="resorts", null=True, blank=True)
 
     def __str__(self):
         return self.name

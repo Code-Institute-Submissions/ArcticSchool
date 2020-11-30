@@ -8,9 +8,13 @@ class ResortsAdmin(admin.ModelAdmin):
         'name',
         'country',
         'about',
+        'open_season',
+        'top_altitude',
+        'bottom_altitude',
+        'resort_altitude',
         'levels',
-        'styles',
         'instructors',
+        'image',
     )
 
     ordering = ('name',)
