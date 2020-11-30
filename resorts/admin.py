@@ -7,7 +7,6 @@ class ResortsAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'country',
-        'street_address',
         'about',
         'levels',
         'styles',

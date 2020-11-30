@@ -28,10 +28,31 @@
         {% for resort in resorts %}
         <!--  -->
         <div class="row resorts-container {% if forloop.counter|divisibleby:2 %}reverse-background{% endif %}">
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-                <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}">
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
+            <div class="container p-0">
+                <div class="row {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 image-container">
+                        {% if resort.image %}
+                        <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}">
+                        {% else %}
+                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                        {% endif %}
+                    </div>
+                    <div
+                        class="col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8 {% if forloop.counter|divisibleby:2 %}text-left{% else %}text-right{% endif %}">
+                        <div class="resort-info">
+                            <div class="main-info">
+                                <h3><u>{{ resort.name }}</u></h3>
+                                <p>Address : {{ resort.country.name }}</p>
+                                <p class="">{{ resort.about }}</p>
+                            </div>
+                            <div class="bottom-info">
+                                <p class="bottom-info-title"><span>{{ resort.levels }}</span></p>
+                                <p class="bottom-info-title"><span>{{ resort.styles }}</span></p>
+                                <p class="bottom-info-title"><span>{{ resort.instructors }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         {% endfor %}

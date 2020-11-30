@@ -9,7 +9,6 @@ class Resort(models.Model):
 
     name = models.CharField(max_length=120, default='Resort Name')
     country = CountryField(blank_label="(Select Country)")
-    street_address = models.CharField(max_length=80)
     about = models.TextField(default="Some text about resort")
     levels = models.TextField(
         default="Type levels as example: Beginner, Intermediate, Advance, etc.")
