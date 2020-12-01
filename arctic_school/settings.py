@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home',
     'team',
     'resorts',
+    'lessons',
 
 ]
 
