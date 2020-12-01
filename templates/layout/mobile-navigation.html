@@ -20,7 +20,7 @@
         <ul class="nav navbar-nav mt-3 ml-auto">
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == 'lessons' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                    href="#">LESSONS</a>
+                    href="{% url 'lessons' %}">LESSONS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == 'teams' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"

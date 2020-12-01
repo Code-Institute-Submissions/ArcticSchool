@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == 'lessons' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="#">LESSONS</a>
+                <a class="nav-link mr-3 {% if request.get_full_path == 'lessons' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="{% url 'lessons' %}">LESSONS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == 'teams' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}" href="{% url 'team' %}">TEAM</a>
