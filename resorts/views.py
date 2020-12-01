@@ -5,7 +5,7 @@ from home.models import SocialIcon
 
 
 def resorts(request):
-    """ A view to return team page """
+    """ A view to return resorts page """
 
     resorts = Resort.objects.all()
     social =  SocialIcon.objects.all()
