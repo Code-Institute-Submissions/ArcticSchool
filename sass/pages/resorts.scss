@@ -44,12 +44,31 @@
 
         img {
             max-width: 100%;
-            border: 3px solid #fff;
+            border: 10px solid #fff;
             border-radius: 25px;
         }
     }
 
     .reverse-background {
         background: linear-gradient(90deg, #059cd9, #1ca5dc, #31addf);
+    }
+
+    .resort-info {
+
+        h3 {
+            margin-top: 20px;
+            span {
+                font-size: 1rem;
+            }
+        }
+
+        p{
+            font-weight: 500;
+
+            span {
+                font-style: italic;
+                font-weight: 300;
+            }
+        }
     }
 }
