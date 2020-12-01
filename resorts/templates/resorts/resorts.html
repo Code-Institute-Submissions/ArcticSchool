@@ -3,12 +3,12 @@
 
 {% block content %}
 
-<!--  -->
+<!--  Main resorts container -->
 <h1 class="d-none">Resorts</h1>
 <div id="resorts-container">
     <div class="resorts-bg"></div>
     <div class="container mt-3">
-        <!-- -->
+        <!-- About resorts container -->
         <div class="row about-resorts-container">
             <h2 class="d-flex justify-content-center">Our Resorts</h2>
             <div class="about-resorts">
@@ -26,7 +26,7 @@
     </div>
     <div class="container-fluid">
         {% for resort in resorts %}
-        <!--  -->
+        <!-- Resort section -->
         <div class="row resorts-container {% if forloop.counter|divisibleby:2 %}reverse-background{% endif %}">
             <div class="container p-0">
                 <div class="row {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
