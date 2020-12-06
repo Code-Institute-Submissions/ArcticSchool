@@ -8,6 +8,8 @@ class CategoriesAdmin(admin.ModelAdmin):
         'friendly_name',
     )
 
+    ordering = ('name',)
+
 
 class LessonsAdmin(admin.ModelAdmin):
     list_display = (
@@ -22,6 +24,8 @@ class LessonsAdmin(admin.ModelAdmin):
         'price',
         'image'
     )
+
+    ordering = ('name',)
 
 
 admin.site.register(Category, CategoriesAdmin)
