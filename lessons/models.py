@@ -24,7 +24,7 @@ class Lesson(models.Model):
     end_date = models.DateField()
     start_time = models.TimeField(auto_now=False, auto_now_add=False)
     end_time = models.TimeField(auto_now=False, auto_now_add=False)
-    participants  =models.IntegerField(max_length=3, default='')
+    participants  =models.IntegerField()
     place = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)
