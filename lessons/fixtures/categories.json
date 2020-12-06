@@ -1,0 +1,66 @@
+[
+  {
+    "pk": 1,
+    "model": "lessons.category",
+    "fields": {
+      "name": "beginner",
+      "friendly_name": "Beginner"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "lessons.category",
+    "fields": {
+      "name": "intermediate",
+      "friendly_name": "Intermediate"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "lessons.category",
+    "fields": {
+      "name": "advance",
+      "friendly_name": "Advance"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "lessons.category",
+    "fields": {
+      "name": "expert",
+      "friendly_name": "Expert"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "lessons.category",
+    "fields": {
+      "name": "hot_deals",
+      "friendly_name": "Hot Deals"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "lessons.category",
+    "fields": {
+      "name": "family",
+      "friendly_name": "Family Offers"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "lessons.category",
+    "fields": {
+      "name": "group",
+      "friendly_name": "Groups"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "lessons.category",
+    "fields": {
+      "name": "elderly",
+      "friendly_name": "Elderly"
+    }
+  }
+]
