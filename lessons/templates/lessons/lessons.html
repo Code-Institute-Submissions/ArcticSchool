@@ -1,8 +1,46 @@
-a{% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 
 <!-- Main lessons container -->
+<h1 class="d-none">Lessons</h1>
+<div id="lessons-container">
+
+    <!-- Lessons categories container - minimum 4 for categories/blocks
+'please keep even number format of categories, to present blocks in bueatifull way'-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block">
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nulla sapiente autem
+                    quo,
+                    itaque quam rem earum placeat maiores corporis temporibus pariatur commodi aperiam ipsam. Neque
+                    deserunt
+                    quod nulla repellendus.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block">
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nulla sapiente autem
+                    quo,
+                    itaque quam rem earum placeat maiores corporis temporibus pariatur commodi aperiam ipsam. Neque
+                    deserunt
+                    quod nulla repellendus.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block">
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nulla sapiente autem
+                    quo,
+                    itaque quam rem earum placeat maiores corporis temporibus pariatur commodi aperiam ipsam. Neque
+                    deserunt
+                    quod nulla repellendus.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block">
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nulla sapiente autem
+                    quo,
+                    itaque quam rem earum placeat maiores corporis temporibus pariatur commodi aperiam ipsam. Neque
+                    deserunt
+                    quod nulla repellendus.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
