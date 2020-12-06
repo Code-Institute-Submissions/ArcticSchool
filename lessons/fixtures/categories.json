@@ -4,7 +4,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "beginner",
-      "friendly_name": "Beginner"
+      "friendly_name": "Beginner",
+      "promo_text": ""
     }
   },
   {
@@ -12,7 +13,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "intermediate",
-      "friendly_name": "Intermediate"
+      "friendly_name": "Intermediate",
+      "promo_text": ""
     }
   },
   {
@@ -20,7 +22,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "advance",
-      "friendly_name": "Advance"
+      "friendly_name": "Advance",
+      "promo_text": ""
     }
   },
   {
@@ -28,7 +31,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "expert",
-      "friendly_name": "Expert"
+      "friendly_name": "Expert",
+      "promo_text": ""
     }
   },
   {
@@ -36,7 +40,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "hot_deals",
-      "friendly_name": "Hot Deals"
+      "friendly_name": "Hot Deals",
+      "promo_text": ""
     }
   },
   {
@@ -44,7 +49,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "family",
-      "friendly_name": "Family Offers"
+      "friendly_name": "Family Offers",
+      "promo_text": ""
     }
   },
   {
@@ -52,7 +58,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "group",
-      "friendly_name": "Groups"
+      "friendly_name": "Groups",
+      "promo_text": ""
     }
   },
   {
@@ -60,7 +67,8 @@
     "model": "lessons.Category",
     "fields": {
       "name": "elderly",
-      "friendly_name": "Elderly"
+      "friendly_name": "Elderly",
+      "promo_text": ""
     }
   }
 ]
