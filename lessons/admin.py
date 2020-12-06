@@ -21,8 +21,7 @@ class LessonsAdmin(admin.ModelAdmin):
         'end_time',
         'participants',
         'place',
-        'price',
-        'image'
+        'price'
     )
 
     ordering = ('name',)
