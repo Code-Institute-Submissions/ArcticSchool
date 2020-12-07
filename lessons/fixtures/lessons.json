@@ -3,15 +3,16 @@
     "pk": 1,
     "model": "model.Lesson",
     "fields": {
-      "category": "",
       "name": "",
+      "category": "",
+      "level":"",
       "description": "",
       "start_date": "",
       "end_date": "",
       "start_time": "",
       "end_time": "",
       "participants": "",
-      "place": "",
+      "resort": "",
       "price": "",
       "image": ""
     }
