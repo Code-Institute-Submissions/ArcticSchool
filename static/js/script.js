@@ -57,4 +57,12 @@ $(document).ready(function () {
 		e.preventDefault();
 		scrollToTop();
 	}
+
+
+	/**
+	 * This function will count number of existing classes on the page to determine divider for container height
+	 */
+	let categoryClass = $('div .category-block').length;
+	categoryClass = categoryClass/2
+	$("div .category-block").css( { height: `calc((100vh - 59px) / ${categoryClass})` } );
 });
