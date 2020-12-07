@@ -3,8 +3,8 @@
     "pk": 1,
     "model": "lessons.Category",
     "fields": {
-      "name": "beginner",
-      "friendly_name": "Beginner",
+      "name": "childrens",
+      "friendly_name": "Children",
       "promo_text": ""
     }
   },
@@ -12,8 +12,8 @@
     "pk": 2,
     "model": "lessons.Category",
     "fields": {
-      "name": "intermediate",
-      "friendly_name": "Intermediate",
+      "name": "adult",
+      "friendly_name": "Adult",
       "promo_text": ""
     }
   },
@@ -21,8 +21,8 @@
     "pk": 3,
     "model": "lessons.Category",
     "fields": {
-      "name": "advance",
-      "friendly_name": "Advance",
+      "name": "elderly",
+      "friendly_name": "Elderly",
       "promo_text": ""
     }
   },
@@ -30,8 +30,8 @@
     "pk": 4,
     "model": "lessons.Category",
     "fields": {
-      "name": "expert",
-      "friendly_name": "Expert",
+      "name": "family_friends",
+      "friendly_name": "Family & Friends",
       "promo_text": ""
     }
   },
@@ -39,8 +39,8 @@
     "pk": 5,
     "model": "lessons.Category",
     "fields": {
-      "name": "hot_deals",
-      "friendly_name": "Hot Deals",
+      "name": "expert_riders",
+      "friendly_name": "Expert Riders",
       "promo_text": ""
     }
   },
@@ -48,8 +48,8 @@
     "pk": 6,
     "model": "lessons.Category",
     "fields": {
-      "name": "family",
-      "friendly_name": "Family Offers",
+      "name": "off_psite",
+      "friendly_name": "Off-Psite",
       "promo_text": ""
     }
   },
@@ -58,7 +58,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "group",
-      "friendly_name": "Groups",
+      "friendly_name": "Group Lessons",
       "promo_text": ""
     }
   },
@@ -66,8 +66,8 @@
     "pk": 8,
     "model": "lessons.Category",
     "fields": {
-      "name": "elderly",
-      "friendly_name": "Elderly",
+      "name": "super_offers",
+      "friendly_name": "Super Offers",
       "promo_text": ""
     }
   }
