@@ -4,5 +4,16 @@
 }
 
 .category-block {
-    height: calc((100vh - 59px)/2);
+    height: calc((100vh - 59px) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+    }
+
+    h1 {
+        color: #059cd9;
+        margin-bottom: 0;
+    }
 }

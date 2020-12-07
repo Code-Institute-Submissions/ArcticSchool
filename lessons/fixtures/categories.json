@@ -5,6 +5,7 @@
     "fields": {
       "name": "childrens",
       "friendly_name": "Children",
+      "order": 1,
       "promo_text": ""
     }
   },
@@ -14,6 +15,7 @@
     "fields": {
       "name": "adult",
       "friendly_name": "Adult",
+      "order": 2,
       "promo_text": ""
     }
   },
@@ -23,6 +25,7 @@
     "fields": {
       "name": "elderly",
       "friendly_name": "Elderly",
+      "order": 3,
       "promo_text": ""
     }
   },
@@ -32,6 +35,7 @@
     "fields": {
       "name": "family_friends",
       "friendly_name": "Family & Friends",
+      "order": 4,
       "promo_text": ""
     }
   },
@@ -41,6 +45,7 @@
     "fields": {
       "name": "expert_riders",
       "friendly_name": "Expert Riders",
+      "order": 5,
       "promo_text": ""
     }
   },
@@ -50,6 +55,7 @@
     "fields": {
       "name": "off_psite",
       "friendly_name": "Off-Psite",
+      "order": 6,
       "promo_text": ""
     }
   },
@@ -59,6 +65,7 @@
     "fields": {
       "name": "group",
       "friendly_name": "Group Lessons",
+      "order": 7,
       "promo_text": ""
     }
   },
@@ -68,6 +75,7 @@
     "fields": {
       "name": "super_offers",
       "friendly_name": "Super Offers",
+      "order": 8,
       "promo_text": ""
     }
   }
