@@ -13,15 +13,16 @@ class CategoriesAdmin(admin.ModelAdmin):
 
 class LessonsAdmin(admin.ModelAdmin):
     list_display = (
-        'category',
         'name',
+        'category',
+        'level',
+        'resort',
+        'participants',
         'start_date',
         'end_date',
         'start_time',
         'end_time',
-        'participants',
-        'place',
-        'price'
+        'price',
     )
 
     ordering = ('name',)
