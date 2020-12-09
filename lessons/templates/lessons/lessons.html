@@ -13,7 +13,10 @@
         <div class="row">
             {% for category in categories.all|dictsort:"order" %}
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block">
-                <h1 class="category-name">{{ category.friendly_name }}</h1>
+                <a href="{% url 'category_result' category.name %}">
+                    <h1 class="category-name">{{ category.friendly_name }}</h1>
+                    <p class="promo-display">{{ category.promo_text }}</p>
+                </a>
             </div>
             {% endfor %}
         </div>
