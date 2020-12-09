@@ -5,15 +5,44 @@
 
 .category-block {
     height: calc((100vh - 59px) / 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    border: 1px solid red;
 
-    &:hover {
-    }
+    a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-    h1 {
-        color: #059cd9;
-        margin-bottom: 0;
+        h1 {
+            font-size: 2.25rem;
+            color: #059cd9;
+            margin: 0;
+        }
+
+        .promo-display{
+            display: none;
+        }
+
+        &:hover {
+            background-color: red;
+            text-decoration: none;
+
+            h1 {
+                color: #fff !important;
+            }
+
+            .promo-display{
+                color: #fff;
+                display: block;
+            }
+        }
     }
+}
+
+.cat-result-contianer {
+    margin-top: 100px;
+    color: #000;
 }

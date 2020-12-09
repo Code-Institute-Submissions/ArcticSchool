@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        {% for lesson in lessons %}
+        <div class="cat-result-contianer mr-2">
+            <p class=""> {{ lesson.name }} </p>
+            <p class=""> {{ lesson.level }} </p>
+            <p class=""> {{ lesson.description }} </p>
+            <p class=""> {{ lesson.start_date }} </p>
+            <p class=""> {{ lesson.end_date }} </p>
+            <p class=""> {{ lesson.start_time }} </p>
+            <p class=""> {{ lesson.end_time }} </p>
+            <p class=""> {{ lesson.participants }} </p>
+            <p class=""> {{ lesson.resort }} </p>
+            <p class=""> £ {{ lesson.price }} </p>
+            <p class=""> {{ lesson.image }} </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
