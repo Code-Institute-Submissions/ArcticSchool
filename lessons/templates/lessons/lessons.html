@@ -12,11 +12,15 @@
     <div class="container-fluid">
         <div class="row">
             {% for category in categories.all|dictsort:"order" %}
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block">
-                <a href="{% url 'category_result' category.name %}">
-                    <h1 class="category-name">{{ category.friendly_name }}</h1>
-                    <p class="promo-display">{{ category.promo_text }}</p>
-                </a>
+            <div
+                class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 category-block-{% if forloop.counter|divisibleby:2 %}e{% endif %}">
+                <div class="cat-card shadow-sm">
+                    <a href="{% url 'category_result' category.name %}">
+                        <h1 class="category-name"><u>{{ category.friendly_name }}</u></h1>
+                        <p class="{% if category.promo_text|length == 0 %}d-none{% else %}promo-display{% endif %}">
+                            {{ category.promo_text }}</p>
+                    </a>
+                </div>
             </div>
             {% endfor %}
         </div>
