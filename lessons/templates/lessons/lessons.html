@@ -17,8 +17,6 @@
                 <div class="cat-card shadow-sm">
                     <a href="{% url 'category_result' category.name %}">
                         <h1 class="category-name"><u>{{ category.friendly_name }}</u></h1>
-                        <p class="{% if category.promo_text|length == 0 %}d-none{% else %}promo-display{% endif %}">
-                            {{ category.promo_text }}</p>
                     </a>
                 </div>
             </div>

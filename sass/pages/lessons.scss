@@ -31,10 +31,6 @@
             margin: 0;
         }
 
-        .promo-display {
-            display: none;
-        }
-
         &:hover {
             text-decoration: none;
             border: 10px solid #fff;
@@ -44,11 +40,6 @@
             h1 {
                 color: #fff !important;
                 text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-            }
-
-            .promo-display {
-                color: #fff;
-                display: block;
             }
         }
     }
