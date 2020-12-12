@@ -1,5 +1,5 @@
 {% for social in socials %}
-<a href="{{ social.url }}"" target=" _blank"
+<a href="{{ social.url }}" rel="noopener noreferrer" target="{% if social.url %}_blank{% endif %}"
     class="btn btn-default social-button {% if forloop.last %} mr-0 {% else %} mr-3 {% endif %} {{ social.title }}-icon">
     <i class="fab {{ social.icon }}"></i>
 </a>
