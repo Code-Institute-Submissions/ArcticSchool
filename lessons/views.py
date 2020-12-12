@@ -4,7 +4,7 @@ from .models import Category, Lesson
 
 
 def lessons(request):
-    """ A view to return lessons page """
+    """ A view to return lessons page - categories """
 
     categories = Category.objects.all()
     context = {
@@ -15,13 +15,30 @@ def lessons(request):
 
 
 def category_result(request, category_name):
+    """ A view to return lessons in selected category """
 
     lessons = Lesson.objects.all()
-    lessons = lessons.filter(category__name=category_name)
+
+    if category_name == "all_lessons":
+        lessons = lessons
+    else:
+        lessons = lessons.filter(category__name=category_name)
 
     context = {
         'lessons': lessons,
         'category_name': category_name,
     }
 
-    return render(request, 'lessons/lessons-cat.html', context)
+    return render(request, 'lessons/lessons-category-page.html', context)
+
+
+def lesson(request, lesson_id, lessons):
+    """ A view to return picked lesson detail """
+
+    context = {
+        'lessons': lessons,
+        'lesson_id': lesson_id,
+    }
+
+    return render(request, 'lessons/lesson-detail.html', context)
+
