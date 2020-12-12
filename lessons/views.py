@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Lesson
+from home.models import SocialIcon
 # Create your views here.
 
 
@@ -18,6 +19,7 @@ def category_result(request, category_name):
     """ A view to return lessons in selected category """
 
     lessons = Lesson.objects.all()
+    social = SocialIcon.objects.all()
 
     if category_name == "all_lessons":
         lessons = lessons
@@ -25,6 +27,7 @@ def category_result(request, category_name):
         lessons = lessons.filter(category__name=category_name)
 
     context = {
+        'socials': social,
         'lessons': lessons,
         'category_name': category_name,
     }
@@ -35,7 +38,10 @@ def category_result(request, category_name):
 def lesson(request, lesson_id, lessons):
     """ A view to return picked lesson detail """
 
+    social = SocialIcon.objects.all()
+
     context = {
+        'socials': social,
         'lessons': lessons,
         'lesson_id': lesson_id,
     }
