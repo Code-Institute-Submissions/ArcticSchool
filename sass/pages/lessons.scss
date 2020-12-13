@@ -57,6 +57,10 @@
         }
 
         .lessons-result-cards {
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
             .card {
                 border-radius: 15px;
                 .card-head {
@@ -67,15 +71,27 @@
                     }
                 }
                 .card-body {
-                    h2,
-                    h3,
-                    h4 {
-                        color: #000 !important;
+                    h1 {
+                        font-size: 1.25rem;
+                        color: #059cd9;
                     }
+                    p {
+                        font-size: 1rem;
+                        font-family: "Lato", sans-serif;
+                        color: #000;
+                        font-weight: 500;
+                        margin-bottom: 0.5rem;
+
+                        span {
+                            font-weight: 300;
+                        }
+                    }
+
                     .buttons {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
+                        margin-top: 1rem;
 
                         a {
                             width: calc(50% - 5px);
