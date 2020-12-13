@@ -46,10 +46,29 @@
     }
 
     // category results page - lesson cards style
-    .card {
-        img {
-            width: 100%;
-            height: 100%;
+    .lessons-result-category {
+        .about-lessons-result {
+            img {
+            }
+            .about-lessons {
+            }
+            .about-text {
+            }
+        }
+
+        .lessons-result-cards {
+            .card {
+                .card-head {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .card-body {
+                    .book-button {
+                    }
+                }
+            }
         }
     }
 }

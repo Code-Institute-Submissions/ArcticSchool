@@ -32,7 +32,7 @@ def category_result(request, category_name):
         'category_name': category_name,
     }
 
-    return render(request, 'lessons/lessons-category-page.html', context)
+    return render(request, 'lessons/lessons-cat-result.html', context)
 
 
 def lesson(request, lesson_id, lessons):

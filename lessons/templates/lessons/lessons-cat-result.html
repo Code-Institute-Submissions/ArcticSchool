@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Main container -->
+<div class="container-fluid">
+    <div class="lessons-result-category">
+        <!-- About lessons promo container -->
+        <div class="about-lessons-result">
+            <img src="" alt="">
+            <div class="container">
+                <div class="about-lessons">
+                    <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iste
+                        obcaecati porro minus ea corrupti ullam atque aperiam ipsa, enim aut est quae, recusandae,
+                        cumque sequi qui temporibus odit repudiandae?</p>
+                </div>
+                <hr class="">
+            </div>
+        </div>
+        <div class="lessons-result-cards">
+            <div class="container">
+                {% for lesson in lessons %}
+                <div class="col-xs-12 col-sm-2 col-lg-4 col-xl-4">
+                    <div class="card">
+                        <div class="card-head">
+                            {% if lesson.image %}
+                            <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}">
+                            {% else %}
+                            <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+
+
+
+                            <a href="" class="book-button">
+                                <button class="btn btn-primary">Book</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
