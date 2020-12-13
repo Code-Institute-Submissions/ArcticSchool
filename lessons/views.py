@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Lesson
-from home.models import SocialIcon
+from home.models import SocialIcon, LevelCard
 # Create your views here.
 
 
@@ -20,6 +20,8 @@ def category_result(request, category_name):
 
     lessons = Lesson.objects.all()
     social = SocialIcon.objects.all()
+    categories = Category.objects.all()
+    levels = LevelCard.objects.all()
 
     if category_name == "all_lessons":
         lessons = lessons
@@ -30,6 +32,8 @@ def category_result(request, category_name):
         'socials': social,
         'lessons': lessons,
         'category_name': category_name,
+        'categories': categories,
+        'levels': levels,
     }
 
     return render(request, 'lessons/lessons-cat-result.html', context)
@@ -47,4 +51,3 @@ def lesson(request, lesson_id, lessons):
     }
 
     return render(request, 'lessons/lesson-detail.html', context)
-
