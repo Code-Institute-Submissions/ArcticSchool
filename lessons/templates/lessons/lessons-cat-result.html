@@ -19,11 +19,13 @@
                     <hr class="">
                 </div>
             </div>
+            <!-- Lessons result container for picked category -->
             <div class="lessons-result-cards">
                 <div class="container">
                     {% for lesson in lessons %}
                     <div class="col-xs-12 col-sm-2 col-lg-4 col-xl-4">
                         <div class="card shadow-sm">
+                            <!-- Card top part -->
                             <div class="card-head">
                                 {% if lesson.image %}
                                 <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}">
@@ -31,11 +33,17 @@
                                 <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
                                 {% endif %}
                             </div>
+                            <!-- Card bottom part -->
                             <div class="card-body">
-                                <h2>{{ lesson.name }}</h2>
-                                <h4><span class="">From
-
-                                </h4>
+                                <!-- Lesson details -->
+                                <h1>{{ lesson.name }}</h1>
+                                <p>Level
+                                    <span>{{ lesson.level }}</span>
+                                </p>
+                                <p>Participants
+                                    <span>{{ lesson.participants }}</span>
+                                </p>
+                                <!-- Buttons section -->
                                 <div class="buttons">
                                     <a href="">
                                         <button class="btn hvr-bounce-to-right">Details</button>
