@@ -33,7 +33,7 @@ class Lesson(models.Model):
     resort = models.ForeignKey(
         Resort, null=True, blank=True, on_delete=models.PROTECT)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(upload_to="lessons",null=True, blank=True)
 
     def __str__(self):
         return self.name

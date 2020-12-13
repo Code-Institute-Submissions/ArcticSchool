@@ -12,7 +12,7 @@
             "resort_altitude":1800,
             "levels":"Intermediate, Advanced, Expert",
             "instructors":"2",
-            "image":""
+            "image":"resorts/avoiz_resort.jpg"
         }
     },
     {
@@ -28,7 +28,7 @@
             "resort_altitude":1569,
             "levels":"Beginner, Intermediate, Advanced",
             "instructors":"4",
-            "image":""
+            "image":"resorts/davos_resort.jpg"
         }
     },
     {
@@ -44,7 +44,7 @@
             "resort_altitude":1000,
             "levels":"Beginner, Intermediate, Advanced",
             "instructors":"2",
-            "image":""
+            "image":"resorts/les_gets_resort.jpg"
         }
     }
 ]
