@@ -7,7 +7,6 @@
 <div id="lessons-container">
     <!-- About lessons promo container -->
     <div class="about-lessons-result">
-        <div class="lessons-bg"></div>
         <div class="about-lessons">
             <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iste
                 obcaecati porro minus ea corrupti ullam atque aperiam ipsa, enim aut est quae, recusandae,
@@ -32,32 +31,34 @@
                         <div id="filters" class="collapse show" aria-labelledby="filters-box" data-parent="#accordion">
                             <!-- Filters form -->
                             <form action="" method="">
-                                <!-- Category -->
-                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Category:</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            {% for category in categories|dictsort:"order" %}
-                                            <option>{{ category.friendly_name }}</option>
-                                            {% endfor %}
-                                        </select>
+                                <div class="row">
+                                    <!-- Category -->
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Category:</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                {% for category in categories|dictsort:"order" %}
+                                                <option>{{ category.friendly_name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Level -->
-                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Level:</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            {% for level in levels %}
-                                            <option>{{ level.title }}</option>
-                                            {% endfor %}
-                                        </select>
+                                    <!-- Level -->
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Level:</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                {% for level in levels %}
+                                                <option>{{ level.title }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Sort -->
+                                    <!-- Sort -->
 
 
-                                <button class="btn btn-primary" >Apply</button>
+                                    <button class="btn btn-primary">Apply</button>
+                                </div>
                             </form>
                         </div>
                     </div>
