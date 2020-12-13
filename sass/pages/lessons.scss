@@ -83,6 +83,22 @@
                 max-height: auto;
                 width: 100%;
             }
+            .super-offer-icon {
+                position: absolute;
+                top: 15px;
+                right: -4px;
+                background-color: #059cd9;
+                border: 3px solid #fff;
+                border-radius: 15px;
+                padding: 0.25rem;
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+
+                p {
+                    margin: 0;
+                    padding: 0.025rem;
+                }
+            }
         }
         .card-body {
             h1 {

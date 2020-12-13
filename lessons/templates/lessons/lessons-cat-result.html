@@ -111,9 +111,9 @@
                                 {% else %}
                                 <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
                                 {% endif %}
-                                {% if lesson.category == "super_offers" %}
-                                <div class="">
-                                    <p class="">Offer!</p>
+                                {% if lesson.category.friendly_name == "Super Offers" %}
+                                <div class="super-offer-icon">
+                                    <p class="super-offer-text">Hot Deal</p>
                                 </div>
                                 {% endif %}
                             </div>
