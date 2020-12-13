@@ -37,8 +37,12 @@
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">Category:</label>
                                             <select class="form-control" id="exampleFormControlSelect1">
+                                                <option value="reset"
+                                                    {% if current_sorting == 'None_None' %}selected{% endif %}>...
+                                                </option>
                                                 {% for category in categories|dictsort:"order" %}
-                                                <option>{{ category.friendly_name }}</option>
+                                                <option value="{{ category.name }}">{{ category.friendly_name }}
+                                                </option>
                                                 {% endfor %}
                                             </select>
                                         </div>
@@ -46,19 +50,48 @@
                                     <!-- Level -->
                                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                                         <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Level:</label>
+                                            <label for="exampleFormControlSelect1">Level</label>
                                             <select class="form-control" id="exampleFormControlSelect1">
+                                                <option value="reset"
+                                                    {% if current_sorting == 'None_None' %}selected{% endif %}>...
+                                                </option>
                                                 {% for level in levels %}
-                                                <option>{{ level.title }}</option>
+                                                <option value="{{level.title}}">{{ level.title }}</option>
                                                 {% endfor %}
                                             </select>
                                         </div>
                                     </div>
                                     <!-- Sort -->
-
-
-                                    <button class="btn btn-primary">Apply</button>
+                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Sort</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option value="reset"
+                                                    {% if current_sorting == 'None_None' %}selected{% endif %}>...
+                                                </option>
+                                                <option value="price_asc"
+                                                    {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                                                    (low to high)</option>
+                                                <option value="price_desc"
+                                                    {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                                                    (high to low)</option>
+                                                <option value="name_asc"
+                                                    {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                                                </option>
+                                                <option value="name_desc"
+                                                    {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                                                    (Z-A)</option>
+                                                <option value="category_asc"
+                                                    {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                                    Category (A-Z)</option>
+                                                <option value="category_desc"
+                                                    {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                                                    Category (Z-A)</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
+                                <button class="btn btn-primary">Apply</button>
                             </form>
                         </div>
                     </div>
