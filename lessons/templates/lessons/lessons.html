@@ -16,90 +16,6 @@
     <div class="container-fluid">
         <!-- Lessons result container for picked category -->
         <div class="lessons-result-cards">
-            <!-- Filters container -->
-            <div class="filter-box">
-                <div id="accordion">
-                    <div class="container">
-                        <div class="" id="filters-box">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#filters"
-                                    aria-expanded="true" aria-controls="filters">
-                                    Filters
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="filters" class="collapse" aria-labelledby="filters-box" data-parent="#accordion">
-                            <!-- Filters form -->
-                            <form action="" method="">
-                                <div class="row">
-                                    <!-- Category -->
-                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Category:</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option value="reset"
-                                                    {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
-                                                </option>
-                                                {% for category in categories|dictsort:"order" %}
-                                                <option value="{{ category.name }}">{{ category.friendly_name }}
-                                                </option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Level -->
-                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Level</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option value="reset"
-                                                    {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
-                                                </option>
-                                                {% for level in levels %}
-                                                <option value="{{level.title}}">{{ level.title }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- Sort -->
-                                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Sort</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option value="reset"
-                                                    {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
-                                                </option>
-                                                <option value="price_asc"
-                                                    {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
-                                                    (low to high)</option>
-                                                <option value="price_desc"
-                                                    {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
-                                                    (high to low)</option>
-                                                <option value="name_asc"
-                                                    {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
-                                                </option>
-                                                <option value="name_desc"
-                                                    {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
-                                                    (Z-A)</option>
-                                                <option value="category_asc"
-                                                    {% if current_sorting == 'category_asc' %}selected{% endif %}>
-                                                    Category (A-Z)</option>
-                                                <option value="category_desc"
-                                                    {% if current_sorting == 'category_desc' %}selected{% endif %}>
-                                                    Category (Z-A)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter-buttons">
-                                    <button class="btn btn-danger">Clear Filters</button>
-                                    <button class="btn btn-primary">Apply Filters</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="container">
                 <!-- Lessons card counter -->
                 <div class="page-info">
@@ -108,49 +24,123 @@
                 <hr>
                 <!-- Lessons cards container -->
                 <div class="row mb-4">
-                    {% for lesson in lessons %}
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                        <div
-                            class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
-                            <!-- Card top part -->
-                            <div class="card-head">
-                                {% if lesson.image %}
-                                <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}">
-                                {% else %}
-                                <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
-                                {% endif %}
-                                {% if lesson.supper_offer == True %}
-                                <div class="super-offer-icon">
-                                    <p class="super-offer-text">Super Offer!</p>
+                    <!-- Filters container -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                        <!-- Filters form -->
+                        <form action="" method="">
+                            <div class="row">
+                                <!-- Category -->
+                                <div class="filter-box">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Category:</label>
+                                        {% for category in categories|dictsort:"order" %}
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="{{category.friendly_name}}">
+                                            <label class="form-check-label" for="{{category.friendly_name}}">
+                                                {{category.friendly_name}}
+                                            </label>
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
                                 </div>
-                                {% endif %}
-                            </div>
-                            <!-- Card bottom part -->
-                            <div class="card-body">
-                                <!-- Lesson details -->
-                                <h1>{{ lesson.name }}</h1>
-                                <p>Level
-                                    <span>{{ lesson.level }}</span>
-                                </p>
-                                <p>Participants
-                                    <span>{{ lesson.participants }}</span>
-                                </p>
-                                <p>Price
-                                    <span>£ {{ lesson.price }}</span>
-                                </p>
-                                <!-- Buttons section -->
-                                <div class="buttons">
-                                    <a href="">
-                                        <button class="btn hvr-bounce-to-right">Details</button>
-                                    </a>
-                                    <a href="">
-                                        <button class="btn hvr-bounce-to-right">Book</button>
-                                    </a>
+                                <!-- Level -->
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Level</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option value="reset"
+                                                {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
+                                            </option>
+                                            {% for level in levels %}
+                                            <option value="{{level.title}}">{{ level.title }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Sort -->
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Sort</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option value="reset"
+                                                {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
+                                            </option>
+                                            <option value="price_asc"
+                                                {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                                                (low to high)</option>
+                                            <option value="price_desc"
+                                                {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                                                (high to low)</option>
+                                            <option value="name_asc"
+                                                {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                                            </option>
+                                            <option value="name_desc"
+                                                {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                                                (Z-A)</option>
+                                            <option value="category_asc"
+                                                {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                                Category (A-Z)</option>
+                                            <option value="category_desc"
+                                                {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                                                Category (Z-A)</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="filter-buttons">
+                                <button class="btn btn-danger">Clear Filters</button>
+                                <button class="btn btn-primary">Apply Filters</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                        <div class="row">
+                            {% for lesson in lessons %}
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 extra-padding">
+                                <div
+                                    class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+                                    <!-- Card top part -->
+                                    <div class="card-head">
+                                        {% if lesson.image %}
+                                        <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}">
+                                        {% else %}
+                                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                                        {% endif %}
+                                        {% if lesson.supper_offer == True %}
+                                        <div class="super-offer-icon">
+                                            <p class="super-offer-text">Super Offer!</p>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                    <!-- Card bottom part -->
+                                    <div class="card-body">
+                                        <!-- Lesson details -->
+                                        <h1>{{ lesson.name }}</h1>
+                                        <p>Level
+                                            <span>{{ lesson.level }}</span>
+                                        </p>
+                                        <p>Participants
+                                            <span>{{ lesson.participants }}</span>
+                                        </p>
+                                        <p>Price
+                                            <span>£ {{ lesson.price }}</span>
+                                        </p>
+                                        <!-- Buttons section -->
+                                        <div class="buttons">
+                                            <a href="">
+                                                <button class="btn hvr-bounce-to-right">Details</button>
+                                            </a>
+                                            <a href="">
+                                                <button class="btn hvr-bounce-to-right">Book</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
                 <!-- Show more lessons container -->
                 <div class="row">
