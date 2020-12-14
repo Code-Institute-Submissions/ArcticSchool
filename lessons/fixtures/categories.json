@@ -48,27 +48,18 @@
     "pk": 6,
     "model": "lessons.Category",
     "fields": {
-      "name": "all_lessons",
-      "friendly_name": "All Lessons",
-      "order": 1
-    }
-  },
-  {
-    "pk": 7,
-    "model": "lessons.Category",
-    "fields": {
       "name": "group",
       "friendly_name": "Group Lessons",
       "order": 8
     }
   },
   {
-    "pk": 8,
+    "pk": 7,
     "model": "lessons.Category",
     "fields": {
-      "name": "super_offers",
-      "friendly_name": "Super Offers",
-      "order": 2
+      "name": "private",
+      "friendly_name": "Private Lessons",
+      "order": 8
     }
   }
 ]
