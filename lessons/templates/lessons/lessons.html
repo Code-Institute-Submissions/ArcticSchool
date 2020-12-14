@@ -101,12 +101,16 @@
                 </div>
             </div>
             <div class="container">
+                <!-- Lessons card counter -->
+                <div class="page-info">
+                    <p class="counter-lessons"></p>
+                </div>
                 <hr>
                 <!-- Lessons cards container -->
                 <div class="row mb-4">
                     {% for lesson in lessons %}
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                        <div class="card shadow-sm">
+                        <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
                             <!-- Card top part -->
                             <div class="card-head">
                                 {% if lesson.image %}
@@ -114,7 +118,7 @@
                                 {% else %}
                                 <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
                                 {% endif %}
-                                {% if lesson.category.friendly_name == "Super Offers" %}
+                                {% if lesson.supper_offer == True %}
                                 <div class="super-offer-icon">
                                     <p class="super-offer-text">Super Offer!</p>
                                 </div>
@@ -130,6 +134,9 @@
                                 <p>Participants
                                     <span>{{ lesson.participants }}</span>
                                 </p>
+                                <p>Price
+                                    <span>£ {{ lesson.price }}</span>
+                                </p>
                                 <!-- Buttons section -->
                                 <div class="buttons">
                                     <a href="">
@@ -143,6 +150,10 @@
                         </div>
                     </div>
                     {% endfor %}
+                </div>
+                <!-- Show more lessons container -->
+                <div class="show-more">
+                    <a href="#" id="loadMore">Show More</a>
                 </div>
             </div>
         </div>
