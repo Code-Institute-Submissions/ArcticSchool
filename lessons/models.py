@@ -24,15 +24,16 @@ class Lesson(models.Model):
         'Category', null=True, blank=True, on_delete=models.PROTECT)
     level = models.ForeignKey(
         LevelCard, null=True, blank=True, on_delete=models.PROTECT)
-    description = models.TextField()
-    start_date = models.DateField()
-    end_date = models.DateField()
+    description = models.TextField(null=True, blank=True)
+    start_date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
     start_time = models.TimeField(auto_now=False, auto_now_add=False)
     end_time = models.TimeField(auto_now=False, auto_now_add=False)
-    participants = models.IntegerField()
+    participants = models.IntegerField(null=True, blank=True)
     resort = models.ForeignKey(
         Resort, null=True, blank=True, on_delete=models.PROTECT)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2,null=True, blank=True)
+    supper_offer = models.BooleanField(null=True, blank=True, default=False)
     image = models.ImageField(upload_to="lessons",null=True, blank=True)
 
     def __str__(self):
