@@ -5,17 +5,6 @@ from home.models import SocialIcon, LevelCard
 
 
 def lessons(request):
-    """ A view to return lessons page - categories """
-
-    categories = Category.objects.all()
-    context = {
-        'categories': categories,
-    }
-
-    return render(request, 'lessons/lessons.html', context)
-
-
-def category_result(request, category_name):
     """ A view to return lessons in selected category """
 
     lessons = Lesson.objects.all()
@@ -23,20 +12,14 @@ def category_result(request, category_name):
     categories = Category.objects.all()
     levels = LevelCard.objects.all()
 
-    if category_name == "all_lessons":
-        lessons = lessons
-    else:
-        lessons = lessons.filter(category__name=category_name)
-
     context = {
         'socials': social,
         'lessons': lessons,
-        'category_name': category_name,
         'categories': categories,
         'levels': levels,
     }
 
-    return render(request, 'lessons/lessons-cat-result.html', context)
+    return render(request, 'lessons/lessons.html', context)
 
 
 def lesson(request, lesson_id, lessons):
