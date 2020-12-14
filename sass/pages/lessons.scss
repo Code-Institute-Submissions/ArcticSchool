@@ -78,10 +78,11 @@
         margin-bottom: 1rem;
         .card-head {
             border-radius: 15px 15px 0 0;
+
             img {
                 border-radius: inherit;
-                max-height: auto;
                 width: 100%;
+                height: 170px;
             }
             .super-offer-icon {
                 position: absolute;
@@ -118,6 +119,7 @@
             }
 
             .buttons {
+                position: relative;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;

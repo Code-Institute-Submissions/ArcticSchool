@@ -58,7 +58,6 @@ $(document).ready(function () {
 		scrollToTop();
 	}
 
-
 	/**
 	 * This function will count number of existing classes on the page to determine divider for container height
 	 */
@@ -69,4 +68,18 @@ $(document).ready(function () {
 	}
 	categoryClass = categoryClass / 2
 	$("div .category-block").css({ height: `calc((100vh - 59px) / ${categoryClass})` });
+
+	/**
+	 * This function will equalize lessons cards height - solution found on
+	 * https://stackoverflow.com/questions/11688250/setting-equal-heights-for-divs-with-jquery
+	 */
+	$('#lessons-container').each(function () {
+		var highestCard = 0;
+		$('.card', this).each(function () {
+			if ($(this).height() > highestCard) {
+				highestCard = $(this).height();
+			}
+		});
+		$('.card', this).height(highestCard);
+	});
 });
