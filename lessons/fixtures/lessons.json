@@ -340,5 +340,347 @@
       "supper_offer": "False",
       "image": "lessons/name_text.jpg"
     }
+  },
+  {
+    "pk": 19,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "True",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "True",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "True",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "True",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "lessons.Lesson",
+    "fields": {
+      "name": "test1",
+      "category": 1,
+      "level": 1,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos dignissimos architecto accusantium aperiam eveniet fugit iste error in quaerat maiores cupiditate, iusto perferendis et odio nam dolore praesentium doloribus voluptatum?",
+      "start_date": "2020-12-13",
+      "end_date": "2020-12-13",
+      "start_time": "19:00:00",
+      "end_time": "22:00:00",
+      "participants": "2",
+      "resort": 2,
+      "price": "100",
+      "supper_offer": "False",
+      "image": "lessons/name_text.jpg"
+    }
   }
 ]

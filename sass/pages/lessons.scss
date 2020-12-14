@@ -74,6 +74,7 @@
 
     // cards style
     .card {
+        display: none;
         border-radius: 15px;
         margin-bottom: 1rem;
         .card-head {
@@ -159,6 +160,50 @@
     .card-super-offer {
         border: 2px solid #00d4f5;
         box-shadow: 0 0.125rem 0.25rem rgba(0, 212, 245, 0.25) !important;
+    }
+
+    // show/load more cards button
+    .show-more {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        a {
+            color: #059cd9;
+            width: 80px;
+            opacity: 0.8;
+            &:hover {
+                text-decoration: none;
+                opacity: 1;
+            }
+        }
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            padding-top: 2px;
+            border-radius: 50%;
+            background-color: #059cd9;
+            font-size: 1.25rem;
+            color: #fff;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+    }
+    .show-disable {
+        a {
+            pointer-events: none;
+            color: #ccc;
+            opacity: 0.5;
+            i {
+                background-color: #ccc;
+            }
+        }
     }
 }
 

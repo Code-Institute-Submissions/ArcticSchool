@@ -28,7 +28,7 @@
                                 </button>
                             </h5>
                         </div>
-                        <div id="filters" class="collapse show" aria-labelledby="filters-box" data-parent="#accordion">
+                        <div id="filters" class="collapse" aria-labelledby="filters-box" data-parent="#accordion">
                             <!-- Filters form -->
                             <form action="" method="">
                                 <div class="row">
@@ -110,7 +110,8 @@
                 <div class="row mb-4">
                     {% for lesson in lessons %}
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                        <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+                        <div
+                            class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
                             <!-- Card top part -->
                             <div class="card-head">
                                 {% if lesson.image %}
@@ -152,8 +153,10 @@
                     {% endfor %}
                 </div>
                 <!-- Show more lessons container -->
-                <div class="show-more">
-                    <a href="#" id="loadMore">Show More</a>
+                <div class="row">
+                    <div class="show-more">
+                        <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More</a>
+                    </div>
                 </div>
             </div>
         </div>
