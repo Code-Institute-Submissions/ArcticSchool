@@ -86,14 +86,11 @@
             }
             .super-offer-icon {
                 position: absolute;
-                top: 24px;
-                right: -8px;
-                background-color: #059cd9;
-                border: 3px solid #fff;
-                border-radius: 15px;
-                padding: 0.25rem;
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
+                top: -2px;
+                right: -2px;
+                background-color: #00d4f5;
+                padding: 0.5rem;
+                border-radius: 0 15px;
 
                 p {
                     margin: 0;
@@ -157,6 +154,11 @@
                 border-radius: inherit;
             }
         }
+    }
+
+    .card-super-offer {
+        border: 2px solid #00d4f5;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 212, 245, 0.25) !important;
     }
 }
 
