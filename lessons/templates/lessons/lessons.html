@@ -23,7 +23,7 @@
                 </div>
                 <hr>
                 <!-- Lessons cards container -->
-                <div class="row mb-4">
+                <div class="row justify-content-center">
                     <!-- Filters container -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                         <!-- Filters form -->
@@ -32,36 +32,30 @@
                                 <!-- Category -->
                                 <div class="filter-box">
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Category:</label>
-                                        {% for category in categories|dictsort:"order" %}
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="{{category.friendly_name}}">
-                                            <label class="form-check-label" for="{{category.friendly_name}}">
-                                                {{category.friendly_name}}
-                                            </label>
-                                        </div>
-                                        {% endfor %}
-
-                                    </div>
-                                </div>
-                                <!-- Level -->
-                                <div class="">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Level</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option value="reset"
-                                                {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
-                                            </option>
-                                            {% for level in levels %}
-                                            <option value="{{level.title}}">{{ level.title }}</option>
+                                        <div class="filter-label">Category</div>
+                                        <ul class="">
+                                            {% for category in categories|dictsort:"order" %}
+                                            <li class="">
+                                                <a href="" class=""><input type="checkbox">
+                                                    {{ category.friendly_name }}
+                                                </a>
+                                            </li>
                                             {% endfor %}
-                                        </select>
+                                        </ul>
                                     </div>
-                                </div>
-                                <!-- Sort -->
-                                <div class="">
+                                    <div class="filter-label">Levels</div>
+                                    <ul class="">
+                                        {% for level in levels %}
+                                        <li class="">
+                                            <a href="" class=""><input type="checkbox">
+                                                {{ level.level }}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    <div class="filter-label">£ Price</div>
                                     <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Sort</label>
+                                        <div class="filter-label">Sort by</div>
                                         <select class="form-control" id="exampleFormControlSelect1">
                                             <option value="reset"
                                                 {% if current_sorting == 'None_None' %}selected{% endif %}>Select..
@@ -140,12 +134,11 @@
                             </div>
                             {% endfor %}
                         </div>
-                    </div>
-                </div>
-                <!-- Show more lessons container -->
-                <div class="row">
-                    <div class="show-more">
-                        <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More</a>
+                        <!-- Show more lessons container -->
+                        <div class="show-more">
+                            <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More</a>
+                            <span class="page-results">12 lessons from 120</span>
+                        </div>
                     </div>
                 </div>
             </div>
