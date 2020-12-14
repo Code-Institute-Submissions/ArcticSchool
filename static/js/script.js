@@ -88,16 +88,13 @@ $(document).ready(function () {
 	 * Load more content with jQuery - May 21, 2013 c 2013 @ElmahdiMahmoud
 	*/
 	$(function () {
-		$("div").slice(0, 4).show();
+		$(".card").slice(0, 12).show();
 		$("#loadMore").on('click', function (e) {
 			e.preventDefault();
-			$("div:hidden").slice(0, 4).slideDown();
-			if ($("div:hidden").length == 0) {
+			$(".card:hidden").slice(0, 12).slideDown();
+			if ($(".card:hidden").length == 0) {
 				$("#load").fadeOut('slow');
 			}
-			$('html,body').animate({
-				scrollTop: $(this).offset().top
-			}, 1500);
 		});
 	});
 });
