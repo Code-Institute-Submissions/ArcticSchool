@@ -74,7 +74,7 @@ $(document).ready(function () {
 	 * https://stackoverflow.com/questions/11688250/setting-equal-heights-for-divs-with-jquery
 	 */
 	$('#lessons-container').each(function () {
-		var highestCard = 0;
+		let highestCard = 0;
 		$('.card', this).each(function () {
 			if ($(this).height() > highestCard) {
 				highestCard = $(this).height();
