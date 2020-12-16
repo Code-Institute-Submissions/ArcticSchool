@@ -26,7 +26,7 @@ SECRET_KEY = '+t&2u&_0&tm!bos(w4=pfqh45$23izhd)ll+qdjn#%y7n_5ov1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['arcticschool.heroku.com','localhost']
+ALLOWED_HOSTS = ['arcticschool.herokuapp.com','localhost']
 
 
 # Application definition
