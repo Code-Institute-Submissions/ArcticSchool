@@ -34,8 +34,6 @@ entrypoints==0.3
 enum-compat==0.0.3
 filelock==3.0.12
 flake8==3.8.4
-Flask==1.1.2
-Flask-PyMongo==2.3.0
 get==2019.4.13
 gunicorn==20.0.4
 idna==2.9
