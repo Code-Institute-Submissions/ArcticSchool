@@ -8,8 +8,8 @@ from django_countries.fields import CountryField
 class Resort(models.Model):
 
     name = models.CharField(max_length=120)
-    country = CountryField(blank_label="(Select Country)")
-    about = models.TextField()
+    country = CountryField(max_length=200, blank_label="(Select Country)")
+    about = models.TextField(max_length=500)
     open_season = models.CharField(max_length=120, default="December - April")
     top_altitude = models.IntegerField(default=0)
     bottom_altitude = models.IntegerField(default=0)
