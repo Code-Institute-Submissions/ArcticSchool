@@ -32,9 +32,10 @@ class Lesson(models.Model):
     participants = models.IntegerField(null=True, blank=True)
     resort = models.ForeignKey(
         Resort, null=True, blank=True, on_delete=models.PROTECT)
-    price = models.DecimalField(max_digits=6, decimal_places=2,null=True, blank=True)
+    price = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
     supper_offer = models.BooleanField(null=True, blank=True, default=False)
-    image = models.ImageField(upload_to="lessons",null=True, blank=True)
+    image = models.ImageField(upload_to="lessons", null=True, blank=True)
 
     def __str__(self):
         return self.name
