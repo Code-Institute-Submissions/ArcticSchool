@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 
 """
+
 import os
 import dj_database_url
 from pathlib import Path
@@ -27,7 +28,10 @@ SECRET_KEY = '+t&2u&_0&tm!bos(w4=pfqh45$23izhd)ll+qdjn#%y7n_5ov1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 696b7c9
 ALLOWED_HOSTS = ['arcticschool.herokuapp.com', 'localhost']
 
 
@@ -91,8 +95,6 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-WSGI_APPLICATION = 'arctic_school.wsgi.application'
-
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -105,6 +107,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+WSGI_APPLICATION = 'arctic_school.wsgi.application'
 
 
 # Database
@@ -121,7 +124,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
