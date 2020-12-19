@@ -104,9 +104,13 @@ $(document).ready(function () {
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
 		//>=, not <=
-		if (scroll >= 500) {
+		if (scroll >= 100) {
 			//clearHeader, not clearheader - caps H
-			$(".").addClass(".fixed-filters");
+			$(".filter-box").addClass("position-fixed");
 		}
-	}); //missing );
+		else {
+			$(".filter-box").removeClass("position-fixed");
+		}
+	});
+
 });
