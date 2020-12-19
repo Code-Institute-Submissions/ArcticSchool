@@ -97,4 +97,16 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+	/**
+	 * This function will add class to side navigation when scrolled to predefined point
+	 */
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		//>=, not <=
+		if (scroll >= 500) {
+			//clearHeader, not clearheader - caps H
+			$(".").addClass(".fixed-filters");
+		}
+	}); //missing );
 });
