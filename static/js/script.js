@@ -108,18 +108,38 @@ $(document).ready(function () {
 	 * Load more content with jQuery - May 21, 2013 c 2013 @ElmahdiMahmoud
 	*/
 	$(function () {
-		$(".card").slice(0, 24).show();
+		$(".card").slice(0, 12).show();
 		$("#loadMore").on('click', function (e) {
 			e.preventDefault();
-			$(".card:hidden").slice(0, 24).slideDown();
+			$(".card:hidden").slice(0, 12).slideDown();
 			if ($(".card:hidden").length == 0) {
 				$("#load").fadeOut('slow');
 			}
+
+			// get number of visisble cards and pass value to bottoms count section
 			let cards_on_page = $('.card:visible').length;
 			$(".cards-count").html(cards_on_page);
 			// check visible card count
 			check_count();
+			change_load_number();
 		});
+		change_load_number();
+		// get number of cards to show and pass value to LoadMore() span element
+		function change_load_number() {
+			let all_cards = Number($('.total-count').html());
+			let cards_on_page = $('.card:visible').length;
+			let cards_to_show;
+			cards_to_show = all_cards - cards_on_page;
+			console.log(cards_to_show);
+			if (cards_to_show < 12) {
+				cards_to_show = cards_to_show;
+				$('.visible-cards-count').html(cards_to_show);
+			}
+			else {
+				cards_to_show = 12;
+				$('.visible-cards-count').html(cards_to_show);
+			}
+		}
 	});
 
 	/**
@@ -131,6 +151,7 @@ $(document).ready(function () {
 		if (cards_on_page != total_count) {
 		} else {
 			$('.show-more').addClass('show-disable');
+			$('.visible-cards-count').html('0');
 		}
 	};
 
