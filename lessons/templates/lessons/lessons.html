@@ -40,10 +40,12 @@
                                 <div class="form-group">
                                     <div class="filter-label">Category</div>
                                     <ul class="">
+                                        <li class="">
+                                            <a href="{% url 'lessons' %}" class="">All Lessons ({{ lessons.count }})</a>
+                                        </li>
                                         {% for category in categories|dictsort:"order" %}
                                         <li class="">
-                                            <a href="{{ lessons }}?category=category.name" class=""><input type="checkbox">
-                                                {{ category.friendly_name }}
+                                            <a href="{% url 'lessons' %}?category={{ category.name }}" class="">{{ category.friendly_name }}
                                             </a>
                                         </li>
                                         {% endfor %}
@@ -120,7 +122,8 @@
                         </div>
                         <!-- Show more lessons container -->
                         <div class="show-more">
-                            <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More (<span class="visible-cards-count"></span>)</a>
+                            <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More (<span
+                                    class="visible-cards-count"></span>)</a>
                             <p class="page-results"><span class="cards-count">
                                     {% if lessons.count <= 12 %} {{ lessons.count }} {% else %}12 {% endif %}</span>
                                         from <span class="total-count">{{ lessons.count }}</span> lessons</p>
