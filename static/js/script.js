@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// NAVIGATION
 	/**
 	* This function fill change hamburegr button from lines to cross sign on small devices
 	*/
@@ -58,6 +59,8 @@ $(document).ready(function () {
 		scrollToTop();
 	}
 
+
+	// LESSONS PAGE
 	/**
 	 * This function will count number of existing classes on the page to determine divider for container height
 	 */
@@ -84,6 +87,23 @@ $(document).ready(function () {
 	});
 
 	/**
+	* This function will add class to side navigation when scrolled to predefined point
+	*/
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		// top section height
+		let top_section_height = $(".about-lessons-result").height()
+		//>=, not <=
+		if (scroll >= top_section_height) {
+			//clearHeader, not clearheader - caps H
+			$(".filter-box").addClass("fixed-filters");
+		}
+		else {
+			$(".filter-box").removeClass("fixed-filters");
+		}
+	});
+
+	/**
 	 * This function will show more elements.cards
 	 * Load more content with jQuery - May 21, 2013 c 2013 @ElmahdiMahmoud
 	*/
@@ -103,23 +123,6 @@ $(document).ready(function () {
 	});
 
 	/**
-	 * This function will add class to side navigation when scrolled to predefined point
-	 */
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		// top section height
-		let top_section_height = $(".about-lessons-result").height()
-		//>=, not <=
-		if (scroll >= top_section_height) {
-			//clearHeader, not clearheader - caps H
-			$(".filter-box").addClass("fixed-filters");
-		}
-		else {
-			$(".filter-box").removeClass("fixed-filters");
-		}
-	});
-
-	/**
 	 * This function will change load button to unavailable when all cards are loaded
 	 */
 	function check_count() {
@@ -131,6 +134,8 @@ $(document).ready(function () {
 		}
 	};
 
+
+	// TEAM PAGAE
 	/**
 	 * This function will change text onClick
 	 */
