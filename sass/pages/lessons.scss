@@ -69,6 +69,12 @@
         }
     }
 
+    // filters box fixed style
+    .fixed-filters {
+        position: fixed;
+        top: 70px;
+    }
+
     // cards style
     .card {
         display: none;
