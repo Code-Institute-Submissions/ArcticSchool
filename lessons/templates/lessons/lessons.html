@@ -21,48 +21,45 @@
                 <div class="page-info">
                     <p class="counter-lessons"></p>
                 </div>
-                <hr>
                 <!-- Lessons cards container -->
                 <div class="row justify-content-between">
                     <!-- Filters container -->
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                         <!-- Filters form -->
                         <form action="" method="">
-                            <div class="row">
-                                <!-- Category -->
-                                <div class="filter-box">
-                                    <div class="form-group">
-                                        <div class="filter-label">Category</div>
-                                        <ul class="">
-                                            {% for category in categories|dictsort:"order" %}
-                                            <li class="">
-                                                <a href="" class=""><input type="checkbox">
-                                                    {{ category.friendly_name }}
-                                                </a>
-                                            </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-                                    <div class="filter-label">Levels</div>
+                            <!-- Category -->
+                            <div class="filter-box">
+                                <div class="form-group">
+                                    <div class="filter-label">Category</div>
                                     <ul class="">
-                                        {% for level in levels %}
+                                        {% for category in categories|dictsort:"order" %}
                                         <li class="">
                                             <a href="" class=""><input type="checkbox">
-                                                {{ level.level }}
+                                                {{ category.friendly_name }}
                                             </a>
                                         </li>
                                         {% endfor %}
                                     </ul>
-                                    <div class="filter-label">£ Price</div>
-                                    <div class="form-group">
-                                        <div class="filter-label">Sort by</div>
-                                    </div>
+                                </div>
+                                <div class="filter-label">Levels</div>
+                                <ul class="">
+                                    {% for level in levels %}
+                                    <li class="">
+                                        <a href="" class=""><input type="checkbox">
+                                            {{ level.level }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                <div class="filter-label">£ Price</div>
+                                <div class="form-group">
+                                    <div class="filter-label">Sort by</div>
+                                </div>
 
-                                    <!-- Buttons container -->
-                                    <div class="filter-buttons">
-                                        <button class="btn btn-danger">Clear Filters</button>
-                                        <button class="btn btn-primary">Apply Filters</button>
-                                    </div>
+                                <!-- Buttons container -->
+                                <div class="filter-buttons">
+                                    <button class="btn btn-danger">Clear Filters</button>
+                                    <button class="btn btn-primary">Apply Filters</button>
                                 </div>
                             </div>
                         </form>
@@ -116,7 +113,8 @@
                         <!-- Show more lessons container -->
                         <div class="show-more">
                             <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More</a>
-                            <span class="page-results"> from {{ lessons.count }}</span>
+                            <p class="page-results"><span class="cards-count">
+                                {% if lessons.count <= 24 %} {{ lessons.count }} {% else %}24 {% endif %}</span> from {{ lessons.count }} lessons</p>
                         </div>
                     </div>
                 </div>

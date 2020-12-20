@@ -67,12 +67,23 @@
         label {
             font-weight: 300;
         }
+
+        .filter-buttons {
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+
+            .btn {
+                margin-bottom: 0.5rem;
+            }
+        }
     }
 
     // filters box fixed style
     .fixed-filters {
         position: fixed;
-        top: 70px;
+        width: 263px;
+        top: 80px;
     }
 
     // cards style
@@ -176,7 +187,7 @@
 
         a {
             color: #059cd9;
-            width: 80px;
+            width: 110px;
             opacity: 0.8;
             &:hover {
                 text-decoration: none;
@@ -219,7 +230,6 @@
 }
 
 @media (max-width: 414px) {
-
 }
 
 @media (min-width: 768px) {

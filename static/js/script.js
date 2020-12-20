@@ -88,13 +88,15 @@ $(document).ready(function () {
 	 * Load more content with jQuery - May 21, 2013 c 2013 @ElmahdiMahmoud
 	*/
 	$(function () {
-		$(".card").slice(0, 12).show();
+		$(".card").slice(0, 24).show();
 		$("#loadMore").on('click', function (e) {
 			e.preventDefault();
-			$(".card:hidden").slice(0, 12).slideDown();
+			$(".card:hidden").slice(0, 24).slideDown();
 			if ($(".card:hidden").length == 0) {
 				$("#load").fadeOut('slow');
 			}
+			let cards_on_page = $('.card:visible').length;
+			$(".cards-count").html(cards_on_page);
 		});
 	});
 
@@ -103,8 +105,9 @@ $(document).ready(function () {
 	 */
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
+		// top section height
 		let top_section_height = $(".about-lessons-result").height()
-		console.log(top_section_height)
+		console.log(top_section_height);
 		//>=, not <=
 		if (scroll >= top_section_height) {
 			//clearHeader, not clearheader - caps H
