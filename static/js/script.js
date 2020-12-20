@@ -107,7 +107,6 @@ $(document).ready(function () {
 		let scroll = $(window).scrollTop();
 		// top section height
 		let top_section_height = $(".about-lessons-result").height()
-		console.log(top_section_height);
 		//>=, not <=
 		if (scroll >= top_section_height) {
 			//clearHeader, not clearheader - caps H
@@ -115,6 +114,17 @@ $(document).ready(function () {
 		}
 		else {
 			$(".filter-box").removeClass("fixed-filters");
+		}
+	});
+
+	/**
+	 * This function will change text onClick
+	 */
+	$('#read-more-button').click(function () {
+		if ($(this).html() != 'Hide') {
+			$(this).html('Hide');
+		} else {
+			$(this).html('About Me');
 		}
 	});
 
