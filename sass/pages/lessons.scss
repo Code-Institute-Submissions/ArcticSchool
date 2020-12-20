@@ -47,6 +47,7 @@
 
 // category results page - lesson cards style
 .about-lessons-result {
+    padding-top: 30px;
     .about-lessons {
     }
     .about-lessons-text {
@@ -54,7 +55,7 @@
         font-size: 1.25rem;
         font-weight: 300;
 
-        span{
+        span {
             color: #059cd9;
         }
     }
@@ -124,13 +125,14 @@
             h1 {
                 font-size: 1.25rem;
                 color: #059cd9;
+                margin-bottom: 0.5rem;
             }
             p {
                 font-size: 1rem;
                 font-family: "Lato", sans-serif;
                 color: #000;
                 font-weight: 500;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.25rem;
 
                 span {
                     font-weight: 300;
