@@ -120,7 +120,7 @@
                         </div>
                         <!-- Show more lessons container -->
                         <div class="show-more">
-                            <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More</a>
+                            <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More (<span class="visible-cards-count"></span>)</a>
                             <p class="page-results"><span class="cards-count">
                                     {% if lessons.count <= 24 %} {{ lessons.count }} {% else %}24 {% endif %}</span>
                                         from <span class="total-count">{{ lessons.count }}</span> lessons</p>
