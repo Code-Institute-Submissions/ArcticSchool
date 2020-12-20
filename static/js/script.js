@@ -123,6 +123,7 @@ $(document).ready(function () {
 			check_count();
 			change_load_number();
 		});
+		check_count();
 		change_load_number();
 		// get number of cards to show and pass value to LoadMore() span element
 		function change_load_number() {
@@ -148,7 +149,8 @@ $(document).ready(function () {
 	function check_count() {
 		let cards_on_page = $('.card:visible').length;
 		let total_count = Number($('.total-count').html());
-		if (cards_on_page != total_count) {
+		console.log(cards_on_page)
+		if (cards_on_page != total_count || cards_on_page === 0 ) {
 		} else {
 			$('.show-more').addClass('show-disable');
 			$('.visible-cards-count').html('0');

@@ -42,7 +42,7 @@
                                     <ul class="">
                                         {% for category in categories|dictsort:"order" %}
                                         <li class="">
-                                            <a href="" class=""><input type="checkbox">
+                                            <a href="{{ lessons }}?category=category.name" class=""><input type="checkbox">
                                                 {{ category.friendly_name }}
                                             </a>
                                         </li>
