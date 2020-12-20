@@ -1,6 +1,11 @@
 #lessons-container {
     margin-top: 59px;
 
+    .lessons-bg {
+        height: calc(100vh / 4);
+        background: url("/media/bg_images/our_team_bg.jpeg") center center / cover no-repeat;
+    }
+
     // category cards style
     .category-block-,
     .category-block-e {
@@ -47,8 +52,13 @@
 
 // category results page - lesson cards style
 .about-lessons-result {
-    padding-top: 30px;
     .about-lessons {
+        margin-top: 30px;
+
+        h2 {
+            text-align: center;
+            color: #059cd9;
+        }
     }
     .about-lessons-text {
         color: #000;
