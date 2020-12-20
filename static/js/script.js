@@ -97,6 +97,8 @@ $(document).ready(function () {
 			}
 			let cards_on_page = $('.card:visible').length;
 			$(".cards-count").html(cards_on_page);
+			// check visible card count
+			check_count();
 		});
 	});
 
@@ -116,6 +118,18 @@ $(document).ready(function () {
 			$(".filter-box").removeClass("fixed-filters");
 		}
 	});
+
+	/**
+	 * This function will change load button to unavailable when all cards are loaded
+	 */
+	function check_count() {
+		let cards_on_page = $('.card:visible').length;
+		let total_count = Number($('.total-count').html());
+		if (cards_on_page != total_count) {
+		} else {
+			$('.show-more').addClass('show-disable');
+		}
+	};
 
 	/**
 	 * This function will change text onClick
