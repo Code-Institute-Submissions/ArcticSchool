@@ -103,13 +103,15 @@ $(document).ready(function () {
 	 */
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
+		let top_section_height = $(".about-lessons-result").height()
+		console.log(top_section_height)
 		//>=, not <=
-		if (scroll >= 100) {
+		if (scroll >= top_section_height) {
 			//clearHeader, not clearheader - caps H
-			$(".filter-box").addClass("position-fixed");
+			$(".filter-box").addClass("fixed-filters");
 		}
 		else {
-			$(".filter-box").removeClass("position-fixed");
+			$(".filter-box").removeClass("fixed-filters");
 		}
 	});
 
