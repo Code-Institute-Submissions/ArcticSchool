@@ -4,13 +4,15 @@
 {% block content %}
 
 <!-- Main container -->
+<h1 class="d-none">Lessons</h1>
 <div id="lessons-container">
     <!-- About lessons promo container -->
     <div class="about-lessons-result">
-        <div class="about-lessons">
-            <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iste
-                obcaecati porro minus ea corrupti ullam atque aperiam ipsa, enim aut est quae, recusandae,
-                cumque sequi qui temporibus odit repudiandae?</p>
+        <div class="container">
+            <div class="about-lessons">
+                <p class="about-lessons-text">We have got private and group snowboard lessson for everyone. From beginner through advanced riders to experts. Doesn't matter, if you are old or young, age is not a limit to start your beautiful journey with snowboarding. We have got the best instructors on the whole globe, <strong>they all are incredibly passionate about snowboard and teaching, with many years of experience and knowledge</strong>.</p>
+            </div>
+            <hr class="p-3">
         </div>
     </div>
     <div class="container-fluid">
@@ -114,7 +116,8 @@
                         <div class="show-more">
                             <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More</a>
                             <p class="page-results"><span class="cards-count">
-                                {% if lessons.count <= 24 %} {{ lessons.count }} {% else %}24 {% endif %}</span> from {{ lessons.count }} lessons</p>
+                                    {% if lessons.count <= 24 %} {{ lessons.count }} {% else %}24 {% endif %}</span>
+                                        from {{ lessons.count }} lessons</p>
                         </div>
                     </div>
                 </div>

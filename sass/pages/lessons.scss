@@ -49,7 +49,14 @@
 .about-lessons-result {
     .about-lessons {
     }
-    .about-text {
+    .about-lessons-text {
+        color: #000;
+        font-size: 1.25rem;
+        font-weight: 300;
+
+        span{
+            color: #059cd9;
+        }
     }
 }
 
@@ -227,9 +234,6 @@
         bottom: 30px;
         opacity: 0.6;
     }
-}
-
-@media (max-width: 414px) {
 }
 
 @media (min-width: 768px) {
