@@ -38,18 +38,17 @@
                             <!-- Category -->
                             <div class="filter-box">
                                 <div class="form-group">
-                                    <div class="filter-label">Category</div>
-                                    <ul class="">
-                                        <li class="">
-                                            <a href="{% url 'lessons' %}" class="">All Lessons ({{ lessons.count }})</a>
-                                        </li>
-                                        {% for category in categories|dictsort:"order" %}
-                                        <li class="">
-                                            <a href="{% url 'lessons' %}?category={{ category.name }}" class="">{{ category.friendly_name }}
-                                            </a>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
+                                    <li class="category-li">
+                                        <a class="category-link"
+                                            href="{% url 'lessons' %}">All Lessons</a>
+                                    </li>
+                                    {% for category in categories|dictsort:"order" %}
+                                    <li class="category-li">
+                                        <a class="category-link"
+                                            href="{% url 'lessons' %}?category={{ category.name }}">{{ category.friendly_name }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
                                 </div>
                                 <div class="filter-label">Levels</div>
                                 <ul class="">
@@ -121,6 +120,7 @@
                             {% endfor %}
                         </div>
                         <!-- Show more lessons container -->
+                        {% if lessons.count %}
                         <div class="show-more">
                             <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More (<span
                                     class="visible-cards-count"></span>)</a>
@@ -128,6 +128,7 @@
                                     {% if lessons.count <= 12 %} {{ lessons.count }} {% else %}12 {% endif %}</span>
                                         from <span class="total-count">{{ lessons.count }}</span> lessons</p>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
