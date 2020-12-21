@@ -50,15 +50,12 @@
                                     {% endfor %}
                                 </div>
                                 <div class="filter-label">Levels</div>
-                                <ul class="">
-                                    {% for level in levels %}
-                                    <div class="form-group">
-                                        <input type="checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
-                                        <label class="text-uppercase"
-                                            for="{{ level.level }}">{{ level.title }}</label>
-                                    </div>
-                                    {% endfor %}
-                                </ul>
+                                {% for level in levels %}
+                                <div class="form-group">
+                                    <input type="checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
+                                    <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
+                                </div>
+                                {% endfor %}
                                 <div class="filter-label">£ Price</div>
                                 <div class="form-group">
                                     <div class="filter-label">Sort by</div>
@@ -126,6 +123,10 @@
                             <p class="page-results"><span class="cards-count">
                                     {% if lessons.count <= 12 %} {{ lessons.count }} {% else %}12 {% endif %}</span>
                                         from <span class="total-count">{{ lessons.count }}</span> lessons</p>
+                        </div>
+                        {% else %}
+                        <div class="text-center">
+                            <p class="no-results">No results found for this category..</p>
                         </div>
                         {% endif %}
                     </div>
