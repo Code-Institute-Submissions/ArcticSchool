@@ -39,12 +39,11 @@
                             <div class="filter-box">
                                 <div class="form-group">
                                     <li class="category-li">
-                                        <a class="category-link"
-                                            href="{% url 'lessons' %}">All Lessons</a>
+                                        <a class="category-link shadow-sm" href="{% url 'lessons' %}">All Lessons</a>
                                     </li>
                                     {% for category in categories|dictsort:"order" %}
                                     <li class="category-li">
-                                        <a class="category-link"
+                                        <a class="category-link shadow-sm"
                                             href="{% url 'lessons' %}?category={{ category.name }}">{{ category.friendly_name }}
                                         </a>
                                     </li>
@@ -53,11 +52,11 @@
                                 <div class="filter-label">Levels</div>
                                 <ul class="">
                                     {% for level in levels %}
-                                    <li class="">
-                                        <a href="" class=""><input type="checkbox">
-                                            {{ level.level }}
-                                        </a>
-                                    </li>
+                                    <div class="form-check pl-0 mb-3">
+                                        <input type="checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
+                                        <label class="text-uppercase"
+                                            for="{{ level.level }}">{{ level.title }}</label>
+                                    </div>
                                     {% endfor %}
                                 </ul>
                                 <div class="filter-label">£ Price</div>
@@ -67,8 +66,8 @@
 
                                 <!-- Buttons container -->
                                 <div class="filter-buttons">
-                                    <button class="btn btn-danger">Clear Filters</button>
-                                    <button class="btn btn-primary">Apply Filters</button>
+                                    <button class="btn btn-danger shadow-sm">Clear Filters</button>
+                                    <button class="btn btn-primary shadow-sm">Apply Filters</button>
                                 </div>
                             </div>
                         </form>
