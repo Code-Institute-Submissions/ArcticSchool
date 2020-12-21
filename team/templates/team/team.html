@@ -13,13 +13,11 @@
             <h2>Meet our team!</h2>
             <div class="about-team">
                 <p class="about-team-text">
-                    <i>
-                        Our team consists of the world's best instructors with extensive experience, highly qualified in
-                        various fields, to ensure the highest quality of training.Some of them are trained in teaching:
-                        <strong>children, elderly and even nervous clients.</strong> We are here to help you better
-                        understand how to ride on snowboard and also to help you have fun, as you always should, when
-                        riding!
-                    </i>
+                    Our team consists of the world's best instructors with extensive experience, highly qualified in
+                    various fields, to ensure the highest quality of training.Some of them are trained in teaching:
+                    <strong>children, elderly and even nervous clients.</strong> We are here to help you better
+                    understand how to ride on snowboard and also to help you have fun, as you always should, when
+                    riding!
                 </p>
                 <p class="blue-text text-uppercase">
                     <strong>
@@ -52,13 +50,12 @@
                         </div>
                         <div class="card-body">
                             <hr class="white-hr">
-                            <h5 class="card-title text-underline"><u>{{ instructor.name }}</u><span
-                                    class="age">{{ instructor.age }}</span></h5>
+                            <h5 class="card-title text-underline"><u>{{ instructor.name }}</u><span class="age">{{ instructor.age }}</span></h5>
                             <div id="readmore-button-{{ forloop.counter }}" class="collapse">
                                 <p class="card-text">{{ instructor.about }}</p>
                             </div>
-                            <button type="button" class="btn btn-info" data-toggle="collapse"
-                                data-target="#readmore-button-{{ forloop.counter }}">Read more</button>
+                            <button id="read-more-button" type="button" class="btn btn-info" data-toggle="collapse"
+                                data-target="#readmore-button-{{ forloop.counter }}">About Me</button>
                         </div>
                     </div>
                 </div>

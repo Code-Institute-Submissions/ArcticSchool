@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// NAVIGATION
 	/**
 	* This function fill change hamburegr button from lines to cross sign on small devices
 	*/
@@ -58,6 +59,8 @@ $(document).ready(function () {
 		scrollToTop();
 	}
 
+
+	// LESSONS PAGE
 	/**
 	 * This function will count number of existing classes on the page to determine divider for container height
 	 */
@@ -84,6 +87,23 @@ $(document).ready(function () {
 	});
 
 	/**
+	* This function will add class to side navigation when scrolled to predefined point
+	*/
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		// top section height
+		let top_section_height = $(".about-lessons-result").height()
+		//>=, not <=
+		if (scroll >= top_section_height) {
+			//clearHeader, not clearheader - caps H
+			$(".filter-box").addClass("fixed-filters");
+		}
+		else {
+			$(".filter-box").removeClass("fixed-filters");
+		}
+	});
+
+	/**
 	 * This function will show more elements.cards
 	 * Load more content with jQuery - May 21, 2013 c 2013 @ElmahdiMahmoud
 	*/
@@ -95,6 +115,59 @@ $(document).ready(function () {
 			if ($(".card:hidden").length == 0) {
 				$("#load").fadeOut('slow');
 			}
+
+			// get number of visisble cards and pass value to bottoms count section
+			let cards_on_page = $('.card:visible').length;
+			$(".cards-count").html(cards_on_page);
+			// check visible card count
+			check_count();
+			change_load_number();
 		});
+		check_count();
+		change_load_number();
+		// get number of cards to show and pass value to LoadMore() span element
+		function change_load_number() {
+			let all_cards = Number($('.total-count').html());
+			let cards_on_page = $('.card:visible').length;
+			let cards_to_show;
+			cards_to_show = all_cards - cards_on_page;
+			console.log(cards_to_show);
+			if (cards_to_show < 12) {
+				cards_to_show = cards_to_show;
+				$('.visible-cards-count').html(cards_to_show);
+			}
+			else {
+				cards_to_show = 12;
+				$('.visible-cards-count').html(cards_to_show);
+			}
+		}
 	});
+
+	/**
+	 * This function will change load button to unavailable when all cards are loaded
+	 */
+	function check_count() {
+		let cards_on_page = $('.card:visible').length;
+		let total_count = Number($('.total-count').html());
+		console.log(cards_on_page)
+		if (cards_on_page != total_count || cards_on_page === 0 ) {
+		} else {
+			$('.show-more').addClass('show-disable');
+			$('.visible-cards-count').html('0');
+		}
+	};
+
+
+	// TEAM PAGAE
+	/**
+	 * This function will change text onClick
+	 */
+	$('#read-more-button').click(function () {
+		if ($(this).html() != 'Hide') {
+			$(this).html('Hide');
+		} else {
+			$(this).html('About Me');
+		}
+	});
+
 });

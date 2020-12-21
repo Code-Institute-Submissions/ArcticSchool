@@ -1,6 +1,11 @@
 #lessons-container {
     margin-top: 59px;
 
+    .lessons-bg {
+        height: calc(100vh / 4);
+        background: url("/media/bg_images/lessons_bg.jpg") center center / cover no-repeat;
+    }
+
     // category cards style
     .category-block-,
     .category-block-e {
@@ -48,8 +53,21 @@
 // category results page - lesson cards style
 .about-lessons-result {
     .about-lessons {
+        margin-top: 30px;
+
+        h2 {
+            text-align: center;
+            color: #059cd9;
+        }
     }
-    .about-text {
+    .about-lessons-text {
+        color: #000;
+        font-size: 1.25rem;
+        font-weight: 300;
+
+        span {
+            color: #059cd9;
+        }
     }
 }
 
@@ -63,10 +81,56 @@
     .filter-box {
         width: 100%;
         color: #000;
+        margin-bottom: 2rem;
 
         label {
             font-weight: 300;
         }
+
+        .category-li {
+            list-style: none;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            margin-bottom: 10px;
+
+        }
+        .active-li{
+            background-color: #00d4f5 !important;
+        }
+
+        .category-link {
+            width: 100%;
+            color: #fff;
+            background-color: #1ca5dc;
+            border-radius: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0.5rem;
+
+            &:hover {
+                text-decoration: none;
+                background-color: #00d4f5;
+            }
+        }
+
+        .filter-buttons {
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+
+            .btn {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    // filters box fixed style
+    .fixed-filters {
+        position: fixed;
+        width: 263px;
+        top: 80px;
     }
 
     // cards style
@@ -100,13 +164,14 @@
             h1 {
                 font-size: 1.25rem;
                 color: #059cd9;
+                margin-bottom: 0.5rem;
             }
             p {
                 font-size: 1rem;
                 font-family: "Lato", sans-serif;
                 color: #000;
                 font-weight: 500;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.25rem;
 
                 span {
                     font-weight: 300;
@@ -166,11 +231,12 @@
         justify-content: center;
         justify-items: center;
         text-align: center;
+        margin-top: 1.25rem;
         margin-bottom: 1.25rem;
 
         a {
             color: #059cd9;
-            width: 80px;
+            width: 110px;
             opacity: 0.8;
             &:hover {
                 text-decoration: none;
@@ -207,13 +273,15 @@
         color: black;
         position: absolute;
         right: 20px;
-        bottom: 30px;
+        bottom: 5px;
         opacity: 0.6;
     }
-}
 
-@media (max-width: 414px) {
-
+    // no category results
+    .no-results {
+        font-size: 1.25rem;
+        color: #dc3545;
+    }
 }
 
 @media (min-width: 768px) {
