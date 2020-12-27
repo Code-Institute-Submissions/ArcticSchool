@@ -39,7 +39,7 @@
                             <div class="filter-box">
                                 <div class="form-group">
                                     <li class="category-li">
-                                        <a class="category-link shadow-sm" href="{% url 'lessons' %}">All Lessons</a>
+                                        <a class="category-link shadow-sm" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
                                     </li>
                                     {% for category in categories|dictsort:"order" %}
                                     <li class="category-li">
@@ -58,7 +58,7 @@
                                 {% endfor %}
                                 <div class="filter-label">£ Price</div>
                                 <div class="form-group">
-                                    <div class="filter-label">Sort by</div>
+                                    <div class="filter-label">Sort by</div>git 
                                 </div>
 
                                 <!-- Buttons container -->
@@ -126,7 +126,7 @@
                         </div>
                         {% else %}
                         <div class="text-center">
-                            <p class="no-results">No results found for this category..</p>
+                            <p class="no-results">No results found in category</p>
                         </div>
                         {% endif %}
                     </div>

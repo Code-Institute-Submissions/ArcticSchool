@@ -10,6 +10,7 @@ def lessons(request):
     """ A view to return lessons in selected category """
 
     lessons = Lesson.objects.all()
+    all_lessons = Lesson.objects.all()
     social = SocialIcon.objects.all()
     categories = Category.objects.all()
     levels = LevelCard.objects.all()
@@ -24,6 +25,7 @@ def lessons(request):
         'lessons': lessons,
         'categories': categories,
         'levels': levels,
+        'all_lessons':all_lessons,
     }
 
     return render(request, 'lessons/lessons.html', context)
