@@ -158,7 +158,7 @@ $(document).ready(function () {
 	};
 
 	/**
-	 *
+	 * This function will reload Lessons page and display/filter lessons with selected Sort Option only
 	 */
 	$('#sort-selector').change(function () {
 		let selector = $(this);
@@ -176,6 +176,10 @@ $(document).ready(function () {
 			window.location.replace(currentUrl);
 		}
 	})
+
+	/**
+	 * This function will reload Lessons page and display/filter lessons with selected Levels only
+	 */
 
 	// TEAM PAGAE
 	/**
