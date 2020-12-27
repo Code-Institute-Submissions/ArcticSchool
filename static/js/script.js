@@ -150,13 +150,32 @@ $(document).ready(function () {
 		let cards_on_page = $('.card:visible').length;
 		let total_count = Number($('.total-count').html());
 		console.log(cards_on_page)
-		if (cards_on_page != total_count || cards_on_page === 0 ) {
+		if (cards_on_page != total_count || cards_on_page === 0) {
 		} else {
 			$('.show-more').addClass('show-disable');
 			$('.visible-cards-count').html('0');
 		}
 	};
 
+	/**
+	 *
+	 */
+	$('#sort-selector').change(function () {
+		let selector = $(this);
+		let currentUrl = new URL(window.location);
+		let selectedVal = selector.val();
+		if (selectedVal != "reset") {
+			let sort = selectedVal.split("_")[0];
+			let direction = selectedVal.split("_")[1];
+			currentUrl.searchParams.set("sort", sort);
+			currentUrl.searchParams.set("direction", direction);
+			window.location.replace(currentUrl);
+		} else {
+			currentUrl.searchParams.delete("sort");
+			currentUrl.searchParams.delete("direction");
+			window.location.replace(currentUrl);
+		}
+	})
 
 	// TEAM PAGAE
 	/**

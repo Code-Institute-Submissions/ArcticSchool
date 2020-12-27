@@ -33,41 +33,38 @@
                 <div class="row justify-content-between">
                     <!-- Filters container -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                        <!-- Filters form -->
-                        <form action="" method="">
-                            <!-- Category -->
-                            <div class="filter-box">
-                                <div class="form-group">
-                                    <li class="category-li">
-                                        <a class="category-link shadow-sm" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
-                                    </li>
-                                    {% for category in categories|dictsort:"order" %}
-                                    <li class="category-li">
-                                        <a class="category-link shadow-sm"
-                                            href="{% url 'lessons' %}?category={{ category.name }}">{{ category.friendly_name }}
-                                        </a>
-                                    </li>
-                                    {% endfor %}
-                                </div>
-                                <div class="filter-label">Levels</div>
-                                {% for level in levels %}
-                                <div class="form-group m-0">
-                                    <input type="checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
-                                    <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
-                                </div>
+                        <!-- Category -->
+                        <div class="filter-box">
+                            <div class="">
+                                <li class="category-li">
+                                    <a class="category-link shadow-sm" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
+                                </li>
+                                {% for category in categories|dictsort:"order" %}
+                                <li class="category-li">
+                                    <a class="category-link shadow-sm"
+                                        href="{% url 'lessons' %}?category={{ category.name }}">{{ category.friendly_name }}
+                                    </a>
+                                </li>
                                 {% endfor %}
-                                <div class="filter-label">£ Price</div>
-                                <div class="form-group">
-                                    <div class="filter-label">Sort by</div>git
-                                </div>
-
-                                <!-- Buttons container -->
-                                <div class="filter-buttons">
-                                    <button class="btn btn-danger shadow-sm">Clear Filters</button>
-                                    <button class="btn btn-primary shadow-sm">Apply Filters</button>
-                                </div>
                             </div>
-                        </form>
+                            <div class="filter-label">Levels</div>
+                            {% for level in levels %}
+                            <div class="m-0">
+                                <input type="checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
+                                <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
+                            </div>
+                            {% endfor %}
+                            <div class="">
+                                <div class="filter-label">Sort by</div>
+                                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                         <div class="row">
