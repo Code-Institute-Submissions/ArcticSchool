@@ -122,9 +122,11 @@ $(document).ready(function () {
 			// check visible card count
 			check_count();
 			change_load_number();
+			getQueryVariable();
 		});
 		check_count();
 		change_load_number();
+
 		// get number of cards to show and pass value to LoadMore() span element
 		function change_load_number() {
 			let all_cards = Number($('.total-count').html());
@@ -149,7 +151,6 @@ $(document).ready(function () {
 	function check_count() {
 		let cards_on_page = $('.card:visible').length;
 		let total_count = Number($('.total-count').html());
-		console.log(cards_on_page)
 		if (cards_on_page != total_count || cards_on_page === 0) {
 		} else {
 			$('.show-more').addClass('show-disable');
@@ -176,10 +177,6 @@ $(document).ready(function () {
 			window.location.replace(currentUrl);
 		}
 	})
-
-	/**
-	 * This function will reload Lessons page and display/filter lessons with selected Levels only
-	 */
 
 	// TEAM PAGAE
 	/**
