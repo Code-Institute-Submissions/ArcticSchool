@@ -50,7 +50,7 @@
                             <div class="filter-label">Levels</div>
                             {% for level in levels %}
                             <div class="m-0">
-                                <input type="checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
+                                <input type="checkbox" name="level_checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
                                 <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
                             </div>
                             {% endfor %}
@@ -69,7 +69,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                         <div class="row">
                             {% for lesson in lessons %}
-                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 extra-padding">
+                            <div id="{{ lesson.level }}" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 extra-padding">
                                 <div
                                     class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
                                     <!-- Card top part -->
@@ -90,7 +90,7 @@
                                         <!-- Lesson details -->
                                         <h1>{{ lesson.name }}</h1>
                                         <p>Level
-                                            <span>{{ lesson.level }}</span>
+                                            <span id="lesson_level">{{ lesson.level }}</span>
                                         </p>
                                         <p>Participants
                                             <span>{{ lesson.participants }}</span>

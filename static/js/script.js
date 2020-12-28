@@ -180,6 +180,25 @@ $(document).ready(function () {
 		}
 	})
 
+	// Levels checkbox listener
+	/**
+	 * This functill listen to filter - level checkbox change.
+	 */
+	$('input[name=level_checkbox]').change(function () {
+		var lvl_List = "";
+		$('input[type=checkbox]').each(function () {
+			if (this.checked) {
+				let lvl_lable = '"#' + $(this).next('label').text() + '"';
+				alert(lvl_lable);
+				$(lvl_lable).toggle();
+			}else {
+				let lvl_lable = '#' + $(this).next('label').text();
+				$(lvl_lable).toggle();
+			}
+		});
+		console.log(lvl_List);
+	});
+
 	// TEAM PAGAE
 	/**
 	 * This function will change button caption onClick
