@@ -41,14 +41,14 @@
                                 </li>
                                 {% for category in categories|dictsort:"order" %}
                                 <li class="category-li">
-                                    <a class="category-link shadow-sm"
+                                    <a class="category-link shadow-sm "
                                         href="{% url 'lessons' %}?category={{ category.name }}">{{ category.friendly_name }}
                                     </a>
                                 </li>
                                 {% endfor %}
                             </div>
                             <div class="filter-container">
-                                <select id="sort-selector" class="custom-select custom-select-sm selector-border {% if request.get_full_path == '/?category={{ category.name }}' %}category-selected{% endif %}">
+                                <select id="sort-selector" class="custom-select custom-select-sm selector-border {% if current_sorting == 'None_None' %}selector-border-none{% endif %}">
                                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
