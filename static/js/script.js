@@ -124,7 +124,9 @@ $(document).ready(function () {
 			change_load_number();
 			getQueryVariable();
 		});
+		// run check count function
 		check_count();
+		// run chabge load number function
 		change_load_number();
 
 		// get number of cards to show and pass value to LoadMore() span element
@@ -180,7 +182,7 @@ $(document).ready(function () {
 
 	// TEAM PAGAE
 	/**
-	 * This function will change text onClick
+	 * This function will change button caption onClick
 	 */
 	$('#read-more-button').click(function () {
 		if ($(this).html() != 'Hide') {
