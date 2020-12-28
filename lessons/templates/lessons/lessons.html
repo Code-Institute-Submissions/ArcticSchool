@@ -35,9 +35,9 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                         <!-- Category -->
                         <div class="filter-box">
-                            <div class="">
+                            <div>
                                 <li class="category-li">
-                                    <a class="category-link shadow-sm" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
+                                    <a class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
                                 </li>
                                 {% for category in categories|dictsort:"order" %}
                                 <li class="category-li">
@@ -47,16 +47,8 @@
                                 </li>
                                 {% endfor %}
                             </div>
-                            <div class="filter-label">Levels</div>
-                            {% for level in levels %}
-                            <div class="m-0">
-                                <input type="checkbox" name="level_checkbox" class="" id="{{ level.level }}" value="{{ level.level }}">
-                                <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
-                            </div>
-                            {% endfor %}
-                            <div class="">
-                                <div class="filter-label">Sort by</div>
-                                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <div class="filter-container">
+                                <select id="sort-selector" class="custom-select custom-select-sm selector-border {% if request.get_full_path == '/?category={{ category.name }}' %}category-selected{% endif %}">
                                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -64,12 +56,23 @@
                                     <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                                 </select>
                             </div>
+                            <div class="filter-container">
+                                <div class="filter-label">Levels</div>
+                                {% for level in levels %}
+                                <div class="m-0">
+                                    <input type="checkbox" name="level_checkbox" class="" id="{{ level.level }}"
+                                        value="{{ level.level }}">
+                                    <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                         <div class="row">
                             {% for lesson in lessons %}
-                            <div id="{{ lesson.level }}" class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 extra-padding">
+                            <div id="{{ lesson.level }}"
+                                class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 extra-padding">
                                 <div
                                     class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
                                     <!-- Card top part -->
@@ -122,8 +125,8 @@
                                         from <span class="total-count">{{ lessons.count }}</span> lessons</p>
                         </div>
                         {% else %}
-                        <div class="text-center>
-                            <p class="no-results">No results found..</p>
+                        <div class="text-center">
+                            <p class="no-results">No results found in <span class="pathname"></span> category</p>
                         </div>
                         {% endif %}
                     </div>

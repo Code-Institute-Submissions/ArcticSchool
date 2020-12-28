@@ -1,3 +1,5 @@
+from django.db.models.fields import URLField
+from django.http.request import HttpRequest
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -42,8 +44,6 @@ def lessons(request):
             categories = Category.objects.all()
 
     current_sorting = f'{sort}_{direction}'
-
-    print(current_sorting)
 
     context = {
         'socials': social,

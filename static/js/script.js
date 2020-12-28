@@ -135,7 +135,6 @@ $(document).ready(function () {
 			let cards_on_page = $('.card:visible').length;
 			let cards_to_show;
 			cards_to_show = all_cards - cards_on_page;
-			console.log(cards_to_show);
 			if (cards_to_show < 12) {
 				cards_to_show = cards_to_show;
 				$('.visible-cards-count').html(cards_to_show);
@@ -191,7 +190,7 @@ $(document).ready(function () {
 				let lvl_lable = '"#' + $(this).next('label').text() + '"';
 				alert(lvl_lable);
 				$(lvl_lable).toggle();
-			}else {
+			} else {
 				let lvl_lable = '#' + $(this).next('label').text();
 				$(lvl_lable).toggle();
 			}
@@ -199,16 +198,35 @@ $(document).ready(function () {
 		console.log(lvl_List);
 	});
 
+	/**
+	 * This function will add special id to anchor element to set 'category-selected' style
+	 */
+	$(function () {
+		let pathname = window.location.href;
+		// check if path name contains 
+		if (pathname.search("=") < 0) { } else {
+			pathname = pathname.split('=')[1];
+			let last_sign = pathname.search("&");
+
+			if (last_sign <= 0) {
+				category_selected = pathname + '-selected';
+				$('.pathname').html(pathname);
+			} else { }
+		}
+	});
+
 	// TEAM PAGAE
 	/**
 	 * This function will change button caption onClick
 	 */
-	$('#read-more-button').click(function () {
-		if ($(this).html() != 'Hide') {
-			$(this).html('Hide');
-		} else {
-			$(this).html('About Me');
-		}
+	$(function () {
+		$('#read-more-button').click(function () {
+			if ($(this).html() != 'Hide') {
+				$(this).html('Hide');
+			} else {
+				$(this).html('About Me');
+			}
+		});
 	});
 
 });
