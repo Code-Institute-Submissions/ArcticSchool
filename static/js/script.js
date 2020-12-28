@@ -188,13 +188,11 @@ $(document).ready(function () {
 		$('input[type=checkbox]').each(function () {
 			if (this.checked) {
 				let lvl_label = '"#' + $(this).next('label').text() + '"';
-				alert(lvl_label);
+				console.log(lvl_label);
+				
 			} else {
-				let lvl_label = '#' + $(this).next('label').text();
-				alert(lvl_label);
 			}
 		});
-		console.log(lvl_List);
 	});
 
 	/**

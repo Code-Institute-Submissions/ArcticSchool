@@ -220,6 +220,11 @@
                         border: 1px solid #00d4f5;
                         color: #00d4f5;
                     }
+
+                    .hvr-bounce-to-right {
+                        -webkit-transition-duration: 0.15s;
+                        transition-duration: 0.15s;
+                    }
                 }
                 a:nth-child(2) {
                     .btn {
