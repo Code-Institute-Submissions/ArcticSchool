@@ -184,15 +184,14 @@ $(document).ready(function () {
 	 * This functill listen to filter - level checkbox change.
 	 */
 	$('input[name=level_checkbox]').change(function () {
-		var lvl_List = "";
+		let currentUrl = new URL(window.location);
 		$('input[type=checkbox]').each(function () {
 			if (this.checked) {
-				let lvl_lable = '"#' + $(this).next('label').text() + '"';
-				alert(lvl_lable);
-				$(lvl_lable).toggle();
+				let lvl_label = '"#' + $(this).next('label').text() + '"';
+				alert(lvl_label);
 			} else {
-				let lvl_lable = '#' + $(this).next('label').text();
-				$(lvl_lable).toggle();
+				let lvl_label = '#' + $(this).next('label').text();
+				alert(lvl_label);
 			}
 		});
 		console.log(lvl_List);
