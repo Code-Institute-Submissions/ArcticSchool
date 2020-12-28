@@ -41,7 +41,7 @@
                                 </li>
                                 {% for category in categories|dictsort:"order" %}
                                 <li class="category-li">
-                                    <a class="category-link shadow-sm "
+                                    <a class="category-link shadow-sm" id="{{ category.name }}"
                                         href="{% url 'lessons' %}?category={{ category.name }}">{{ category.friendly_name }}
                                     </a>
                                 </li>

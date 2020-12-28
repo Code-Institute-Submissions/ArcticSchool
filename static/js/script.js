@@ -203,15 +203,24 @@ $(document).ready(function () {
 	 */
 	$(function () {
 		let pathname = window.location.href;
-		// check if path name contains 
+		// check if path name contains
 		if (pathname.search("=") < 0) { } else {
 			pathname = pathname.split('=')[1];
 			let last_sign = pathname.search("&");
 
 			if (last_sign <= 0) {
+				// add categroy.name-selected class to element when window href doesn't contains category or filtering
 				category_selected = pathname + '-selected';
 				$('.pathname').html(pathname);
-			} else { }
+				let my_id = '#' + pathname;
+				$(my_id).addClass('category-selected');
+			} else {
+				// add category.name-selected class to element when category is filtered
+				category_selected = pathname.substring(0, last_sign); + '-selected';
+				$('.pathname').html(category_selected);
+				let my_id = '#' + category_selected;
+				$(my_id).addClass('category-selected');
+			}
 		}
 	});
 
