@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'team',
     'resorts',
     'lessons',
+    'contact',
 
     # Other
     'storages'
