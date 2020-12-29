@@ -37,7 +37,7 @@
                         <div class="filter-box">
                             <div>
                                 <li class="category-li">
-                                    <a class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
+                                    <a id="all_lessons" class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}" href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
                                 </li>
                                 {% for category in categories|dictsort:"order" %}
                                 <li class="category-li">

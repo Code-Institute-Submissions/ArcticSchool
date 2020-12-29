@@ -189,7 +189,7 @@ $(document).ready(function () {
 			if (this.checked) {
 				let lvl_label = '"#' + $(this).next('label').text() + '"';
 				console.log(lvl_label);
-				
+
 			} else {
 			}
 		});
@@ -200,6 +200,7 @@ $(document).ready(function () {
 	 */
 	$(function () {
 		let pathname = window.location.href;
+		let category_in = pathname.search("category");
 		// check if path name contains
 		if (pathname.search("=") < 0) { } else {
 			pathname = pathname.split('=')[1];
@@ -216,7 +217,11 @@ $(document).ready(function () {
 				category_selected = pathname.substring(0, last_sign); + '-selected';
 				$('.pathname').html(category_selected);
 				let my_id = '#' + category_selected;
-				$(my_id).addClass('category-selected');
+				if (category_in == -1) {
+					$('#all_lessons').addClass('category-selected');
+				} else {
+					$(my_id).addClass('category-selected');
+				}
 			}
 		}
 	});
