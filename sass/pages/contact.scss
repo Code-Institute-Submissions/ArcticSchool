@@ -9,12 +9,27 @@
         width: 100%;
     }
 
-    #form_contact {
+    #form-contact {
+        background: #fff;
+        padding: 1.25rem;
+        border-radius: 10px;
         left: 50%;
-        top: calc((100%/2) + 59px);
+        top: calc((100% / 2) + 59px);
         position: absolute;
         -webkit-transform: translate3d(-50%, -50%, 0);
         -moz-transform: translate3d(-50%, -50%, 0);
         transform: translate3d(-50%, -50%, 0);
+    }
+
+    .form-group {
+        label {
+            color: #059cd9;
+        }
+        .form-control {
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ced4da;
+            background: none;
+        }
     }
 }

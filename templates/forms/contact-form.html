@@ -1,4 +1,12 @@
-<form id="form_contact">
+<form id="form-contact" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 shadow-sm">
+    <h2 class="blue-text">Message Us</h2>
+    <div class="quote-contact-container">
+        <p class="blue-text">Stay positive all the time.</p>
+        <div class="quote-text">
+            <p class="">{{ quote.description }}</p>
+            <span class="">{{ quote.author }}</span>
+        </div>
+    </div>
     <div class="form-group">
         <label for="name_contact">Name</label>
         <input type="text" class="form-control" id="name_contact" placeholder="John Doe">
@@ -11,5 +19,8 @@
         <label for="text_contact">Message..</label>
         <textarea class="form-control" id="text_contact" rows="5"></textarea>
     </div>
-
+    <div class="buttons-group d-flex justify-content-between">
+        <button type="submit" class="btn btn-danger">Clear</button>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
 </form>
