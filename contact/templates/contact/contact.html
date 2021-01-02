@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block content %}
-<h1 class="hidden">Contact</h1>
-
-<div class="container">
-    <!-- Contact form  -->
-    {% include 'forms/contact-form.html' %}
+<h1 class="d-none">Contact</h1>
+<div id="contact_bg">
+    <img src="/media/bg_images/contact_bg.svg" alt="contact-background-image">
+    <div class="container">
+        <!-- Contact form  -->
+        {% include 'forms/contact-form.html' %}
+    </div>
 </div>
 
 {% endblock %}
