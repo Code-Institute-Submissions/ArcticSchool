@@ -1,0 +1,20 @@
+#contact {
+    background-color: #f1f2f3;
+}
+#contact_bg {
+    height: calc(100% - 59px);
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    #form_contact {
+        left: 50%;
+        top: calc((100%/2) + 59px);
+        position: absolute;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
