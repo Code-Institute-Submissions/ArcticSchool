@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Quote
+from .models import QuoteText
 
 
 class QuoteAdmin(admin.ModelAdmin):
@@ -11,4 +11,4 @@ class QuoteAdmin(admin.ModelAdmin):
     ordering = ('author',)
 
 
-admin.site.register(Quote, QuoteAdmin)
+admin.site.register(QuoteText, QuoteAdmin)
