@@ -2,7 +2,11 @@
     background-color: #f1f2f3;
 
     .page-title{
-        color: #f60f13;
+        color: #059cd9;
+    }
+
+    .btn {
+        width: 120px;
     }
 }
 #contact_bg {
@@ -47,8 +51,10 @@
     }
 
     .form-group {
+        margin: 0;
+        padding-bottom: 1rem;
         label {
-            color: #059cd9;
+            color: #000;
         }
         .form-control {
             border: none;
@@ -57,5 +63,10 @@
             background: none;
             padding: 0.375rem 0rem;
         }
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+        color: #ced4da;
     }
 }
