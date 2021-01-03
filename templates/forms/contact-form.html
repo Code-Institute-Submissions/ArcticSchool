@@ -1,5 +1,5 @@
 <form id="form-contact" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 shadow-sm">
-    <h2 class="blue-text">Message Us</h2>
+    <h2 class="page-title">Message Us</h2>
     <div class="quote-contact-container">
         <p class="quote-text-contact">"{{ quote.description }}"</p>
         <span class="author-text"><i>Author - {{ quote.author }}</i></span>
@@ -10,14 +10,14 @@
     </div>
     <div class="form-group">
         <label for="email_contact">Email address</label>
-        <input type="email" class="form-control" id="email_contact" placeholder="name@example.com">
+        <input type="email" class="form-control" id="email_contact" placeholder="email@address.com">
     </div>
     <div class="form-group">
-        <label for="text_contact">Message..</label>
-        <textarea class="form-control" id="text_contact" rows="5"></textarea>
+        <label for="text_contact">Message</label>
+        <textarea class="form-control" id="text_contact" rows="5" placeholder="Your message here.."></textarea>
     </div>
     <div class="buttons-group d-flex justify-content-between">
-        <button type="submit" class="btn btn-danger">Clear</button>
+        <button type="button" id="clear-form-btn" class="btn btn-danger">Clear</button>
         <button type="submit" class="btn btn-primary">Send</button>
     </div>
 </form>

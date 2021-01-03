@@ -1,5 +1,9 @@
 #contact {
     background-color: #f1f2f3;
+
+    .page-title{
+        color: #f60f13;
+    }
 }
 #contact_bg {
     height: calc(100% - 59px);
@@ -25,14 +29,15 @@
             font-size: 0.85rem !important;
             text-align: right;
             margin-bottom: 15px;
-            background-color: rgba(49, 173, 223, 0.2);
-            border: 1px solid #059cd9;
-            border-radius: 25px;
-            padding: 1.25rem;
+            background-color: rgba(49, 173, 223, 0.15);
+            border-bottom: 1px solid #059cd9;
+            border-radius: 10px 10px 0 0;
+            padding: 1rem;
 
             .quote-text-contact {
                 font-weight: 400;
                 text-align: left;
+                margin-bottom: 5px;
             }
 
             .author-text {
@@ -48,8 +53,9 @@
         .form-control {
             border: none;
             border-radius: 0;
-            border-bottom: 1px solid #ced4da;
+            border-bottom: 1px solid #059cd9;
             background: none;
+            padding: 0.375rem 0rem;
         }
     }
 }
