@@ -1,20 +1,24 @@
 #contact {
     background-color: #f1f2f3;
 
+    // contact form top section
     .page-title {
         color: #059cd9;
     }
 
     .promo-text {
-        font-size: 0.85rem;
+        font-weight: 300;
         color: #000;
         padding: 0;
     }
+
+    // contact form buttons
     .btn {
         width: 120px;
         border: 1px solid #00d4f5;
         color: #00d4f5;
     }
+
     .buttons {
         position: relative;
         display: flex;
@@ -57,6 +61,7 @@
         border-radius: inherit;
     }
 }
+
 #contact_bg {
     height: calc(100% - 59px);
     width: 100%;
@@ -65,9 +70,10 @@
         width: 100%;
     }
 
+    // contact form style
     #form-contact {
         background: #fff;
-        padding: 1.25rem;
+        padding: 1.75rem;
         border-radius: 10px;
         left: 50%;
         top: calc((100% / 2) + 59px);
