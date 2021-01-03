@@ -99,8 +99,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # allauth settings
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -191,3 +189,17 @@ if 'BUCKET_S3' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+
+# Gmail sending real e-mail settings
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = "hello@arcticschool.com"
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp .EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    GMAIL_HOST_USER = os.environ.get('GMAIL_HOST_USER')
+    GMAIL_HOST_PASS = os.environ.get('GMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('GMAIL_HOST_USER')
