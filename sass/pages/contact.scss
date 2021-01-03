@@ -6,7 +6,8 @@
         color: #059cd9;
     }
 
-    .promo-text {
+    .promo-text-contact {
+        font-size: 1rem;
         font-weight: 300;
         color: #000;
         padding: 0;
@@ -76,7 +77,7 @@
         padding: 1.75rem;
         border-radius: 10px;
         left: 50%;
-        top: calc((100% / 2) + 59px);
+        top: calc(100% / 2);
         position: absolute;
         -webkit-transform: translate3d(-50%, -50%, 0);
         -moz-transform: translate3d(-50%, -50%, 0);
