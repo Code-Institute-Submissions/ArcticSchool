@@ -240,4 +240,9 @@ $(document).ready(function () {
 		});
 	});
 
+	// CONTACT PAGE
+	/**
+	 * This function will clear contact form
+	 */
+
 });
