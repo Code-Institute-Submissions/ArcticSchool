@@ -1,10 +1,17 @@
-import random
-from django.db.models import query
-from django.shortcuts import render
-from .models import QuoteText
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
+from .forms import ContactForm
 
 
 def contact(request):
-    """ A view to return contact page and quotes """
 
-    return render(request, 'contact/contact.html')
+    if request.method == "GET":
+
+        contact_from = ContactForm()
+        template = 'contact/contact.html'
+
+        context = {
+            'contact_form': contact_from,
+        }
+
+        return render(request, template, context)
