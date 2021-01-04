@@ -1,23 +1,20 @@
-<form id="form-contact" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 shadow´">
+<h1 class="d-none">Contact Us</h1>
+<form method="POST" id="form-contact" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 shadow">
     <!-- Contact form title and promo text -->
     <h2 class="page-title">Message Us</h2>
     <p class="promo-text-contact"><i>If you have any questions or need help, please fill out the form below. <br>We will answer
             in lightning speed.</i></p>
     <!-- Contact form fields -->
     <div class="form-group">
-        <input type="text" class="form-control" id="name_contact" placeholder="Name" required>
+        {% csrf_token %}
+        {{ contact_form.name | as_crispy_field }}
+        {{ contact_form.email | as_crispy_field }}
+        {{ contact_form.subject | as_crispy_field }}
+        {{ contact_form.message | as_crispy_field }}
     </div>
-    <div class="form-group">
-        <input type="email" class="form-control" id="email_contact" placeholder="Your email address" required>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="subject_contact" placeholder="Subject" required>
-    </div>
-    <div class="form-group">
-        <textarea class="form-control" id="text_contact" rows="5" placeholder="Message.." required></textarea>
-    </div>
-    <div class="buttons d-flex justify-content-between mt-4">
+    <div class="form-actions buttons d-flex justify-content-between mt-4">
         <button type="reset" class="btn hvr-bounce-to-right">Clear</button>
         <button type="submit" class="btn hvr-bounce-to-right">Send</button>
     </div>
+
 </form>
