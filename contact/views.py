@@ -8,6 +8,8 @@ from django.template.loader import render_to_string
 
 
 def contact(request):
+    """ View to render contact page with contact form """
+
     if request.method == 'GET':
         contact_form = ContactForm()
     else:
@@ -17,7 +19,8 @@ def contact(request):
             from_email = contact_form.cleaned_data['from_email']
             subject = contact_form.cleaned_data['subject']
             message = contact_form.cleaned_data['message']
-            html_msg = render_to_string('emails/email.html', {'name': name, 'message':message})
+            html_msg = render_to_string(
+                'emails/email.html', {'name': name, 'message': message})
             try:
                 send_mail(subject, message, settings.EMAIL_HOST_USER, [
                           from_email, settings.EMAIL_HOST_USER],
