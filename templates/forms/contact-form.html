@@ -2,6 +2,15 @@
 <form method="POST" id="form-contact" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 shadow">
     <!-- Contact form title and promo text -->
     <h2 class="page-title">Message Us</h2>
+    <!-- POST message -->
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <p {% if message.tags %} class="message alert-{{ message.tags }}" {% endif %}> {{ message }} </p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <p class="promo-text-contact"><i>If you have any questions or need help, please fill out the form below. <br>We will
             answer
             in lightning speed.</i></p>
@@ -9,7 +18,7 @@
     <div class="form-group">
         {% csrf_token %}
         {{ contact_form.name | as_crispy_field }}
-        {{ contact_form.email | as_crispy_field }}
+        {{ contact_form.from_email | as_crispy_field }}
         {{ contact_form.subject | as_crispy_field }}
         {{ contact_form.message | as_crispy_field }}
     </div>
