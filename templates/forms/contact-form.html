@@ -1,7 +1,7 @@
 <h1 class="d-none">Contact Us</h1>
 <form method="POST" id="form-contact" class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 shadow">
     <!-- Contact form title and promo text -->
-    <h2 class="page-title">Message Us</h2>
+    <h2 class="page-title">Get in touch!</h2>
     <!-- POST message -->
     {% if messages %}
     <div class="messages">
@@ -11,9 +11,7 @@
     </div>
     {% endif %}
 
-    <p class="promo-text-contact"><i>If you have any questions or need help, please fill out the form below. <br>We will
-            answer
-            in lightning speed.</i></p>
+    <p class="promo-text-contact"><i>If you have any questions or need help, please fill out the form below.</i></p>
     <!-- Contact form fields -->
     <div class="form-group">
         {% csrf_token %}
