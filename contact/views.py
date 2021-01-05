@@ -21,6 +21,5 @@ def contact(request):
                           from_email, settings.EMAIL_HOST_USER], fail_silently=False)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-
             messages.success(request, 'Dear ' + name.capitalize() + ', thanks for reaching out!')
     return render(request, "contact/contact.html", {'contact_form': contact_form})

@@ -3,7 +3,7 @@ from django import forms
 
 class ContactForm(forms.Form):
     name = forms.CharField(required=True)
-    email = forms.EmailField(required=True)
+    from_email = forms.EmailField(required=True)
     subject = forms.CharField(required=False)
     message = forms.CharField(widget=forms.Textarea, required=True)
 
@@ -15,7 +15,7 @@ class ContactForm(forms.Form):
         super().__init__(*args, **kwargs)
         placeholders = {
             'name': 'Full Name',
-            'email': 'Email Address',
+            'from_email': 'Email Address',
             'subject': 'Subject',
             'message': 'Message',
         }
