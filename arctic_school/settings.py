@@ -199,7 +199,7 @@ if 'BUCKET_S3' in os.environ:
 
 
 # Gmail sending real e-mail settings
-if 'DEVELOPMENTm' in os.environ:
+if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = "arcticschoolmail@gmail.com"
 else:
