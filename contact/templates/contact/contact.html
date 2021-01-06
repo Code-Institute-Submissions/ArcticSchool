@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="d-none">Contact</h1>
+<div id="contact_bg">
+    <div class="container">
+        <div class="row">
+            <!-- Contact form  -->
+            {% include 'forms/contact-form.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
