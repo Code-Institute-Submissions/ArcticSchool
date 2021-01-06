@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<img src="" alt="contact-bg">
+<div class="container-fluid">
+    {% if user.is_authenticated %}
+    <!-- Display user account info/details -->
+    <div class="account-details">
+        <p class="l">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquid repellendus autem saepe
+            perspiciatis totam, sunt inventore magni nobis modi. Sunt quibusdam doloremque neque aliquam fugiat placeat
+            quis est commodi?</p>
+    </div>
+    {% else %}
+    <!-- Display login/register form -->
+
+    {% endif %}
+</div>
+
+{% endblock %}
