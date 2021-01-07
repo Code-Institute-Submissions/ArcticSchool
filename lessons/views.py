@@ -54,13 +54,13 @@ def lessons(request):
 
 
 def lesson(request, lesson_id):
-    """ A view to return picked lesson detail """
+    """ A view to return lesson detail with resort detail """
 
     resorts = Resort.objects.all()
     social = SocialIcon.objects.all()
     lesson = get_object_or_404(Lesson, pk=lesson_id)
 
-    resort=resorts.get(name=lesson.resort)
+    resort = resorts.get(name=lesson.resort)
 
     context = {
         'socials': social,
