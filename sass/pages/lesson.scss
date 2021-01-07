@@ -84,6 +84,22 @@
             border-radius: inherit;
         }
 
+        // super offer star style
+        .supper-offer-start {
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            font-size: 3rem;
+            color: gold;
+            -webkit-text-stroke-width: 5px;
+            -webkit-text-stroke-color: #fff;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+        }
+
+        // responsive style
         @media (max-width: 767.98px) {
             .lesson-resort-image {
                 width: 100%;
