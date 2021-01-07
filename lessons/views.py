@@ -1,6 +1,8 @@
+from resorts.models import Resort
 from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
 from .models import Category, Lesson
+from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
 
 
@@ -54,12 +56,14 @@ def lessons(request):
 def lesson(request, lesson_id):
     """ A view to return picked lesson detail """
 
+    resorts = Resort.objects.all()
     social = SocialIcon.objects.all()
     lesson = get_object_or_404(Lesson, pk=lesson_id)
 
     context = {
         'socials': social,
         'lesson': lesson,
+        'resorts': resorts,
     }
 
     return render(request, 'lessons/lesson.html', context)
