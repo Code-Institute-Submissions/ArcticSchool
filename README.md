@@ -309,6 +309,7 @@ To deploy your project please use following steps:
 * Navbar links hover sryle - code used from [Hoover.css](https://ianlunn.github.io/Hover). Code was edited to match an author design.
 * [Hero pattern](https://www.heropatterns.com) was used to create background pattern in promo banner section.
 * Mountains graphic - [Twentypine](http://www.twentypine.com)
+* SVG Background graphics - [SVGBackgrounds](https://www.svgbackgrounds.com/#large-triangles) and [LoadingIO](https://loading.io) - highly recommended.
 
 ### Acknowledgements
 

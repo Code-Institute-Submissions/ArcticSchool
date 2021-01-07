@@ -1,8 +1,9 @@
+from resorts.models import Resort
 from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
 from .models import Category, Lesson
+from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
-# Create your views here.
 
 
 def lessons(request):
@@ -52,15 +53,19 @@ def lessons(request):
     return render(request, 'lessons/lessons.html', context)
 
 
-def lesson(request, lesson_id, lessons):
-    """ A view to return picked lesson detail """
+def lesson(request, lesson_id):
+    """ A view to return lesson detail with resort detail """
 
+    resorts = Resort.objects.all()
     social = SocialIcon.objects.all()
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
+
+    resort = resorts.get(name=lesson.resort)
 
     context = {
         'socials': social,
-        'lessons': lessons,
-        'lesson_id': lesson_id,
+        'lesson': lesson,
+        'resort': resort,
     }
 
-    return render(request, 'lessons/lesson-detail.html', context)
+    return render(request, 'lessons/lesson.html', context)

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="d-none">{{ lesson.name }}</h1>
+<!-- Main lesson container -->
+<div class="lesson-container">
+    <div class="container">
+        <div class="row empty-box">
+            <div class="breadcrumbs">
+                <a href="{% url 'lessons' %}" class=""><i class="fas fa-chevron-left"></i> Back to Lessons</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="lesson-details">
+                    <!-- 1st Lesson part -->
+                    <div class="card shadow-sm">
+                        <!-- Image -->
+                        <!-- Name -->
+                        <h2>{{ lesson.name }}</h2>
+                        <!-- Supper Offer
+                        <p class="lesson-offer">{% if supper_offer %}Super Offer!{% endif %}</p>-->
+                        <!-- Category & Level -->
+                        <p class="lesson-category">Category
+                            <span>{{ lesson.category }}</span>
+                        </p>
+                        <!-- £ Price -->
+                        <p class="lesson-price">£ {{ lesson.price }}</p>
+                        {% if lesson.supper_offer %}
+                        <span class="supper-offer-start"><i class="fas fa-star"></i></span>
+                        {% endif %}
+                    </div>
+                    <!-- 2nd Lesson part -->
+                    <div class="card shadow-sm">
+                        <!-- Description -->
+                        <h4>About Lesson</h4>
+                        <p class="lesson-description">Description
+                            <span>{{ lesson.description }}</span>
+                        </p>
+                        <!-- Participants -->
+                        <p class="lesson-participants">Participant/s
+                            <span class="">{{ lesson.participants }}</span>
+                        </p>
+                    </div>
+                    <!-- 3rd Lesson part -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="card shadow-sm">
+                                <!-- Start Date & Start Time -->
+                                <h4>Lesson Starts</h4>
+                                <p class="s-date">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
+                                <p class="s-time">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="card shadow-sm">
+                                <!-- End Date & En Time -->
+                                <h4>Lesson Ends</h4>
+                                <p class="e-date">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
+                                <p class="e-time">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th Lesson part -->
+                <div class="card shadow-sm">
+                    <!-- Resort -->
+                    <div class="resort-top-sec">
+                        <h4>Were ? - <span>{{ lesson.resort }} Resort</span></h4>
+                        <img src="/media/{{ resort.image }}" alt="{{ resort.name }}-image"
+                            class="lesson-resort-image shadow-sm">
+                    </div>
+                    <!-- Resorts Info -->
+                    <div class="resort-bottom-sec">
+                        <p class="">This resort is placed in {{ resort.country.name }}</p>
+                        <p class="">Few words about our beautiful resort.<br>
+                            <span>{{ resort.about }}</span>
+                        </p>
+                        <p class="">{{ resort.top_altitude }}</p>
+                        <p class="">{{ resort.bottom_altitude }}</p>
+                        <p class="">{{ resort.resort_altitude }}</p>
+                        <p class="">{{ resort.instructors }}</p>
+                    </div>
+                </div>
+                <!-- Bottom Section -->
+                <div class="row">
+                    <!-- Contact button  -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="card shadow-sm">
+                            <div>
+                                <a href="{% url 'contact' %}">
+                                    <button class="btn hvr-bounce-to-right">Need more information ?</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Booking Button -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="card shadow-sm">
+                            <div>
+                                <a href="#">
+                                    <button class="btn hvr-bounce-to-right">Book</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row empty-box">
+    </div>
+    <!-- You might like -->
+
+</div>
+<!-- Footer -->
+{% include 'layout/footer.html' %}
+
+{% endblock %}
