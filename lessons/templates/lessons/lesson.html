@@ -64,12 +64,9 @@
                 <!-- 4th Lesson part -->
                 <div class="card shadow-sm">
                     <!-- Resort -->
-                    <h4>Resort</h4>
+                    <h4>Resort - <span>{{ lesson.resort }}</span></h4>
                     <img src="/media/{{ resort.image }}" alt="{{ resort.name }}-image"
                         class="lesson-resort-image shadow-sm">
-                    <p class="lesson-price">Resort Name
-                        <span>{{ lesson.resort }}</span>
-                    </p>
                     <!-- Resorts Info -->
                     {{ resort.country }}
                     {{ resort.about }}
@@ -78,13 +75,27 @@
                     {{ resort.resort_altitude }}
                     {{ resort.instructors }}
                 </div>
-                <!-- Booking Lesson part -->
-                <div class="card shadow-sm">
-                    <!-- Book now button -->
-                    <div class="buttons">
-                        <a href="">
-                            <button class="btn hvr-bounce-to-right">Book</button>
-                        </a>
+                <!-- Bottom Section -->
+                <div class="row">
+                    <!-- Contact button  -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="card shadow-sm">
+                            <div>
+                                <a href="{% url 'contact' %}">
+                                    <button class="btn hvr-bounce-to-right">Need more information ?</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Booking Button -->
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="card shadow-sm">
+                            <div>
+                                <a href="#">
+                                    <button class="btn hvr-bounce-to-right">Book</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
