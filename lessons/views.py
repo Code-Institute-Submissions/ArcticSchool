@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
 from .models import Category, Lesson
 from home.models import SocialIcon, LevelCard
-# Create your views here.
 
 
 def lessons(request):
@@ -52,15 +51,15 @@ def lessons(request):
     return render(request, 'lessons/lessons.html', context)
 
 
-def lesson(request, lesson_id, lessons):
+def lesson(request, lesson_id):
     """ A view to return picked lesson detail """
 
     social = SocialIcon.objects.all()
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
 
     context = {
         'socials': social,
-        'lessons': lessons,
-        'lesson_id': lesson_id,
+        'lesson': lesson,
     }
 
-    return render(request, 'lessons/lesson-detail.html', context)
+    return render(request, 'lessons/lesson.html', context)
