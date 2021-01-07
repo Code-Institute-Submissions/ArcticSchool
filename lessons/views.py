@@ -60,10 +60,12 @@ def lesson(request, lesson_id):
     social = SocialIcon.objects.all()
     lesson = get_object_or_404(Lesson, pk=lesson_id)
 
+    resort=resorts.get(name=lesson.resort)
+
     context = {
         'socials': social,
         'lesson': lesson,
-        'resorts': resorts,
+        'resort': resort,
     }
 
     return render(request, 'lessons/lesson.html', context)

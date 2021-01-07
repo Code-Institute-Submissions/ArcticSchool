@@ -3,62 +3,91 @@
 
 {% block content %}
 
-
+<!-- Main lesson container -->
 <div class="lesson-container">
-    <div class="container-fluid">
-        <img src="" alt="" class="">
-    </div>
     <div class="container">
-        <div class="lesson-details">
-
-            <div class="card shadow-sm">
-                <!-- Image -->
-
-                <!-- Name -->
-                <p class="lesson-name">
-                    <span>{{ lesson.name }}</span>
-                </p>
-
-                <!-- Supper Offer
-        <p class="lesson-offer">{% if supper_offer %}Super Offer!{% endif %}</p>-->
-
-                <!-- Category & Level -->
-                <p class="lesson-category">Category
-                    <span>{{ lesson.category }}</span>
-                </p>
-            </div>
-
-            <!-- Description -->
-            <p class="lesson-description">Description
-                <span>{{ lesson.description }}</span>
-            </p>
-
-            <!-- Start Date & Start Time -->
-
-            <!-- End Date & End Time -->
-
-            <!-- Participants -->
-            <p class="lesson-participants">Participant/s
-                <span class="">{{ lesson.participants }}</span>
-            </p>
-
-            <!-- Resort -->
-            <p class="lesson-price">Resort Name
-                <span>{{ lesson.resort }}</span>
-            </p>
-            <!-- Resorts Info -->
-
-            <!-- £ Price -->
-            <p class="lesson-price">£ {{ lesson.price }}</p>
-
-            <!-- Book now button -->
-            <div class="buttons">
-                <a href="">
-                    <button class="btn hvr-bounce-to-right">Book</button>
-                </a>
+        <div class="row">
+            <img src="" alt="" class="">
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="lesson-details">
+                    <!-- 1st Lesson part -->
+                    <div class="card shadow-sm">
+                        <!-- Image -->
+                        <!-- Name -->
+                        <p class="lesson-name">
+                            <span>{{ lesson.name }}</span>
+                        </p>
+                        <!-- Supper Offer
+                        <p class="lesson-offer">{% if supper_offer %}Super Offer!{% endif %}</p>-->
+                        <!-- Category & Level -->
+                        <p class="lesson-category">Category
+                            <span>{{ lesson.category }}</span>
+                        </p>
+                        <!-- £ Price -->
+                        <p class="lesson-price">£ {{ lesson.price }}</p>
+                    </div>
+                    <!-- 2nd Lesson part -->
+                    <div class="card shadow-sm">
+                        <!-- Description -->
+                        <p class="lesson-description">Description
+                            <span>{{ lesson.description }}</span>
+                        </p>
+                        <!-- Participants -->
+                        <p class="lesson-participants">Participant/s
+                            <span class="">{{ lesson.participants }}</span>
+                        </p>
+                    </div>
+                    <!-- 3rd Lesson part -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="card shadow-sm">
+                                <!-- Start Date & Start Time -->
+                                <p class="lesson-participants">Lesson Starts:
+                                    <span class="">{{ lesson.start_date }} - {{ lesson.start_time }}</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="card shadow-sm">
+                                <!-- End Date & End Time -->
+                                <p class="lesson-participants">Lesson Ends:
+                                    <span class="">{{ lesson.end_date }} - {{ lesson.end_time }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4th Lesson part -->
+                <div class="card shadow-sm">
+                    <!-- Resort -->
+                    <p class="lesson-price">Resort Name
+                        <span>{{ lesson.resort }}</span>
+                    </p>
+                    <!-- Resorts Info -->
+                    {{ resort.name }}
+                    {{ resort.country }}
+                    {{ resort.about }}
+                    {{ resort.top_altitude }}
+                    {{ resort.bottom_altitude }}
+                    {{ resort.resort_altitude }}
+                    {{ resort.instructors }}
+                    {{ resort.image }}
+                </div>
+                <!-- Booking Lesson part -->
+                <div class="card shadow-sm">
+                    <!-- Book now button -->
+                    <div class="buttons">
+                        <a href="">
+                            <button class="btn hvr-bounce-to-right">Book</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock %}
