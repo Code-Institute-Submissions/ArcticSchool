@@ -27,11 +27,14 @@
                         </p>
                         <!-- £ Price -->
                         <p class="lesson-price">£ {{ lesson.price }}</p>
+                        {% if lesson.supper_offer %}
+                        <span class="supper-offer-start"><i class="fas fa-star"></i></span>
+                        {% endif %}
                     </div>
                     <!-- 2nd Lesson part -->
                     <div class="card shadow-sm">
                         <!-- Description -->
-                        <h4>Description</h4>
+                        <h4>About Lesson</h4>
                         <p class="lesson-description">Description
                             <span>{{ lesson.description }}</span>
                         </p>
@@ -64,16 +67,22 @@
                 <!-- 4th Lesson part -->
                 <div class="card shadow-sm">
                     <!-- Resort -->
-                    <h4>Resort - <span>{{ lesson.resort }}</span></h4>
-                    <img src="/media/{{ resort.image }}" alt="{{ resort.name }}-image"
-                        class="lesson-resort-image shadow-sm">
+                    <div class="resort-top-sec">
+                        <h4>Were ? - <span>{{ lesson.resort }} Resort</span></h4>
+                        <img src="/media/{{ resort.image }}" alt="{{ resort.name }}-image"
+                            class="lesson-resort-image shadow-sm">
+                    </div>
                     <!-- Resorts Info -->
-                    {{ resort.country }}
-                    {{ resort.about }}
-                    {{ resort.top_altitude }}
-                    {{ resort.bottom_altitude }}
-                    {{ resort.resort_altitude }}
-                    {{ resort.instructors }}
+                    <div class="resort-bottom-sec">
+                        <p class="">This resort is placed in {{ resort.country.name }}</p>
+                        <p class="">Few words about our beautiful resort.<br>
+                            <span>{{ resort.about }}</span>
+                        </p>
+                        <p class="">{{ resort.top_altitude }}</p>
+                        <p class="">{{ resort.bottom_altitude }}</p>
+                        <p class="">{{ resort.resort_altitude }}</p>
+                        <p class="">{{ resort.instructors }}</p>
+                    </div>
                 </div>
                 <!-- Bottom Section -->
                 <div class="row">
@@ -93,9 +102,6 @@
                             <div>
                                 <a href="#">
                                     <button class="btn hvr-bounce-to-right">Book</button>
-                                    {% if lesson.supper_offer %}
-                                    <span class="supper-offer-start"><i class="fas fa-star"></i></span>
-                                    {% endif %}
                                 </a>
                             </div>
                         </div>
@@ -104,6 +110,12 @@
             </div>
         </div>
     </div>
+    <div class="row empty-box">
+    </div>
+    <!-- You might like -->
+
 </div>
+<!-- Footer -->
+{% include 'layout/footer.html' %}
 
 {% endblock %}
