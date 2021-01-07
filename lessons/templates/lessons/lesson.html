@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block content %}
-
+<h1 class="d-none">{{ lesson.name }}</h1>
 <!-- Main lesson container -->
 <div class="lesson-container">
     <div class="container">
-        <div class="row">
-            <img src="" alt="" class="">
+        <div class="row empty-box">
+            <div class="breadcrumbs">
+                <a href="{% url 'lessons' %}" class=""><i class="fas fa-chevron-left"></i> Back to Lessons</a>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -16,9 +18,7 @@
                     <div class="card shadow-sm">
                         <!-- Image -->
                         <!-- Name -->
-                        <p class="lesson-name">
-                            <span>{{ lesson.name }}</span>
-                        </p>
+                        <h2>{{ lesson.name }}</h2>
                         <!-- Supper Offer
                         <p class="lesson-offer">{% if supper_offer %}Super Offer!{% endif %}</p>-->
                         <!-- Category & Level -->
@@ -31,6 +31,7 @@
                     <!-- 2nd Lesson part -->
                     <div class="card shadow-sm">
                         <!-- Description -->
+                        <h4>Description</h4>
                         <p class="lesson-description">Description
                             <span>{{ lesson.description }}</span>
                         </p>
@@ -44,25 +45,28 @@
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                             <div class="card shadow-sm">
                                 <!-- Start Date & Start Time -->
-                                <p class="lesson-participants">Lesson Starts:
-                                    <span class="">{{ lesson.start_date }} - {{ lesson.start_time }}</span>
-                                </p>
+                                <h4>Lesson Starts</h4>
+                                <p class="s-date">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
+                                <p class="s-time">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                             <div class="card shadow-sm">
-                                <!-- End Date & End Time -->
-                                <p class="lesson-participants">Lesson Ends:
-                                    <span class="">{{ lesson.end_date }} - {{ lesson.end_time }}</span>
-                                </p>
+                                <!-- End Date & En Time -->
+                                <h4>Lesson Ends</h4>
+                                <p class="e-date">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
+                                <p class="e-time">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- 4th Lesson part -->
                 <div class="card shadow-sm">
                     <!-- Resort -->
-                    <img src="/media/{{ resort.image }}" alt="{{ resort.name }}-image" class="lesson-resort-image shadow-sm">
+                    <h4>Resort</h4>
+                    <img src="/media/{{ resort.image }}" alt="{{ resort.name }}-image"
+                        class="lesson-resort-image shadow-sm">
                     <p class="lesson-price">Resort Name
                         <span>{{ lesson.resort }}</span>
                     </p>
@@ -86,7 +90,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 {% endblock %}
