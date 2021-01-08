@@ -4,6 +4,7 @@ from django.db.models.functions import Lower
 from .models import Category, Lesson
 from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
+import random
 
 
 def lessons(request):
@@ -56,17 +57,19 @@ def lessons(request):
 def lesson(request, lesson_id):
     """ A view to return lesson detail with resort detail """
 
-    lessons = Lesson.objects.all()
+    lessons = list(Lesson.objects.all())
     resorts = Resort.objects.all()
     social = SocialIcon.objects.all()
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     resort = resorts.get(name=lesson.resort)
 
+    random_lessons = random.sample(lessons, 5)
+
     context = {
         'socials': social,
         'lesson': lesson,
         'resort': resort,
-        'lessons':lessons,
+        'lessons':random_lessons,
     }
 
     return render(request, 'lessons/lesson.html', context)
