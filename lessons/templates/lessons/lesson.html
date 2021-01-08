@@ -19,14 +19,13 @@
                         <!-- Image -->
                         <!-- Name -->
                         <h2>{{ lesson.name }}</h2>
-                        <!-- Supper Offer
-                        <p class="lesson-offer">{% if supper_offer %}Super Offer!{% endif %}</p>-->
                         <!-- Category & Level -->
                         <p class="lesson-category">Category
                             <span>{{ lesson.category }}</span>
                         </p>
                         <!-- £ Price -->
                         <p class="lesson-price">£ {{ lesson.price }}</p>
+                        <!-- Supper Offer -->
                         {% if lesson.supper_offer %}
                         <span class="supper-offer-start"><i class="fas fa-star"></i></span>
                         {% endif %}
@@ -110,10 +109,10 @@
             </div>
         </div>
     </div>
-    <div class="row empty-box">
-    </div>
+    <!-- Empty box to separte two sections -->
+    <div class="empty-box"></div>
     <!-- You might like -->
-
+    {% include 'includes/you-might-like.html' %}
 </div>
 <!-- Footer -->
 {% include 'layout/footer.html' %}
