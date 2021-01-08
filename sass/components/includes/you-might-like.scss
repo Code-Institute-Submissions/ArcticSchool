@@ -7,8 +7,35 @@ bg-white {
     height: auto;
     padding: 1.25rem;
 
+    a:hover {
+        text-decoration: none;
+    }
+
     img {
         width: 100%;
         border-radius: 10px;
+    }
+
+    .card {
+        padding: 1rem !important;
+        //border: 1px solid #059cd9;
+
+        &:hover {
+            box-shadow: #059cd9;
+        }
+    }
+
+    h5 {
+        //font-size: 0.85rem;
+        margin-top: 5px;
+        margin-bottom: 0;
+        color: #059cd9;
+    }
+
+    p {
+        color: #000000;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
     }
 }
