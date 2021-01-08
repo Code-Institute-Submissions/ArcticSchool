@@ -63,7 +63,7 @@ def lesson(request, lesson_id):
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     resort = resorts.get(name=lesson.resort)
 
-    random_lessons = random.sample(lessons, 5)
+    random_lessons = random.sample(lessons, 4)
 
     context = {
         'socials': social,

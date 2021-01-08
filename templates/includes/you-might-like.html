@@ -2,11 +2,14 @@
 <div class="container-fluid bg-white">
     <div class="container">
         <div class="yml">
+            <h4>You may also like</h4>
             <div class="row">
                 <!-- Lessons for loop -->
                 {% for lesson in lessons %}
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                    {{ lesson.name }}
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 p-2">
+                    <div class="card shadow">
+                        <img src="/media/{{ lesson.image }}" alt="{{ lesson.name }}-image">
+                    </div>
                 </div>
                 {% endfor %}
             </div>
