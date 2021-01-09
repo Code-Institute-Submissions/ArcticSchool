@@ -53,6 +53,18 @@
             a:focus {
                 background: none !important;
             }
+
+
+
+
+            // date and time info style
+            .s-info {
+                font-weight: 400;
+
+                span {
+                    font-weight: 300;
+                }
+            }
         }
 
         .lesson-resort-image {
