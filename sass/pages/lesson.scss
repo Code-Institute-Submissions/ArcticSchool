@@ -7,6 +7,10 @@
 
     h2 {
         color: #f60f13;
+
+        span {
+            font-size: 0.85rem !important;
+        }
     }
     h4 {
         color: #059cd9;
@@ -54,12 +58,11 @@
                 background: none !important;
             }
 
-
-
-
             // date and time info style
-            .s-info {
+            .s-info,
+            .lesson-info {
                 font-weight: 400;
+                margin-bottom: 0.5rem;
 
                 span {
                     font-weight: 300;

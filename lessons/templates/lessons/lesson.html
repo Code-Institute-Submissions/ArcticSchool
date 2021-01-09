@@ -18,18 +18,20 @@
                     <div class="card shadow-sm border-0">
                         <!-- Image -->
                         <!-- Name -->
-                        <h2>{{ lesson.name }}</h2>
+                        <h2>{{ lesson.name }}
+                            <span>{% if lesson.supper_offer == True %}(Supper Offer){% endif %}</span>
+                        </h2>
                         <!-- Category & Level -->
-                        <p class="lesson-category">Category
+                        <p class="lesson-info">Category
                             <span>{{ lesson.category }}</span>
                         </p>
-                        <p class="lesson-level">Level
+                        <p class="lesson-info">Level
                             <span>{{ lesson.level }}</span>
                         </p>
                         <!-- £ Price -->
-                        <p class="lesson-price">£ {{ lesson.price }}</p>
+                        <p class="lesson-info">Price<span> £{{ lesson.price }}</span></p>
                         <!-- Participants -->
-                        <p class="lesson-participants">Participant/s
+                        <p class="lesson-info">Participant/s
                             <span class="">{{ lesson.participants }}</span>
                         </p>
                         <!-- Supper Offer -->
@@ -41,9 +43,7 @@
                     <div class="card shadow-sm border-0">
                         <!-- Description -->
                         <h4>About Lesson</h4>
-                        <p class="lesson-description">Description
-                            <span>{{ lesson.description }}</span>
-                        </p>
+                        <p class="lesson-info"><span>{{ lesson.description }}</span></p>
                     </div>
                     <!-- 3rd Lesson part -->
                     <div class="row">
