@@ -11,7 +11,7 @@
                     <a href="{% url 'lesson' lesson.id %}">
                         <div class="card shadow-sm">
                             <!-- Image -->
-                            <img src="/media/{{ lesson.image }}" alt="{{ lesson.name }}-image">
+                            <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lesson.name }}-image">
                             <!-- Lesson basic info -->
                             <div class="yml-info">
                                 <h5 class="yml-title">{{ lesson.name }}</h5>
