@@ -7,14 +7,23 @@
                 <!-- Lessons for loop -->
                 {% for lesson in lessons %}
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 p-2">
-                    <a href="" class="">
+                    <!-- Whole card as link to lesson's detail -->
+                    <a href="{% url 'lesson' lesson.id %}">
                         <div class="card shadow-sm">
+                            <!-- Image -->
                             <img src="/media/{{ lesson.image }}" alt="{{ lesson.name }}-image">
+                            <!-- Lesson basic info -->
                             <div class="yml-info">
                                 <h5 class="yml-title">{{ lesson.name }}</h5>
-                                <p class="yml-price">£ <span>{{ lesson.price }}</span></p>
+                                <p class="yml-price">Price <span>£{{ lesson.price }}</span></p>
                                 <p class="yml-level">Level <span>{{ lesson.level }}</span></p>
-                                <p class="yml-category">For <span>{{ lesson.category }}</span></p>
+                                <p class="yml-category">Category <span>{{ lesson.category }}</span></p>
+                            </div>
+                            <!-- Book now button -->
+                            <div class="buttons">
+                                <a href="#">
+                                    <button class="btn hvr-bounce-to-right">Book Now!</button>
+                                </a>
                             </div>
                         </div>
                     </a>
