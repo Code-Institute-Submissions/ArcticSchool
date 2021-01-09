@@ -21,7 +21,10 @@ bg-white {
         //border: 1px solid #059cd9;
 
         &:hover {
-            box-shadow: #059cd9;
+            border: 2px solid rgb(0, 212, 245,.5) !important;
+            &.shadow-sm {
+                box-shadow: 0 0.125rem 0.25rem #00d4f5 !important;
+            }
         }
 
         .super-offer-icon {
