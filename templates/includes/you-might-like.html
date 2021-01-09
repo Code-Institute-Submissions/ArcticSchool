@@ -1,5 +1,5 @@
 <!-- Main container -->
-<div class="container-fluid bg-white">
+<div class="container-fluid bg-white mt-4">
     <div class="container">
         <div class="yml">
             <h4>You may also like</h4>
@@ -9,9 +9,18 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 p-2">
                     <!-- Whole card as link to lesson's detail -->
                     <a href="{% url 'lesson' lesson.id %}">
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
                             <!-- Image -->
-                            <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lesson.name }}-image">
+                            {% if lesson.image %}
+                            <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.image }}-image">
+                            {% else %}
+                            <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                            {% endif %}
+                            {% if lesson.supper_offer == True %}
+                            <div class="super-offer-icon">
+                                <p class="super-offer-text">Super Offer!</p>
+                            </div>
+                            {% endif %}
                             <!-- Lesson basic info -->
                             <div class="yml-info">
                                 <h5 class="yml-title">{{ lesson.name }}</h5>
@@ -21,9 +30,7 @@
                             </div>
                             <!-- Book now button -->
                             <div class="buttons">
-                                <a href="#">
-                                    <button class="btn hvr-bounce-to-right mt-2">Book Now</button>
-                                </a>
+                                <a href="#" class="btn hvr-bounce-to-right mt-2">Book Now</a>
                             </div>
                         </div>
                     </a>

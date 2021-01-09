@@ -36,14 +36,17 @@ $(document).ready(function () {
 	/**
 	 * This function will show the 'go to the top' button and scroll smoothly to the top of the page when button is clicked
 	 * Code Snippet from https://codepen.io/joshuamasen/pen/OYaYbL
+	 * & Navigation opacity change when scrolled
 	 */
 	const scrollToTopButton = document.getElementById('back-to-top');
 	const scrollFunc = () => {
 		let y = window.scrollY;
 		if (y > 0) {
 			scrollToTopButton.className = "top-link show";
+			$('.navbar').addClass('less');
 		} else {
 			scrollToTopButton.className = "top-link hide";
+			$('.navbar').removeClass('less');
 		}
 	};
 	window.addEventListener("scroll", scrollFunc);

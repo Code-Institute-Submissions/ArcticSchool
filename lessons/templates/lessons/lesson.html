@@ -15,7 +15,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="lesson-details">
                     <!-- 1st Lesson part -->
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm border-0">
                         <!-- Image -->
                         <!-- Name -->
                         <h2>{{ lesson.name }}</h2>
@@ -31,7 +31,7 @@
                         {% endif %}
                     </div>
                     <!-- 2nd Lesson part -->
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm border-0">
                         <!-- Description -->
                         <h4>About Lesson</h4>
                         <p class="lesson-description">Description
@@ -45,7 +45,7 @@
                     <!-- 3rd Lesson part -->
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <div class="card shadow-sm">
+                            <div class="card shadow-sm border-0">
                                 <!-- Start Date & Start Time -->
                                 <h4>Lesson Starts</h4>
                                 <p class="s-date">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <div class="card shadow-sm">
+                            <div class="card shadow-sm border-0">
                                 <!-- End Date & En Time -->
                                 <h4>Lesson Ends</h4>
                                 <p class="e-date">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
@@ -64,7 +64,7 @@
                 </div>
 
                 <!-- 4th Lesson part -->
-                <div class="card shadow-sm">
+                <div class="card shadow-sm border-0">
                     <!-- Resort -->
                     <div class="resort-top-sec">
                         <h4>Were ? - <span>{{ lesson.resort }} Resort</span></h4>
@@ -87,28 +87,20 @@
                 <div class="row">
                     <!-- Contact button  -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="card shadow-sm">
-                            <a href="{% url 'contact' %}">
-                                <button class="btn hvr-bounce-to-right">Need more information ?</button>
-                            </a>
-
+                        <div class="card shadow-sm border-0">
+                            <a href="{% url 'contact' %}" class="btn hvr-bounce-to-right">Need more information ?</a>
                         </div>
                     </div>
                     <!-- Booking Button -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="card shadow-sm">
-                            <a href="#">
-                                <button class="btn hvr-bounce-to-right">Book</button>
-                            </a>
-
+                        <div class="card shadow-sm border-0">
+                            <a class="btn hvr-bounce-to-right">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Empty box to separte two sections -->
-    <div class="empty-box"></div>
     <!-- You might like -->
     {% include 'includes/you-might-like.html' %}
 </div>
