@@ -23,8 +23,15 @@
                         <p class="lesson-category">Category
                             <span>{{ lesson.category }}</span>
                         </p>
+                        <p class="lesson-level">Level
+                            <span>{{ lesson.level }}</span>
+                        </p>
                         <!-- £ Price -->
                         <p class="lesson-price">£ {{ lesson.price }}</p>
+                        <!-- Participants -->
+                        <p class="lesson-participants">Participant/s
+                            <span class="">{{ lesson.participants }}</span>
+                        </p>
                         <!-- Supper Offer -->
                         {% if lesson.supper_offer %}
                         <span class="supper-offer-start"><i class="fas fa-star"></i></span>
@@ -37,10 +44,6 @@
                         <p class="lesson-description">Description
                             <span>{{ lesson.description }}</span>
                         </p>
-                        <!-- Participants -->
-                        <p class="lesson-participants">Participant/s
-                            <span class="">{{ lesson.participants }}</span>
-                        </p>
                     </div>
                     <!-- 3rd Lesson part -->
                     <div class="row">
@@ -48,16 +51,16 @@
                             <div class="card shadow-sm border-0">
                                 <!-- Start Date & Start Time -->
                                 <h4>Lesson Starts</h4>
-                                <p class="s-date">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
-                                <p class="s-time">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
+                                <p class="s-info">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
+                                <p class="s-info">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                             <div class="card shadow-sm border-0">
                                 <!-- End Date & En Time -->
                                 <h4>Lesson Ends</h4>
-                                <p class="e-date">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
-                                <p class="e-time">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
+                                <p class="s-info">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
+                                <p class="s-info">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
                             </div>
                         </div>
                     </div>

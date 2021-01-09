@@ -44,7 +44,7 @@
         .card {
             display: none;
             border-radius: 15px;
-            border: 1px solid #f4f4f4;
+            border: 2px solid #fafafa;
             margin-bottom: 1rem;
             padding: 1.25rem;
 
@@ -52,6 +52,18 @@
             a:visited,
             a:focus {
                 background: none !important;
+            }
+
+
+
+
+            // date and time info style
+            .s-info {
+                font-weight: 400;
+
+                span {
+                    font-weight: 300;
+                }
             }
         }
 
