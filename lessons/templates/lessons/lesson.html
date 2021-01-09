@@ -88,27 +88,19 @@
                     <!-- Contact button  -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="card shadow-sm border-0">
-                            <a href="{% url 'contact' %}">
-                                <button class="btn hvr-bounce-to-right">Need more information ?</button>
-                            </a>
-
+                            <a href="{% url 'contact' %}" class="btn hvr-bounce-to-right">Need more information ?</a>
                         </div>
                     </div>
                     <!-- Booking Button -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="card shadow-sm border-0">
-                            <a href="#">
-                                <button class="btn hvr-bounce-to-right">Book</button>
-                            </a>
-
+                            <a class="btn hvr-bounce-to-right">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Empty box to separte two sections -->
-    <div class="empty-box"></div>
     <!-- You might like -->
     {% include 'includes/you-might-like.html' %}
 </div>
