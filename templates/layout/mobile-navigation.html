@@ -5,7 +5,7 @@
     <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
             <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
-                href="#">BOOKING</a>
+                href="{% url 'booking' %}">BOOKING</a>
         </li>
     </ul>
     <button id="hamburger-button" class="navbar-toggler" type="button" data-toggle="collapse"

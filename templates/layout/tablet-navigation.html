@@ -9,7 +9,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
-                href="#">BOOKING</a>
+                href="{% url 'booking' %}">BOOKING</a>
         </li>
         <li class="nav-item">
             <a class="nav-link mr-3 {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
