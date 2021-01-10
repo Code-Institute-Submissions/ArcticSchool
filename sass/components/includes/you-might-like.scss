@@ -21,9 +21,9 @@ bg-white {
         //border: 1px solid #059cd9;
 
         &:hover {
-            border: 2px solid rgb(0, 212, 245,.5) !important;
+            border: 2px solid rgb(0, 212, 245, 0.5) !important;
             &.shadow-sm {
-                box-shadow: 0 0.125rem 0.25rem #00d4f5 !important;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 212, 245, 0.595) !important;
             }
         }
 
@@ -58,6 +58,7 @@ bg-white {
         color: #000000;
         font-weight: 400;
         margin-bottom: 5px;
+        font-size: 0.85rem;
 
         span {
             font-weight: 300;

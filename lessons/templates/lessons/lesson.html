@@ -13,77 +13,89 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="lesson-details">
-                    <!-- 1st Lesson part -->
-                    <div class="card shadow-sm border-0">
-                        <!-- Image -->
-                        <!-- Name -->
-                        <h2>{{ lesson.name }}
-                            <span>{% if lesson.supper_offer == True %}(Supper Offer){% endif %}</span>
-                        </h2>
-                        <!-- Category & Level -->
-                        <p class="lesson-info">Category
-                            <span>{{ lesson.category }}</span>
-                        </p>
-                        <p class="lesson-info">Level
-                            <span>{{ lesson.level }}</span>
-                        </p>
-                        <!-- £ Price -->
-                        <p class="lesson-info">Price<span> £{{ lesson.price }}</span></p>
-                        <!-- Participants -->
-                        <p class="lesson-info">Participant/s
-                            <span class="">{{ lesson.participants }}</span>
-                        </p>
-                        <!-- Supper Offer -->
-                        {% if lesson.supper_offer %}
-                        <span class="supper-offer-start"><i class="fas fa-star"></i></span>
-                        {% endif %}
-                    </div>
-                    <!-- 2nd Lesson part -->
-                    <div class="card shadow-sm border-0">
-                        <!-- Description -->
-                        <h4>About Lesson</h4>
-                        <p class="lesson-info"><span>{{ lesson.description }}</span></p>
-                    </div>
-                    <!-- 3rd Lesson part -->
+                <!-- 1st Lesson part -->
+                <div class="card shadow-sm border-0">
+                    <!-- Name -->
+                    <h2>{{ lesson.name }}</h2>
+                    <!-- Row - wrapped top part -->
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <div class="card shadow-sm border-0">
-                                <!-- Start Date & Start Time -->
-                                <h4>Lesson Starts</h4>
-                                <p class="s-info">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
-                                <p class="s-info">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
-                            </div>
+                        <!-- Lesson image -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4">
+                            {% if lesson.image %}
+                            <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}-image"
+                                class="lesson-image shadow-sm">
+                            {% else %}
+                            <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" class="lesson-image shadow-sm">
+                            {% endif %}
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                            <div class="card shadow-sm border-0">
-                                <!-- End Date & En Time -->
-                                <h4>Lesson Ends</h4>
-                                <p class="s-info">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
-                                <p class="s-info">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
-                            </div>
+                        <!-- Lesson main info -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9 col-xl-9">
+                            <h5>This lesson is for <span>{{ lesson.category }}</span></h5>
+                            <h5>You level should be, as high as <span>{{ lesson.level }}</span></h5>
+                            <!-- Participants -->
+                            <h5>We've got space for <span class="">{{ lesson.participants }} Participant{% if lesson.participants > 1 %}s{% endif %}</span></h5>
+                            <!-- £ Price -->
+                            <h5 class="mt-3">{% if lesson.supper_offer == True %}Cheaper Price !{% else %}Price {% endif %} <span class="{% if lesson.supper_offer == True %}offer-price{% endif %}"><u>£{{ lesson.price }}</u></span></h5>
+                        </div>
+                    </div>
+                    <!-- Supper Offer -->
+                    {% if lesson.supper_offer %}
+                    <span class="supper-offer-start"><i class="fas fa-star"></i></span>
+                    {% endif %}
+                </div>
+                <!-- 2nd Lesson part -->
+                <div class="card shadow-sm border-0">
+                    <!-- Description -->
+                    <h4>About Lesson</h4>
+                    <p class="lesson-info"><span>{{ lesson.description }}</span></p>
+                </div>
+                <!-- 3rd Lesson part -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="card shadow-sm border-0">
+                            <!-- Start Date & Start Time -->
+                            <h4>Lesson Starts</h4>
+                            <p class="s-info">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
+                            <p class="s-info">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="card shadow-sm border-0">
+                            <!-- End Date & En Time -->
+                            <h4>Lesson Ends</h4>
+                            <p class="s-info">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
+                            <p class="s-info">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- 4th Lesson part -->
                 <div class="card shadow-sm border-0">
-                    <!-- Resort -->
-                    <div class="resort-top-sec">
-                        <h4>Were ? - <span>{{ lesson.resort }} Resort</span></h4>
-                        <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}-image"
-                            class="lesson-resort-image shadow-sm">
-                    </div>
-                    <!-- Resorts Info -->
-                    <div class="resort-bottom-sec">
-                        <p class="">This resort is placed in {{ resort.country.name }}</p>
-                        <p class="">Few words about our beautiful resort.<br>
+                    <div class="row">
+                        <!-- Resort -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 resort-top-sec">
+                            <h4>Were ? - {{ lesson.resort }} Resort</h4>
+                            <!-- Resort image -->
+                            {% if resort.image %}
+                            <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}-image"
+                                class="lesson-resort-image shadow-sm mb-4">
+                            {% else %}
+                            <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image"
+                                class="lesson-resort-image shadow-sm mb-4">
+                            {% endif %}
+                        </div>
+                        <!-- Resorts Info -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 resort-bottom-sec">
+                            <h4 class="">This resort is placed in {{ resort.country.name }}</h4>
                             <span>{{ resort.about }}</span>
-                        </p>
-                        <p class="">{{ resort.top_altitude }}</p>
-                        <p class="">{{ resort.bottom_altitude }}</p>
-                        <p class="">{{ resort.resort_altitude }}</p>
-                        <p class="">{{ resort.instructors }}</p>
+                            </p>
+                            <p class="s-info">Top Altitude - <span>{{ resort.top_altitude }}</span></p>
+                            <p class="s-info">Bottom Altitude - <span>{{ resort.bottom_altitude }}</span></p>
+                            <p class="s-info">Resort Altitude - <span>{{ resort.resort_altitude }}</span></p>
+                            <p class="s-info">Instructors at the resort -
+                                <span>{{ resort.instructors }}</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <!-- Bottom Section -->
@@ -91,7 +103,8 @@
                     <!-- Contact button  -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="card shadow-sm border-0">
-                            <a href="{% url 'contact' %}" class="btn hvr-bounce-to-right">Need more information ?</a>
+                            <a href="{% url 'contact' %}" class="btn hvr-bounce-to-right btn-blue">Need more information
+                                ?</a>
                         </div>
                     </div>
                     <!-- Booking Button -->
