@@ -14,8 +14,20 @@
         </div>
     </div>
     <!-- Booking container -->
-    <div class="booking-qty">
-        <h2>{% if booked %}Nothing booked yet ?{% else %}{% endif %}</h2>
+    <div class="container">
+        <div class="booking-container">
+            <h2>{% if booked %}
+                <!-- Finalise your booking -->
+                Finalise your booking
+                {% else %}
+                <!-- Link for bookigin -->
+                Nothing booked yet ?
+                <a href="{% url 'lessons' %}" rel="noopener noreferrer">
+                    <button class="btn btn-danger text-uppercase">Book now</button>
+                </a>
+                {% endif %}
+            </h2>
+        </div>
     </div>
 </div>
 
