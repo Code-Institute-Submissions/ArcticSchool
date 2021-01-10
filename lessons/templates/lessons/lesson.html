@@ -68,22 +68,24 @@
 
                 <!-- 4th Lesson part -->
                 <div class="card shadow-sm border-0">
-                    <!-- Resort -->
-                    <div class="resort-top-sec">
-                        <h4>Were ? - <span>{{ lesson.resort }} Resort</span></h4>
-                        <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}-image"
-                            class="lesson-resort-image shadow-sm">
-                    </div>
-                    <!-- Resorts Info -->
-                    <div class="resort-bottom-sec">
-                        <p class="">This resort is placed in {{ resort.country.name }}</p>
-                        <p class="">Few words about our beautiful resort.<br>
-                            <span>{{ resort.about }}</span>
-                        </p>
-                        <p class="">{{ resort.top_altitude }}</p>
-                        <p class="">{{ resort.bottom_altitude }}</p>
-                        <p class="">{{ resort.resort_altitude }}</p>
-                        <p class="">{{ resort.instructors }}</p>
+                    <div class="row">
+                        <!-- Resort -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 resort-top-sec">
+                            <h4>Were ? - <span>{{ lesson.resort }} Resort</span></h4>
+                            <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}-image"
+                                class="lesson-resort-image shadow-sm">
+                        </div>
+                        <!-- Resorts Info -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 resort-bottom-sec">
+                            <p class="">This resort is placed in {{ resort.country.name }}</p>
+                            <p class="">Few words about our beautiful resort.<br>
+                                <span>{{ resort.about }}</span>
+                            </p>
+                            <p class="">{{ resort.top_altitude }}</p>
+                            <p class="">{{ resort.bottom_altitude }}</p>
+                            <p class="">{{ resort.resort_altitude }}</p>
+                            <p class="">{{ resort.instructors }}</p>
+                        </div>
                     </div>
                 </div>
                 <!-- Bottom Section -->
