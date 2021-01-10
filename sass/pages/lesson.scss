@@ -12,8 +12,17 @@
             font-size: 0.85rem !important;
         }
     }
+
+    h5 {
+        font-size: 1rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+        span {
+            color: #059cd9;
+        }
+    }
+
     h4,
-    h5,
     h6 {
         color: #059cd9;
     }
@@ -70,11 +79,17 @@
                     font-weight: 300;
                 }
             }
+
+            img {
+                display: flex;
+                margin: auto;
+            }
         }
 
         // lesson image
         .lesson-image {
-            width: 100%;
+            width: 90%;
+            border-radius: 15px;
         }
         // resort image
         .lesson-resort-image {
