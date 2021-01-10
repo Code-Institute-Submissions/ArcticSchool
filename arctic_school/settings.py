@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'lessons',
     'contact',
     'user_account',
+    'booking',
 
     # Other
     'storages',
