@@ -3,5 +3,23 @@
 
 {% block content %}
 
+<!-- Main container -->
+<div id="booking">
+    <!-- Top banner -->
+    <div class="container">
+        <div class="booking-banner">
+            <h2 class="banner-text">Booking..
+                <hr>
+            </h2>
+        </div>
+    </div>
+    <!-- Booking container -->
+    <div class="booking-qty">
+        <h2>{% if booked %}Nothing booked yet ?{% else %}{% endif %}</h2>
+    </div>
+</div>
+
+<!-- Footer -->
+{% include 'layout/footer.html' %}
 
 {% endblock %}
