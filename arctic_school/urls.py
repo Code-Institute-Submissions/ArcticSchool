@@ -27,4 +27,5 @@ urlpatterns = [
     path('lessons/', include('lessons.urls')),
     path('contact/', include('contact.urls')),
     path('account/', include('user_account.urls')),
+    path('booking/', include('booking.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
