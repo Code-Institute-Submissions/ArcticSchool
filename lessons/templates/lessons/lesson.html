@@ -19,18 +19,23 @@
                     <h2>{{ lesson.name }} <span>{% if lesson.supper_offer == True %}(Supper Offer){% endif %}</span>
                     </h2>
                     <!-- Lesson image -->
-                    {% if lesson.image %}
-                    <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}-image">
-                    {% else %}
-                    <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
-                    {% endif %}
-                    <!-- Category & Level -->
-                    <p class="lesson-info">Category - <span>{{ lesson.category }}</span></p>
-                    <p class="lesson-info">Level - <span>{{ lesson.level }}</span></p>
-                    <!-- £ Price -->
-                    <p class="lesson-info">Price<span> £{{ lesson.price }}</span></p>
-                    <!-- Participants -->
-                    <p class="lesson-info">Participants - <span class="">{{ lesson.participants }}</span> </p>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        {% if lesson.image %}
+                        <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.name }}-image"
+                            class="lesson-image shadow-sm mb-4">
+                        {% else %}
+                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image"
+                            class="lesson-image shadow-sm mb-4">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                        <p class=" lesson-info">Category - <span>{{ lesson.category }}</span></p>
+                        <p class="lesson-info">Level - <span>{{ lesson.level }}</span></p>
+                        <!-- £ Price -->
+                        <p class="lesson-info">Price<span> £{{ lesson.price }}</span></p>
+                        <!-- Participants -->
+                        <p class="lesson-info">Participants - <span class="">{{ lesson.participants }}</span> </p>
+                    </div>
                     <!-- Supper Offer -->
                     {% if lesson.supper_offer %}
                     <span class="supper-offer-start"><i class="fas fa-star"></i></span>
@@ -73,7 +78,8 @@
                             <img src="{{ MEDIA_URL }}{{ resort.image }}" alt="{{ resort.name }}-image"
                                 class="lesson-resort-image shadow-sm mb-4">
                             {% else %}
-                            <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                            <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image"
+                                class="lesson-resort-image shadow-sm mb-4">
                             {% endif %}
                         </div>
                         <!-- Resorts Info -->
