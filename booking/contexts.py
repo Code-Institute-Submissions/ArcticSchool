@@ -25,6 +25,7 @@ def booking_contents(request):
         'discount': discount,
         'discount_point': discount_point,
         'discount_threshold': settings.OFF_10_DISCOUNT_THRESHOLD,
+        'discount_percentage': settings.OFF_10_DISCOUNT,
         'grand_total': grand_total,
     }
 
