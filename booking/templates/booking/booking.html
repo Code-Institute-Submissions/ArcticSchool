@@ -14,19 +14,27 @@
         </div>
     </div>
     <!-- Booking container -->
-    <div class="container">
-        <div class="booking-container">
-            <h2>{% if booked %}
+    <div class="container-fluid">
+        <div class="container">
+            <div class="booking-container">
+                {% if booked %}
                 <!-- Finalise your booking -->
-                Finalise your booking
+                <h2>Finalise your booking</h2>
+                <div class="row"></div>
                 {% else %}
                 <!-- Link for bookigin -->
-                Nothing booked yet ?
-                <a href="{% url 'lessons' %}" rel="noopener noreferrer">
-                    <button class="btn btn-danger text-uppercase">Book now</button>
-                </a>
+                <h2>Nothing booked yet ?
+                    <a href="{% url 'lessons' %}" rel="noopener noreferrer">
+                        <button class="btn btn-danger text-uppercase">Book now</button>
+                    </a>
+                </h2>
+                <!-- Include "You may like" container -->
+                <div class="row">
+                    {% include 'includes/you-might-like.html' %}
+                </div>
                 {% endif %}
-            </h2>
+
+            </div>
         </div>
     </div>
 </div>
