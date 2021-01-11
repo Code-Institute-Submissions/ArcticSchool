@@ -215,6 +215,5 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
-
-# Booked discount
+OFF_10_DISCOUNT_THRESHOLD = 200
 OFF_10_DISCOUNT = 10
