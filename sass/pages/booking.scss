@@ -34,8 +34,11 @@
     .booking-container {
         h2 {
             color: #f60f13;
-            display: flex;
-            justify-content: space-evenly;
+
+            span {
+                font-size: 0.85rem;
+                color: #000;
+            }
         }
 
         h4 {
