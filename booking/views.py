@@ -23,7 +23,6 @@ def add_to_booking(request, lesson_id):
     """ Add a quantity of the specified lesson to the booking_bag """
 
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if lesson_id in list(bag.keys()):
