@@ -229,6 +229,25 @@ $(document).ready(function () {
 		}
 	});
 
+	/**
+	 * This function will toggle discount bar and change hide element
+	 */
+	$('#close-discount').click(function () {
+		$('#discount-banner').toggle('d-none');
+		// set close discount value to true
+		sessionStorage.setItem('display_discount', 'False');
+	});
+
+	/**
+	 * This function will check for display_discount when lessons page is open
+	 */
+	window.onload = $(function () {
+		display_discount = sessionStorage.getItem('display_discount');
+		if (display_discount === 'False') {
+			$('#discount-banner').toggle('d-none');
+		}
+	});
+
 	// TEAM PAGAE
 	/**
 	 * This function will change button caption onClick
