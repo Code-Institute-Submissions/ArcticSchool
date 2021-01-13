@@ -15,13 +15,13 @@
     </div>
     <!-- Booking container -->
     <div class="booking-container">
-        {% if booked %}
+        {% if bag %}
         <div class="container">
             <!-- Finalise your booking -->
             <h2>Finalise your booking</h2>
             <!-- When any lesson is booked show booked in this container -->
             <div class="row">
-
+                    {{ bag }}
             </div>
         </div>
         {% else %}
