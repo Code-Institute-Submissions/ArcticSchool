@@ -21,9 +21,14 @@
             <h2>Finalise your booking</h2>
             <!-- When any lesson is booked show booked in this container -->
             <div class="row">
-                {% if booked_lessons %}
-                    {{ booked_lessons }}
-                {% endif %}
+                <div class="col">
+                    <!-- Booked lessons present in table on page -->
+                    {% if booked_lessons %}
+                    <div class="table-responsive rounded">
+                        {% include 'booking/booking-table.html' %}
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
         {% else %}
