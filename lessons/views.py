@@ -4,6 +4,7 @@ from django.db.models.functions import Lower
 from .models import Category, Lesson
 from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
+from django.contrib import sessions
 import random
 
 

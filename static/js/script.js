@@ -242,9 +242,8 @@ $(document).ready(function () {
 	 * This function will check for display_discount when lessons page is open
 	 */
 	window.onload = $(function () {
-		display_discount = sessionStorage.getItem('display_discount');
-		if (display_discount === 'False') {
-			$('#discount-banner').toggle('d-none');
+		if (sessionStorage.getItem('display_discount') === null) {
+			$('#discount-banner').removeClass('d-none');
 		}
 	});
 
