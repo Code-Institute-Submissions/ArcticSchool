@@ -5,7 +5,13 @@
     <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
             <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
-                href="{% url 'booking' %}">BOOKING</a>
+                href="{% url 'booking' %}">BOOKING
+                {% if booked_lessons %}
+                <span class="rounded-circle booking-count">
+                    {{ lessons_count }}
+                </span>
+                {% endif %}
+            </a>
         </li>
     </ul>
     <button id="hamburger-button" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -32,7 +38,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == '/contact/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                href="{% url 'contact' %}">CONTACT</a>
+                    href="{% url 'contact' %}">CONTACT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"

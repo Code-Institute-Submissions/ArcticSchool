@@ -21,7 +21,9 @@
             <h2>Finalise your booking</h2>
             <!-- When any lesson is booked show booked in this container -->
             <div class="row">
-                {{ bag }}
+                {% if booked_lessons %}
+                    {{ booked_lessons }}
+                {% endif %}
             </div>
         </div>
         {% else %}
