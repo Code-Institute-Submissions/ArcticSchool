@@ -6,7 +6,11 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
                     <div class="card-head">
+                        {% if item.lesson.image %}
                         <img src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" class="shadow-sm">
+                        {% else %}
+                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" class="lesson-image shadow-sm">
+                        {% endif %}
                     </div>
                 </div>
                 <!-- Card bottom part -->
@@ -26,7 +30,8 @@
                                 <p>Price: <span>£ {{ item.lesson.price }}</span></p>
                             </div>
                             <div class="col my-auto">
-                                <button class="btn hvr-bounce-to-right button-grey">Remove</button>
+                                <a class="remove-lesson btn hvr-bounce-to-right button-grey"
+                                    id="remove_{{ item.lesson_id }} data-lesson_id=" {{ lesson.id }}">Remove</a>
                             </div>
                         </div>
                     </div>
