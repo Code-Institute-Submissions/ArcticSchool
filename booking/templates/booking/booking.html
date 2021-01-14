@@ -26,6 +26,10 @@
                     {% if booked_lessons %}
                     <div class="table-responsive rounded">
                         {% include 'booking/booking-table.html' %}
+                        <!-- Totals -->
+                        {% include 'booking/booking-totals.html' %}
+                        <!-- Buttons -->
+                        {% include 'booking/booking-buttons.html' %}
                     </div>
                     {% endif %}
                 </div>
