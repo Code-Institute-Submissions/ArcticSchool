@@ -23,22 +23,12 @@
             <h2>Finalise your booking</h2>
             <!-- When any lesson is booked show booked in this container -->
             {% if booked_lessons %}
-            <div class="row">
-                <div class="col">
-                    <div class="table-responsive rounded">
-                        <!-- Booked lessons present in table on page -->
-                        {% include 'booking/booking-table.html' %}
-                    </div>
-                </div>
-            </div>
-            <!-- Totals -->
-            <div class="row my-4">
+                <!-- Booked lessons present in table on page -->
+                {% include 'booking/booking-table.html' %}
+                <!-- Totals -->
                 {% include 'booking/booking-totals.html' %}
-            </div>
-            <!-- Buttons -->
-            <div class="row my-4">
+                <!-- Buttons -->
                 {% include 'booking/booking-buttons.html' %}
-            </div>
             {% endif %}
         </div>
         {% else %}
@@ -51,9 +41,7 @@
             <hr>
         </div>
         <!-- Include "You may like" container -->
-        <div class="row">
-            {% include 'includes/you-might-like.html' %}
-        </div>
+        {% include 'includes/you-might-like.html' %}
         {% endif %}
         <!-- Booking banner included -->
         {% include 'includes/booking-banner.html' %}
