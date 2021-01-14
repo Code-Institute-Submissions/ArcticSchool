@@ -4,26 +4,29 @@
         <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
             <!-- Card top part -->
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
                     <div class="card-head">
                         <img src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" class="shadow-sm">
                     </div>
                 </div>
                 <!-- Card bottom part -->
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10 col-xl-10">
                     <!-- Lesson details -->
 
                     <div class="card-body">
                         <h1>{{ item.lesson.name }}</h1>
                         <div class="row">
-                            <div class="col">
+                            <div class="col my-auto">
                                 <p>Level: <span>{{ item.lesson.level }}</span></p>
                             </div>
-                            <div class="col">
+                            <div class="col my-auto">
                                 <p>Participants: <span>{{ item.lesson.participants }}</span></p>
                             </div>
-                            <div class="col">
+                            <div class="col my-auto">
                                 <p>Price: <span>£ {{ item.lesson.price }}</span></p>
+                            </div>
+                            <div class="col my-auto">
+                                <button class="btn hvr-bounce-to-right button-grey">Remove</button>
                             </div>
                         </div>
                     </div>
