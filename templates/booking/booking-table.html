@@ -1,25 +1,35 @@
-{% for item in booked_lessons %}
-<div id="{{ item.lesson.id }}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 extra-padding">
-    <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
-        <!-- Card top part -->
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 card-head">
-                <img src="{{ item.lesson.image.url }}" alt="{{ lessons.name }}" style="width: 50%;">
-                {% if lesson.supper_offer == True %}
-                <div class="super-offer-icon">
-                    <p class="super-offer-text">Super Offer!</p>
+<div id="booking-table">
+    {% for item in booked_lessons %}
+    <div id="{{ item.lesson.id }}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 extra-padding">
+        <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+            <!-- Card top part -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                    <div class="card-head">
+                        <img src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" class="shadow-sm">
+                    </div>
                 </div>
-                {% endif %}
-            </div>
-            <!-- Card bottom part -->
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 card-body">
-                <!-- Lesson details -->
-                <h1>{{ lesson.name }}</h1>
-                <p>Level: <span>{{ lesson.level }}</span></p>
-                <p>Participants: <span>{{ lesson.participants }}</span></p>
-                <p>Price: <span>£ {{ lesson.price }}</span></p>
+                <!-- Card bottom part -->
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <!-- Lesson details -->
+
+                    <div class="card-body">
+                        <h1>{{ item.lesson.name }}</h1>
+                        <div class="row">
+                            <div class="col">
+                                <p>Level: <span>{{ item.lesson.level }}</span></p>
+                            </div>
+                            <div class="col">
+                                <p>Participants: <span>{{ item.lesson.participants }}</span></p>
+                            </div>
+                            <div class="col">
+                                <p>Price: <span>£ {{ item.lesson.price }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}

@@ -105,4 +105,42 @@
             }
         }
     }
+
+    #booking-table {
+        .card {
+            border: 1px solid #fafafa;
+
+            // card head
+            .card-head {
+                padding: 0.85rem;
+            }
+
+            // image style
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            // card body
+            .card-body {
+                padding: 0.85rem;
+                h1 {
+                    font-size: 1.25rem;
+                    color: #059cd9;
+                    margin-bottom: 0.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                    font-family: "Lato", sans-serif;
+                    color: #000;
+                    font-weight: 500;
+                    margin-bottom: 0.25rem;
+
+                    span {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
 }
