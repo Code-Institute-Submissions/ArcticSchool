@@ -20,23 +20,27 @@
             <!-- Finalise your booking -->
             <h2>Finalise your booking</h2>
             <!-- When any lesson is booked show booked in this container -->
+            {% if booked_lessons %}
             <div class="row">
                 <div class="col">
-                    <!-- Booked lessons present in table on page -->
-                    {% if booked_lessons %}
                     <div class="table-responsive rounded">
+                        <!-- Booked lessons present in table on page -->
                         {% include 'booking/booking-table.html' %}
-                        <!-- Totals -->
-                        {% include 'booking/booking-totals.html' %}
-                        <!-- Buttons -->
-                        {% include 'booking/booking-buttons.html' %}
                     </div>
-                    {% endif %}
                 </div>
             </div>
+            <!-- Totals -->
+            <div class="row my-4">
+                {% include 'booking/booking-totals.html' %}
+            </div>
+            <!-- Buttons -->
+            <div class="row my-4">
+                {% include 'booking/booking-buttons.html' %}
+            </div>
+            {% endif %}
         </div>
         {% else %}
-        <!-- Link for bookigin -->
+        <!-- Link for booking -->
         <div class="container">
             <h2>Nothing booked yet ?<br>
                 <span>Have a quick look on randomly selected lessons for you.</span>

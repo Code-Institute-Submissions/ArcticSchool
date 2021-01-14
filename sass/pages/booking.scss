@@ -45,6 +45,32 @@
         h4 {
             display: none;
         }
+
+        h5 {
+            color: #000;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .discount-text {
+            text-decoration: underline;
+            color: #cbcbcb;
+        }
+
+        .big-text {
+            color: #f60f13;
+            font-size: 1.5rem;
+        }
+
+        .spent-more-text {
+            color: #fff;
+            background-color: #31addf;
+            padding: 0.5rem;
+            border-radius: 10px;
+            max-width: 350px;
+            text-align: center;
+            margin-left: auto;
+        }
     }
 
     // you may like container style
