@@ -1,0 +1,8 @@
+<h1 class="blue-text"><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h1>
+<h1 class="blue-text">Discount: £{{ discount|floatformat:2 }}</h1>
+<h1 class="mt-4 blue-text"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h1>
+{% if discount_point > 0 %}
+<p class="mb-1 blue-text">
+    Spend just <strong>${{ discount_point }}</strong> more to get discount!
+</p>
+{% endif %}
