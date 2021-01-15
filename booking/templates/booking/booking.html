@@ -8,19 +8,17 @@
 <!-- Main container -->
 <div id="booking">
     <!-- Top banner -->
-    <div class="container">
-        <div class="booking-banner">
-            <h2 class="banner-text">Booking..
-                <hr>
-            </h2>
-        </div>
+    <div class="container booking-banner">
+        <h2>Booking..
+            <hr>
+        </h2>
     </div>
     <!-- Booking container -->
     <div class="booking-container">
         {% if bag %}
         <div class="container">
             <!-- Finalise your booking -->
-            <h2 >Finalise your booking</h2>
+            <h2>Finalise your booking</h2>
             <hr>
             <!-- When any lesson is booked show booked in this container -->
             {% if booked_lessons %}
