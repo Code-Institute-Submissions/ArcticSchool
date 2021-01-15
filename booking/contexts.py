@@ -3,6 +3,7 @@ from decimal import Decimal
 from django.conf import settings
 from lessons.models import Lesson
 
+
 def booking_contents(request):
 
     booked_lessons = []
@@ -16,8 +17,8 @@ def booking_contents(request):
         lessons_count += quantity
         booked_lessons.append({
             'lesson_id': lesson_id,
-            'quantity':quantity,
-            'lesson':lesson,
+            'quantity': quantity,
+            'lesson': lesson,
         })
 
     if total > settings.OFF_10_DISCOUNT_THRESHOLD:
@@ -26,10 +27,6 @@ def booking_contents(request):
     else:
         discount = 0
         discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
-        if discount_point == 100:
-            discount_point = (settings.OFF_10_DISCOUNT_THRESHOLD - total) + 1
-        else:
-            discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
 
     grand_total = total - discount
 
@@ -42,7 +39,7 @@ def booking_contents(request):
         'discount_threshold': settings.OFF_10_DISCOUNT_THRESHOLD,
         'discount_percentage': settings.OFF_10_DISCOUNT,
         'grand_total': grand_total,
-        'bag':bag,
+        'bag': bag,
     }
 
     return context
