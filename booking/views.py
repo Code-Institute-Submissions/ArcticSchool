@@ -32,7 +32,6 @@ def add_to_booking(request, lesson_id):
         bag[lesson_id] = quantity
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
 
 
