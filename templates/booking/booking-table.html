@@ -1,45 +1,68 @@
 <div id="booking-table">
     {% for item in booked_lessons %}
     <div id="{{ item.lesson.id }}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 extra-padding">
+        <!-- Card -->
         <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
-            <!-- Card top part -->
             <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                    <div class="card-head">
+                <!-- Image -->
+                <div class="col-xs-3 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-auto">
+                    <!-- Magic Padding Container -->
+                    <div class="p-1">
                         {% if item.lesson.image %}
                         <img src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" class="shadow-sm">
                         {% else %}
                         <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" class="lesson-image shadow-sm">
                         {% endif %}
                     </div>
+                    <!-- Magic Padding Container End -->
                 </div>
-                <!-- Card bottom part -->
-                <div class="col-xs-12 col-sm-8 col-md-10 col-lg-10 col-xl-10">
-                    <!-- Lesson details -->
-
-                    <div class="card-body">
-                        <h1>{{ item.lesson.name }}</h1>
+                <!-- Card Body -->
+                <!-- Lesson Info -->
+                <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 my-auto">
+                    <!-- Magic Padding Container -->
+                    <div class="p-1">
+                        <!-- Lesson Info Container -->
                         <div class="row">
-                            <div class="col my-auto">
+                            <div class="col-xl-12 col-sm-12 col-md-12 col-lg-12">
+                                <!-- Lesson Title -->
+                                <h1>{{ item.lesson.name }}</h1>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 pr-1">
+                                <!-- Lesson Resort -->
+                                <p>Resort: <span>{{ item.lesson.resort }}</span></p>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 pr-1">
+                                <!-- Lesson Level -->
                                 <p>Level: <span>{{ item.lesson.level }}</span></p>
                             </div>
-                            <div class="col my-auto">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 pr-1">
+                                <!-- Lesson Participants -->
                                 <p>Participants: <span>{{ item.lesson.participants }}</span></p>
                             </div>
-                            <div class="col my-auto">
-                                <p>Price: <span>£ {{ item.lesson.price }}</span></p>
-                            </div>
-                            <div class="col my-auto">
-                                <a href="{% url 'lesson' item.lesson.id %}"
-                                    class="remove-lesson btn hvr-bounce-to-right btn-blue">Details</a>
-                                <a class="remove-lesson btn hvr-bounce-to-right btn-grey"
-                                    data-lesson_id="{{ lesson.id }}" id="remove_{{ item.lesson_id }}">Remove</a>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <!-- Lesson Price -->
+                                <p class="price">Price: <span>£ {{ item.lesson.price }}</span></p>
                             </div>
                         </div>
+                        <!-- Lesson Info Container End -->
                     </div>
+                    <!-- Magic Padding Container End -->
                 </div>
+                <!-- Buttons -->
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-auto">
+                    <!-- Magic Padding Container -->
+                    <div class="p-1">
+                        <a href="{% url 'lesson' item.lesson.id %}"
+                            class="remove-lesson btn hvr-bounce-to-right btn-blue mb-2">Details</a>
+                        <a class="remove-lesson btn hvr-bounce-to-right btn-grey" data-lesson_id="{{ lesson.id }}"
+                            id="remove_{{ item.lesson_id }}">Remove</a>
+                    </div>
+                    <!-- Magic Padding Container End -->
+                </div>
+                <!-- Card Body End -->
             </div>
         </div>
+        <!-- Card End -->
     </div>
     {% endfor %}
 </div>
