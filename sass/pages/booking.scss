@@ -22,7 +22,7 @@
             background-color: #059cd9;
             border-radius: 10px;
             margin-top: 10px;
-            box-shadow: 5px 5px rgba(204,204,204,.65);
+            box-shadow: 5px 5px rgba(204, 204, 204, 0.65);
         }
     }
 
@@ -30,7 +30,9 @@
     .booking-container {
         h2 {
             color: #f60f13;
-
+        }
+        h3 {
+            color: #f60f13;
             span {
                 font-size: 1rem;
                 color: #000;
@@ -177,7 +179,7 @@
 
 // responsive
 @media (max-width: 768px) {
-    h2 {
+    h2, h3 {
         text-align: center;
     }
 }
