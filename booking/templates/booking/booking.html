@@ -21,10 +21,12 @@
         <div class="container">
             <!-- Finalise your booking -->
             <h2>Finalise your booking</h2>
+            <hr>
             <!-- When any lesson is booked show booked in this container -->
             {% if booked_lessons %}
             <!-- Booked lessons present in table on page -->
             {% include 'booking/booking-table.html' %}
+            <hr>
             <!-- Totals -->
             {% include 'booking/booking-totals.html' %}
             <!-- Buttons -->
