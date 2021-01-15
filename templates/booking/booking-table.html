@@ -30,8 +30,10 @@
                                 <p>Price: <span>£ {{ item.lesson.price }}</span></p>
                             </div>
                             <div class="col my-auto">
-                                <a class="remove-lesson btn hvr-bounce-to-right button-grey" data-lesson_id="{{ lesson.id }}"
-                                    id="remove_{{ item.lesson_id }}">Remove</a>
+                                <a href="{% url 'lesson' item.lesson.id %}"
+                                    class="remove-lesson btn hvr-bounce-to-right btn-blue">Details</a>
+                                <a class="remove-lesson btn hvr-bounce-to-right btn-grey"
+                                    data-lesson_id="{{ lesson.id }}" id="remove_{{ item.lesson_id }}">Remove</a>
                             </div>
                         </div>
                     </div>
