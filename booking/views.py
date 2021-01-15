@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render,redirect, HttpResponse
 from home.models import SocialIcon
 from lessons.models import Lesson
 import random
@@ -23,6 +23,7 @@ def add_to_booking(request, lesson_id):
     """ Add a quantity of the specified lesson to the booking_bag """
 
     quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if lesson_id in list(bag.keys()):
@@ -32,4 +33,18 @@ def add_to_booking(request, lesson_id):
 
     request.session['bag'] = bag
     print(request.session['bag'])
-    return render(request, 'booking/booking.html')
+    return redirect(redirect_url)
+
+
+def remove_from_booking(request, lesson_id):
+    """ Remove lesson from the booking 'bag' """
+
+    try:
+        bag = request.session.get('bag', {})
+        bag.pop(lesson_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
