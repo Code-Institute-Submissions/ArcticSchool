@@ -3,6 +3,10 @@
     <div id="{{ item.lesson.id }}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 extra-padding">
         <!-- Card -->
         <div class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+            <!-- Supper Offer -->
+            {% if item.lesson.supper_offer %}
+            <span class="card-super-offer"><i class="fas fa-star"></i></span>
+            {% endif %}
             <div class="row">
                 <!-- Image -->
                 <div class="col-xs-3 col-sm-12 col-md-3 col-lg-3 col-xl-3 my-auto">
