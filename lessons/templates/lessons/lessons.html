@@ -124,7 +124,7 @@
                                                 <input class="form-control qty_input" type="hidden" name="quantity"
                                                     value="1" min="1" max="1" data-item_id="{{ lesson.id }}"
                                                     id="id_qty_{{ lesson.id }}">
-                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                                <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                                                 <button type="submit" class="btn hvr-bounce-to-right">Book Now</button>
                                             </form>
                                         </div>
