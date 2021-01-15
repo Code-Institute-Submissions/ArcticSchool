@@ -4,7 +4,7 @@
         <h5 class="discount-text">Discount: £{{ discount|floatformat:2 }}</h5>
         <h5 class="mt-5 big-text"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h5>
         {% if total <= discount_threshold %} <p class="mb-1 spent-more-text shadow-sm">Spend more than
-            <strong>£{{ discount_threshold }}</strong> to get
+            <strong>£{{ discount_threshold }}</strong><br class="d-block d-sm-none">to get
             <strong>{{ discount_percentage }}% discount!</strong></p>
             {% endif %}
     </div>
