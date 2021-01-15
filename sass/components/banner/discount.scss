@@ -17,6 +17,7 @@
         margin-right: auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         span {
             color: greenyellow;
@@ -39,11 +40,5 @@
             background: #fff !important;
             border: 1px solid #000 !important;
         }
-    }
-}
-
-@media(max-width: 475px) {
-    .close-button {
-        margin-top: 10px;
     }
 }
