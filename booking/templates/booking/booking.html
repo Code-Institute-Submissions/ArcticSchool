@@ -23,12 +23,12 @@
             <h2>Finalise your booking</h2>
             <!-- When any lesson is booked show booked in this container -->
             {% if booked_lessons %}
-                <!-- Booked lessons present in table on page -->
-                {% include 'booking/booking-table.html' %}
-                <!-- Totals -->
-                {% include 'booking/booking-totals.html' %}
-                <!-- Buttons -->
-                {% include 'booking/booking-buttons.html' %}
+            <!-- Booked lessons present in table on page -->
+            {% include 'booking/booking-table.html' %}
+            <!-- Totals -->
+            {% include 'booking/booking-totals.html' %}
+            <!-- Buttons -->
+            {% include 'booking/booking-buttons.html' %}
             {% endif %}
         </div>
         {% else %}
@@ -51,4 +51,24 @@
 <!-- Footer -->
 {% include 'layout/footer.html' %}
 
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script type="text/javascript">
+    /**
+     * This function will remove item from booked lessons bag and update the 'bag' and reload page
+     */
+    $('.remove-lesson').click(function (e) {
+        let csrfToken = "{{ csrf_token }}";
+        let lessonId = $(this).attr('id').split('remove_')[1];
+        let url = `/booking/remove/${lessonId}`;
+        let data = { 'csrfmiddlewaretoken': csrfToken };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    });
+</script>
 {% endblock %}
