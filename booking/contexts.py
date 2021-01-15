@@ -25,7 +25,11 @@ def booking_contents(request):
         discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
     else:
         discount = 0
-        discount_point = 0
+        discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
+        if discount_point == 100:
+            discount_point = (settings.OFF_10_DISCOUNT_THRESHOLD - total) + 1
+        else:
+            discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
 
     grand_total = total - discount
 

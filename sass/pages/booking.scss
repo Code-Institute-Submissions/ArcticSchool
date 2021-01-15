@@ -46,30 +46,32 @@
             display: none;
         }
 
-        h5 {
-            color: #000;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
+        .totals-text {
+            h5 {
+                color: #000;
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
 
-        .discount-text {
-            text-decoration: underline;
-            color: #cbcbcb;
-        }
+            .discount-text {
+                text-decoration: underline;
+                color: #cbcbcb;
+            }
 
-        .big-text {
-            color: #f60f13;
-            font-size: 1.5rem;
-        }
+            .big-text {
+                color: #f60f13;
+                font-size: 1.5rem;
+            }
 
-        .spent-more-text {
-            color: #fff;
-            background-color: #31addf;
-            padding: 0.5rem;
-            border-radius: 10px;
-            max-width: 350px;
-            text-align: center;
-            margin-left: auto;
+            .spent-more-text {
+                color: #fff;
+                background-color: #31addf;
+                padding: 0.5rem;
+                border-radius: 10px;
+                max-width: 350px;
+                text-align: center;
+                margin-left: auto;
+            }
         }
 
         // you might like margin
@@ -116,7 +118,7 @@
         margin-bottom: 30px;
 
         .card {
-            border: 1px solid #fafafa;
+            border: 1px solid #ebebeb;
 
             // card head
             .card-head {
@@ -160,7 +162,7 @@
             }
 
             // supper offer star style
-            .card-super-offer{
+            .card-super-offer {
                 position: absolute;
                 top: -20px;
                 right: -25px;
