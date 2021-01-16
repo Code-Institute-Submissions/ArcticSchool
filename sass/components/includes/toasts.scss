@@ -41,6 +41,17 @@
         border: 1px solid #fff;
         border-radius: inherit;
     }
+
+    // discount text
+    .spent-more-text {
+        color: #fff;
+        background-color: #31addf;
+        border-radius: 5px;
+        padding: .25rem;
+        max-width: 350px;
+        text-align: center;
+        margin-left: auto;
+    }
 }
 
 // success toast style
