@@ -69,4 +69,10 @@
         <!-- Card End -->
     </div>
     {% endfor %}
+    <!-- Clear whole bag - button -->
+    <form class="form" action="{% url 'clear_booking' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        <button type="submit" class="btn hvr-bounce-to-right" id="clear-booking">Clear Booking</button>
+    </form>
 </div>
