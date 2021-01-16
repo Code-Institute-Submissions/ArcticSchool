@@ -266,4 +266,11 @@ $(document).ready(function () {
 	 * This function will clear contact form
 	 */
 
+
+
+	// TOASTS
+	/**
+	* This function will display toasts
+	*/
+	$('.toast').toast('show');
 });
