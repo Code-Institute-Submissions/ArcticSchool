@@ -4,7 +4,7 @@
     </a>
     <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
+            <a class="nav-link mr-2 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
                 href="{% url 'booking' %}">BOOKING
                 {% if booked_lessons %}
                 <span class="rounded-circle booking-count">
