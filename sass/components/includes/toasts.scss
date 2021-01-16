@@ -43,11 +43,17 @@
     }
 
     // discount text
+    .small-discount {
+        color: #31addf;
+        font-size: 0.85rem;
+    }
+
+    // discount banner
     .spent-more-text {
         color: #fff;
         background-color: #31addf;
         border-radius: 5px;
-        padding: .25rem;
+        padding: 0.25rem;
         max-width: 350px;
         text-align: center;
         margin-left: auto;

@@ -16,14 +16,14 @@
             </div>
         </div>
         {% if grand_total %}
-        <div class="bag-notification-wrapper">
+        <div>
             {% for item in booked_lessons %}
             <div class="row">
                 <div class="col-3 my-1">
                     {% if item.lesson.image %}
-                    <img class="w-100" src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}">
+                    <img class="w-100 rounded" src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}">
                     {% else %}
-                    <img class="w-100" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                    <img class="w-100 rounded" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
                     {% endif %}
                 </div>
                 <div class="col-9">
@@ -36,12 +36,17 @@
             <div class="col">
                 {% if grand_total %}
                 <strong>
-                    <p class="mt-3 mb-1 text-black">
-                        Total: <span class="float-right">£{{ total|floatformat:2 }}</span>
+                    <p class="m-0 text-black">Total:
+                        <span class="float-right">£{{ grand_total|floatformat:2 }}</span>
                     </p>
+                    {% if discount > 0 %}
+                    <p class="mt-1 mb-2 small-discount">Discount:
+                        <span class="float-right">£{{ discount|floatformat:2 }}</span>
+                    </p>
+                    {% endif %}
                 </strong>
                 {% endif %}
-                {% if total <= discount_threshold %} <p class="mb-1 spent-more-text shadow-sm">Spend more than
+                {% if total <= discount_threshold %} <p class="my-2 spent-more-text">Spend more than
                     <strong>£{{ discount_threshold }}</strong><br class="d-block d-sm-none"> to get
                     <strong>{{ discount_percentage }}% discount!</strong></p>
                     {% endif %}
