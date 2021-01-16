@@ -175,11 +175,27 @@
             }
         }
     }
+    // button style
+    .btn {
+        width: 100%;
+        border: 1px solid #f60f13;
+        color: #f60f13;
+    }
+    // buttons hover style
+    .hvr-bounce-to-right:hover {
+        color: #fff !important;
+    }
+    .hvr-bounce-to-right:before {
+        background: #f60f13;
+        border: 1px solid #fff;
+        border-radius: inherit;
+    }
 }
 
 // responsive
 @media (max-width: 768px) {
-    h2, h3 {
+    h2,
+    h3 {
         text-align: center;
     }
 }

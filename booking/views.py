@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect, HttpResponse
+from django.shortcuts import render, redirect, HttpResponse
 from home.models import SocialIcon
 from lessons.models import Lesson
 import random
@@ -47,3 +47,14 @@ def remove_from_booking(request, lesson_id):
 
     except Exception as e:
         return HttpResponse(status=500)
+
+
+def clear_booking(request):
+    """ A view to clear whole content from booking 'bag' """
+
+    redirect_url = request.POST.get('redirect_url')
+    bag = request.session.get('bag', {})
+    bag.clear()
+    request.session['bag'] = bag
+
+    return redirect(redirect_url)
