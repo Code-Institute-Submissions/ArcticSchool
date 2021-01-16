@@ -54,6 +54,8 @@ def remove_from_booking(request, lesson_id):
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(
+            request, f'Error while removing lesson: {e}')
         return HttpResponse(status=500)
 
 
