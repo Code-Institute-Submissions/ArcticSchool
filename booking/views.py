@@ -50,7 +50,7 @@ def remove_from_booking(request, lesson_id):
 
 
 def clear_booking(request):
-    """ A view to clear whole content from booking 'bag' """
+    """ A view to clear whole content from booking """
 
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
