@@ -10,7 +10,13 @@
     <div class="banner"></div>
     <!-- Main container -->
     <div class="main">
-        <div class="container py-3">
+        <div class="container pb-3">
+            <!-- Breadcrumbs -->
+            <div class="row empty-box">
+                <div class="breadcrumbs">
+                    <a href="{% url 'booking' %}"><i class="fas fa-chevron-left"></i> Back to Booking</a>
+                </div>
+            </div>
             <div class="row">
                 <!-- Checkout Form & Payment Form -->
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 order-form">
@@ -84,12 +90,17 @@
                                 <h4>Payment</h4>
                                 <hr>
                                 <!-- Stripe Card -->
-                                <div class="" id="stripe-card"></div>
+                                <div class="" id="stripe-card">
+                                </div>
                                 <!-- Error message -->
                                 <div class="" id="stripe-error" role="alert"></div>
                             </fieldset>
-                            <!-- Buttons -->
-                            <div class=""></div>
+                            <!-- Complete order button -->
+                            <div class="buttons">
+                                <button type="submit" id="purchase-button" class="btn hvr-bounce-to-right">Make a
+                                    Payment</button>
+                            </div>
+                            <p class="small m-0">Your card will be charged £ {{ grand_total|floatformat:2 }}</p>
                         </div>
                     </div>
                 </div>

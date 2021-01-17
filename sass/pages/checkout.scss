@@ -2,8 +2,84 @@
     margin-top: 59px;
     background-color: #f1f2f3;
 
+    // top box with breadcrumbs
+    .empty-box {
+        height: 40px;
+
+        .breadcrumbs {
+            display: flex;
+            font-weight: 400;
+            font-size: 0.85rem;
+            margin-left: 15px;
+            margin-bottom: 10px;
+
+            a {
+                color: #848484;
+                align-self: flex-end;
+                opacity: 0.8;
+
+                &:hover {
+                    text-decoration: none;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .card {
         border-radius: 10px;
+
+        .buttons {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            // contact form buttons
+            .btn {
+                width: calc(50% - 5px);
+                border: 1px solid #00d4f5;
+                color: #00d4f5;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            .hvr-bounce-to-right {
+                -webkit-transition-duration: 0.15s;
+                transition-duration: 0.15s;
+            }
+        }
+
+        #purchase-button {
+            width: 100%;
+            border: 1px solid #f60f13;
+            color: #f60f13;
+
+            &.hvr-bounce-to-right:before {
+                background: #f60f13;
+            }
+        }
+    }
+
+    .hvr-bounce-to-right:hover {
+        color: #fff !important;
+    }
+    .hvr-bounce-to-right:before {
+        background: #00d4f5;
+        border: 1px solid #fff;
+        border-radius: inherit;
+    }
+
+    .hvr-bounce-to-right:hover {
+        color: #fff !important;
+    }
+    .hvr-bounce-to-right:before {
+        background: #00d4f5;
+        border: 1px solid #fff;
+        border-radius: inherit;
     }
 
     // booking summary section
@@ -42,6 +118,11 @@
             color: #848484;
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
+        }
+        p {
+            color: #848484;
+            font-size: 0.85rem;
+            font-weight: 300;
         }
     }
 }
