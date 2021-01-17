@@ -11,46 +11,52 @@
     <!-- Main container -->
     <div class="main">
         <div class="container">
-            <!-- Form -->
-            <form action="{% url 'checkout' %}" class="" id="payment-form" method="POST">
-                {% csrf_token %}
-                <!-- Basic info -->
-                <fieldset class="">
-                    <legend>Details:</legend>
-                    {{ order_form.full_name | as_crispy_field}}
-                    {{ order_form.email | as_crispy_field}}
-                </fieldset>
-                <fieldset class="">
-                    <legend>Personal Information:</legend>
-                    {{ order_form.phone_number | as_crispy_field}}
-                    {{ order_form.street_address1 | as_crispy_field}}
-                    {{ order_form.street_address2 | as_crispy_field}}
-                    {{ order_form.town_or_city | as_crispy_field}}
-                    {{ order_form.postcode | as_crispy_field}}
-                    {{ order_form.county | as_crispy_field}}
-                    {{ order_form.country | as_crispy_field}}
-                </fieldset>
-                {% if user.is_authenticated %}
-                <label for="save-info">Save personal information</label>
-                <input type="checbok" name="save-info" id="save-info" class="" checked>
-                {% else %}
-                <label class="" for="save-info">
-                    <a href="{% url 'account_signup' %}" class="">Create Account</a>
-                    <a href="{% url 'account_login' %}" class="">Login</a> to save information
-                </label>
-                {% endif %}
-                <!-- Stripe payments section -->
-                <fieldset class="">
-                    <legend>Payment</legend>
-                    <!-- Stripe Card -->
-                    <div class="" id="stripe-card"></div>
-                    <!-- Error message -->
-                    <div class="" id="stripe-error" role="alert"></div>
-                </fieldset>
+            <div class="col -xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <!-- Form -->
+                <form action="{% url 'checkout' %}" class="" id="form-checkout" method="POST">
+                    {% csrf_token %}
+                    <!-- Basic info -->
+                    <fieldset class="">
+                        <legend>Personal Information:</legend>
+                        {{ order_form.full_name | as_crispy_field}}
+                        {{ order_form.email | as_crispy_field}}
+                        {{ order_form.phone_number | as_crispy_field}}
+                    </fieldset>
+                    <hr>
+                    <fieldset class="">
+                        <legend>Home Information:</legend>
+                        {{ order_form.street_address1 | as_crispy_field}}
+                        {{ order_form.street_address2 | as_crispy_field}}
+                        {{ order_form.town_or_city | as_crispy_field}}
+                        {{ order_form.postcode | as_crispy_field}}
+                        {{ order_form.county | as_crispy_field}}
+                        {{ order_form.country | as_crispy_field}}
+                    </fieldset>
+                    <hr>
+                    {% if user.is_authenticated %}
+                    <label for="save-info">Save personal information</label>
+                    <input type="checkbox" name="save-info" id="save-info" class="" checked>
+                    {% else %}
+                    <label class="buttons" for="save-info">
+                        <a href="{% url 'account_signup' %}" class="btn hvr-bounce-to-right">Create Account</a>
+                        <a href="{% url 'account_login' %}" class="btn hvr-bounce-to-right">Login</a> to save
+                        information
+                    </label>
+                    {% endif %}
+                    <hr>
+                    <!-- Stripe payments section -->
+                    <fieldset class="">
+                        <legend>Payment</legend>
+                        <!-- Stripe Card -->
+                        <div class="" id="stripe-card"></div>
+                        <!-- Error message -->
+                        <div class="" id="stripe-error" role="alert"></div>
+                    </fieldset>
 
-                <!-- Buttons -->
-                <div class=""></div>
-            </form>
+                    <!-- Buttons -->
+                    <div class=""></div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
