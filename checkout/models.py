@@ -24,6 +24,18 @@ class Order(models.Model):
         """ This function will create a random, unique order number by using UUID """
         return uuid.uuid4().hex.upper
 
+    def update_total(self):
+        """ Update grand total when new item is added, include discount. """
+
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))[
+            'lineitem_total__sum']
+        if self.order_total > settings.OFF_DISCOUNT_THRESHOLD:
+            self.discount = self.order_total * settings.OFF_DISCOUNT/100
+        else:
+            self.discount = 0
+        self.grand_total = self.order_totaltotal - self.discount
+        self.save()
+
     def save(self, *args, **kwargs):
         """ This function will override the orignal save method and
         create the order number if it hasn't been created before """
@@ -39,5 +51,5 @@ class OrderLineItem(models.Model):
     lesson = models.ForeignKey(
         Lesson, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    linteitem_total = models.DecimalField(
+    lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
