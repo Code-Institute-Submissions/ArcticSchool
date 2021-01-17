@@ -1,9 +1,8 @@
 import uuid
-
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-
+from datetime import datetime
 from lessons.models import Lesson
 
 
@@ -18,6 +17,7 @@ class Order(models.Model):
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(default=datetime.now)
     order_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
     discount = models.DecimalField(
@@ -58,7 +58,7 @@ class OrderLineItem(models.Model):
                               on_delete=models.CASCADE, related_name='lineitems')
     lesson = models.ForeignKey(
         Lesson, null=False, blank=False, on_delete=models.CASCADE)
-    quantity = models.IntegerField(null=False, blank=False, default=0)
+    quantity = models.IntegerField(null=False, blank=False, default=1)
     # Quantity field is created to take higher number than 1 as customer
     # can change the way of purchasing lessons and quantities for each lesson
     lineitem_total = models.DecimalField(
