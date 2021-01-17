@@ -49,7 +49,7 @@ def remove_from_booking(request, lesson_id):
         bag.pop(lesson_id)
 
         request.session['bag'] = bag
-        messages.error(
+        messages.info(
             request, f'{ lesson.name } removed successfully from booking!')
         return HttpResponse(status=200)
 
