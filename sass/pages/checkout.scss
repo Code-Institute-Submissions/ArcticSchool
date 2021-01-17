@@ -1,4 +1,28 @@
 #checkout {
     margin-top: 59px;
+    background-color: #f1f2f3;
 
+    // booking summary section
+    .booking-summary {
+        color: #adadad;
+        padding: 1.25rem;
+        h4 {
+            color: #adadad;
+            font-size: 1.25rem;
+        }
+
+        .summary-text  {
+            font-weight: 300;
+        }
+
+        .summary-totals {
+            .grand-total {
+                color: #059cd9;
+            }
+        }
+    }
+
+    // booking advert section
+    .booking-advert {
+    }
 }
