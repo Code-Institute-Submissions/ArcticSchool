@@ -23,7 +23,7 @@
                     <form action="{% url 'checkout' %}" id="form-checkout" method="POST">
                         {% csrf_token %}
                         <!-- Basic info -->
-                        <fieldset class="">
+                        <fieldset>
                             <h4>Personal Information:</h4>
                             <hr>
                             {{ order_form.full_name | as_crispy_field}}
@@ -89,21 +89,25 @@
                     <!-- Stripe payments section -->
                     <div class="booking-payment">
                         <!-- Stripe payments section -->
-                        <fieldset class="">
-                            <h4>Payment</h4>
-                            <hr>
-                            <!-- Stripe Card -->
-                            <div class="" id="stripe-card">
+                        <form id="payment-form">
+                            <fieldset>
+                                <h4>Payment</h4>
+                                <hr>
+                                <div class="card-control mt-4 mb-1">
+                                    <div id="card-element">
+                                        <!-- Elements will create input elements here -->
+                                    </div>
+                                </div>
+                                <!-- We'll put the error messages in this element -->
+                                <div id="card-errors" role="alert"></div>
+                            </fieldset>
+                            <!-- Complete order button -->
+                            <div class="buttons">
+                                <button type="submit" id="submit" class="btn hvr-bounce-to-right">Make a
+                                    Payment</button>
                             </div>
-                            <!-- Error message -->
-                            <div class="" id="stripe-error" role="alert"></div>
-                        </fieldset>
-                        <!-- Complete order button -->
-                        <div class="buttons">
-                            <button type="submit" id="purchase-button" class="btn hvr-bounce-to-right">Make a
-                                Payment</button>
-                        </div>
-                        <p class="small m-0">Your card will be charged £ {{ grand_total|floatformat:2 }}</p>
+                            <p class="small m-0 mt-1">Your card will be charged £ {{ grand_total|floatformat:2 }}</p>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -115,4 +119,11 @@
 <!-- Footer -->
 {% include 'layout/footer.html' %}
 
+{% endblock %}
+
+{% block extra_js %}
+{{ block.supper }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
