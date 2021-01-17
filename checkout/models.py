@@ -53,3 +53,10 @@ class OrderLineItem(models.Model):
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+    def save(self, *args, **kwargs):
+        """ This functiojn will override the orignal save method to set the
+         """
+
+        self.lineitem_total = self.lesson.price * self.quantity
+        super().save(*args, **kwargs)
