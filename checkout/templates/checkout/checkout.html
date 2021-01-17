@@ -3,6 +3,58 @@
 {% block extra_title %}| Checkout{% endblock %}
 {% block content %}
 
+<!-- Checkout main container -->
+<h1 class="d-none">Checkout</h1>
+<div id="checkout">
+    <!-- Banner -->
+    <div class="banner"></div>
+    <!-- Main container -->
+    <div class="main">
+        <div class="container">
+            <!-- Form -->
+            <form action="{% url 'checkout' %}" class="" id="payment-form" method="POST">
+                {% csrf_token %}
+                <!-- Basic info -->
+                <fieldset class="">
+                    <legend>Details:</legend>
+                    {{ order_form.full_name | as_crispy_field}}
+                    {{ order_form.email | as_crispy_field}}
+                </fieldset>
+                <fieldset class="">
+                    <legend>Personal Information:</legend>
+                    {{ order_form.phone_number | as_crispy_field}}
+                    {{ order_form.street_address1 | as_crispy_field}}
+                    {{ order_form.street_address2 | as_crispy_field}}
+                    {{ order_form.town_or_city | as_crispy_field}}
+                    {{ order_form.postcode | as_crispy_field}}
+                    {{ order_form.county | as_crispy_field}}
+                    {{ order_form.country | as_crispy_field}}
+                </fieldset>
+                {% if user.is_authenticated %}
+                <label for="save-info">Save personal information</label>
+                <input type="checbok" name="save-info" id="save-info" class="" checked>
+                {% else %}
+                <label class="" for="save-info">
+                    <a href="{% url 'account_signup' %}" class="">Create Account</a>
+                    <a href="{% url 'account_login' %}" class="">Login</a> to save information
+                </label>
+                {% endif %}
+                <!-- Stripe payments section -->
+                <fieldset class="">
+                    <legend>Payment</legend>
+                    <!-- Stripe Card -->
+                    <div class="" id="stripe-card"></div>
+                    <!-- Error message -->
+                    <div class="" id="stripe-error" role="alert"></div>
+                </fieldset>
+
+                <!-- Buttons -->
+                <div class=""></div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 <!-- Footer -->
 {% include 'layout/footer.html' %}
