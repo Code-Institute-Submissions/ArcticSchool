@@ -50,8 +50,11 @@
                     <strong>£{{ discount_threshold }}</strong><br class="d-block d-sm-none"> to get
                     <strong>{{ discount_percentage }}% discount!</strong></p>
                     {% endif %}
-                    <a href="{% url 'booking' %}" class="btn hvr-bounce-to-right">
-                        <span class="text-uppercase">Finalise Booking</span>
+                    <a href="{% url 'checkout' %}" class="btn hvr-bounce-to-right">
+                        <span class="text-uppercase">Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
                     </a>
             </div>
         </div>
