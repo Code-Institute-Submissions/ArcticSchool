@@ -20,6 +20,18 @@ class Order(models.Model):
     grand_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
 
+    def _create_order_number(self):
+        """ This function will create a random, unique order number by using UUID """
+        return uuid.uuid4().hex.upper
+
+    def save(self, *args, **kwargs):
+        """ This function will override the orignal save method and
+        create the order number if it hasn't been created before """
+
+        if not self.order_number:
+            self.order_number = self._create_order_number()
+        super().save(*args, **kwargs)
+
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False,
