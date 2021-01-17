@@ -68,6 +68,6 @@ def clear_booking(request):
     request.session['bag'] = bag
 
     messages.info(
-        request, f'All lessons have been removed from booking successfully!')
+        request, f'Your booking has been cleared successfully!')
 
     return redirect(redirect_url)
