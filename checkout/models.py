@@ -12,7 +12,12 @@ class Order(models.Model):
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    date = models.DateTimeField(auto_now_add=True)
+    country = models.CharField(max_length=40, null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
     order_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
     discount = models.DecimalField(
@@ -44,6 +49,9 @@ class Order(models.Model):
             self.order_number = self._create_order_number()
         super().save(*args, **kwargs)
 
+    def __str__(self):
+        return self.order_number
+
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False,
@@ -55,8 +63,10 @@ class OrderLineItem(models.Model):
         max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
-        """ This functiojn will override the orignal save method to set the
-         """
+        """ This functiojn will override the orignal save method to set the """
 
         self.lineitem_total = self.lesson.price * self.quantity
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f'Name {self.lesson.name} on Order {self.order.order_number}'
