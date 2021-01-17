@@ -2,27 +2,52 @@
     margin-top: 59px;
     background-color: #f1f2f3;
 
+    .card {
+        border-radius: 10px;
+    }
+
     // booking summary section
     .booking-summary {
-        color: #adadad;
+        color: #848484;
         padding: 1.25rem;
         h4 {
-            color: #adadad;
+            color: #848484;
             font-size: 1.25rem;
+            margin-bottom: 0.5rem;
         }
 
-        .summary-text  {
+        .summary-text {
             font-weight: 300;
+            font-style: italic;
         }
 
         .summary-totals {
+            p {
+                justify-content: space-between;
+                display: flex;
+            }
             .grand-total {
-                color: #059cd9;
+                color: #f60f13;
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 0;
             }
         }
     }
 
-    // booking advert section
-    .booking-advert {
+    // booking paymet section
+    .booking-payment {
+        padding: 1.25rem;
+        h4 {
+            color: #848484;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .form-margin {
+        margin-top: 20px;
     }
 }

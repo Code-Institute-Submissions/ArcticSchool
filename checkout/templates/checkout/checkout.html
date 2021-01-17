@@ -10,10 +10,10 @@
     <div class="banner"></div>
     <!-- Main container -->
     <div class="main">
-        <div class="container">
+        <div class="container py-3">
             <div class="row">
                 <!-- Checkout Form & Payment Form -->
-                <div class="col -xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 order-form">
                     <!-- Wrapped with card style -->
                     <div class="card shadow-sm">
                         <!-- Form -->
@@ -22,13 +22,14 @@
                             <!-- Basic info -->
                             <fieldset class="">
                                 <legend>Personal Information:</legend>
+                                <hr>
                                 {{ order_form.full_name | as_crispy_field}}
                                 {{ order_form.email | as_crispy_field}}
                                 {{ order_form.phone_number | as_crispy_field}}
                             </fieldset>
-                            <hr>
                             <fieldset class="">
                                 <legend>Home Information:</legend>
+                                <hr>
                                 {{ order_form.street_address1 | as_crispy_field}}
                                 {{ order_form.street_address2 | as_crispy_field}}
                                 {{ order_form.town_or_city | as_crispy_field}}
@@ -41,48 +42,56 @@
                             <label for="save-info">Save personal information</label>
                             <input type="checkbox" name="save-info" id="save-info" class="" checked>
                             {% else %}
+                            <span>If you want to save your infomration, please</span>
                             <label class="buttons" for="save-info">
-                                <a href="{% url 'account_signup' %}" class="btn hvr-bounce-to-right">Create Account</a>
-                                <a href="{% url 'account_login' %}" class="btn hvr-bounce-to-right">Login</a> to save
-                                information
+                                <a href="{% url 'account_login' %}" class="btn hvr-bounce-to-right">Login</a>
+                                <a href="{% url 'account_signup' %}" class="btn hvr-bounce-to-right">Register</a>
                             </label>
                             {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <!-- Booking Summary -->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <!-- Wrapped with card style -->
+                    <div class="card shadow-sm form-margin mb-3">
+                        <div class="booking-summary">
+                            <h4 class="">Summary</h4>
+                            <p class="summary-text">Your booking summary includes all deductions & discount (if
+                                applied)
+                            </p>
                             <hr>
+                            <div class="summary-totals">
+                                <p class="">Total:
+                                    <span>£ {{ total|floatformat:2 }}</span>
+                                </p>
+                                <p class="">Discount:
+                                    <span>£ {{ discount|floatformat:2 }}</span>
+                                </p>
+                                <hr>
+                                <p class="grand-total">Grand Total:
+                                    <span>£ {{ grand_total|floatformat:2 }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Wrapped with card style -->
+                    <div class="card shadow-sm form-margin">
+                        <!-- Stripe payments section -->
+                        <div class="booking-payment">
                             <!-- Stripe payments section -->
                             <fieldset class="">
-                                <legend>Payment</legend>
+                                <h4>Payment</h4>
+                                <hr>
                                 <!-- Stripe Card -->
                                 <div class="" id="stripe-card"></div>
                                 <!-- Error message -->
                                 <div class="" id="stripe-error" role="alert"></div>
                             </fieldset>
-
                             <!-- Buttons -->
                             <div class=""></div>
-                        </form>
-                    </div>
-                </div>
-                <!-- Booking Summary -->
-                <div class="col -xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <!-- Wrapped with card style -->
-                    <div class="card shadow-sm">
-                        <div class="booking-summary">
-                            <h4 class="">Summary</h4>
-                            <p class="summary-text">Your booking summary includes all deductions & discount (if applied)
-                            </p>
-                            <hr>
-                            <div class="summary-totals">
-                                <p class="">Total: £{{ total|floatformat:2 }}</p>
-                                <p class="">Discount: £{{ discount|floatformat:2 }}</p>
-                                <hr>
-                                <p class="grand-total">Grand Total: £{{ grand_total|floatformat:2 }}</p>
-                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Booking Advert -->
-                <div class="booking-advert">
-
                 </div>
             </div>
         </div>

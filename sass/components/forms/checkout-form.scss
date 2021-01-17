@@ -4,13 +4,6 @@
     border-radius: 10px;
     padding: 1.25rem;
 
-    // contact form buttons
-    .btn {
-        width: 100%;
-        border: 1px solid #00d4f5;
-        color: #00d4f5;
-    }
-
     .buttons {
         position: relative;
         display: flex;
@@ -18,24 +11,23 @@
         justify-content: space-between;
         margin-top: 1rem;
 
-        button {
+        // contact form buttons
+        .btn {
             width: calc(50% - 5px);
-            &:hover {
-                text-decoration: none;
-            }
+            border: 1px solid #00d4f5;
+            color: #00d4f5;
+        }
 
-            .btn {
-                width: 100%;
-                border: 1px solid #00d4f5;
-                color: #00d4f5;
-            }
+        &:hover {
+            text-decoration: none;
+        }
 
-            .hvr-bounce-to-right {
-                -webkit-transition-duration: 0.15s;
-                transition-duration: 0.15s;
-            }
+        .hvr-bounce-to-right {
+            -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
         }
     }
+
     .hvr-bounce-to-right:hover {
         color: #fff !important;
     }
@@ -66,8 +58,14 @@
 
     fieldset {
         legend {
-            color: #adadad;
+            color: #848484;
             font-size: 1.25rem;
         }
+    }
+
+    span {
+        color: #848484;
+        font-size: 0.85rem;
+        font-weight: 300;
     }
 }
