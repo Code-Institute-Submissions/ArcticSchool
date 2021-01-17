@@ -59,6 +59,8 @@ class OrderLineItem(models.Model):
     lesson = models.ForeignKey(
         Lesson, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
+    # Quantity field is created to take higher number than 1 as customer
+    # can change the way of purchasing lessons and quantities for each lesson
     lineitem_total = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
