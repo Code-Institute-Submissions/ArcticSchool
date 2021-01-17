@@ -21,12 +21,12 @@ def booking_contents(request):
             'lesson': lesson,
         })
 
-    if total > settings.OFF_10_DISCOUNT_THRESHOLD:
-        discount = total * Decimal(settings.OFF_10_DISCOUNT/100)
-        discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
+    if total > settings.OFF_DISCOUNT_THRESHOLD:
+        discount = total * Decimal(settings.OFF_DISCOUNT/100)
+        discount_point = settings.OFF_DISCOUNT_THRESHOLD - total
     else:
         discount = 0
-        discount_point = settings.OFF_10_DISCOUNT_THRESHOLD - total
+        discount_point = settings.OFF_DISCOUNT_THRESHOLD - total
 
     grand_total = total - discount
 
@@ -36,8 +36,8 @@ def booking_contents(request):
         'lessons_count': lessons_count,
         'discount': discount,
         'discount_point': discount_point,
-        'discount_threshold': settings.OFF_10_DISCOUNT_THRESHOLD,
-        'discount_percentage': settings.OFF_10_DISCOUNT,
+        'discount_threshold': settings.OFF_DISCOUNT_THRESHOLD,
+        'discount_percentage': settings.OFF_DISCOUNT,
         'grand_total': grand_total,
         'bag': bag,
     }
