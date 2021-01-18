@@ -1,7 +1,7 @@
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
-    CSS from here: 
+    CSS from here:
     https://stripe.com/docs/stripe-js
 */
 
@@ -55,6 +55,19 @@ form.addEventListener('submit', function (ev) {
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
+            // Billing details from userform on checkout page
+            billing_details: {
+                name: $.trim(form.full_name.value),
+                email: $.trim(form.email.value),
+                phone: $.trim(form.phone.value),
+                address: {
+                    line1: $.trim(form.street_address1.value),
+                    line2: $.trim(form.street_address1.value),
+                    city: $.trim(form.town_or_city.value),
+                    state: $.trim(form.county.value),
+                    country: $.trim(form.country.value),
+                }
+            }
         }
     }).then(function (result) {
         if (result.error) {
