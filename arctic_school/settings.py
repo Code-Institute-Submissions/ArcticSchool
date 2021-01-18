@@ -226,3 +226,6 @@ OFF_DISCOUNT = 10
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_CURRENCY = 'gbp'
+
+# Webhooks
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
