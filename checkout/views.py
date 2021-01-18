@@ -1,9 +1,9 @@
 from django.conf import settings
-from django.shortcuts import redirect, render, reverse
+from django.shortcuts import redirect, render, reverse, get_object_or_404
 from django.contrib import messages
 
 from checkout.forms import OrderForm
-from checkout.models import OrderLineItem
+from checkout.models import Order, OrderLineItem
 from lessons.models import Lesson
 from home.models import SocialIcon
 from booking.contexts import booking_contents
@@ -57,6 +57,7 @@ def checkout(request):
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout-success', args=[order.order_number]))
+
         else:
             messages.error(request, "There was an error with your form. \
                 Check your information, please.")
@@ -92,6 +93,26 @@ def checkout(request):
         'socials': social,
         'stripe_public_key': public_key,
         'client_secret': intent.client_secret,
+    }
+
+    return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    """ A view to render succesfull checkouts """
+
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. Check your email and confirmation \
+        we have sent to {order.email}.')
+
+    if 'bag' in request.session:
+        del request.session['bag']
+
+    template = 'checkout/checkout-success.html'
+    context = {
+        'order': order,
     }
 
     return render(request, template, context)
