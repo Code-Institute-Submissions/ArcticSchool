@@ -71,7 +71,7 @@ form.addEventListener('submit', function (ev) {
                 billing_details: {
                     name: $.trim(form.full_name.value),
                     email: $.trim(form.email.value),
-                    phone: $.trim(form.phone.value),
+                    phone: $.trim(form.phone_number.value),
                     address: {
                         line1: $.trim(form.street_address1.value),
                         line2: $.trim(form.street_address1.value),
