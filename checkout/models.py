@@ -27,18 +27,18 @@ class Order(models.Model):
 
     def _create_order_number(self):
         """ This function will create a random, unique order number by using UUID """
-        return uuid.uuid4().hex.upper
+        return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """ Update grand total when new item is added, include discount. """
 
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))[
-            'lineitem_total__sum']
+            'lineitem_total__sum'] or 0
         if self.order_total > settings.OFF_DISCOUNT_THRESHOLD:
             self.discount = self.order_total * settings.OFF_DISCOUNT/100
         else:
             self.discount = 0
-        self.grand_total = self.order_totaltotal - self.discount
+        self.grand_total = self.order_total - self.discount
         self.save()
 
     def save(self, *args, **kwargs):
