@@ -43,8 +43,8 @@
                         {% if user.is_authenticated %}
                         <h4 class="mt-4">Your personal information could be saved for future orders..</h4>
                         <hr>
-                        <label for="save-info" class="mt-3"><input type="checkbox" name="save-info" class="mr-1 " id="save-info"
-                                checked>Save personal information
+                        <label for="save-info" class="mt-3"><input type="checkbox" name="save-info" class="mr-1 "
+                                id="save-info" checked>Save personal information
                         </label>
                         {% else %}
                         <div class="mt-4">
@@ -103,7 +103,8 @@
                             </fieldset>
                             <!-- Complete order button -->
                             <div class="buttons">
-                                <button type="submit" id="submit-button" class="btn hvr-bounce-to-right">Make a Payment</button>
+                                <button type="submit" id="submit-button" class="btn hvr-bounce-to-right">Make a
+                                    Payment</button>
                             </div>
                             <p class="small m-0 mt-1">Your card will be charged £ {{ grand_total|floatformat:2 }}</p>
                         </div>
@@ -112,6 +113,15 @@
             </div>
         </form>
     </div>
+</div>
+<!-- Stripe loading overlay container -->
+<div id="loading-overlay">
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
+        <span class="">Payment in process..</span>
+    </h1>
 </div>
 
 <!-- Footer -->
