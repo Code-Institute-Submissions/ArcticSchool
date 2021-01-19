@@ -66,6 +66,11 @@
             .hvr-bounce-to-right {
                 -webkit-transition-duration: 0.15s;
                 transition-duration: 0.15s;
+
+                &:active,
+                &:focus {
+                    color: #fff;
+                }
             }
         }
     }
@@ -143,6 +148,13 @@
 
             &.hvr-bounce-to-right:before {
                 background: #f60f13;
+            }
+
+            &.hvr-bounce-to-right {
+                &:active,
+                &:focus {
+                    color: #fff;
+                }
             }
         }
     }
