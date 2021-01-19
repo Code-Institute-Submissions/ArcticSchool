@@ -53,13 +53,14 @@ class StripeWH_Handler:
                 )
                 order_exists = True
                 break
-
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
-                
+
         if order_exists:
-            return HttpResponse(content=f'Webhook received: {event["type"]} | SUCCESS: Verifed order already in database', status=200)
+            return HttpResponse(
+                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                status=200)
         else:
             order = None
             try:
@@ -89,9 +90,10 @@ class StripeWH_Handler:
                         messages.error("Something whent wrong..")
             except Exception as e:
                 if order:
-                    order.delet()
-                return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                                    status=500)
+                    order.delete()
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    status=500)
 
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
