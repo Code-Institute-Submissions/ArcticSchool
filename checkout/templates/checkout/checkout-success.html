@@ -4,15 +4,52 @@
 {% block content %}
 
 <!-- Checkout main container -->
-<div id="checkout" class="my-auto">
+<div id="checkout-success">
     <!-- Main container -->
     <div class="container py-4">
-        <h1 class="page-title my-2">Payment Success!</h1>
-
-        <div class="row">
-
+        <h1 class="page-title mt-2 mb-4">Payment Success!</h1>
+        <!-- Main container -->
+        <div class="row my-3">
+            <!-- Personal and Order Information -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+                <div class="card shadow-sm">
+                    <!-- Order details -->
+                    <h4>Order Details</h4>
+                    <p class="">Order Number <span class=""> {{ order }}</span></p>
+                    <p class="">Order Number <span class=""> {{ order.full_name }}</span></p>
+                    <p class="">Order Number <span class=""> {{ order.email }}</span></p>
+                    <p class="">Order Number <span class=""> {{ order.phone_number }}</span></p>
+                    <p class="">Order Number <span class=""> {{ order.street_address1 }}</span></p>
+                    <p class="">Order Number <span class=""> {{ order.street_address2 }}</span></p>
+                    <p class="">Order Number <span class=""> {{order.postcode }}</span></p>
+                    <p class="">Order Number <span class=""> {{order.county }}</span></p>
+                    <p class="">Order Number <span class=""> {{order.country.name }}</span></p>
+                    <p class="">Order Number <span class=""> {{order.grand_total }}</span></p>
+                    <p class="">Order Number <span class=""> {{order.discount }}</span></p>
+                </div>
+            </div>
+            <!-- Personal and Order Information -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+                <div class="card shadow-sm">
+                    <!-- If something went wrong -->
+                    <p class="">If you do not recognise details above or you think any of these is incorrect.<br>
+                        Please contact us by using
+                        <a href="{% url 'contact' %}" class="contact-form">Contact Form</a><br>
+                        Our team is here to help you with all type of queries.
+                    </p>
+                </div>
+            </div>
+            <!-- Personal and Order Information -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+                <div class="card shadow-sm">
+                    <h4>Email notification sent succesffuly!</h4>
+                    <p class="">All transaction details, inclding order details, payment, and booking information can be
+                        found on email provide when purchasing lessons.
+                        <br>Please check your mailbox <span class="email"> {{ order.email }}</span>
+                    </p>
+                </div>
+            </div>
         </div>
-
     </div>
 </div>
 
