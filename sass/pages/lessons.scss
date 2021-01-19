@@ -229,12 +229,17 @@
                         -webkit-transition-duration: 0.15s;
                         transition-duration: 0.15s;
                     }
-                    &:nth-child(2) {
+                }
+
+                form {
+                    width: calc(50% - 5px);
+                    .btn {
+                        width: 100%;
                         border: 1px solid #f60f13;
                         color: #f60f13;
 
                         &.hvr-bounce-to-right:before {
-                            background: #f60f13 !important;
+                            background: #f60f13;
                         }
                     }
                 }
