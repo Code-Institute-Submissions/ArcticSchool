@@ -24,7 +24,7 @@ class OrderForm(forms.ModelForm):
             'town_or_city': 'Town or City',
             'postcode': 'Postcode',
             'country': 'Country',
-            'county': 'County',
+            'county': 'County, Shire or State',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
