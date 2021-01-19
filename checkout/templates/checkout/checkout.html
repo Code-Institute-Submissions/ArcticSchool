@@ -4,7 +4,7 @@
 {% block content %}
 
 <!-- Checkout main container -->
-<div id="checkout" class="my-auto">
+<div id="checkout">
     <!-- Main container -->
     <div class="container py-4">
         <h1 class="page-title my-2">Checkout</h1>
@@ -38,6 +38,9 @@
                             {{ order_form.town_or_city | as_crispy_field}}
                             {{ order_form.postcode | as_crispy_field}}
                             {{ order_form.county | as_crispy_field}}
+                            <div class="from-group arrow-position">
+                                <i class="fas fa-angle-down blue-text"></i>
+                            </div>
                             {{ order_form.country | as_crispy_field}}
                         </fieldset>
                         {% if user.is_authenticated %}
