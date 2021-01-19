@@ -238,3 +238,46 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
     align-items: center;
     font-size: 0.85rem;
 }
+
+/* style code snippet from:
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover
+- edited to match whole content style
+*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    right: 10px;
+    border-radius: 10px;
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+        &:first-child {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}

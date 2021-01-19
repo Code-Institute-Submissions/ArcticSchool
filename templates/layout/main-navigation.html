@@ -33,8 +33,35 @@
                     href="{% url 'contact' %}">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                    href="{% url 'user_account' %}">ACCOUNT</a>
+                <div class="dropdown">
+                    <a class="nav-link mr-3 dropbtn {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
+                        href="{% url 'user_account' %}">ACCOUNT</a>
+                    <div class="dropdown-content shadow-sm">
+                        {% if request.user.is_authenticated %}
+                        <!-- When user is logged in -->
+                        <p class="mb-1">Bookings</p>
+                        <a href="" class="first-child">Active</a>
+                        <a href="" class="">History</a>
+                        <hr>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        <hr>
+                        <!-- If user has super powers - administrator -->
+                        {% if request.user.is_superuser %}
+                        <p class="mb-1">Management</p>
+                        <a href="" class="">Lessons</a>
+                        <a href="" class="">Resorts</a>
+                        <a href="" class="">Team</a>
+                        <hr>
+                        <p class="mb-1">Additional</p>
+                        <a href="" class="">Lessons</a>
+                        {% endif %}
+                        {% else %}
+                        <!-- When user is not logged in -->
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        {% endif %}
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
