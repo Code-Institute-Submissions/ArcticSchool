@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'resorts',
     'lessons',
     'contact',
-    'user_account',
+    'profiles',
     'booking',
     'checkout',
 
