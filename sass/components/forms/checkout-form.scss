@@ -24,6 +24,13 @@
         }
     }
 
+    .arrow-position {
+        text-align: right;
+        position: absolute;
+        right: 30px;
+        margin-top: 7px;
+    }
+
     label,
     input::placeholder,
     textarea::placeholder {
