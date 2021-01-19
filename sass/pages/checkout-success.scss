@@ -1,0 +1,47 @@
+#checkout-success {
+    margin-top: 59px;
+    margin-bottom: auto;
+    background-color: #fff;
+
+    h1 {
+        color: #059cd9;
+    }
+    h4 {
+        font-size: 1.25rem;
+        color: #848484;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    .card {
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+
+    .contact-form {
+        color: #059cd9;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .email {
+        font-weight: 400;
+        color: #059cd9;
+    }
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
