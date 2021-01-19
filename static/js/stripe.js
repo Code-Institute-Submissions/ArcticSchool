@@ -74,13 +74,13 @@ form.addEventListener('submit', function (ev) {
                     phone: $.trim(form.phone_number.value),
                     address: {
                         line1: $.trim(form.street_address1.value),
-                        line2: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
                         city: $.trim(form.town_or_city.value),
                         state: $.trim(form.county.value),
                         country: $.trim(form.country.value),
                     }
                 }
-            }
+            },
         }).then(function (result) {
             if (result.error) {
                 let errorDiv = document.getElementById('card-errors');
@@ -101,7 +101,7 @@ form.addEventListener('submit', function (ev) {
             }
         });
     }).fail(function () {
-        // reload page, error can be found in Django messages
+        // reload the page, the error will be in django messages
         location.reload();
     })
 });
