@@ -7,7 +7,7 @@
     text-align: right !important;
 
     .user-menu-link {
-        color: #000;
+        color: #00d4f5;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
     }
@@ -24,6 +24,36 @@
         border: 0;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
+    }
+}
+
+i {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    outline: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.rotate-down {
+    i {
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        -o-transition-property: -o-transform;
+        transition-property: transform;
+        outline: 0;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
     }
 }
 
