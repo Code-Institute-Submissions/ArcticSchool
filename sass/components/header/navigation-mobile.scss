@@ -1,0 +1,40 @@
+#mobileMenu {
+    height: auto;
+    max-height: calc(100vh - 59px);
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    text-align: right !important;
+
+    .user-menu-link {
+        color: #000;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+    }
+
+    .nav-link-mobile {
+        font-size: 0.85rem;
+        color: #000 !important;
+        font-weight: 400;
+    }
+
+    hr {
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+}
+
+button,
+input[type="submit"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: right;
+}
