@@ -35,21 +35,21 @@
                     <!-- When user is logged in -->
                     {% if request.user.is_authenticated %}
                         <h6 class="text-uppercase booking">Booking</h6>
-                        <a href="" class="">Current</a>
-                        <a href="" class="">Archived</a>
+                        <a href="">Current</a>
+                        <a href="">Archived</a>
                         <hr>
                         <!-- If user has super powers - administrator -->
                         {% if request.user.is_superuser %}
                             <h6 class="text-uppercase">Management</h6>
-                            <a href="" class="">Categories</a>
-                            <a href="" class="">Lessons</a>
-                            <a href="" class="">Instructors</a>
-                            <a href="" class="">Resorts</a>
+                            <a href="">Categories</a>
+                            <a href="">Lessons</a>
+                            <a href="">Instructors</a>
+                            <a href="">Resorts</a>
                             <hr>
                             <h6 class="text-uppercase">Home Page</h6>
-                            <a href="" class="">Lessons Cards</a>
-                            <a href="" class="">Level Cards</a>
-                            <a href="" class="">Social Media</a>
+                            <a href="">Lessons Cards</a>
+                            <a href="">Level Cards</a>
+                            <a href="">Social Media</a>
                             <hr>
                             <!-- Logout button -->
                             <a href="#" class="dropdown-item">
