@@ -5,7 +5,7 @@
 
 <img src="" alt="contact-bg">
 <div class="container-fluid">
-    {% if user.is_authenticated %}
+    {% if request.user.is_authenticated %}
     <!-- Display user account info/details -->
     <div class="account-details">
         <p class="l">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aliquid repellendus autem saepe
