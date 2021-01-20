@@ -281,6 +281,11 @@ Team cards - read more button
 - <strong>Fix</strong>: Forloop iterate number added to ID and target ID -  '{{ forloop.counter }}'
 - <strong>Verdict</strong>: Dropdown description field shows only on card where button was clicked. Work as expected!
 
+Relation does not exist error in Django when deployed
+- <strong>Bug</strong>: When trying to access login page, website shows relation error page.
+- <strong>Fix</strong>: Data base url changed in settings. Migrations have been updated. Database url changed to Development database.
+- <strong>Verdict</strong>: Deployed website works as expected.
+
 ---
 
 ## Deployment
