@@ -62,6 +62,17 @@ $(document).ready(function () {
 		scrollToTop();
 	}
 
+	/**
+	 * This function will rotate chevron element when user menu link is clicked
+	*/
+	$('.chevron-rotate').on('click', function () {
+		if ($(this).closest('button').hasClass('rotate-down')) {
+			$(this).closest('button').removeClass('rotate-down');
+		} else {
+			$(this).closest('button').addClass('rotate-down');
+		}
+	});
+
 
 	// LESSONS PAGE
 	/**
