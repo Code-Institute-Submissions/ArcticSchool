@@ -264,6 +264,7 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
     right: 10px;
     border: 2px solid #fafafa;
     border-radius: 5px;
+    z-index: 999999999;
 
     h6 {
         font-size: 0.85rem;
@@ -320,5 +321,9 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
             cursor: pointer;
             outline: inherit;
         }
+    }
+
+    .login-font {
+        color: #00d4f5;
     }
 }
