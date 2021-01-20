@@ -12,6 +12,11 @@
         font-weight: 700;
     }
 
+    .user-nav-link {
+        font-size: 0.85rem;
+        color: #848484 !important;
+    }
+
     .nav-link-mobile {
         font-size: 0.85rem;
         color: #000 !important;
@@ -67,4 +72,10 @@ input[type="submit"] {
     cursor: pointer;
     outline: inherit;
     text-align: right;
+}
+
+´#mobileUserMenu {
+    button {
+        color: #000;
+    }
 }
