@@ -2,79 +2,73 @@
     <a class="navbar-brand p-0" href="{% url 'home' %}">
         <img src="{{MEDIA_URL}}logo/logo.png" alt="arctic-school-logo">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == '/lessons/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                    href="{% url 'lessons' %}">LESSONS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == '/team/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                    href="{% url 'team' %}">TEAM</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == '/resorts/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                    href="{% url 'resorts' %}">RESORTS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
-                    href="{% url 'booking' %}">BOOKING
-                    {% if booked_lessons %}
-                    <span class="rounded-circle booking-count">{{ lessons_count }}</span>
-                    {% endif %}
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mr-3 {% if request.get_full_path == '/contact/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                    href="{% url 'contact' %}">CONTACT</a>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                    <a class="nav-link mr-3 dropbtn {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
-                        href="{% url 'user_account' %}">ACCOUNT</a>
-                    <div class="dropdown-content shadow-sm">
-                        {% if request.user.is_authenticated %}
-                        <!-- When user is logged in -->
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link mr-3 {% if request.get_full_path == '/lessons/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
+                href="{% url 'lessons' %}">LESSONS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mr-3 {% if request.get_full_path == '/team/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
+                href="{% url 'team' %}">TEAM</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mr-3 {% if request.get_full_path == '/resorts/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
+                href="{% url 'resorts' %}">RESORTS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mr-3 special-nav-lnik {% if request.get_full_path == '/booking/' %}nav-link-active-red{% else %}hvr-bounce-to-top-red{% endif %}"
+                href="{% url 'booking' %}">BOOKING
+                {% if booked_lessons %}
+                <span class="rounded-circle booking-count">{{ lessons_count }}</span>
+                {% endif %}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link mr-3 {% if request.get_full_path == '/contact/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
+                href="{% url 'contact' %}">CONTACT</a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <a class="nav-link mr-3 dropbtn {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
+                    href="{% url 'user_account' %}">ACCOUNT</a>
+                <div class="dropdown-content shadow-sm">
+                    <!-- When user is logged in -->
+                    {% if request.user.is_authenticated %}
                         <h6 class="text-uppercase booking">Booking</h6>
-                        <a href="" class="first-child">Current</a>
+                        <a href="" class="">Current</a>
                         <a href="" class="">Archived</a>
                         <hr>
                         <!-- If user has super powers - administrator -->
                         {% if request.user.is_superuser %}
-                        <h6 class="text-uppercase">Management</h6>
-                        <a href="" class="">Categories</a>
-                        <a href="" class="">Lessons</a>
-                        <a href="" class="">Instructors</a>
-                        <a href="" class="">Resorts</a>
-                        <hr>
-                        <h6 class="text-uppercase">Home Page</h6>
-                        <a href="" class="">Lessons Cards</a>
-                        <a href="" class="">Level Cards</a>
-                        <a href="" class="">Social Media</a>
-                        <hr>
-                        <a href="#" class="dropdown-item">
-                            <form method="post" action="{% url 'account_logout' %}">
-                                {% csrf_token %}
-                                {% if redirect_field_value %}
-                                <input type="hidden" name="{{ redirect_field_name }}"
-                                    value="{{ redirect_field_value }}" />
-                                {% endif %}
-                                <button type="submit">Logout</button>
-                            </form>
-                        </a>
+                            <h6 class="text-uppercase">Management</h6>
+                            <a href="" class="">Categories</a>
+                            <a href="" class="">Lessons</a>
+                            <a href="" class="">Instructors</a>
+                            <a href="" class="">Resorts</a>
+                            <hr>
+                            <h6 class="text-uppercase">Home Page</h6>
+                            <a href="" class="">Lessons Cards</a>
+                            <a href="" class="">Level Cards</a>
+                            <a href="" class="">Social Media</a>
+                            <hr>
+                            <!-- Logout button -->
+                            <a href="#" class="dropdown-item">
+                                <form method="post" action="{% url 'account_logout' %}">
+                                    {% csrf_token %}
+                                    {% if redirect_field_value %}
+                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                    {% endif %}
+                                    <button type="submit">Logout</button>
+                                </form>
+                            </a>
                         {% endif %}
-                        {% else %}
-                        <!-- When user is not logged in -->
+                    <!-- When user is not logged in -->
+                    {% else %}
                         <a href="{% url 'account_login' %}" class="dropdown-item login-font">Login</a>
                         <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        {% endif %}
-                    </div>
+                    {% endif %}
                 </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </li>
+    </ul>
 </nav>
