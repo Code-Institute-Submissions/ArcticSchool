@@ -262,20 +262,22 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
     background-color: #fff;
     min-width: 160px;
     right: 10px;
-    border: 2px solid #fff;
+    border: 2px solid #fafafa;
     border-radius: 5px;
 
-    p {
+    h6 {
         color: #00d4f5;
         margin-bottom: 0;
         padding: 0.5rem;
-        padding-bottom: 0;
-        font-weight: 500;
+        font-weight: 700;
+    }
+    .booking {
+        @extend h6;
+        color: #f60f13;
     }
 
     a {
         font-size: 0.85rem;
-        font-weight: 300;
         color: #000;
         text-decoration: none;
         display: block;
@@ -294,9 +296,10 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
         &:last-child {
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
-            font-weight: 400;
+            color: #f60f13;
 
             &:hover {
+                color: #fff;
                 background-color: #f60f13;
             }
         }
@@ -316,9 +319,5 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
             cursor: pointer;
             outline: inherit;
         }
-    }
-
-    .login-font {
-        font-weight: 400;
     }
 }
