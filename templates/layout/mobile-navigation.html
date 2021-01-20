@@ -14,9 +14,8 @@
             </a>
         </li>
     </ul>
-    <button id="hamburger-button" class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
-        aria-label="Toggle navigation">
+    <button id="hamburger-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu"
+        aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -40,10 +39,14 @@
                 <a class="nav-link mr-3 {% if request.get_full_path == '/contact/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
                     href="{% url 'contact' %}">CONTACT</a>
             </li>
+            {% if request.user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link mr-3 {% if request.get_full_path == '/account/' %}nav-link-active{% else %}hvr-bounce-to-top{% endif %}"
                     href="{% url 'user_account' %}">ACCOUNT</a>
             </li>
+            {% endif %}
+            <!-- Include User Mobile Menu -->
+            {% include 'layout/mobile-user-menu.html' %}
         </ul>
     </div>
 </nav>
