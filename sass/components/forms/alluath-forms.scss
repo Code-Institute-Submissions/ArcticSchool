@@ -193,6 +193,15 @@
                 padding: 0;
             }
 
+            // extra padding for forms small-column-padding-right/left
+            .sc-pr{
+                padding-right: 10px;
+            }
+
+            .sc-pl{
+                padding-left: 10px;
+            }
+
             input {
                 margin-bottom: 5px;
             }
