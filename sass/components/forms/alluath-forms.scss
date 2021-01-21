@@ -165,13 +165,13 @@
     }
 }
 
-/* ----------------------------- Verify your email & inactive & password reset done */
+/* ----------------------------- Allauth additional pages */
 #account_inactive,
 #account_confirm_email,
 #account_reset_password_done,
 #account_reset_password_from_key,
-#account_reset_password_from_key_done ,
-#account_email_verification_sent{
+#account_reset_password_from_key_done,
+#account_email_verification_sent {
     h1,
     p {
         color: #fff;
