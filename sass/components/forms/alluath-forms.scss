@@ -102,12 +102,11 @@
 
     .forgot-button {
         color: #00d4f5;
-        display: flex;
-        flex-direction: row-reverse;
         margin-bottom: 4px;
+        font-size: 0.85rem;
         &:hover {
-            text-decoration: none;
-            color: #059cd9;
+            text-decoration: underline;
+            color: #00d4f5;
         }
     }
 
@@ -194,11 +193,11 @@
             }
 
             // extra padding for forms small-column-padding-right/left
-            .sc-pr{
+            .sc-pr {
                 padding-right: 10px;
             }
 
-            .sc-pl{
+            .sc-pl {
                 padding-left: 10px;
             }
 
