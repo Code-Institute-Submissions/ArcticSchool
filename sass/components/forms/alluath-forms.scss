@@ -1,7 +1,13 @@
 // Main Style
 #account_login,
 #account_signup,
-#account_reset_password {
+#account_reset_password,
+#account_email_verification_sent,
+#account_inactive,
+#account_reset_password_done,
+#account_reset_password_from_key,
+#account_reset_password_from_key_done,
+#account_confirm_email {
     height: calc(100vh - 59px);
     margin-top: 59px;
     display: flex;
@@ -120,19 +126,9 @@
         padding: 0.25rem 0.25rem;
         margin-bottom: 0;
     }
-}
 
-/* ----------------------------- Passwor dreset style changed */
-#account_reset_password {
-    p {
-        color: #848484;
-        &:last-child {
-            font-size: 0.85rem !important;
-            font-weight: 300;
-        }
-    }
-
-    .invalid-feedback {
+    .invalid-feedback,
+    .errorlist {
         font-size: 0.85rem !important;
         font-weight: 300;
         color: #721c24;
@@ -143,8 +139,42 @@
         background-color: #f8d7da;
     }
 
+    // special button style
+    .btn-white {
+        width: 280px;
+        background-color: #fff;
+    }
+
+    .extra-yellow {
+        color: #fffe00;
+    }
+}
+
+/* ----------------------------- Password reset style changed */
+#account_reset_password {
+    p {
+        color: #848484;
+        &:last-child {
+            font-size: 0.85rem !important;
+            font-weight: 300;
+        }
+    }
+
     input {
         margin-top: 10px;
+    }
+}
+
+/* ----------------------------- Verify your email & inactive & password reset done */
+#account_email_verification_sent,
+#account_inactive,
+#account_reset_password_done,
+#account_reset_password_from_key,
+#account_reset_password_from_key_done ,
+#account_confirm_email{
+    h1,
+    p {
+        color: #fff;
     }
 }
 
