@@ -1,12 +1,12 @@
 // Main Style
 #account_login,
 #account_signup,
-#account_reset_password,
-#account_email_verification_sent,
 #account_inactive,
+#account_reset_password,
 #account_reset_password_done,
 #account_reset_password_from_key,
 #account_reset_password_from_key_done,
+#account_email_verification_sent,
 #account_confirm_email {
     height: calc(100vh - 59px);
     margin-top: 59px;
@@ -166,12 +166,12 @@
 }
 
 /* ----------------------------- Verify your email & inactive & password reset done */
-#account_email_verification_sent,
 #account_inactive,
+#account_confirm_email,
 #account_reset_password_done,
 #account_reset_password_from_key,
 #account_reset_password_from_key_done ,
-#account_confirm_email{
+#account_email_verification_sent{
     h1,
     p {
         color: #fff;
