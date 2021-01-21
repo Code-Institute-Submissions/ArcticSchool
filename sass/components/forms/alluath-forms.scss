@@ -1,6 +1,7 @@
 // Main Style
 #account_login,
-#account_signup {
+#account_signup,
+#account_reset_password {
     height: calc(100vh - 59px);
     margin-top: 59px;
     display: flex;
@@ -122,6 +123,32 @@
     }
 }
 
+/* ----------------------------- Passwor dreset style changed */
+#account_reset_password {
+    p {
+        color: #848484;
+        &:last-child {
+            font-size: 0.85rem !important;
+            font-weight: 300;
+        }
+    }
+
+    .invalid-feedback {
+        font-size: 0.85rem !important;
+        font-weight: 300;
+        color: #721c24;
+        margin-bottom: 5px;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        padding: 0.25rem;
+        background-color: #f8d7da;
+    }
+
+    input {
+        margin-top: 10px;
+    }
+}
+
 /* -----------------------------  Responsive forms style */
 // Login Form
 #account_login {
@@ -169,6 +196,26 @@
             input {
                 margin-bottom: 5px;
             }
+        }
+    }
+}
+
+// forgot password
+#account_reset_password {
+    @media (max-height: 350px) {
+        .card {
+            padding: 1rem;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0px;
+        }
+        input {
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 0.85rem;
         }
     }
 }
