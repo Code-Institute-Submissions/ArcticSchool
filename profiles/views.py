@@ -6,9 +6,8 @@ from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from profiles.forms import UserDetailsForm
-from .models import UserProfile
 from home.models import SocialIcon
-
+from .models import UserProfile
 
 
 @login_required(login_url='/accounts/login/')
@@ -16,7 +15,6 @@ def user_account(request):
     """ A view to return account page """
 
     profile = get_object_or_404(UserProfile, user=request.user)
-
 
     if request.method == 'POST':
         form = UserDetailsForm(request.POST, instance=profile)
@@ -32,7 +30,7 @@ def user_account(request):
     context = {
         'form': details_form,
         'orders': orders,
-        'socials':social,
+        'socials': social,
         'no_bag': True,
     }
     return render(request, template, context)
