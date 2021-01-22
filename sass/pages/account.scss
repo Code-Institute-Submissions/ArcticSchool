@@ -45,8 +45,8 @@
                     margin: 0;
                     display: flex;
                     align-self: center;
-                    max-width: 100%;
-                    width: 100%;
+                    max-width: 300px;
+                    width: 300px;
                 }
 
                 select {
@@ -73,9 +73,10 @@
 
             // buttons
             .btn {
-                width: 100%;
+                width: calc((100%)/2 - 5px);
                 border: 1px solid #00d4f5;
                 color: #00d4f5;
+                margin-top: 15px;
 
                 &:active,
                 &:focus {
@@ -116,5 +117,35 @@
 
     footer {
         flex-shrink: none;
+    }
+
+    @media (max-width: 768px) {
+        .account-main {
+            .card {
+                .form-group {
+                    flex-direction: column;
+
+                    .form-control {
+                        height: calc(1.5em + 0.5rem + 2px);
+                    }
+
+                    label {
+                        text-align: left;
+                        align-self: auto;
+                    }
+                }
+                .arrow-position {
+                    margin-top: 30px;
+                }
+            }
+
+            .buttons{
+                flex-direction: column;
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
