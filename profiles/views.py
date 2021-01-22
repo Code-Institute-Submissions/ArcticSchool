@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from profiles.forms import UserDetailsForm
 from .models import UserProfile
+from home.models import SocialIcon
 
 
 
@@ -23,14 +24,15 @@ def user_account(request):
             form.save()
             messages.success(request, 'Profile detailes updated successfully!')
 
-
     details_form = UserDetailsForm(instance=profile)
     orders = profile.orders.all()
+    social = SocialIcon.objects.all()
 
     template = 'account/account.html'
     context = {
         'form': details_form,
         'orders': orders,
+        'socials':social,
         'no_bag': True,
     }
     return render(request, template, context)
