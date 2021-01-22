@@ -3,56 +3,56 @@
 
 {% block content %}
 <h1 class="d-none">User Account</h1>
-{% if request.user.is_authenticated %}
-<div class="container">
-    <!-- Welcome text -->
-    {% if user.first_name == '' %}
-    <h2 class="welcome-text">Welcome Back {{ user.username|title}} !</h2>
-    {% else %}
-    <h2 class="welcome-text">Welcome Back {{ user.first_name|title }} {{ user.last_name|title}} !</h2>
-    {% endif %}
-    <div class="card shadow-sm">
-        <!-- Display user account info/details -->
-        <div class="user-details">
-            <!-- Card with persona info -->
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <h5>Default User Details</h5>
-                    <p class="mb-2 promo-text-personal">You can update your personal details by using from below</p>
-                    <form action="{% url 'user_account' %}" method="POST" id="profile-update-form">
-                        {% csrf_token %}
-                        {{ form.first_name | as_crispy_field }}
-                        {{ form.last_name | as_crispy_field }}
-                        {{ form.phone_number | as_crispy_field }}
-                        {{ form.street_address1 | as_crispy_field }}
-                        {{ form.street_address2 | as_crispy_field }}
-                        {{ form.postcode | as_crispy_field }}
-                        {{ form.town_or_city | as_crispy_field }}
-                        {{ form.county | as_crispy_field }}
-                        <div class="from-group arrow-position">
-                            <i class="fas fa-angle-down blue-text"></i>
-                        </div>
-                        {{ form.country | as_crispy_field }}
-                        {{ form.receiving_newsletter | as_crispy_field }}
-                        <div id="div_id_full_name" class="form-group d-none">
-                            <div class="d-none">
-                                <input type="text" name="full_name" maxlength="200" placeholder="Full Name"
-                                    class="d-none" id="id_full_name"
-                                    value="{{ form.first_name.value }} {{ form.last_name.value }}">
+<div class="account-main my-4´">
+    {% if request.user.is_authenticated %}
+    <div class="container">
+        <div class="card shadow-sm">
+            <!-- Display user account info/details -->
+            <div class="user-details">
+                <!-- Card with persona info -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <h5>Default User Details</h5>
+                        <p class="mb-2 promo-text-personal">You can update your personal details by using from below</p>
+                        <form action="{% url 'user_account' %}" method="POST" id="profile-update-form" class="mt-3">
+                            {% csrf_token %}
+                            {{ form.first_name | as_crispy_field }}
+                            {{ form.last_name | as_crispy_field }}
+                            {{ form.phone_number | as_crispy_field }}
+                            {{ form.street_address1 | as_crispy_field }}
+                            {{ form.street_address2 | as_crispy_field }}
+                            {{ form.postcode | as_crispy_field }}
+                            {{ form.town_or_city | as_crispy_field }}
+                            {{ form.county | as_crispy_field }}
+                            <div class="from-group arrow-position">
+                                <i class="fas fa-angle-down blue-text"></i>
                             </div>
-                        </div>
-                        <button class="btn hvr-bounce-to-right mt-4">Update Information</button>
-                    </form>
-                </div>
-                <!-- Display user active booking and history list -->
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <div class="user-booking">
+                            {{ form.country | as_crispy_field }}
+                            {{ form.receiving_newsletter | as_crispy_field }}
+                            <div id="div_id_full_name" class="form-group d-none">
+                                <div class="d-none">
+                                    <input type="text" name="full_name" maxlength="200" placeholder="Full Name"
+                                        class="d-none" id="id_full_name"
+                                        value="{{ form.first_name.value }} {{ form.last_name.value }}">
+                                </div>
+                            </div>
+                            <button class="btn hvr-bounce-to-right mt-4">Update Information</button>
+                        </form>
+                    </div>
+                    <!-- Display user active booking and history list -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <div class="user-booking">
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
-    {% endif %}
+</div>
+<!-- Footer -->
+<div class="mt-auto">
+    {% include 'layout/footer.html' %}
 </div>
 {% endblock %}
