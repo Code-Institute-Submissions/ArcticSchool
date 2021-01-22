@@ -15,7 +15,7 @@
                 {% endif %}
             </div>
         </div>
-        {% if grand_total %}
+        {% if grand_total and not no_bag %}
         <div>
             {% for item in booked_lessons %}
             <div class="row">
