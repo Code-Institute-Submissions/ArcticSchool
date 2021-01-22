@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.contrib import messages
 from django.template.loader import render_to_string
+from profiles.models import UserProfile
 from .forms import ContactForm
 
 
@@ -12,7 +13,18 @@ def contact(request):
     """ View to render contact page with contact form """
 
     if request.method == 'GET':
-        contact_form = ContactForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                contact_form = ContactForm(initial={
+                    'name': profile.full_name,
+                    'from_email': profile.email_address,
+                    }
+                )
+            except UserProfile.DoesNotExist:
+                contact_form = ContactForm()
+        else:
+            contact_form = ContactForm()
     else:
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():

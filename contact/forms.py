@@ -1,7 +1,9 @@
+""" This module contains Contact Form """
 from django import forms
 
 
 class ContactForm(forms.Form):
+    """ Contact form for Contact Page """
     name = forms.CharField(required=True)
     from_email = forms.EmailField(required=True)
     subject = forms.CharField(required=False)
@@ -22,7 +24,6 @@ class ContactForm(forms.Form):
 
         # Change number of visible rows in textarea field
         self.fields['message'].widget.attrs = {'rows': 5}
-
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
