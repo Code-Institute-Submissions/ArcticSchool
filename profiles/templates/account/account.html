@@ -10,7 +10,7 @@
             <!-- Display user account info/details -->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <h5>Default User Details</h5>
+                    <h5>User Details</h5>
                     <p class="mb-2 promo-text-personal">You can update your personal details by using from below</p>
                     <form action="{% url 'user_account' %}" method="POST" id="profile-update-form" class="mt-3">
                         {% csrf_token %}
@@ -27,6 +27,9 @@
                             <i class="fas fa-angle-down blue-text"></i>
                         </div>
                         {{ form.country | as_crispy_field }}
+                        <div class="from-group arrow-position-newsletter">
+                            <i class="fas fa-angle-down blue-text"></i>
+                        </div>
                         {{ form.receiving_newsletter | as_crispy_field }}
                         <div id="div_id_full_name" class="form-group d-none">
                             <div class="d-none">
@@ -41,11 +44,27 @@
                         </div>
                     </form>
                 </div>
+                <hr>
                 <!-- Display user active booking and history list -->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    <div class="user-booking">
-
+                    <h5>Recently Booked</h5>
+                    <p class="mb-2 promo-text-personal">View your last 10 Bookings
+                    </p>
+                    <!-- Lesson container -->
+                    {% for order in orders %}
+                    <div class="booked-lesson">
+                        <!-- Order Number -->
+                        <a href="{% url 'booking_archived' order.order_number %}" title="{{ order.order_number }}"
+                            class="last-10-orders"><strong>Order Number: {{ order.order_number|truncatechars:20 }}
+                            </strong><br>
+                            <p>Booked: {{ order.date|date:"d-m-Y (D)" }} | {{ order.date|time:"H:i "}}</p>
+                        </a>
+                        {% if forloop.last %}
+                        {% else %}
+                        <hr class="separate-line">
+                        {% endif %}
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
