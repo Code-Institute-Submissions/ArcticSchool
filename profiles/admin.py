@@ -6,6 +6,7 @@ from .models import UserProfile
 class UserProfileAdmin(admin.ModelAdmin):
     """ Administartion display list for user """
     list_display = (
+        'user',
         'full_name',
         'email_address',
         'phone_number',
