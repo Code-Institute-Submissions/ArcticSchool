@@ -49,4 +49,13 @@
         font-size: 0.85rem;
         font-weight: 300;
     }
+
+    #id_country,
+    #id_country option:not(:first-child) {
+        color: #495057;
+    }
+
+    #id_country option:first-child {
+        color: #ced4da;
+    }
 }
