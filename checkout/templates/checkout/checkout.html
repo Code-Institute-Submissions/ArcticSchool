@@ -52,8 +52,10 @@
                         <div class="mt-4">
                             <span>If you want to save your infomration, please</span>
                             <label class="buttons" for="save-info">
-                                <a href="{% url 'account_login' %}?next={{ request.path }}" class="btn hvr-bounce-to-right">Login</a>
-                                <a href="{% url 'account_signup' %}?next={{ request.path }}" class="btn hvr-bounce-to-right">Register</a>
+                                <a href="{% url 'account_login' %}?next={{ request.path }}"
+                                    class="btn hvr-bounce-to-right">Login</a>
+                                <a href="{% url 'account_signup' %}?next={{ request.path }}"
+                                    class="btn hvr-bounce-to-right">Register</a>
                             </label>
                         </div>
                         {% endif %}
@@ -106,8 +108,8 @@
                             </fieldset>
                             <!-- Complete order button -->
                             <div class="buttons">
-                                <button type="submit" id="submit-button" class="btn hvr-bounce-to-right" disabled>Make a
-                                    Payment</button>
+                                <button type="submit" id="submit-button" class="btn hvr-bounce-to-right"
+                                    disabled="disabled">Make a Payment</button>
                             </div>
                             <p class="small m-0 mt-1">Your card will be charged £ {{ grand_total|floatformat:2 }}</p>
                         </div>
