@@ -1,9 +1,11 @@
+""" Models for Checkout app """
+
 import uuid
 
+from datetime import datetime
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from datetime import datetime
 
 from django_countries.fields import CountryField
 
@@ -12,6 +14,9 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    This is ored model used to create orders
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
@@ -65,6 +70,10 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    This is a function which will create
+    a single item on order
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE, related_name='lineitems')
     lesson = models.ForeignKey(

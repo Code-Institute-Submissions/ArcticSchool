@@ -1,9 +1,14 @@
+""" Resorts administration settings """
 from django.contrib import admin
 from .models import Resort
 # Register your models here.
 
 
 class ResortsAdmin(admin.ModelAdmin):
+    """
+    Resort app list display in administration
+    with ordering
+    """
     list_display = (
         'name',
         'country',

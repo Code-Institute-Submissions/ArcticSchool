@@ -1,10 +1,13 @@
+""" """
+
+import json
+import time
+
 from django.http import HttpResponse
 from django.contrib import messages
 
 from checkout.models import Order, OrderLineItem
 from lessons.models import Lesson
-import json
-import time
 
 
 class StripeWH_Handler:
@@ -59,7 +62,8 @@ class StripeWH_Handler:
 
         if order_exists:
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]}'
+                '| SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
@@ -87,7 +91,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        messages.error("Something whent wrong..")
+                        messages.error('Something whent wrong..')
             except Exception as e:
                 if order:
                     order.delete()

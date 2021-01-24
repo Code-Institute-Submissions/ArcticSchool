@@ -1,8 +1,10 @@
+""" App registered in Administration from Home page """
 from django.contrib import admin
 from .models import LevelCard, LessonCard, SocialIcon
-# Register your models here.
+
 
 class LevelsAdmin(admin.ModelAdmin):
+    """ Levels Card admin list display and ordering """
     list_display = (
         'title',
         'level',
@@ -11,7 +13,9 @@ class LevelsAdmin(admin.ModelAdmin):
 
     ordering = ('level',)
 
+
 class LessonsAdmin(admin.ModelAdmin):
+    """ Lessons Card admin list display and ordering """
     list_display = (
         'title',
         'description',
@@ -19,7 +23,9 @@ class LessonsAdmin(admin.ModelAdmin):
 
     ordering = ('title',)
 
+
 class SocialsAdmin(admin.ModelAdmin):
+    """ Social Media Icons admin list display and ordering """
     list_display = (
         'title',
         'icon',
@@ -27,6 +33,7 @@ class SocialsAdmin(admin.ModelAdmin):
     )
 
     ordering = ('title',)
+
 
 admin.site.register(LevelCard, LevelsAdmin)
 admin.site.register(LessonCard, LessonsAdmin)

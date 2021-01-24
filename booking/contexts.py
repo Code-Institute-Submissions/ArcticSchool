@@ -1,10 +1,15 @@
-from django.shortcuts import get_object_or_404
+""" Booking bag content """
 from decimal import Decimal
+from django.shortcuts import get_object_or_404
 from django.conf import settings
 from lessons.models import Lesson
 
 
 def booking_contents(request):
+    """
+    This function will allow to use booking
+    contents 'bag' on whole application
+    """
 
     booked_lessons = []
     total = 0

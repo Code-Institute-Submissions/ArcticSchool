@@ -1,17 +1,17 @@
+""" Views for Resorts App """
 from django.shortcuts import render
-from .models import Resort
 from home.models import SocialIcon
-# Create your views here.
+from .models import Resort
 
 
 def resorts(request):
     """ A view to return resorts page """
 
-    resorts = Resort.objects.all()
+    all_resorts = Resort.objects.all()
     social =  SocialIcon.objects.all()
 
     context = {
-        'resorts': resorts,
+        'resorts': all_resorts,
         'socials': social,
     }
 

@@ -1,9 +1,11 @@
+""" Models for Lessons App """
 from django.db import models
 from home.models import LevelCard
 from resorts.models import Resort
 
 
 class Category(models.Model):
+    """ Lessons Category Model """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -19,6 +21,7 @@ class Category(models.Model):
 
 
 class Lesson(models.Model):
+    """ Lesson Model """
     name = models.CharField(max_length=254)
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.PROTECT)

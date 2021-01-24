@@ -1,3 +1,4 @@
+""" Views for Booking App """
 import random
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages

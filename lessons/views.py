@@ -1,11 +1,10 @@
-from resorts.models import Resort
+""" Views Lessons App """
+import random
 from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
-from .models import Category, Lesson
 from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
-from django.contrib import sessions
-import random
+from .models import Category, Lesson
 
 
 def lessons(request):
@@ -58,19 +57,19 @@ def lessons(request):
 def lesson(request, lesson_id):
     """ A view to return lesson detail with resort detail """
 
-    lessons = list(Lesson.objects.all())
+    all_lessons = list(Lesson.objects.all())
     resorts = Resort.objects.all()
     social = SocialIcon.objects.all()
-    lesson = get_object_or_404(Lesson, pk=lesson_id)
-    resort = resorts.get(name=lesson.resort)
+    selected_lesson = get_object_or_404(Lesson, pk=lesson_id)
+    resort = resorts.get(name=selected_lesson.resort)
 
-    random_lessons = random.sample(lessons, 4)
+    random_lessons = random.sample(all_lessons, 4)
 
     context = {
         'socials': social,
-        'lesson': lesson,
+        'lesson': selected_lesson,
         'resort': resort,
-        'lessons':random_lessons,
+        'lessons': random_lessons,
     }
 
     return render(request, 'lessons/lesson.html', context)

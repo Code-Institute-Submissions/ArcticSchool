@@ -1,4 +1,4 @@
-from typing import Text
+""" Models for Resort App """
 from django.db import models
 from django_countries.fields import CountryField
 
@@ -6,7 +6,7 @@ from django_countries.fields import CountryField
 
 
 class Resort(models.Model):
-
+    """ This model will create a Resort """
     name = models.CharField(max_length=120)
     country = CountryField(max_length=200, blank_label="(Select Country)")
     about = models.TextField(max_length=500)

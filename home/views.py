@@ -1,7 +1,6 @@
+""" Views for Home App"""
 from django.shortcuts import render
 from .models import LevelCard, LessonCard, SocialIcon
-
-# Create your views here.
 
 
 def index(request):
