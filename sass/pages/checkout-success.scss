@@ -35,6 +35,15 @@
     .card {
         padding: 1.25rem;
         border-radius: 10px;
+
+        .order-number-active {
+            color: #059cd9;
+
+            &:hover {
+                text-decoration: none;
+                color: #00d4f5;
+            }
+        }
     }
 
     .contact-form {
