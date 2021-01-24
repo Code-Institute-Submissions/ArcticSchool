@@ -7,7 +7,14 @@
 <div id="checkout-success">
     <!-- Main container -->
     <div class="container py-4">
+        {% if from_profile %}
+        <h1 class="page-title mt-1 mb-4 text-left">Archived Order</h1>
+        <!-- Back to Profile Button -->
+        <a href="{% url 'user_account' %}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> Back to
+            Account</a>
+        {% else %}
         <h1 class="page-title mt-1 mb-4">Payment Success!</h1>
+        {% endif %}
         <!-- Main container -->
         <div class="row my-3">
             <!-- Personal and Order Information -->
@@ -15,19 +22,50 @@
                 <div class="card shadow-sm">
                     <!-- Order details -->
                     <h4>Order Details</h4>
-                    <p>Order Number: <span> {{ order }}</span></p>
-                    <p>Full Name: <span> {{ order.full_name|title  }}</span></p>
+                    <p>Order Number:
+                        <span>
+                            {% if from_profile %}
+                            {{ order.order_number }}
+                            {% else %}
+                            <a href="{% url 'booking_active' order.order_number %}" title="{{ order.order_number }}"
+                                class="order-number-active">{{ order.order_number }}</a>
+                            {% endif %}
+                        </span>
+                    </p>
+                    <p>Full Name: <span> {{ order.full_name|title }}</span></p>
                     <p>Email Address: <span> {{ order.email }}</span></p>
                     <p>Phone Number: <span> {{ order.phone_number }}</span></p>
                     <p>Street Addres 1: <span> {{ order.street_address1 }}</span></p>
                     <p>Street Addres 2: <span> {{ order.street_address2 }}</span></p>
                     <p>Postcode: <span> {{order.postcode|upper }}</span></p>
-                    <p>County: <span> {{order.county|title  }}</span></p>
+                    <p>County: <span> {{order.county|title }}</span></p>
                     <p>Country: <span> {{order.country.name|title }}</span></p>
                     <hr>
                     <p>Payment: <span> £{{order.grand_total }}</span></p>
+                    {% if from_profile %}
+                    <p>Date: <span> {{ order.date|date:"d-m-Y (D)" }} | {{ order.date|time:"H:i "}}</span></p>
+                    {% endif %}
                 </div>
             </div>
+            {% if from_profile %}
+            <!-- Booked Lessons from Order -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+                <div class="card shadow-sm">
+                    <h4>You have booked this lesson/s</h4>
+                    {% for item in order.lineitems.all %}
+                    <div class="lesson-container blue-text">
+                        <img src="{{ item.lesson.image.url }}" alt="{{ item.lesson.name }}-image" width="100px"
+                            height="auto">
+                        : {{ item.lesson.name }}
+                        Category: {{ item.lesson.category }}
+                        Participant/s: {{ item.lesson.participants }}
+                        Resort: {{ item.lesson.resort }}
+                        Price: £{{ item.lesson.price }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% else %}
             <!-- Personal and Order Information -->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
                 <div class="card shadow-sm">
@@ -49,6 +87,7 @@
                     </p>
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
