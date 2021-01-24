@@ -286,6 +286,12 @@ Relation does not exist error in Django when deployed
 - <strong>Fix</strong>: Data base url changed in settings. Migrations have been updated. Database url changed to Development database.
 - <strong>Verdict</strong>: Deployed website works as expected.
 
+User Form not updated while payment is proccessed
+- <strong>Bug</strong>: While making payment user form details form should be updated
+- <strong>Fix</strong>: I have added two print statement when form suppoused to be validated. I've received message for 'else' = not valid. To get more info I have searched in Django dosc., I've used {{ form.error }} in as messages to see what is creating my issue when form is validated. Solution! Required newsletter field changed to not be required anymore.
+- <strong>Verdict</strong>: Form validation = passed! User details form updated.
+
+
 ---
 
 ## Deployment
