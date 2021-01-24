@@ -34,8 +34,10 @@
                         <div id="div_id_full_name" class="form-group d-none">
                             <div class="d-none">
                                 <input type="text" name="full_name" maxlength="200" placeholder="Full Name"
-                                    class="d-none" id="id_full_name"
-                                    value="{{ form.first_name.value }} {{ form.last_name.value }}">
+                                    class="d-none" id="id_full_name" value="{% if not form.first_name.value %}
+                                    {% elif not form.last_name.value %}{% else %}
+                                    {{ form.first_name.value }} {{ form.last_name.value }}
+                                    {% endif %}">
                             </div>
                         </div>
                         <div class="d-flex justify-content-between buttons mt-4">
