@@ -1,4 +1,4 @@
-// main toast style
+/* Toasts */
 .messages-container {
     position: fixed;
     top: 80px;
@@ -7,6 +7,7 @@
     max-width: 300px;
 }
 
+/* Main toast class */
 .toast {
     background-color: #fff;
     border-radius: 5px;
@@ -26,7 +27,7 @@
         font-weight: 300;
     }
 
-    // button style
+    /* Buttons */
     .btn {
         width: 100%;
         border: 1px solid #f60f13;
@@ -37,7 +38,6 @@
             color: #fff;
         }
     }
-    // buttons hover style
     .hvr-bounce-to-right:hover {
         color: #fff !important;
     }
@@ -47,13 +47,13 @@
         border-radius: inherit;
     }
 
-    // discount text
+    /* Discount text */
     .small-discount {
         color: #31addf;
         font-size: 0.85rem;
     }
 
-    // discount banner
+    /* Discount banner */
     .spent-more-text {
         color: #fff;
         background-color: #31addf;
@@ -65,7 +65,7 @@
     }
 }
 
-// success toast style
+/* Toast - Success */
 .toast-success {
     border: 2px solid #28a745;
 
@@ -75,7 +75,7 @@
     }
 }
 
-// error toast style
+/* Toast - Error */
 .toast-error {
     border: 2px solid #dc3545;
 
@@ -85,7 +85,7 @@
     }
 }
 
-// info toast style
+/* Toast - Info */
 .toast-info {
     border: 2px solid #17a2b8;
 
@@ -95,7 +95,7 @@
     }
 }
 
-// warning toast style
+/* Toast - Warning */
 .toast-warning {
     border: 2px solid #ffc107;
 

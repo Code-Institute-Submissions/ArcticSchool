@@ -1,3 +1,4 @@
+/* Discount banner main container */
 #discount-banner {
     background-color: #00d4f5;
     height: 50px;
@@ -19,6 +20,7 @@
         justify-content: space-between;
         align-items: center;
 
+        /* X Button style */
         .close-button {
             height: 30px;
             width: 30px;

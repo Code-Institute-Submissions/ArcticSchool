@@ -1,7 +1,9 @@
+/* You may like  */
 bg-white {
     background-color: #fff;
 }
 
+/* Main container */
 .yml {
     width: 100%;
     height: auto;
@@ -16,6 +18,7 @@ bg-white {
         border-radius: 10px;
     }
 
+    /* Card */
     .card {
         padding: 1rem !important;
         //border: 1px solid #059cd9;
@@ -26,7 +29,7 @@ bg-white {
                 box-shadow: 0 0.125rem 0.25rem rgba(0, 212, 245, 0.595) !important;
             }
         }
-
+        /* Supper offer icon */
         .super-offer-icon {
             position: absolute;
             top: -2px;
@@ -42,11 +45,13 @@ bg-white {
             }
         }
     }
+    /* Supper offer card bold style */
     .card-super-offer {
         border: 2px solid #00d4f5 !important;
         box-shadow: 0 0.125rem 0.25rem rgba(0, 212, 245, 0.25) !important;
     }
 
+    /* Headings and paragraphs */
     h5 {
         //font-size: 0.85rem;
         margin-top: 5px;

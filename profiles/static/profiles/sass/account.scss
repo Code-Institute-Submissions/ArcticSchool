@@ -1,10 +1,11 @@
+/* Profile page main container */
 #user_account {
     background-color: #f1f2f3;
     margin-top: 59px;
     display: flex;
     flex-direction: column;
 
-    // Main Container
+    /* Account main */
     .account-main {
         flex: 1 0 auto;
         display: flex;
@@ -15,7 +16,7 @@
             width: 100%;
             margin: 2rem 1rem 2rem 1rem;
         }
-
+        /* Card */
         .card {
             padding: 1.25rem;
             border-radius: 10px;
@@ -64,6 +65,7 @@
                 }
             }
 
+            /* Input box arrows */
             .arrow-position {
                 text-align: right;
                 position: absolute;
@@ -78,14 +80,14 @@
                 margin-top: 7px;
             }
 
-            // User Details Form
+            /* User details form */
             .user-details-fields {
                 &::placeholder {
                     color: #ced4da;
                 }
             }
 
-            // buttons
+            /* Buttons */
             .btn {
                 width: calc((100%) / 2 - 5px);
                 border: 1px solid #00d4f5;
@@ -127,10 +129,9 @@
                 }
             }
         }
-
-        // Last 10 Orders Booked
     }
 
+    /* Recently booked */
     .booked-lesson {
         hr {
             display: block;
@@ -159,7 +160,9 @@
     }
 
     @media (max-width: 768px) {
+        /* Account main container */
         .account-main {
+            /* Card main container */
             .card {
                 .form-group {
                     flex-direction: column;

@@ -1,12 +1,15 @@
+/* Resorts main container */
 #resorts-container {
     height: auto;
     background-color: #fff;
 
+    /* Background image */
     .resorts-bg {
         height: calc(100vh / 4);
         background: url("/media/bg_images/resorts_bg.jpg") center center / cover no-repeat;
     }
 
+    /* About resort container */
     .about-resorts-container {
         margin-top: 20px;
         padding: 1.25rem;
@@ -49,10 +52,12 @@
         }
     }
 
+    /* Reverse resort style */
     .reverse-background {
         background: linear-gradient(90deg, #059cd9, #1ca5dc, #31addf);
     }
 
+    /* Headings and paragraphs */
     .resort-info {
 
         h3 {

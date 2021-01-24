@@ -1,3 +1,4 @@
+/* Lesson Page */
 #lesson {
     /* Background Image */
     background-color: #059cd9;
@@ -26,7 +27,7 @@
     h6 {
         color: #059cd9;
     }
-    // top box with breadcrumbs
+    /* Breadcrumb box */
     .empty-box {
         height: 100px;
 
@@ -50,7 +51,7 @@
         }
     }
 
-    // main lesson container
+    /* Lesson main container style */
     .lesson-container {
         color: #000;
         font-size: 1rem;
@@ -68,7 +69,7 @@
                 background: none !important;
             }
 
-            // date and time info style
+            /* Lesson date and time */
             .s-info,
             .lesson-info {
                 font-weight: 400;
@@ -85,23 +86,23 @@
             }
         }
 
-        // lesson image
+        /* Lesson image */
         .lesson-image {
             width: 90%;
             border-radius: 15px;
         }
-        // resort image
+        /* Resort image */
         .lesson-resort-image {
             width: 100%;
             border-radius: 15px;
         }
 
-        // offer price style
+        /* Supper offer price */
         .offer-price {
             color: #f60f13;
         }
 
-        // buttons
+        /* Buttons */
         .btn {
             width: 100%;
             border: 1px solid #f60f13;
@@ -113,7 +114,6 @@
             }
         }
 
-        // buttons hover style
         .hvr-bounce-to-right:hover {
             color: #fff !important;
         }
@@ -132,7 +132,7 @@
             }
         }
 
-        // supper offer star style
+        /* Supper ofer star icon style */
         .supper-offer-start {
             position: absolute;
             top: -35px;
@@ -148,7 +148,7 @@
             -o-transform: rotate(-90deg);
         }
 
-        // responsive style
+        /* Resort image responsive style */
         @media (max-width: 767.98px) {
             .lesson-resort-image {
                 width: 100%;

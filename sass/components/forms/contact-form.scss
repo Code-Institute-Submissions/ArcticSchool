@@ -1,5 +1,6 @@
+/* Contact main container */
 #contact {
-    // contact form buttons
+    /* Buttons */
     .btn {
         width: 120px;
         border: 1px solid #00d4f5;
@@ -59,7 +60,7 @@
         border-radius: inherit;
     }
 
-    // contact form style
+    /* Form */
     #form-contact {
         background: #fff;
         padding: 1.75rem;
@@ -92,6 +93,7 @@
             }
         }
 
+        /* Message box */
         .message {
             padding: 1rem;
             border-width: 2px;
@@ -99,6 +101,7 @@
             border-radius: 5px;
         }
 
+        /* Input boxes */
         .form-group {
             margin: 0;
             padding-bottom: 1rem;

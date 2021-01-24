@@ -1,3 +1,4 @@
+/* Main mobile menu container */
 #mobileMenu {
     height: auto;
     max-height: calc(100vh - 59px);
@@ -6,12 +7,14 @@
     -webkit-overflow-scrolling: touch;
     text-align: right !important;
 
+    /* 1st Level links */
     .user-menu-link {
         color: #00d4f5;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
     }
 
+    /* 2nd Level Links */
     .user-nav-link {
         font-size: 0.85rem;
         color: #848484 !important;
@@ -32,6 +35,7 @@
     }
 }
 
+/* Arrow */
 i {
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
@@ -61,7 +65,7 @@ i {
         transform: rotate(180deg);
     }
 }
-
+/* Buttons */
 button,
 input[type="submit"] {
     background: none;
@@ -74,7 +78,7 @@ input[type="submit"] {
     text-align: right;
 }
 
-´#mobileUserMenu {
+#mobileUserMenu {
     button {
         color: #000;
     }

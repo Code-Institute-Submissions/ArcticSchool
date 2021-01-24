@@ -34,9 +34,7 @@ Classes and ID's names modified to suits main project style
     text-decoration: none;
 }
 
-/*
-Mainpage Top Section
-*/
+/* Mainpage Top Section */
 #top-bg {
     background: url("/media/bg_images/mainpage_bg.jpg") center center / cover no-repeat;
 }
@@ -104,7 +102,6 @@ Mainpage Top Section
 }
 
 /* Interactive Elements */
-/* Main container */
 .interactive-top {
     display: flex;
     justify-content: space-between;
@@ -149,9 +146,7 @@ Mainpage Top Section
     justify-content: center;
 }
 
-/*
-Promo Banner Section
-*/
+/* Promo Banner Section */
 .promo-banner {
     border-radius: 1rem;
     padding: 1.25rem;
@@ -165,9 +160,7 @@ Promo Banner Section
     padding: 0.5rem;
 }
 
-/*
-About Us Section
-*/
+/* About Us Section */
 #about-us {
     display: flex;
     padding-top: 1.25rem;
@@ -215,9 +208,7 @@ About Us Section
     }
 }
 
-/*
-Why Our Lessons Section
-*/
+/* Why Our Lessons Section */
 #why-our-lessons {
     background-color: #059cd9;
     padding-bottom: 30px;
@@ -231,9 +222,7 @@ Why Our Lessons Section
     }
 }
 
-/*
-My Level Section
-*/
+/* My Level Section */
 #my-level {
     color: #000;
     text-align: center;

@@ -1,8 +1,10 @@
+/* Checkout success main container */
 #checkout-success {
     margin-top: 59px;
     margin-bottom: auto;
     background-color: #fff;
 
+    /* Heading and paragraphs */
     h1 {
         color: #059cd9;
     }
@@ -32,6 +34,7 @@
         }
     }
 
+    /* Card */
     .card {
         padding: 1.25rem;
         border-radius: 10px;

@@ -1,7 +1,9 @@
+/* Navigation */
 header {
     background-color: #fff;
 }
 
+/* Nav */
 nav {
     min-height: 59px;
     background-color: #fff;
@@ -15,7 +17,7 @@ nav {
 .navbar {
     padding: 0.55rem 1rem;
 
-    // navigation bar opacity classes
+    /* Navigation bar opacity */
     &.less {
         background-color: rgba(255, 255, 255, 0.95);
     }
@@ -31,7 +33,7 @@ nav {
     color: #f60f13 !important;
 }
 
-/* Normal | blue - nav active link : hover.css*/
+/* Normal | blue - nav active link : hover.css */
 .nav-link-active {
     display: inline-block;
     vertical-align: middle;
@@ -55,7 +57,7 @@ nav {
     background: #00d4f5 !important;
 }
 
-/* Special | red - nav active link : hover.css*/
+/* Special | red - nav active link : hover.css */
 .nav-link-active-red {
     display: inline-block;
     vertical-align: middle;
@@ -227,7 +229,7 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
     left: 50%;
 }
 
-// booking count icon
+/* Booking Li - Red count icon */
 .booking-count {
     width: 25px;
     height: 25px;
@@ -278,6 +280,7 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
         color: #f60f13;
     }
 
+    /* Links */
     a {
         font-size: 0.85rem;
         color: #000;
@@ -306,6 +309,7 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
             }
         }
 
+        /* Buttons */
         button {
             width: 100%;
             height: 100%;

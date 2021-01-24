@@ -1,5 +1,6 @@
+/* Booking main container */
 #booking {
-    // banner style
+    /* Booking baner */
     .booking-banner {
         height: 300px;
         width: 320px;
@@ -8,7 +9,7 @@
         flex-direction: column;
         text-align: center;
 
-        // booking text
+        /* Title */
         h2 {
             margin: 0;
             font-size: 3.5rem;
@@ -16,7 +17,7 @@
             color: #059cd9;
             text-shadow: 5px 5px rgba(204, 204, 204, 0.65);
         }
-        // bottom line
+        /* Separating bootom line */
         hr {
             height: 10px;
             background-color: #059cd9;
@@ -26,7 +27,7 @@
         }
     }
 
-    // booking container
+    /* Container */
     .booking-container {
         h2 {
             color: #f60f13;
@@ -72,20 +73,19 @@
             }
         }
 
-        // you might like margin
+        /* You might like includes - margin */
         .yml {
             margin-bottom: 40px;
         }
     }
 
-    // you may like container style
-
+    /* You might like inckudes - main style */
     .card {
         border-radius: 10px;
         border: 2px solid #fafafa;
         margin-bottom: 1rem;
 
-        // button style
+        /* Buttons */
         .btn {
             width: 100%;
             border: 1px solid #f60f13;
@@ -96,7 +96,7 @@
                 color: #fff;
             }
         }
-        // buttons hover style
+        /* Buttons hover */
         .hvr-bounce-to-right:hover {
             color: #fff !important;
         }
@@ -116,6 +116,7 @@
         }
     }
 
+    /* Booking - Booked lessons present in table */
     #booking-table {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -123,16 +124,17 @@
         .card {
             border: 1px solid #ebebeb;
 
-            // card head
+            /* Card head */
             .card-head {
                 padding: 0.85rem;
             }
-            // image style
+            /* Image */
             img {
                 width: 100%;
                 border-radius: 10px;
             }
 
+            /* Heading and paragraphs */
             padding: 0.85rem;
             h1 {
                 font-size: 1.5rem;
@@ -154,7 +156,7 @@
             .price {
                 color: #f60f13;
             }
-            // remove button grey out style
+            /* Remove button */
             .btn-grey {
                 color: #adadad;
                 border-color: #adadad;
@@ -164,7 +166,7 @@
                 }
             }
 
-            // supper offer star style
+            /* Supper offer - star icon */
             .card-super-offer {
                 position: absolute;
                 top: -20px;
@@ -181,7 +183,7 @@
             }
         }
 
-        // button style
+        /* Buttons */
         .btn {
             width: 100%;
             border: 1px solid #f60f13;
@@ -192,7 +194,6 @@
                 color: #fff;
             }
         }
-        // buttons hover style
         .hvr-bounce-to-right:hover {
             color: #fff !important;
         }
@@ -213,7 +214,6 @@
     }
 }
 
-// responsive
 @media (max-width: 768px) {
     h2,
     h3 {

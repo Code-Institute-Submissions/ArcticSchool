@@ -1,4 +1,4 @@
-// contact form style
+/* Checout form main container */
 #form-checkout {
     background: #fff;
     border-radius: 10px;
@@ -24,6 +24,7 @@
         }
     }
 
+    /* Input arrow icon */
     .arrow-position {
         text-align: right;
         position: absolute;
@@ -31,6 +32,7 @@
         margin-top: 7px;
     }
 
+    /* Inout fields style */
     label,
     input::placeholder,
     textarea::placeholder {

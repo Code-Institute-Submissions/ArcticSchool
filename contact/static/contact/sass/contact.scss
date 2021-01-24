@@ -1,15 +1,18 @@
+/* Contact Page */
 #contact {
+    /* Background image */
     background-image: url("/media/bg_images/contact_bg.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-color: #f1f2f3;
 
-    // contact form top section
+    /* Title */
     .page-title {
         color: #059cd9;
     }
 
+    /* Promo text */
     .promo-text-contact {
         font-size: 1rem;
         font-weight: 300;
