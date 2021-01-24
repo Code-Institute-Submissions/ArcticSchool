@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from profiles.forms import UserDetailsForm
 from home.models import SocialIcon
-from lessons.models import Lesson
 from checkout.models import Order
 from .models import UserProfile
 

@@ -1,8 +1,9 @@
+import random
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages
 from home.models import SocialIcon
 from lessons.models import Lesson
-import random
+
 
 
 def booking(request):
@@ -68,6 +69,6 @@ def clear_booking(request):
     request.session['bag'] = bag
 
     messages.info(
-        request, f'Your booking has been cleared successfully!')
+        request, 'Your booking has been cleared successfully!')
 
     return redirect(redirect_url)
