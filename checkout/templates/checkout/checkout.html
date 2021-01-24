@@ -106,7 +106,7 @@
                             </fieldset>
                             <!-- Complete order button -->
                             <div class="buttons">
-                                <button type="submit" id="submit-button" class="btn hvr-bounce-to-right">Make a
+                                <button type="submit" id="submit-button" class="btn hvr-bounce-to-right" disabled>Make a
                                     Payment</button>
                             </div>
                             <p class="small m-0 mt-1">Your card will be charged £ {{ grand_total|floatformat:2 }}</p>
@@ -136,6 +136,6 @@
 {{ block.supper }}
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
-<script src="{% static 'js/stripe.js' %}"></script>
-<script src="{% static 'js/checkout.js' %}"></script>
+<script src="{% static 'checkout/js/stripe.js' %}"></script>
+<script src="{% static 'checkout/js/checkout.js' %}"></script>
 {% endblock %}
