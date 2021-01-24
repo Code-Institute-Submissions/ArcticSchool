@@ -50,7 +50,14 @@ def booking_archived(request, order_number):
     return render(request, template, context)
 
 
-def booking_active(request):
+def booking_active(request, order_number):
     """ A view to return active bookings """
+    order = get_object_or_404(Order, order_number=order_number)
 
-    return render(request, 'profile/account.html')
+    template = 'account/bookings-active.html'
+    context = {
+        'order': order,
+
+    }
+
+    return render(request, template, context)
