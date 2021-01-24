@@ -1,48 +1,46 @@
-// Fonts
+/* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
-
-// Import Base Style
+/* ------------------------------------------------------------ BASE STYLE ----- */
 @import "base/base.scss";
-
-// Import Header - Navigation
+/* ------------------------------------------------------------ NAVIGATION ----- */
 @import "components/header/navigation.scss";
 @import "components/header/navigation-mobile.scss";
-
-// Import Pages Style
-@import "pages/index.scss";
-@import "pages/lesson.scss";
-@import "pages/lessons.scss";
-@import "pages/team.scss";
-@import "pages/resorts.scss";
-@import "pages/booking.scss";
-@import "pages/contact.scss";
-@import "pages/account.scss";
-@import "pages/checkout.scss";
-@import "pages/checkout-success.scss";
-
-// Import Components
-//  Cards
-@import "components/cards/level-cards.scss";
-@import "components/cards/our-lessons-cards.scss";
-
-// Forms
+/* --------------------------------------------------------------------------------- PAGES ----- */
+/* ------------------------------------------------------------ HOME PAGE ----- */
+@import "../home/static/home/sass/index.scss";
+@import "../home/static/home/sass/level-cards.scss";
+@import "../home/static/home/sass/our-lessons-cards.scss";
+/* ------------------------------------------------------------ LESSONS ----- */
+@import "../lessons/static/lessons/sass/lessons.scss";
+@import "../lessons/static/lessons/sass/lesson.scss";
+@import "../lessons/static/lessons/sass/discount.scss";
+/* ------------------------------------------------------------ TEAM ----- */
+@import "../team/static/team/sass/team.scss";
+/* ------------------------------------------------------------ RESORTS ----- */
+@import "../resorts/static/resorts/sass/resorts.scss";
+/* ------------------------------------------------------------ BOOKING ----- */
+@import "../booking/static/booking/sass/booking.scss";
+/* ------------------------------------------------------------ CONTACT ----- */
+@import "../contact/static/contact/sass/contact.scss";
+/* ------------------------------------------------------------ ACCOUNT ----- */
+@import "../profiles/static/profiles/sass/account.scss";
+/* ------------------------------------------------------------ CHECKOUT ----- */
+@import "../checkout/static/checkout/sass/checkout.scss";
+@import "../checkout/static/checkout/sass/checkout-success.scss";
+/* --------------------------------------------------------------------------------- COMPONENTS ----- */
+/* ------------------------------------------------------------ ALL ALLAUTH FORMS ----- */
 @import "components/forms/alluath-forms.scss";
+/* ------------------------------------------------------------ CONTACT FORM ----- */
 @import "components/forms/contact-form.scss";
+/* ------------------------------------------------------------ CHECKOUT FORM ----- */
 @import "components/forms/checkout-form.scss";
-
-// Social Icons
+/* ------------------------------------------------------------ SOCIAL MEDIA ICONS ----- */
 @import "components/social/icons.scss";
-
-// Banners
+/* --------------------------------------------------------------------------------- INCLUDES: BANNER & TOASTS & YOU MIGHT LIKE----- */
 @import "components/banner/banner.scss";
-@import "components/banner/discount.scss";
-
-// Incudes
-@import "components/includes/toasts.scss";
-@import "components/includes/you-might-like.scss";
-
-//  Footer
+@import "includes/toasts.scss";
+@import "includes/you-might-like.scss";
+/* --------------------------------------------------------------------------------- FOOTER MAIN ----- */
 @import "components/footer/footer.scss";
-
-// Import Responsive
+/* --------------------------------------------------------------------------------- ADDITIONAL RESPONSIVE ----- */
 @import "responsive/responsive.scss";

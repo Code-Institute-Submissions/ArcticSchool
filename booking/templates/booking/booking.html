@@ -55,21 +55,5 @@
 
 {% block extra_js %}
 {{ block.super }}
-<script type="text/javascript">
-    /**
-     * This function will remove item from booked lessons bag and update the 'bag' and reload page
-     */
-    $('.remove-lesson').click(function (e) {
-        let csrfToken = "{{ csrf_token }}";
-        let lessonId = $(this).attr('id').split('remove_')[1];
-        let url = `/booking/remove/${lessonId}`;
-        let data = { 'csrfmiddlewaretoken': csrfToken };
-
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    });
-</script>
-
+<script src="{% static 'booking/js/booking.js' %}"></script>
 {% endblock %}

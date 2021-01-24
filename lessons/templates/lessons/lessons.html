@@ -157,3 +157,8 @@
 {% include 'layout/footer.html' %}
 
 {% endblock %}
+
+{% block extra_js %}
+{{ block.supper }}
+<script src="{% static 'lessons/js/lessons.js' %}"></script>
+{% endblock %}

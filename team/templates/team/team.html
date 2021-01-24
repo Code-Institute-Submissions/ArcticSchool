@@ -71,3 +71,8 @@
 {% include 'layout/footer.html' %}
 
 {% endblock %}
+
+{% block extra_js %}
+{{ block.supper }}
+<script src="{% static 'team/js/team.js' %}"></script>
+{% endblock %}
