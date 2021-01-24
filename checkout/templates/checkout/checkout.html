@@ -15,13 +15,12 @@
             </div>
         </div>
         <form action="{% url 'checkout' %}" id="payment-form" method="POST">
+            {% csrf_token %}
             <div class="row">
                 <!-- Checkout Form & Payment Form -->
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <!-- Wrapped with card style -->
                     <div id="form-checkout" class="card shadow-sm">
-                        <!-- Form -->
-                        {% csrf_token %}
                         <!-- Basic info -->
                         <fieldset>
                             <h4>Personal Information:</h4>
