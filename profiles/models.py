@@ -11,7 +11,10 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     """ User Profile model to maintain current bookings, history of bookings """
 
-    newsletter_choices = ((True, 'Yes'), (False, 'No'))
+    newsletter_choices = [
+        ('Yes', 'Yes'),
+        ('No', 'No'),
+    ]
 
     class Meta:
         verbose_name_plural = 'Users Profiles'
@@ -33,8 +36,8 @@ class UserProfile(models.Model):
     county = models.CharField(max_length=80, null=True, blank=True)
     country = CountryField(
         blank_label='Select Country', null=True, blank=True)
-    receiving_newsletter = models.BooleanField(choices=newsletter_choices,
-                                               null=True, default=False)
+    receiving_newsletter = models.CharField(
+        max_length=3, choices=newsletter_choices, blank=True, null=True)
 
     def __str__(self):
         return self.user.username
