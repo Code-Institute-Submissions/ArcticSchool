@@ -27,7 +27,7 @@
                             {% if from_profile %}
                             {{ order.order_number }}
                             {% else %}
-                            <a href="{% url 'booking_active' order.order_number %}" title="{{ order.order_number }}"
+                            <a href="{% url 'booking_review' order.order_number %}" title="{{ order.order_number }}"
                                 class="order-number-active">{{ order.order_number }}</a>
                             {% endif %}
                         </span>

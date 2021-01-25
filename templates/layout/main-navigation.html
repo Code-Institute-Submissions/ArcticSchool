@@ -35,8 +35,8 @@
                     <!-- When user is logged in -->
                     {% if request.user.is_authenticated %}
                         <h6 class="text-uppercase booking">Booking</h6>
-                        <a href="">Current</a>
-                        <a href="">Archived</a>
+                        <a href="{% url 'bookings_active' %}">Active</a>
+                        <a href="{% url 'bookings_archived' %}">Archived</a>
                         <hr>
                         <!-- If user has super powers - administrator -->
                         {% if request.user.is_superuser %}
@@ -64,8 +64,8 @@
                         {% endif %}
                     <!-- When user is not logged in -->
                     {% else %}
-                        <a href="{% url 'account_login' %}" class="dropdown-item login-font">Login</a>
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}?next={{ request.path }}" class="dropdown-item login-font">Login</a>
+                        <a href="{% url 'account_signup' %}?next={{ 'account' }}" class="dropdown-item">Register</a>
                     {% endif %}
                 </div>
             </div>
