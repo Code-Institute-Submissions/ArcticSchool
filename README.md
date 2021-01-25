@@ -291,6 +291,11 @@ User Form not updated while payment is proccessed
 - <strong>Fix</strong>: I have added two print statement when form suppoused to be validated. I've received message for 'else' = not valid. To get more info I have searched in Django dosc., I've used {{ form.error }} in as messages to see what is creating my issue when form is validated. Solution! Required newsletter field changed to not be required anymore.
 - <strong>Verdict</strong>: Form validation = passed! User details form updated.
 
+Sass compiler stopped working main.scss file update stopped.
+- <strong>Bug</strong>: When editing other files than main.scss while using sass compiler is working on file, save is not updating.
+- <strong>Fix</strong>: Import files names have been chagned from example.scss to _example.scss . 
+- <strong>Verdict</strong>: This will inform compiler these files are partials for main.scss file and they will be import corretly. Main.scss file updated as expected. Css.map  file is not created anymore based on compiler settings.
+
 
 ---
 
