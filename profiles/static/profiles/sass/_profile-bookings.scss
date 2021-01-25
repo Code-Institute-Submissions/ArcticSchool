@@ -1,0 +1,42 @@
+/* Main style for Active and Archived */
+#bookings_active,
+#bookings_archived {
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f2f3;
+
+    /* Profile bookings main container  */
+    .profile-bookings {
+        h1 {
+            color: #f60f13;
+        }
+
+        /* Card */
+        .card {
+            padding: 1.25rem;
+            border-radius: 10px;
+
+            a {
+                color: #00d4f5;
+                &:hover {
+                    color: #059cd9;
+                    text-decoration: none;
+                }
+            }
+
+            /* Booking info text */
+            .booking-info {
+                p {
+                    color: #ced4da;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    /* Footer style */
+    footer {
+        flex-shrink: none;
+    }
+}
