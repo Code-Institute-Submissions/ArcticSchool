@@ -37,8 +37,9 @@ def user_account(request):
     return render(request, template, context)
 
 
-def booking_archived(request, order_number):
-    """ A view to return User order history """
+@login_required(login_url='/accounts/login/')
+def booking_review(request, order_number):
+    """ A view to return booking infomration """
     order = get_object_or_404(Order, order_number=order_number)
 
     template = 'checkout/checkout-success.html'
@@ -50,14 +51,29 @@ def booking_archived(request, order_number):
     return render(request, template, context)
 
 
-def booking_active(request, order_number):
-    """ A view to return active bookings """
-    order = get_object_or_404(Order, order_number=order_number)
+@login_required(login_url='/accounts/login/')
+def bookings_active(request):
+    """ A view to return user active bookings """
+
+    profile = get_object_or_404(UserProfile, user=request.user)
+    # Order user orders - newest at begining
+    user_orders = profile.orders.all()
+    user_orders = user_orders.order_by('-date')
 
     template = 'account/bookings-active.html'
     context = {
-        'order': order,
+        'user_orders': user_orders,
+    }
 
+    return render(request, template, context)
+
+
+@login_required(login_url='/accounts/login/')
+def bookings_archived(request):
+    """ A view to return user archived bookings """
+
+    template = 'account/bookings-archived.html'
+    context = {
     }
 
     return render(request, template, context)

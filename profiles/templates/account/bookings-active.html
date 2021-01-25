@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+´
+<!-- Main profile bookings container -->
+<div class="profile-bookings">
+    <div class="card shadow-sm">
+
+        {% for order in user_orders %}
+        <!-- User order container -->
+        <div class="user-order-container">
+
+            <a href="#" class="">{{ order.order_number }}</a>
+
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+<!-- Footer -->
+<div class="mt-auto">
+    {% include 'layout/footer.html' %}
+</div>
+{% endblock %}
