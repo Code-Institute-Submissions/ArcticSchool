@@ -12,7 +12,7 @@
             color: #f60f13;
         }
 
-        h4{
+        h4 {
             color: #848484;
             font-size: 1.5rem;
         }
@@ -54,6 +54,41 @@
                 font-size: 1rem;
                 margin-bottom: 10px;
             }
+        }
+
+        /* Buttons */
+        .btn {
+            width: 250px;
+            border: 1px solid #00d4f5;
+            color: #00d4f5;
+
+            &:active,
+            &:focus {
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .hvr-bounce-to-right {
+            -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+        }
+
+        .hvr-bounce-to-right:hover {
+            color: #fff !important;
+        }
+
+        .hvr-bounce-to-right:before {
+            background: #00d4f5;
+            border: 1px solid #fff;
+            border-radius: inherit;
+        }
+
+        .btn-white{
+            background-color: #fff;
         }
     }
 
