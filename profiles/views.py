@@ -97,7 +97,7 @@ def bookings_archived(request):
     user_orders = profile.orders.all()
 
     # Filter Booking older than 60 days
-    start_date = date.today() + timedelta(days=59)
+    start_date = date.today() + timedelta(days=-59)
     end_date = start_date + timedelta(days=-365)
     # Filter date range
     user_orders = user_orders.filter(date__range=[end_date, start_date])
