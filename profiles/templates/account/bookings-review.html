@@ -6,21 +6,18 @@
 <!-- Checkout main container -->
 <div class="container py-4">
     <h1 class="page-title mt-1 mb-4 text-left">Order Review</h1>
-    <!-- Back to Profile Button -->
-    {% if from_profile %}
-    <a href="{% url 'user_account' %}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> Back to
-        Account</a>
+
+    {% if 'active' in request.META.HTTP_REFERER %}
+    <a href="{{ request.META.HTTP_REFERER }}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> 
+        Back to Active Bookings</a>
+    {% elif 'archived' in request.META.HTTP_REFERER %}
+    <a href="{{ request.META.HTTP_REFERER }}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> 
+        Back to Archived Bookings</a>
     {% else %}
-    <!-- Check if from bookings page = active/archived -->
-    {% if from_booking_active == True %}
-    <a href="{% url 'bookings_active' %}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> Back to
-        Active Bookings</a>
-    {% elif from_booking_archived == True %}
-    <a href="{% url 'bookings_archived' %}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> Back to
-        Archived Bookings</a>
-    {% else %}
+    <a href="{{ request.META.HTTP_REFERER }}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i> 
+        Back to Account Page</a>
     {% endif %}
-    {% endif %}
+
     <!-- Main container -->
     <div class="row my-3">
         <!-- Personal and Order Information -->
