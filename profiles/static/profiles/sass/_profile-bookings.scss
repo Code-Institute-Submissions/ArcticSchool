@@ -12,16 +12,29 @@
             color: #f60f13;
         }
 
+        h4{
+            color: #848484;
+            font-size: 1.5rem;
+        }
+
         /* Card */
         .card {
             padding: 1.25rem;
             border-radius: 10px;
 
-            a {
+            .user-booking-single {
+                border-radius: 5px;
                 color: #00d4f5;
                 &:hover {
-                    color: #059cd9;
-                    text-decoration: none;
+                    background-color: #00d4f5;
+                }
+
+                a {
+                    color: #00d4f5;
+                    &:hover {
+                        color: #fff;
+                        text-decoration: none;
+                    }
                 }
             }
 
@@ -30,7 +43,16 @@
                 p {
                     color: #ced4da;
                     font-size: 1rem;
+                    margin: 0;
                 }
+            }
+
+            /* Table headings */
+            .table-headings {
+                color: #000;
+                font-weight: 500;
+                font-size: 1rem;
+                margin-bottom: 10px;
             }
         }
     }
