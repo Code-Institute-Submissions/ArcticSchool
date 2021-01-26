@@ -43,10 +43,13 @@ def booking_review(request, order_number):
     """ A view to return booking infomration """
     order = get_object_or_404(Order, order_number=order_number)
 
+    # Footer social media Icons
+    social = SocialIcon.objects.all()
+
     template = 'account/bookings-review.html'
     context = {
         'order': order,
-        'from_profile': True,
+        'socials': social,
     }
 
     return render(request, template, context)
@@ -73,7 +76,7 @@ def bookings_active(request):
     from_booking_active = True
     request.session['from_booking_active'] = from_booking_active
 
-    #Send number of active bookings to session
+    # Send number of active bookings to session
     request.session['active_booking_count'] = user_orders.count()
 
     social = SocialIcon.objects.all()
@@ -117,7 +120,7 @@ def bookings_archived(request):
         'user_orders': user_orders,
         'socials': social,
         'from_booking_archived': from_booking_archived,
-        'active_booking_count':active_booking_count,
+        'active_booking_count': active_booking_count,
     }
 
     return render(request, template, context)
