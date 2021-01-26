@@ -2,20 +2,60 @@
 {% load static %}
 
 {% block content %}
-´
+
 <!-- Main profile bookings container -->
-<div class="profile-bookings">
-    <div class="card shadow-sm">
-
-        {% for order in user_orders %}
-        <!-- User order container -->
-        <div class="user-order-container">
-
-            <a href="#" class="">{{ order.order_number }}</a>
-
+<div class="profile-bookings" role="main">
+    <div class="container py-4">
+        <h1 class="mt-1 mb-4 text-left">Active Bookings</h1>
+        <div class="card shadow-sm">
+            <h4>Currently you have got {{ user_orders.count }} active bookings</h4>
+            <!-- Table headings -->
+            <div class="d-flex table-headings">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">Booking Number</div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">Date Booked</div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 p-0 text-right">Cost</div>
+            </div>
+            <hr>
+            <div class="row">
+                {% for order in user_orders %}
+                <!-- User order container -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 user-booking-single">
+                    <a href="{% url 'booking_review' order.order_number %}">
+                        <div class="row h-100 py-2">
+                            <!-- Table Information -->
+                            <div class="d-none d-sm-none d-lg-block d-xl-block col-lg-6 col-xl-6">
+                                {{ forloop.counter }}. {{ order.order_number }}
+                            </div>
+                            <div class="d-none d-lg-none d-xs-block d-sm-block col-xs-6 col-sm-6 col-md-6">
+                                {{ forloop.counter }}. {{ order.order_number|truncatechars:20 }}
+                            </div>
+                            <div class="d-block d-sm-none col-4 pr-0">
+                                {{ forloop.counter }}. {{ order.order_number|truncatechars:5 }}
+                            </div>
+                            <div class="d-none d-sm-block col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                {{ order.date|date:"d-m-Y (D)" }}
+                            </div>
+                            <div class="d-block d-sm-none col-4 pr-0">
+                                {{ order.date|date:"d/m/y" }}
+                            </div>
+                            <div
+                                class="d-none d-sm-block col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 pl-0 text-right">
+                                £{{ order.grand_total }}
+                            </div>
+                            <div class="d-block d-sm-none col-4 pl-0 text-right">
+                                £{{ order.grand_total }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Booking archive info -->
+            <hr>
+            <div class="booking-info">
+                <p>Your booking will be moved to Archived after 60 days.</p>
+            </div>
         </div>
-
-        {% endfor %}
     </div>
 </div>
 <!-- Footer -->
