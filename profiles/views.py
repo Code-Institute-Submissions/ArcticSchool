@@ -71,7 +71,10 @@ def bookings_active(request):
     user_orders = user_orders.order_by('-date')
 
     from_booking_active = True
-    request.session['from_booking_active'] = True
+    request.session['from_booking_active'] = from_booking_active
+
+    #Send number of active bookings to session
+    request.session['active_booking_count'] = user_orders.count()
 
     social = SocialIcon.objects.all()
     template = 'account/bookings-active.html'
@@ -88,8 +91,33 @@ def bookings_active(request):
 def bookings_archived(request):
     """ A view to return user archived bookings """
 
+    profile = get_object_or_404(UserProfile, user=request.user)
+
+    # Order user orders - newest at begining
+    user_orders = profile.orders.all()
+
+    # Filter Booking older than 60 days
+    start_date = date.today() + timedelta(days=59)
+    end_date = start_date + timedelta(days=-365)
+    # Filter date range
+    user_orders = user_orders.filter(date__range=[end_date, start_date])
+
+    # Sort orders by date - newset first
+    user_orders = user_orders.order_by('-date')
+
+    from_booking_archived = True
+    request.session['from_booking_archived'] = from_booking_archived
+
+    # Get active booking count
+    active_booking_count = request.session.get('active_booking_count')
+
+    social = SocialIcon.objects.all()
     template = 'account/bookings-archived.html'
     context = {
+        'user_orders': user_orders,
+        'socials': social,
+        'from_booking_archived': from_booking_archived,
+        'active_booking_count':active_booking_count,
     }
 
     return render(request, template, context)
