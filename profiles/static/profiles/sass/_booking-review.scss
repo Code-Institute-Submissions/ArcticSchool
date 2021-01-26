@@ -1,0 +1,74 @@
+#booking_review {
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+
+    /* Heading and paragraphs */
+    h1 {
+        color: #059cd9;
+    }
+    h4 {
+        font-size: 1.25rem;
+        color: #848484;
+    }
+
+    .breadcrumbs-link {
+        color: #848484;
+
+        opacity: 0.8;
+
+        &:hover {
+            text-decoration: none;
+            opacity: 1;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    /* Card */
+    .card {
+        padding: 1.25rem;
+        border-radius: 10px;
+
+        .order-number-active {
+            color: #059cd9;
+
+            &:hover {
+                text-decoration: none;
+                color: #00d4f5;
+            }
+        }
+    }
+
+    .contact-form {
+        color: #059cd9;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .email {
+        font-weight: 400;
+        color: #059cd9;
+    }
+
+    /* Footer style */
+    footer {
+        flex-shrink: none;
+    }
+}
+
+@media (max-width: 420px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
