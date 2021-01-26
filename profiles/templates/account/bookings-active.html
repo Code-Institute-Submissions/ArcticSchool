@@ -6,7 +6,7 @@
 <!-- Main profile bookings container -->
 <div class="profile-bookings" role="main">
     <div class="container py-4">
-        {% if user_orders == 0 %}
+        {% if user_orders.count != 0 %}
         <h1 class="mt-1 mb-4 text-left">Active Bookings</h1>
         <div class="card shadow-sm">
             <h4>Currently you have got {{ user_orders.count }} active booking{% if user_orders != 1 %}s{% endif %}</h4>
@@ -59,7 +59,7 @@
         </div>
         {% else %}
         <!-- Nothing booked -->
-        <h4>Nothing booked yet</h4>
+        <h4>Nothing booked yet? Don't waste your time and..</h4>
         <a href="{% url 'lessons' %}" class="btn hvr-bounce-to-right btn-white">Check our Lessons!</a>
         {% endif %}
     </div>
