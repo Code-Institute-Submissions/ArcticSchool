@@ -2,10 +2,73 @@
 {% load static %}
 
 {% block content %}
+
 <!-- Main profile bookings container -->
-<div class="profile-bookings">
-
-
+<div class="profile-bookings" role="main">
+    <div class="container py-4">
+        {% if user_orders == 0 %}
+        <h1 class="mt-1 mb-4 text-left">Archived Bookings</h1>
+        <div class="card shadow-sm">
+            <h4>Currently you have got {{ user_orders.count }} archived booking{% if user_orders != 1 %}s{% endif %}
+            </h4>
+            <div class="booking-info">
+                <p class="mt-0 mb-4">You are able to see all bookings for past year. All other bookings can be accessed
+                    by contacting our IT department<br>Don't worry, they're waiting for your safely on our clouds.</p>
+            </div>
+            <!-- Table headings -->
+            <div class="d-flex table-headings">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">Booking Number</div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">Date Booked</div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 p-0 text-right">Cost</div>
+            </div>
+            <hr>
+            <div class="row">
+                {% for order in user_orders %}
+                <!-- User order container -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 user-booking-single">
+                    <a href="{% url 'booking_review' order.order_number %}">
+                        <div class="row h-100 py-2">
+                            <!-- Table Information -->
+                            <div class="d-none d-sm-none d-lg-block d-xl-block col-lg-6 col-xl-6">
+                                {{ forloop.counter }}. {{ order.order_number }}
+                            </div>
+                            <div class="d-none d-lg-none d-xs-block d-sm-block col-xs-6 col-sm-6 col-md-6">
+                                {{ forloop.counter }}. {{ order.order_number|truncatechars:20 }}
+                            </div>
+                            <div class="d-block d-sm-none col-4 pr-0">
+                                {{ forloop.counter }}. {{ order.order_number|truncatechars:5 }}
+                            </div>
+                            <div class="d-none d-sm-block col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                {{ order.date|date:"d-m-Y (D)" }}
+                            </div>
+                            <div class="d-block d-sm-none col-4 pr-0">
+                                {{ order.date|date:"d/m/y" }}
+                            </div>
+                            <div
+                                class="d-none d-sm-block col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 pl-0 text-right">
+                                £{{ order.grand_total }}
+                            </div>
+                            <div class="d-block d-sm-none col-4 pl-0 text-right">
+                                £{{ order.grand_total }}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <!-- If user has active bookings display active bookings button else display  lessons button -->
+        <!-- Nothing booked -->
+        {% if active_booking_count != 0 %}
+        <h4>Currently there are no archived bookings</h4>
+        <a href="{% url 'bookings_active' %}" class="btn hvr-bounce-to-right btn-white">View Active Bookings</a>
+        {% else %}
+        <h4>Currently there are no active or archived bookings</h4>
+        <a href="{% url 'lessons' %}" class="btn hvr-bounce-to-right btn-white">Book Lessons</a>
+        {% endif %}
+        {% endif %}
+    </div>
 </div>
 <!-- Footer -->
 <div class="mt-auto">
