@@ -9,7 +9,7 @@
         {% if user_orders.count != 0 %}
         <h1 class="mt-1 mb-4 text-left">Active Bookings</h1>
         <div class="card shadow-sm">
-            <h4>Currently you have got {{ user_orders.count }} active booking{% if user_orders != 1 %}s{% endif %}</h4>
+            <h4>Currently you have got {{ user_orders.count }} active booking{% if user_orders.count != 1 %}s{% endif %}</h4>
             <!-- Table headings -->
             <div class="d-flex table-headings">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">Booking Number</div>

@@ -9,7 +9,7 @@
         {% if user_orders.count != 0 %}
         <h1 class="mt-1 mb-4 text-left">Archived Bookings</h1>
         <div class="card shadow-sm">
-            <h4>Currently you have got {{ user_orders.count }} archived booking{% if user_orders != 1 %}s{% endif %}
+            <h4>Currently you have got {{ user_orders.count }} archived booking{% if user_orders.count != 1 %}s{% endif %}
             </h4>
             <div class="booking-info">
                 <p class="mt-0 mb-4">You are able to see all bookings for past year. All other bookings can be accessed
