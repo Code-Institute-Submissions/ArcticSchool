@@ -1,0 +1,136 @@
+/* Management main 'base' style for all management pages */
+#categories_management,
+#lessons_management,
+#instructors_management,
+#resorts_management,
+#lessons_cards_management,
+#level_cards_management,
+#social_media_management {
+    /* Main page style */
+    background-color: #f1f2f3;
+    margin-top: 59px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+
+    .categories-container,
+    .lessons-container,
+    .instructors-container,
+    .resorts-container,
+    .lessons-card-container,
+    .levels-card-containers,
+    .social-media-container {
+        /* Text */
+        h1 {
+            color: #059cd9;
+        }
+
+        h2 {
+            color: #848484;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .info-text {
+            color: #ced4da;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Card */
+        .card {
+            padding: 1.25rem;
+            border-radius: 10px;
+        }
+
+        /* Table headers */
+        .table-headers {
+            color: #000;
+            font-weight: 500;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        /* Table results */
+        .table-results {
+            p {
+                font-weight: 300;
+                margin: 0;
+            }
+
+            .table-line {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            width: calc((100%) / 2 - 5px);
+            border: 1px solid #00d4f5;
+            color: #00d4f5;
+
+            &:active,
+            &:focus {
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .hvr-bounce-to-right {
+            -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+        }
+
+        .hvr-bounce-to-right:hover {
+            color: #fff !important;
+        }
+
+        .hvr-bounce-to-right:before {
+            background: #00d4f5;
+            border: 1px solid #fff;
+            border-radius: inherit;
+        }
+
+        .red-button {
+            border: 1px solid #f60f13;
+            color: #f60f13;
+
+            &:before {
+                background: #f60f13 !important;
+            }
+        }
+
+        /* Add new element - butotn */
+        .add-new-button {
+            width: 100%;
+            border: 1px solid #848484;
+            color: #848484;
+
+            &:before {
+                background: #848484 !important;
+            }
+        }
+    }
+    /* Footer */
+    footer {
+        flex-shrink: none;
+    }
+}
+
+/* Import Individual styles for management pages */
+/* ------------------------------------------------------------ HOME ----- */
+@import "mgmt-home.scss";
+/* ------------------------------------------------------------ LESSONS ----- */
+@import "mgmt-lessons.scss";
+/* ------------------------------------------------------------ TEAM ----- */
+@import "mgmt-team.scss";
+/* ------------------------------------------------------------ RESORTS ----- */
+@import "mgmt-resorts.scss";
