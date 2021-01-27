@@ -2,9 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
 /* ------------------------------------------------------------ BASE STYLE ----- */
 @import "base/base.scss";
+
 /* ------------------------------------------------------------ NAVIGATION ----- */
 @import "components/header/navigation.scss";
 @import "components/header/navigation-mobile.scss";
+
 /* --------------------------------------------------------------------------------- PAGES ----- */
 /* ------------------------------------------------------------ HOME PAGE ----- */
 @import "../home/static/home/sass/index.scss";
@@ -29,6 +31,7 @@
 /* ------------------------------------------------------------ CHECKOUT ----- */
 @import "../checkout/static/checkout/sass/checkout.scss";
 @import "../checkout/static/checkout/sass/checkout-success.scss";
+
 /* --------------------------------------------------------------------------------- COMPONENTS ----- */
 /* ------------------------------------------------------------ ALL ALLAUTH FORMS ----- */
 @import "components/forms/alluath-forms.scss";
@@ -40,10 +43,24 @@
 @import "components/social/icons.scss";
 /* ------------------------------------------------------------ BOOKING BANNER ----- */
 @import "components/banner/banner.scss";
-/* --------------------------------------------------------------------------------- INCLUDES: TOASTS & YOU MIGHT LIKE----- */
+
+/* --------------------------------------------------------------------------------- INCLUDES: TOASTS & YOU MIGHT LIKE ----- */
 @import "includes/toasts.scss";
 @import "includes/you-might-like.scss";
+
+/* --------------------------------------------------------------------------------- MANAGEMENET BASE AND PAGES ----- */
+@import "management/mgmt-base.scss";
+/* ------------------------------------------------------------ HOME ----- */
+@import "management/mgmt-home.scss";
+/* ------------------------------------------------------------ LESSONS ----- */
+@import "management/mgmt-lessons.scss";
+/* ------------------------------------------------------------ TEAM ----- */
+@import "management/mgmt-team.scss";
+/* ------------------------------------------------------------ RESORTS ----- */
+@import "management/mgmt-resorts.scss";
+
 /* --------------------------------------------------------------------------------- FOOTER MAIN ----- */
 @import "components/footer/footer.scss";
+
 /* --------------------------------------------------------------------------------- ADDITIONAL RESPONSIVE ----- */
 @import "responsive/responsive.scss";
