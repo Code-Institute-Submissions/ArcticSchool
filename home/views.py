@@ -26,8 +26,14 @@ def index(request):
 def lessons_cards_management(request):
     """ A view to manage lessons cards - why our lessons """
 
+    social_media = SocialIcon.objects.all()
+    our_lessons_cards = LessonCard.objects.all()
+
     template = "home/mgmt-lessons-cards.html"
-    context = {}
+    context = {
+        'socials': social_media,
+        'our_lessons_cards': our_lessons_cards,
+    }
 
     return render(request, template, context)
 
@@ -58,7 +64,7 @@ def remove_lessons_cards_management(request, card_id):
     lesson_card.delete()
     messages.success(request, 'Lesson card removed successfully!')
 
-    return redirect(reverse('social_media_management'))
+    return redirect(reverse('lessons_cards_management'))
 
 
 # Level Cards Management
@@ -66,8 +72,14 @@ def remove_lessons_cards_management(request, card_id):
 def level_cards_management(request):
     """ A view to manage level cards """
 
+    social_media = SocialIcon.objects.all()
+    level_cards = LevelCard.objects.all()
+
     template = "home/mgmt-level-cards.html"
-    context = {}
+    context = {
+        'socials': social_media,
+        'level_cards': level_cards,
+    }
 
     return render(request, template, context)
 
@@ -98,7 +110,7 @@ def remove_level_cards_management(request, level_id):
     level_card.delete()
     messages.success(request, 'Level card removed successfully!')
 
-    return redirect(reverse('social_media_management'))
+    return redirect(reverse('level_cards_management'))
 
 
 # Social Media Management
