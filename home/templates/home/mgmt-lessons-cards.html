@@ -4,10 +4,52 @@
 {% block extra_title %}| Management - Lessons Cards {% endblock %}
 
 {% block content %}
-
-<!-- -->
-<div class="" role="main">
-
+<!-- Why Our Lesson Cards main container -->
+<div class="levels-card-containers" role="main">
+    <div class="container py-4">
+        <!-- Page title, promo text, 'Add +' button -->
+        <h1 class="mt-1 mb-4 text-left">Management - Home</h1>
+        <div class="card shadow-sm">
+            <h2 class="text-left">Why Our Lessons Cards</h2>
+            <p class="info-text">Add as many 'why our lesson' cards as you want! Describe why clients should purchase
+                our lessons.<br> I know they are awesome and cheap, they don't..</p>
+            <!-- Table headers container -->
+            <div class="row table-headers mt-4">
+                <!-- Add new element button-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <a href="{% url 'add_lessons_cards_management' %}" class="btn hvr-bounce-to-right add-new-button">Add
+                        +</a>
+                </div>
+            </div>
+            <hr>
+            <!-- Table results container -->
+            <div class="row table-results">
+                {% for card in our_lessons_cards %}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="row table-line">
+                        <div class="col-xs-12 col-sm-6  col-md-8 col-lg-8 col-xl-8">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                    <p class="title">{{ card.title }}</p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                    <p>{{ card.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between buttons-space">
+                            <a href="{% url 'edit_lessons_cards_management' card.id %}"
+                                class="btn hvr-bounce-to-right">Edit</a>
+                            <a href="{% url 'remove_lessons_cards_management' card.id %}"
+                                class="btn hvr-bounce-to-right red-button">Remove</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Footer -->
 <div class="mt-auto">
