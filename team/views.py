@@ -24,7 +24,7 @@ def team(request):
 def instructors_management(request):
     """ A view to manage instructors cards """
 
-    template = "resorts/mgmt-team.html"
+    template = "team/mgmt-team.html"
     context = {}
 
     return render(request, template, context)
