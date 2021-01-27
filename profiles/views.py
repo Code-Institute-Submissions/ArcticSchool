@@ -42,6 +42,7 @@ def user_account(request):
 def booking_review(request, order_number):
     """ A view to return booking infomration """
     order = get_object_or_404(Order, order_number=order_number)
+    lessons_count = order.lineitems.count()
 
     # Footer social media Icons
     social = SocialIcon.objects.all()
@@ -49,6 +50,7 @@ def booking_review(request, order_number):
     template = 'account/bookings-review.html'
     context = {
         'order': order,
+        'lessons_count':lessons_count,
         'socials': social,
     }
 
