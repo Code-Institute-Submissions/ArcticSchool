@@ -1,5 +1,6 @@
 """ Views Lessons App """
 import random
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, get_object_or_404
 from django.db.models.functions import Lower
 from resorts.models import Resort
@@ -75,6 +76,7 @@ def lesson(request, lesson_id):
     return render(request, 'lessons/lesson.html', context)
 
 
+@staff_member_required
 def categories_management(request):
     """ A view to manage lessons categoires """
 
@@ -84,6 +86,7 @@ def categories_management(request):
     return render(request, template, context)
 
 
+@staff_member_required
 def lessons_management(request):
     """ A view to manage lessons """
 

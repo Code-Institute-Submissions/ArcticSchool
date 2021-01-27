@@ -1,5 +1,6 @@
 """ A views for Team App """
 from django.shortcuts import render
+from django.contrib.admin.views.decorators import staff_member_required
 from home.models import SocialIcon
 from .models import InstructorProfile
 
@@ -19,7 +20,7 @@ def team(request):
 
     return render(request, 'team/team.html', context)
 
-
+@staff_member_required
 def instructors_management(request):
     """ A view to manage instructors cards """
 
