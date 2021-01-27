@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+{% if 'social-media/add' in request.path %}
+| Management | Social Media | Add+
+{% elif 'social-media/edit' in request.path %}
+| Management | Social Media | Edit
+{% elif 'social-media/add' in request.path %}
+| Management | Social Media | Edit
+{% elif 'social-media/add' in request.path %}
+| Management | Social Media | Edit
+{% elif 'social-media/add' in request.path %}
+| Management | Social Media | Edit
+{% elif 'social-media/add' in request.path %}
+| Management | Social Media | Edit
+{% elif 'social-media/add' in request.path %}
+| Management | Social Media | Edit
+{% else %}
+| Management | Social Media | Edit
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<!--  -->
+<div class="" role="main">
+</div>
+<!-- Footer -->
+<div class="mt-auto">
+    {% include 'layout/footer.html' %}
+</div>
+{% endblock %}
