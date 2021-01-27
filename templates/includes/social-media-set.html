@@ -1,12 +1,12 @@
 {% for social in socials %}
 {% if social.url %}
 <a href="{{ social.url }}" rel="noopener noreferrer" target="_blank"
-    class="btn btn-default social-button {% if forloop.last %} mr-0 {% else %} mr-3 {% endif %} {{ social.title }}-icon">
+    class="btn btn-default social-button {% if forloop.last %} mr-0 {% else %} mr-3 {% endif %} {{ social.name }}-icon">
     <i class="fab {{ social.icon }}"></i>
 </a>
 {% else %}
 <a href="#" rel="noopener noreferrer"
-    class="btn btn-default social-button {% if forloop.last %} mr-0 {% else %} mr-3 {% endif %} {{ social.title }}-icon">
+    class="btn btn-default social-button {% if forloop.last %} mr-0 {% else %} mr-3 {% endif %} {{ social.name }}-icon">
     <i class="fab {{ social.icon }}"></i>
 </a>
 {% endif %}

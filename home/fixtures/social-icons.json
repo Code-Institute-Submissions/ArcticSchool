@@ -3,7 +3,7 @@
       "pk": 1,
       "model": "home.SocialIcon",
       "fields": {
-        "title": "facebook",
+        "name": "facebook",
         "icon": "fa-facebook-f",
         "url": ""
       }
@@ -12,7 +12,7 @@
       "pk": 2,
       "model": "home.SocialIcon",
       "fields": {
-        "title": "instagram",
+        "name": "instagram",
         "icon": "fa-instagram",
         "url": ""
       }
@@ -21,7 +21,7 @@
       "pk": 3,
       "model": "home.SocialIcon",
       "fields": {
-        "title": "twitter",
+        "name": "twitter",
         "icon": "fa-twitter",
         "url": ""
       }
@@ -30,7 +30,7 @@
       "pk": 4,
       "model": "home.SocialIcon",
       "fields": {
-        "title": "snapchat",
+        "name": "snapchat",
         "icon": "fa-snapchat-ghost",
         "url": ""
       }

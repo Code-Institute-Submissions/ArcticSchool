@@ -42,9 +42,21 @@ class SocialIcon(models.Model):
         TikTok = 'fa-tiktok'
         Vimeo = 'fa-viemo-v'
 
-    title = models.TextField(max_length=40)
+    class NameChoices(models.TextChoices):
+        """ Choices for dropdown list in Social Icons """
+        Facebook = 'facebook'
+        YouTube = 'youtube'
+        Pintereset = 'pinterest'
+        Snapchat = 'snapchat'
+        Twitter = 'twitter'
+        Instagram = 'instagram'
+        TikTok = 'tiktok'
+        Vimeo = 'viemo'
+
+    name = models.TextField(choices=NameChoices.choices,
+                            max_length=40, null=False, blank=False, default='Facebook')
     icon = models.CharField(choices=LevelChoices.choices, max_length=30)
     url = models.URLField(max_length=1024, default='', null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return self.name

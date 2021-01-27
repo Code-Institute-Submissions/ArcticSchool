@@ -27,12 +27,12 @@ class LessonsAdmin(admin.ModelAdmin):
 class SocialsAdmin(admin.ModelAdmin):
     """ Social Media Icons admin list display and ordering """
     list_display = (
-        'title',
+        'name',
         'icon',
         'url',
     )
 
-    ordering = ('title',)
+    ordering = ('name',)
 
 
 admin.site.register(LevelCard, LevelsAdmin)
