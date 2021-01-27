@@ -14,9 +14,6 @@ class Category(models.Model):
     order = models.IntegerField(default=1)
 
     def __str__(self):
-        return self.category
-
-    def __str__(self):
         return self.friendly_name
 
 
