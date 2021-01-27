@@ -46,15 +46,27 @@
             <div class="card shadow-sm">
                 <h4>You have booked this lesson/s</h4>
                 {% for item in order.lineitems.all %}
-                <div class="lesson-container blue-text">
-                    <img src="{{ item.lesson.image.url }}" alt="{{ item.lesson.name }}-image" width="100px"
-                        height="auto">
-                    : {{ item.lesson.name }}
-                    Category: {{ item.lesson.category }}
-                    Participant/s: {{ item.lesson.participants }}
-                    Resort: {{ item.lesson.resort }}
-                    Price: £{{ item.lesson.price }}
+                <div class="lessons-container mt-2">
+                    <div class="row">
+                        <!-- Lesson Info -->
+                        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-9 mb-2">
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-between flex-column">
+                                    <h5>{{ item.lesson.name }}</h5>
+                                    <span class="lesson-price">Price £{{ item.lesson.price }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Link to view lesson details -->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-3 button-display">
+                            <a href="{% url 'lesson' item.lesson.id %}" class="btn hvr-bounce-to-right">View Details</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Don't display separate line after last lessons displayed -->
+                {% if forloop.last != True %}
+                <hr>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

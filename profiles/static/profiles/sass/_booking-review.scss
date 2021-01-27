@@ -3,67 +3,99 @@
     display: flex;
     flex-direction: column;
 
-    /* Heading and paragraphs */
-    h1 {
-        color: #059cd9;
-    }
-    h4 {
-        font-size: 1.25rem;
-        color: #848484;
-    }
-
-    .breadcrumbs-link {
-        color: #848484;
-
-        opacity: 0.8;
-
-        &:hover {
-            text-decoration: none;
-            opacity: 1;
-        }
-    }
-
-    p {
-        font-size: 1rem;
-        color: #000;
-        margin-bottom: 0.5rem;
-
-        span {
-            font-weight: 300;
-        }
-    }
-
-    /* Card */
-    .card {
-        padding: 1.25rem;
-        border-radius: 10px;
-
-        .order-number-active {
+    .review-container {
+        /* Heading and paragraphs */
+        h1 {
             color: #059cd9;
+        }
+        h4 {
+            font-size: 1.25rem;
+            color: #848484;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #000;
+            margin-bottom: 0.5rem;
+
+            span {
+                font-weight: 300;
+            }
+        }
+        .breadcrumbs-link {
+            color: #848484;
+
+            opacity: 0.8;
 
             &:hover {
                 text-decoration: none;
-                color: #00d4f5;
+                opacity: 1;
             }
         }
-    }
 
-    .contact-form {
-        color: #059cd9;
+        /* Card */
+        .card {
+            padding: 1.25rem;
+            border-radius: 10px;
+        }
+
+        /* Booked lessons container */
+        .lessons-container {
+            color: #000;
+
+            h5 {
+                font-size: 1.5rem;
+                color: #059cd9;
+                margin-bottom: 0;
+            }
+
+            .lesson-price {
+                color: #f60f13;
+                margin-top: auto;
+            }
+
+            /* Button vertical display */
+            .button-display {
+                align-items: center;
+                align-content: center;
+                display: flex;
+            }
+        }
+        /* Buttons */
+        .btn {
+            width: 100%;
+            border: 1px solid #00d4f5;
+            color: #00d4f5;
+
+            &:active,
+            &:focus {
+                color: #fff;
+            }
+        }
+
         &:hover {
             text-decoration: none;
         }
-    }
 
-    .email {
-        font-weight: 400;
-        color: #059cd9;
-    }
+        .hvr-bounce-to-right {
+            -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+        }
 
-    /* Footer style */
-    footer {
-        flex-shrink: none;
+        .hvr-bounce-to-right:hover {
+            color: #fff !important;
+        }
+
+        .hvr-bounce-to-right:before {
+            background: #00d4f5;
+            border: 1px solid #fff;
+            border-radius: inherit;
+        }
     }
+}
+/* Footer style */
+footer {
+    flex-shrink: none;
 }
 
 @media (max-width: 420px) {
