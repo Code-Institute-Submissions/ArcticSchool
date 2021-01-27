@@ -48,16 +48,8 @@
 @import "includes/toasts.scss";
 @import "includes/you-might-like.scss";
 
-/* --------------------------------------------------------------------------------- MANAGEMENET BASE AND PAGES ----- */
-@import "management/mgmt-base.scss";
-/* ------------------------------------------------------------ HOME ----- */
-@import "management/mgmt-home.scss";
-/* ------------------------------------------------------------ LESSONS ----- */
-@import "management/mgmt-lessons.scss";
-/* ------------------------------------------------------------ TEAM ----- */
-@import "management/mgmt-team.scss";
-/* ------------------------------------------------------------ RESORTS ----- */
-@import "management/mgmt-resorts.scss";
+/* --------------------------------------------------------------------------------- MANAGEMENET ----- */
+@import "management/management-main.scss";
 
 /* --------------------------------------------------------------------------------- FOOTER MAIN ----- */
 @import "components/footer/footer.scss";
