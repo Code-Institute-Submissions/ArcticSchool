@@ -34,10 +34,10 @@
                 <div class="dropdown-content shadow-sm">
                     <!-- When user is logged in -->
                     {% if request.user.is_authenticated %}
-                        <h6 class="text-uppercase booking">Booking</h6>
-                        <a href="{% url 'bookings_active' %}">Active</a>
-                        <a href="{% url 'bookings_archived' %}">Archived</a>
-                        <hr>
+                    <h6 class="text-uppercase booking">Booking</h6>
+                    <a href="{% url 'bookings_active' %}">Active</a>
+                    <a href="{% url 'bookings_archived' %}">Archived</a>
+                    <hr>
                         <!-- If user has super powers - administrator -->
                         {% if request.user.is_superuser %}
                             <h6 class="text-uppercase">Management</h6>
@@ -51,20 +51,21 @@
                             <a href="">Level Cards</a>
                             <a href="">Social Media</a>
                             <hr>
-                            <!-- Logout button -->
-                            <a href="#" class="dropdown-item">
-                                <form method="post" action="{% url 'account_logout' %}">
-                                    {% csrf_token %}
-                                    {% if redirect_field_value %}
-                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                                    {% endif %}
-                                    <button type="submit">Logout</button>
-                                </form>
-                            </a>
                         {% endif %}
+                    <!-- Logout button -->
+                        <a href="#" class="dropdown-item">
+                            <form method="post" action="{% url 'account_logout' %}">
+                                {% csrf_token %}
+                                {% if redirect_field_value %}
+                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                {% endif %}
+                                    <button type="submit">Logout</button>
+                            </form>
+                        </a>
                     <!-- When user is not logged in -->
                     {% else %}
-                        <a href="{% url 'account_login' %}?next={{ request.path }}" class="dropdown-item login-font">Login</a>
+                        <a href="{% url 'account_login' %}?next={{ request.path }}"
+                            class="dropdown-item login-font">Login</a>
                         <a href="{% url 'account_signup' %}?next={{ 'account' }}" class="dropdown-item">Register</a>
                     {% endif %}
                 </div>
