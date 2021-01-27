@@ -13,9 +13,12 @@
     {% elif 'archived' in request.META.HTTP_REFERER %}
     <a href="{{ request.META.HTTP_REFERER }}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i>
         Back to Archived Bookings</a>
-    {% else %}
+    {% elif 'account' in request.META.HTTP_REFERER %}
     <a href="{{ request.META.HTTP_REFERER }}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i>
         Back to Account Page</a>
+    {% else %}
+    <a href="{{ request.META.HTTP_REFERER }}" class="breadcrumbs-link"><i class="fas fa-chevron-left"></i>
+        Go Back</a>
     {% endif %}
 
     <!-- Main container -->
@@ -44,7 +47,7 @@
         <!-- Booked Lessons from Order -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
             <div class="card shadow-sm">
-                <h4>You have booked this lesson/s</h4>
+                <h4>Lesson{% if lessons_count != 1 %}s{% endif %} you booked</h4>
                 {% for item in order.lineitems.all %}
                 <div class="lessons-container mt-2">
                     <div class="row">
