@@ -1,6 +1,8 @@
+""" A views for Team App """
 from django.shortcuts import render
-from .models import InstructorProfile
 from home.models import SocialIcon
+from .models import InstructorProfile
+
 # Create your views here.
 
 
@@ -16,3 +18,12 @@ def team(request):
     }
 
     return render(request, 'team/team.html', context)
+
+
+def instructors_management(request):
+    """ A view to manage instructors cards """
+
+    template = "resorts/mgmt-team.html"
+    context = {}
+
+    return render(request, template, context)

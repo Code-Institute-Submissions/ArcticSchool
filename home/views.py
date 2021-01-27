@@ -17,3 +17,28 @@ def index(request):
     }
 
     return render(request, 'home/index.html', context)
+
+def lessons_cards_management(request):
+    """ A view to manage lessons cards - why our lessons """
+
+    template = "home/mgmt-lessons-cards.html"
+    context = {}
+
+    return render(request, template, context)
+
+
+def level_cards_management(request):
+    """ A view to manage level cards """
+
+    template = "home/mgmt-level-cards.html"
+    context = {}
+
+    return render(request, template, context)
+
+def social_media_management(request):
+    """ A view to manage social media """
+
+    template = "home/mgmt-social-media.html"
+    context = {}
+
+    return render(request, template, context)

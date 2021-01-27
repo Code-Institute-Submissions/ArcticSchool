@@ -73,3 +73,21 @@ def lesson(request, lesson_id):
     }
 
     return render(request, 'lessons/lesson.html', context)
+
+
+def categories_management(request):
+    """ A view to manage lessons categoires """
+
+    template = "lessons/mgmt-categories.html"
+    context = {}
+
+    return render(request, template, context)
+
+
+def lessons_management(request):
+    """ A view to manage lessons """
+
+    template = "lessons/mgmt-lessons.html"
+    context = {}
+
+    return render(request, template, context)
