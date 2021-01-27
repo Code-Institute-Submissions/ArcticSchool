@@ -19,6 +19,7 @@ def resorts(request):
     return render(request, 'resorts/resorts.html', context)
 
 
+# Resorts Management
 @staff_member_required
 def resorts_management(request):
     """ A view to manage resorts """
@@ -27,3 +28,30 @@ def resorts_management(request):
     context = {}
 
     return render(request, template, context)
+
+
+@staff_member_required
+def add_resorts_management(request):
+    """ Management view to add resort """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+@staff_member_required
+def edit_resorts_management(request, resort_id):
+    """ Management view to edit resort """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+@staff_member_required
+def remove_resorts_management(request, resort_id):
+    """ Management view to remove resort """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)

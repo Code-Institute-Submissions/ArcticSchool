@@ -76,6 +76,7 @@ def lesson(request, lesson_id):
     return render(request, 'lessons/lesson.html', context)
 
 
+# Categories Management
 @staff_member_required
 def categories_management(request):
     """ A view to manage lessons categoires """
@@ -87,6 +88,34 @@ def categories_management(request):
 
 
 @staff_member_required
+def add_categories_management(request):
+    """ Management view to add lesson category """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+@staff_member_required
+def edit_categories_management(request, category_id):
+    """ Management view to edit lessons category """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+@staff_member_required
+def remove_categories_management(request, category_id):
+    """ Management view to remove lessons category """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+# Lessons Management
+@staff_member_required
 def lessons_management(request):
     """ A view to manage lessons """
 
@@ -94,3 +123,30 @@ def lessons_management(request):
     context = {}
 
     return render(request, template, context)
+
+
+@staff_member_required
+def add_lessons_management(request):
+    """ Management view to add lessons """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+@staff_member_required
+def edit_lessons_management(request, lesson_id):
+    """ Management view to edit lessons """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
+
+
+@staff_member_required
+def remove_lessons_management(request, lesson_id):
+    """ Management view to remove lessons """
+
+    template = "./management/management-forms.html"
+
+    return render(request, template)
