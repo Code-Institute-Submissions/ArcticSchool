@@ -58,6 +58,10 @@
                 font-weight: 300;
                 margin: 0;
             }
+            
+            .title {
+                font-weight: 400;
+            }
 
             .table-line {
                 display: flex;
@@ -122,6 +126,13 @@
     /* Footer */
     footer {
         flex-shrink: none;
+    }
+}
+
+
+@media (max-width: 576px){
+    .buttons-space {
+        margin-top: 10px;
     }
 }
 
