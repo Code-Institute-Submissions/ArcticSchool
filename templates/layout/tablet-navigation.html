@@ -31,15 +31,15 @@
                         <!-- If user has super powers - administrator -->
                         {% if request.user.is_superuser %}
                             <h6 class="text-uppercase">Management</h6>
-                            <a href="">Categories</a>
-                            <a href="">Lessons</a>
-                            <a href="">Instructors</a>
-                            <a href="">Resorts</a>
+                            <a href="{% url 'categories_management' %}">Categories</a>
+                            <a href="{% url 'lessons_management' %}">Lessons</a>
+                            <a href="{% url 'instructors_management' %}">Instructors</a>
+                            <a href="{% url 'resorts_management' %}">Resorts</a>
                             <hr>
                             <h6 class="text-uppercase">Home Page</h6>
-                            <a href="">Lessons Cards</a>
-                            <a href="">Level Cards</a>
-                            <a href="">Social Media</a>
+                            <a href="{% url 'lessons_cards_management' %}">Lessons Cards</a>
+                            <a href="{% url 'level_cards_management' %}">Level Cards</a>
+                            <a href="{% url 'social_media_management' %}">Social Media</a>
                             <hr>
                             <!-- Logout button -->
                             <a href="#" class="dropdown-item">
