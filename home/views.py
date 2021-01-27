@@ -1,6 +1,7 @@
 """ Views for Home App"""
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
 from .models import LevelCard, LessonCard, SocialIcon
 
 
@@ -53,9 +54,11 @@ def edit_lessons_cards_management(request, card_id):
 def remove_lessons_cards_management(request, card_id):
     """ Management view to remove card """
 
-    template = "./management/management-forms.html"
+    lesson_card = get_object_or_404(LessonCard, pk=card_id)
+    lesson_card.delete()
+    messages.success(request, 'Lesson card removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('social_media_management'))
 
 
 # Level Cards Management
@@ -88,12 +91,14 @@ def edit_level_cards_management(request, level_id):
 
 
 @staff_member_required
-def remove_level_cards_management(request, levevl_id):
+def remove_level_cards_management(request, level_id):
     """ Management view to remove level card """
 
-    template = "./management/management-forms.html"
+    level_card = get_object_or_404(LevelCard, pk=level_id)
+    level_card.delete()
+    messages.success(request, 'Level card removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('social_media_management'))
 
 
 # Social Media Management
@@ -133,6 +138,8 @@ def edit_social_media_management(request, social_id):
 def remove_social_media_management(request, social_id):
     """ Management view to remove social media """
 
-    template = "./management/management-forms.html"
+    social_media_icon = get_object_or_404(SocialIcon, pk=social_id)
+    social_media_icon.delete()
+    messages.success(request, 'Social media icon removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('social_media_management'))
