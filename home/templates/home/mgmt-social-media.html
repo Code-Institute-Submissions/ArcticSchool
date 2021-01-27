@@ -5,9 +5,55 @@
 
 {% block content %}
 
-<!-- -->
-<div class="" role="main">
-
+<!-- Social media main container -->
+<div class="social-media-container" role="main">
+    <div class="container py-4">
+        <!-- Page title, promo text, 'Add +' button -->
+        <h1 class="mt-1 mb-4 text-left">Management</h1>
+        <div class="card shadow-sm">
+            <h2 class="text-left">Social Media</h2>
+            <p class="info-text">Choose from 8 available social media icons, add your url address and enjoy your
+                beautiful social media icons across whole website!</p>
+            <!-- Table headers container -->
+            <div class="row table-headers mt-4">
+                <!-- Add new element button-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <a href="{% url 'add_social_media_management' %}" class="btn hvr-bounce-to-right add-new-button">Add
+                        +</a>
+                </div>
+            </div>
+            <hr>
+            <!-- Table results container -->
+            <div class="row table-results">
+                {% for social in socials %}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="row table-line">
+                        <div class="col-xs-12 col-sm-6  col-md-8 col-lg-8 col-xl-8">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <p>{{ social.name }}</p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    {% if social.url %}
+                                    <p>{{ social.url }}</p>
+                                    {% else %}
+                                    <p> - </p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between">
+                            <a href="{% url 'edit_social_media_management' social.id %}"
+                                class="btn hvr-bounce-to-right">Edit</a>
+                            <a href="{% url 'remove_social_media_management' social.id %}"
+                                class="btn hvr-bounce-to-right red-button">Remove</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Footer -->
 <div class="mt-auto">
