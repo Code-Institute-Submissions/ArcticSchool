@@ -11,7 +11,8 @@
         <h1 class="mt-1 mb-4 text-left">Management - Home</h1>
         <div class="card shadow-sm">
             <h2 class="text-left">Level Cards</h2>
-            <p class="info-text">Add as many level cards as you want! Choose wisely, levels are part of lesson you are going to offer for clients.</p>
+            <p class="info-text">Add as many level cards as you want! Choose wisely, levels are part of lesson you are
+                going to offer for clients.</p>
             <!-- Table headers container -->
             <div class="row table-headers mt-4">
                 <!-- Add new element button-->
@@ -36,13 +37,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between buttons-space">
+                        <div
+                            class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between buttons-space">
                             <a href="{% url 'edit_level_cards_management' card.id %}"
                                 class="btn hvr-bounce-to-right">Edit</a>
                             <a href="{% url 'remove_level_cards_management' card.id %}"
                                 class="btn hvr-bounce-to-right red-button">Remove</a>
                         </div>
                     </div>
+                    <!-- Don't display separate line after last lessons displayed -->
+                    {% if forloop.last != True %}
+                    <hr>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>

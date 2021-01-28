@@ -37,18 +37,23 @@
                                     {% if social.url %}
                                     <p>{{ social.url }}</p>
                                     {% else %}
-                                    <p> - </p>
+                                    <p> No Url address provided </p>
                                     {% endif %}
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between buttons-space">
+                        <div
+                            class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between buttons-space">
                             <a href="{% url 'edit_social_media_management' social.id %}"
                                 class="btn hvr-bounce-to-right">Edit</a>
                             <a href="{% url 'remove_social_media_management' social.id %}"
                                 class="btn hvr-bounce-to-right red-button">Remove</a>
                         </div>
                     </div>
+                    <!-- Don't display separate line after last lessons displayed -->
+                    {% if forloop.last != True %}
+                    <hr>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
