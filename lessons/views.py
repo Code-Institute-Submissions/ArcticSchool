@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
 from .models import Category, Lesson
+from .forms import CategoriesForm, LessonsForm
 
 
 def lessons(request):
@@ -98,25 +99,47 @@ def categories_management(request):
 def add_categories_management(request):
     """ Management view to add lesson category """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = CategoriesForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Category added uccessfully!')
+            return redirect(reverse('categories_management'))
+        else:
+            messages.error(
+                request, 'Adding new category faild. Please ensure the form is valid.')
+    else:
+        form = CategoriesForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
 def edit_categories_management(request, category_id):
     """ Management view to edit lessons category """
 
+    category = get_object_or_404(Category, pk=category_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'category': category,
+        'socials': social,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
 def remove_categories_management(request, category_id):
     """ Management view to remove lessons category """
 
-    category = get_object_or_404(Resort, pk=category_id)
+    category = get_object_or_404(Category, pk=category_id)
     category.delete()
     messages.success(request, 'Category removed successfully!')
 
@@ -144,25 +167,47 @@ def lessons_management(request):
 def add_lessons_management(request):
     """ Management view to add lessons """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = LessonsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Lesson added uccessfully!')
+            return redirect(reverse('lessons_management'))
+        else:
+            messages.error(
+                request, 'Adding new lesson faild. Please ensure the form is valid.')
+    else:
+        form = LessonsForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
 def edit_lessons_management(request, lesson_id):
     """ Management view to edit lessons """
 
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'lesson': lesson,
+        'socials': social,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
 def remove_lessons_management(request, lesson_id):
     """ Management view to remove lessons """
 
-    lesson = get_object_or_404(Resort, pk=lesson_id)
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
     lesson.delete()
     messages.success(request, 'Lesson removed successfully!')
 
