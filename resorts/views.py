@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 from home.models import SocialIcon
+from resorts.forms import ResortForm
 from .models import Resort
 
 
@@ -41,18 +42,40 @@ def resorts_management(request):
 def add_resorts_management(request):
     """ Management view to add resort """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = ResortForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Resort added uccessfully!')
+            return redirect(reverse('resorts_management'))
+        else:
+            messages.error(
+                request, 'Adding new resort faild. Please ensure the form is valid.')
+    else:
+        form = ResortForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
 def edit_resorts_management(request, resort_id):
     """ Management view to edit resort """
 
+    resort = get_object_or_404(Resort, pk=resort_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'resort': resort,
+        'socials': social,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required

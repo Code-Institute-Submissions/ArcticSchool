@@ -1,11 +1,10 @@
 """ A views for Team App """
-from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from home.models import SocialIcon
+from team.forms import InstructorProfileForm
 from .models import InstructorProfile
-
-# Create your views here.
 
 
 def team(request):
@@ -32,8 +31,8 @@ def instructors_management(request):
 
     template = "team/mgmt-team.html"
     context = {
-        'instructors':instructors,
-        'socials':social,
+        'instructors': instructors,
+        'socials': social,
     }
 
     return render(request, template, context)
@@ -43,18 +42,42 @@ def instructors_management(request):
 def add_instructors_management(request):
     """ Management view to add instructor """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = InstructorProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Instructor profile card added uccessfully!')
+            return redirect(reverse('instructors_management'))
+        else:
+            messages.error(
+                request, 'Adding new Instructor profile card faild. \
+                Please ensure the form is valid.')
+    else:
+        form = InstructorProfileForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
 def edit_instructors_management(request, instructor_id):
     """ Management view to edit instructor """
 
+    instructor = get_object_or_404(InstructorProfile, pk=instructor_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'instructor': instructor,
+        'socials': social,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required

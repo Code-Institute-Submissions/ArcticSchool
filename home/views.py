@@ -51,9 +51,16 @@ def add_lessons_cards_management(request):
 def edit_lessons_cards_management(request, card_id):
     """ Management view to edit card """
 
+    lesson_card = get_object_or_404(LessonCard , pk=card_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'lesson_card': lesson_card,
+        'socials':social,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
@@ -62,7 +69,7 @@ def remove_lessons_cards_management(request, card_id):
 
     lesson_card = get_object_or_404(LessonCard, pk=card_id)
     lesson_card.delete()
-    messages.success(request, 'Lesson card removed successfully!')
+    messages.success(request, 'Why Our Lessons card removed successfully!')
 
     return redirect(reverse('lessons_cards_management'))
 
@@ -97,9 +104,16 @@ def add_level_cards_management(request):
 def edit_level_cards_management(request, level_id):
     """ Management view to edit level card """
 
+    level_card = get_object_or_404(LevelCard, pk=level_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'level_card': level_card,
+        'socials':social,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
@@ -141,12 +155,19 @@ def add_social_media_management(request):
 def edit_social_media_management(request, social_id):
     """ Management view to edit social media """
 
+    social_icon = get_object_or_404(SocialIcon, pk=social_id)
+    social = SocialIcon.objects.all()
     template = "./management/management-forms.html"
 
-    return render(request, template)
+    context = {
+        'social_icon': social_icon,
+        'socials':social,
+    }
+
+    return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def remove_social_media_management(request, social_id):
     """ Management view to remove social media """
 
