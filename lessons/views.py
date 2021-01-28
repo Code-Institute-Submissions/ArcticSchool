@@ -103,11 +103,11 @@ def add_categories_management(request):
         form = CategoriesForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Category added uccessfully!')
+            messages.success(request, 'Category added successfully!')
             return redirect(reverse('categories_management'))
         else:
             messages.error(
-                request, 'Adding new category faild. Please ensure the form is valid.')
+                request, 'Adding new category failed. Please ensure the form is valid.')
     else:
         form = CategoriesForm()
 
@@ -124,12 +124,24 @@ def edit_categories_management(request, category_id):
     """ Management view to edit lessons category """
 
     category = get_object_or_404(Category, pk=category_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = CategoriesForm(request.POST, instance=category)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Category edited successfully!')
+            return redirect(reverse('categories_management'))
+        else:
+            messages.error(
+                request, 'Editing category failed. \
+                Please ensure the form is valid.')
+    else:
+        form = CategoriesForm(instance=category)
 
+    template = "./management/management-forms.html"
     context = {
+        'form': form,
         'category': category,
-        'socials': social,
     }
 
     return render(request, template, context)
@@ -168,14 +180,14 @@ def add_lessons_management(request):
     """ Management view to add lessons """
 
     if request.method == 'POST':
-        form = LessonsForm(request.POST)
+        form = LessonsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Lesson added uccessfully!')
+            messages.success(request, 'Lesson added successfully!')
             return redirect(reverse('lessons_management'))
         else:
             messages.error(
-                request, 'Adding new lesson faild. Please ensure the form is valid.')
+                request, 'Adding new lesson failed. Please ensure the form is valid.')
     else:
         form = LessonsForm()
 
@@ -192,12 +204,24 @@ def edit_lessons_management(request, lesson_id):
     """ Management view to edit lessons """
 
     lesson = get_object_or_404(Lesson, pk=lesson_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = LessonsForm(request.POST, request.FILES, instance=lesson)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Lesson edited successfully!')
+            return redirect(reverse('lessons_management'))
+        else:
+            messages.error(
+                request, 'Editing Lesson failed. \
+                Please ensure the form is valid.')
+    else:
+        form = LessonsForm(instance=lesson)
 
+    template = "./management/management-forms.html"
     context = {
+        'form': form,
         'lesson': lesson,
-        'socials': social,
     }
 
     return render(request, template, context)

@@ -40,18 +40,18 @@ def instructors_management(request):
 
 @staff_member_required
 def add_instructors_management(request):
-    """ Management view to add instructor """
+    """ Management view to add instructor card """
 
     if request.method == 'POST':
-        form = InstructorProfileForm(request.POST)
+        form = InstructorProfileForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(
-                request, 'Instructor profile card added uccessfully!')
+                request, 'Instructor Profile card added successfully!')
             return redirect(reverse('instructors_management'))
         else:
             messages.error(
-                request, 'Adding new Instructor profile card faild. \
+                request, 'Adding new Instructor Profile Card failed. \
                 Please ensure the form is valid.')
     else:
         form = InstructorProfileForm()
@@ -66,15 +66,28 @@ def add_instructors_management(request):
 
 @staff_member_required
 def edit_instructors_management(request, instructor_id):
-    """ Management view to edit instructor """
+    """ Management view to edit instructor card """
 
     instructor = get_object_or_404(InstructorProfile, pk=instructor_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = InstructorProfileForm(
+            request.POST, request.FILES, instance=instructor)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Instructor Profile Card edited successfully!')
+            return redirect(reverse('instructors_management'))
+        else:
+            messages.error(
+                request, 'Editing Instructor Profile card failed. \
+                Please ensure the form is valid.')
+    else:
+        form = InstructorProfileForm(instance=instructor)
 
+    template = "./management/management-forms.html"
     context = {
+        'form': form,
         'instructor': instructor,
-        'socials': social,
     }
 
     return render(request, template, context)
@@ -82,10 +95,10 @@ def edit_instructors_management(request, instructor_id):
 
 @staff_member_required
 def remove_instructors_management(request, instructor_id):
-    """ Management view to remove instructor """
+    """ Management view to remove instructor card """
 
     instructor_profile = get_object_or_404(InstructorProfile, pk=instructor_id)
     instructor_profile.delete()
-    messages.success(request, 'Instructor card removed successfully!')
+    messages.success(request, 'Instructor Card removed successfully!')
 
     return redirect(reverse('instructors_management'))

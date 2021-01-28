@@ -1,10 +1,9 @@
 """ Views for Home App"""
-from home.forms import LessonCardsForm, LevelCardsForm, SocialMediaIconsForm
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
+from home.forms import LessonCardsForm, LevelCardsForm, SocialMediaIconsForm
 from .models import LevelCard, LessonCard, SocialIcon
-
 
 def index(request):
     """ A view to return index page """
@@ -47,11 +46,11 @@ def add_lessons_cards_management(request):
         form = LessonCardsForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Why Our Lesson Card added uccessfully!')
+            messages.success(request, 'Why Our Lesson Card added successfully!')
             return redirect(reverse('lessons_cards_management'))
         else:
             messages.error(
-                request, 'Adding new why our lesson card faild. Please ensure the form is valid.')
+                request, 'Adding Why Our Lesson Card failed. Please ensure the form is valid.')
     else:
         form = LessonCardsForm()
 
@@ -67,13 +66,25 @@ def add_lessons_cards_management(request):
 def edit_lessons_cards_management(request, card_id):
     """ Management view to edit card """
 
-    lesson_card = get_object_or_404(LessonCard , pk=card_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    card = get_object_or_404(LessonCard, pk=card_id)
+    if request.method == 'POST':
+        form = LessonCardsForm(request.POST, request.FILES, instance=card)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Why Our Lesson Card edited successfully!')
+            return redirect(reverse('lessons_cards_management'))
+        else:
+            messages.error(
+                request, 'Editing Why Our Lesson Card failed. \
+                Please ensure the form is valid.')
+    else:
+        form = LessonCardsForm(instance=card)
 
+    template = "./management/management-forms.html"
     context = {
-        'lesson_card': lesson_card,
-        'socials':social,
+        'form': form,
+        'card':card,
     }
 
     return render(request, template, context)
@@ -85,7 +96,7 @@ def remove_lessons_cards_management(request, card_id):
 
     lesson_card = get_object_or_404(LessonCard, pk=card_id)
     lesson_card.delete()
-    messages.success(request, 'Why Our Lessons card removed successfully!')
+    messages.success(request, 'Why Our Lessons Card removed successfully!')
 
     return redirect(reverse('lessons_cards_management'))
 
@@ -115,11 +126,11 @@ def add_level_cards_management(request):
         form = LevelCardsForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Level Card added uccessfully!')
+            messages.success(request, 'Level Card added successfully!')
             return redirect(reverse('level_cards_management'))
         else:
             messages.error(
-                request, 'Adding new level card faild. Please ensure the form is valid.')
+                request, 'Adding Level Card failed. Please ensure the form is valid.')
     else:
         form = LevelCardsForm()
 
@@ -135,13 +146,25 @@ def add_level_cards_management(request):
 def edit_level_cards_management(request, level_id):
     """ Management view to edit level card """
 
-    level_card = get_object_or_404(LevelCard, pk=level_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    level = get_object_or_404(LevelCard, pk=level_id)
+    if request.method == 'POST':
+        form = LevelCardsForm(request.POST, request.FILES, instance=level)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Level Card edited successfully!')
+            return redirect(reverse('level_cards_management'))
+        else:
+            messages.error(
+                request, 'Editing Level Card failed. \
+                Please ensure the form is valid.')
+    else:
+        form = LevelCardsForm(instance=level)
 
+    template = "./management/management-forms.html"
     context = {
-        'level_card': level_card,
-        'socials':social,
+        'form': form,
+        'level':level,
     }
 
     return render(request, template, context)
@@ -153,7 +176,7 @@ def remove_level_cards_management(request, level_id):
 
     level_card = get_object_or_404(LevelCard, pk=level_id)
     level_card.delete()
-    messages.success(request, 'Level card removed successfully!')
+    messages.success(request, 'Level Card removed successfully!')
 
     return redirect(reverse('level_cards_management'))
 
@@ -181,7 +204,7 @@ def add_social_media_management(request):
         form = SocialMediaIconsForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Social Media Icon added uccessfully!')
+            messages.success(request, 'Social Media Icon added successfully!')
             return redirect(reverse('social_media_management'))
         else:
             messages.error(
@@ -201,13 +224,25 @@ def add_social_media_management(request):
 def edit_social_media_management(request, social_id):
     """ Management view to edit social media """
 
-    social_icon = get_object_or_404(SocialIcon, pk=social_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    social = get_object_or_404(SocialIcon, pk=social_id)
+    if request.method == 'POST':
+        form = SocialMediaIconsForm(request.POST, instance=social)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Social media icon edited successfully!')
+            return redirect(reverse('social_media_management'))
+        else:
+            messages.error(
+                request, 'Editing social media icon failed. \
+                Please ensure the form is valid.')
+    else:
+        form = SocialMediaIconsForm(instance=social)
 
+    template = "./management/management-forms.html"
     context = {
-        'social_icon': social_icon,
-        'socials':social,
+        'form': form,
+        'social':social,
     }
 
     return render(request, template, context)

@@ -43,14 +43,14 @@ def add_resorts_management(request):
     """ Management view to add resort """
 
     if request.method == 'POST':
-        form = ResortForm(request.POST)
+        form = ResortForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Resort added uccessfully!')
+            messages.success(request, 'Resort added successfully!')
             return redirect(reverse('resorts_management'))
         else:
             messages.error(
-                request, 'Adding new resort faild. Please ensure the form is valid.')
+                request, 'Adding new resort failed. Please ensure the form is valid.')
     else:
         form = ResortForm()
 
@@ -67,12 +67,24 @@ def edit_resorts_management(request, resort_id):
     """ Management view to edit resort """
 
     resort = get_object_or_404(Resort, pk=resort_id)
-    social = SocialIcon.objects.all()
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = ResortForm(request.POST, request.FILES, instance=resort)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, 'Resort edited successfully!')
+            return redirect(reverse('resorts_management'))
+        else:
+            messages.error(
+                request, 'Editing Resort failed. \
+                Please ensure the form is valid.')
+    else:
+        form = ResortForm(instance=resort)
 
+    template = "./management/management-forms.html"
     context = {
+        'form': form,
         'resort': resort,
-        'socials': social,
     }
 
     return render(request, template, context)
