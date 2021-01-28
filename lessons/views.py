@@ -1,7 +1,8 @@
 """ Views Lessons App """
 import random
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
-from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
 from django.db.models.functions import Lower
 from resorts.models import Resort
 from home.models import SocialIcon, LevelCard
@@ -109,9 +110,11 @@ def edit_categories_management(request, category_id):
 def remove_categories_management(request, category_id):
     """ Management view to remove lessons category """
 
-    template = "./management/management-forms.html"
+    category = get_object_or_404(Resort, pk=category_id)
+    category.delete()
+    messages.success(request, 'Category removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('categories_management'))
 
 
 # Lessons Management
@@ -147,6 +150,8 @@ def edit_lessons_management(request, lesson_id):
 def remove_lessons_management(request, lesson_id):
     """ Management view to remove lessons """
 
-    template = "./management/management-forms.html"
+    lesson = get_object_or_404(Resort, pk=lesson_id)
+    lesson.delete()
+    messages.success(request, 'Lesson removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('lessons_management'))
