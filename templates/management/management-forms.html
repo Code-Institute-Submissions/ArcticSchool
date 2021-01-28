@@ -4,14 +4,48 @@
 {% block extra_title %}
 {% include 'management/titles.html' %}
 {% endblock %}
-
 {% block content %}
 
-<!--  -->
-<div class="" role="main">
+<div class="mgmt-forms" role="main">
+    <!-- Forms main container -->
+    <div class="container py-4">
+        <!-- Page title -->
+        <h1 class="mt-1 mb-4 text-left">Management</h1>
+        <div class="card shadow-sm">
+            <h2 class="text-left">
+                {% include 'management/main-title.html' %}
+            </h2>
+            <p class="info-text">
+                {% if '/edit' in request.path %}
+                {% include 'management/info-texts-edit.html' %}
+                {% else %}
+                Remember to fill as many fields as possible.<br>
+                Required fields are must.
+                {% endif %}
+            </p>
+            <hr>
+            <!-- Edit container -->
+            <div class="forms-container">
+                <!-- Form -->
+                {% if '/edit' in request.path %}
+                <!-- Include edit forms -->
+                <div class="edit-forms">
+                    {% include 'management/forms/edit-forms.html' %}
+                </div>
+                {% else %}
+                <!-- Include add forms -->
+                <div class="add-forms">
+                    {% include 'management/forms/add-forms.html' %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
+
 <!-- Footer -->
 <div class="mt-auto">
     {% include 'layout/footer.html' %}
+</div>
 </div>
 {% endblock %}
