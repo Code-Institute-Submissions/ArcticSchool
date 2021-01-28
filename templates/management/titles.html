@@ -1,0 +1,38 @@
+{% if 'categories/add' in request.path %}
+| Management - Categories | Add+
+{% elif 'categories/edit' in request.path %}
+| Management - Categories | Edit
+
+{% elif 'lessons/add' in request.path %}
+| Management - Lessons | Add+
+{% elif 'lessons/edit' in request.path %}
+| Management - Lessons | Edit
+
+{% elif 'instructors/add' in request.path %}
+| Management - Instructors | Add+
+{% elif 'instructors/edit' in request.path %}
+| Management - Instructors | Edit
+
+{% elif 'resorts/add' in request.path %}
+| Management - Resorts | Add+
+{% elif 'resorts/edit' in request.path %}
+| Management - Resorts | Edit
+
+{% elif 'lessons-cards/add' in request.path %}
+| Management - Lessons Cards | Add+
+{% elif 'lessons-cards/edit' in request.path %}
+| Management - Lessons Cards | Edit
+
+{% elif 'level-cards/add' in request.path %}
+| Management - Level Cards | Add+
+{% elif 'level-cards/edit' in request.path %}
+| Management - Level Cards | Edit
+
+{% elif 'social-media/add' in request.path %}
+| Management - Social Media | Add+
+{% elif 'social-media/edit' in request.path %}
+| Management - Social Media | Edit
+
+{% else %}
+| Error !
+{% endif %}
