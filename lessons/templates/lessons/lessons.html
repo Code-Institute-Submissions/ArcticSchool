@@ -44,11 +44,11 @@
                                         class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}"
                                         href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
                                 </li>
-                                {% for category in categories|dictsort:"order" %}
+                                {% for category in categories %}
                                 <li class="category-li">
                                     <a class="category-link shadow-sm" id="{{ category.name }}"
                                         href="{% url 'lessons' %}?category={{ category.name }}">
-                                        {{category.friendly_name }}
+                                        {{ category.name }}
                                     </a>
                                 </li>
                                 {% endfor %}
