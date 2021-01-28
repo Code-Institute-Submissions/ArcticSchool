@@ -1,5 +1,5 @@
 {% if 'categories/edit' in request.path %}
-You are currently editing {{ category.name|title }} category
+You are currently editing {{ category.friendly_name|title }} category
 
 {% elif 'lessons/edit' in request.path %}
 You are currently editing {{ lesson.name|title }} lesson
