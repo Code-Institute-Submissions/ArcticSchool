@@ -1,6 +1,7 @@
 """ A views for Team App """
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
 from home.models import SocialIcon
 from .models import InstructorProfile
 
@@ -26,8 +27,14 @@ def team(request):
 def instructors_management(request):
     """ A view to manage instructors cards """
 
+    instructors = InstructorProfile.objects.all()
+    social = SocialIcon.objects.all()
+
     template = "team/mgmt-team.html"
-    context = {}
+    context = {
+        'instructors':instructors,
+        'socials':social,
+    }
 
     return render(request, template, context)
 
@@ -54,6 +61,8 @@ def edit_instructors_management(request, instructor_id):
 def remove_instructors_management(request, instructor_id):
     """ Management view to remove instructor """
 
-    template = "./management/management-forms.html"
+    instructor_profile = get_object_or_404(InstructorProfile, pk=instructor_id)
+    instructor_profile.delete()
+    messages.success(request, 'Instructor card removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('instructors_management'))
