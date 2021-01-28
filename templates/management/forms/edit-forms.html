@@ -1,16 +1,138 @@
 {% if 'categories/edit' in request.path %}
-
+<!-- Categories Form -->
+<form action="{% url 'edit_categories_management' category.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.name | as_crispy_field }}
+    {{ form.friendly_name | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 {% elif 'lessons/edit' in request.path %}
-
+<!-- Lessons Form -->
+<form action="{% url 'edit_lessons_management' lesson.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.image | as_crispy_field }}
+    {{ form.name | as_crispy_field }}
+    {{ form.category | as_crispy_field }}
+    {{ form.level | as_crispy_field }}
+    {{ form.description | as_crispy_field }}
+    {{ form.start_date | as_crispy_field }}
+    {{ form.end_date | as_crispy_field }}
+    {{ form.start_time | as_crispy_field }}
+    {{ form.end_time | as_crispy_field }}
+    {{ form.participants | as_crispy_field }}
+    {{ form.resort | as_crispy_field }}
+    {{ form.price | as_crispy_field }}
+    {{ form.supper_offer | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 {% elif 'instructors/edit' in request.path %}
-
+<!-- Instructor Profiles Cards Form -->
+<form action="{% url 'edit_instructors_management' instructor.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.image | as_crispy_field }}
+    {{ form.name | as_crispy_field }}
+    {{ form.age | as_crispy_field }}
+    {{ form.about | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 {% elif 'resorts/edit' in request.path %}
-
+<!-- Resorts Form -->
+<form action="{% url 'edit_resorts_management' resort.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.image | as_crispy_field }}
+    {{ form.name | as_crispy_field }}
+    {{ form.country | as_crispy_field }}
+    {{ form.about | as_crispy_field }}
+    {{ form.open_season | as_crispy_field }}
+    {{ form.top_altitude | as_crispy_field }}
+    {{ form.bottom_altitude | as_crispy_field }}
+    {{ form.resort_altitude | as_crispy_field }}
+    {{ form.levels | as_crispy_field }}
+    {{ form.instructors | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 {% elif 'lessons-cards/edit' in request.path %}
-
+<!-- Why Our Lessons Cards Form -->
+<form action="{% url 'edit_lessons_cards_management' card.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.title | as_crispy_field }}
+    {{ form.description | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 {% elif 'level-cards/edit' in request.path %}
-
+<!-- Level Cards Form -->
+<form action="{% url 'edit_level_cards_management' level.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.title | as_crispy_field }}
+    {{ form.level | as_crispy_field }}
+    {{ form.description | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 {% elif 'social-media/edit' in request.path %}
+<!-- Social Media Icon Form -->
+<form action="{% url 'edit_social_media_management' social.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.name | as_crispy_field }}
+    {{ form.icon | as_crispy_field }}
+    {{ form.url | as_crispy_field }}
+    <!-- Buttons -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button type="submit" class="btn hvr-bounce-to-right">Update</button>
+        </div>
+    </div>
+</form>
 
 {% else %}
 {% endif %}
