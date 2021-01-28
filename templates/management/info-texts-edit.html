@@ -1,0 +1,24 @@
+{% if 'categories/edit' in request.path %}
+You are currently editing {{ category.name|title }} category
+
+{% elif 'lessons/edit' in request.path %}
+You are currently editing {{ lesson.name|title }} lesson
+
+{% elif 'instructors/edit' in request.path %}
+You are currently editing {{ instructor.name|title }} card
+
+{% elif 'resorts/edit' in request.path %}
+You are currently editing {{ resort.name|title }} resort
+
+{% elif 'lessons-cards/edit' in request.path %}
+You are currently editing {{ lesson_card.title|title }} from 'Why Our Lesson Card'
+
+{% elif 'level-cards/edit' in request.path %}
+You are currently editing {{ level_card.title|title }} level card
+
+{% elif 'social-media/edit' in request.path %}
+You are currently editing {{ social_icon.name|title }} social media icon
+
+{% else %}
+You are currently trying to edit not existing element.
+{% endif %}
