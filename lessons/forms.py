@@ -68,6 +68,8 @@ class LessonsForm(forms.ModelForm):
             'image': 'Image',
         }
 
+        self.fields['name'].widget.attrs = {'rows': 1}
+        self.fields['description'].widget.attrs = {'rows': 3}
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:

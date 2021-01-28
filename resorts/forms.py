@@ -34,6 +34,8 @@ class ResortForm(forms.ModelForm):
             'image': 'Image',
         }
 
+        self.fields['about'].widget.attrs = {'rows': 3}
+        self.fields['levels'].widget.attrs = {'rows': 1}
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:

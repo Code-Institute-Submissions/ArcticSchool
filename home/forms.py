@@ -24,8 +24,9 @@ class LessonCardsForm(forms.ModelForm):
             'title': 'Title',
             'description': 'Description',
         }
-
-        self.fields['name'].widget.attrs['autofocus'] = True
+        self.fields['title'].widget.attrs = {'rows': 1}
+        self.fields['description'].widget.attrs = {'rows': 3}
+        self.fields['title'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
@@ -55,7 +56,9 @@ class LevelCardsForm(forms.ModelForm):
             'description': 'Description',
         }
 
-        self.fields['name'].widget.attrs['autofocus'] = True
+        self.fields['title'].widget.attrs = {'rows': 1}
+        self.fields['description'].widget.attrs = {'rows': 3}
+        self.fields['title'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
