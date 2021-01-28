@@ -1,6 +1,7 @@
 """ Views for Resorts App """
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
 from home.models import SocialIcon
 from .models import Resort
 
@@ -24,8 +25,14 @@ def resorts(request):
 def resorts_management(request):
     """ A view to manage resorts """
 
+    all_resorts = Resort.objects.all()
+    social = SocialIcon.objects.all()
+
     template = "resorts/mgmt-resorts.html"
-    context = {}
+    context = {
+        'resorts': all_resorts,
+        'socials': social,
+    }
 
     return render(request, template, context)
 
@@ -52,6 +59,8 @@ def edit_resorts_management(request, resort_id):
 def remove_resorts_management(request, resort_id):
     """ Management view to remove resort """
 
-    template = "./management/management-forms.html"
+    resort = get_object_or_404(Resort, pk=resort_id)
+    resort.delete()
+    messages.success(request, 'Resort removed successfully!')
 
-    return render(request, template)
+    return redirect(reverse('resorts_management'))

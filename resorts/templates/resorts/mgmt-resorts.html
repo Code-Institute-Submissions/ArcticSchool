@@ -5,9 +5,55 @@
 
 {% block content %}
 
-<!-- -->
-<div class="" role="main">
-
+<!-- Resorts main container -->
+<div class="social-media-container" role="main">
+    <div class="container py-4">
+        <!-- Page title, promo text, 'Add +' button -->
+        <h1 class="mt-1 mb-4 text-left">Management - Resorts</h1>
+        <div class="card shadow-sm">
+            <h2 class="text-left">Resorts</h2>
+            <p class="info-text">Manage our beautiful resorts and their information.</p>
+            <!-- Table headers container -->
+            <div class="row table-headers mt-4">
+                <!-- Add new element button-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <a href="{% url 'add_resorts_management' %}" class="btn hvr-bounce-to-right add-new-button">Add
+                        +</a>
+                </div>
+            </div>
+            <hr>
+            <!-- Table results container -->
+            <div class="row table-results">
+                {% for resort in resorts %}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="row table-line">
+                        <div class="col-xs-12 col-sm-6  col-md-8 col-lg-8 col-xl-8">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <p class="title">{{ resort.name }}</p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <p>{{ resort.country.name }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-between buttons-space">
+                            <a href="{% url 'edit_resorts_management' resort.id %}"
+                                class="btn hvr-bounce-to-right">Edit</a>
+                            <a href="{% url 'remove_resorts_management' resort.id %}"
+                                class="btn hvr-bounce-to-right red-button">Remove</a>
+                        </div>
+                    </div>
+                    <!-- Don't display separate line after last lessons displayed -->
+                    {% if forloop.last != True %}
+                    <hr>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Footer -->
 <div class="mt-auto">
