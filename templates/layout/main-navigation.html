@@ -34,7 +34,7 @@
                 <div class="dropdown-content shadow-sm">
                     <!-- When user is logged in -->
                     {% if request.user.is_authenticated %}
-                    <h6 class="text-uppercase booking">Booking</h6>
+                    <h6 class="text-uppercase booking">My Booking</h6>
                     <a href="{% url 'bookings_active' %}">Active</a>
                     <a href="{% url 'bookings_archived' %}">Archived</a>
                     <hr>
