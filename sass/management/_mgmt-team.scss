@@ -1,3 +1,13 @@
 /* Management Instructors page individual style */
 #instructors_management {
+    /* Additional wide button */
+    .btn-wide{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1200px){
+    .buttons-space {
+        margin-top: 10px;
+    }
 }
