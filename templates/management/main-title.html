@@ -1,0 +1,38 @@
+{% if 'categories/add' in request.path %}
+Add New Category
+{% elif 'categories/edit' in request.path %}
+Edit Category
+
+{% elif 'lessons/add' in request.path %}
+Add New Lesson
+{% elif 'lessons/edit' in request.path %}
+Edit Lesson
+
+{% elif 'instructors/add' in request.path %}
+Add New Instructors Card
+{% elif 'instructors/edit' in request.path %}
+Edit Instructors Card
+
+{% elif 'resorts/add' in request.path %}
+Add New Resort
+{% elif 'resorts/edit' in request.path %}
+Edit Resort
+
+{% elif 'lessons-cards/add' in request.path %}
+Add New Why Our Lessons Card
+{% elif 'lessons-cards/edit' in request.path %}
+Edit Why Our Lessons Card
+
+{% elif 'level-cards/add' in request.path %}
+Add New Level Card
+{% elif 'level-cards/edit' in request.path %}
+Edit Level Card
+
+{% elif 'social-media/add' in request.path %}
+Add New Social Media Icon
+{% elif 'social-media/edit' in request.path %}
+Edit Social Media Icon
+
+{% else %}
+Are you lost ?
+{% endif %}
