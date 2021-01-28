@@ -1,4 +1,5 @@
 """ Views for Home App"""
+from home.forms import LessonCardsForm, LevelCardsForm, SocialMediaIconsForm
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
@@ -42,9 +43,24 @@ def lessons_cards_management(request):
 def add_lessons_cards_management(request):
     """ Management view to add card """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = LessonCardsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Why Our Lesson Card added uccessfully!')
+            return redirect(reverse('lessons_cards_management'))
+        else:
+            messages.error(
+                request, 'Adding new why our lesson card faild. Please ensure the form is valid.')
+    else:
+        form = LessonCardsForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
@@ -95,9 +111,24 @@ def level_cards_management(request):
 def add_level_cards_management(request):
     """ Management view to add level card """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = LevelCardsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Level Card added uccessfully!')
+            return redirect(reverse('level_cards_management'))
+        else:
+            messages.error(
+                request, 'Adding new level card faild. Please ensure the form is valid.')
+    else:
+        form = LevelCardsForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
@@ -146,9 +177,24 @@ def social_media_management(request):
 def add_social_media_management(request):
     """ Management view to add social media """
 
-    template = "./management/management-forms.html"
+    if request.method == 'POST':
+        form = SocialMediaIconsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Social Media Icon added uccessfully!')
+            return redirect(reverse('social_media_management'))
+        else:
+            messages.error(
+                request, 'Adding new social media icon faild. Please ensure the form is valid.')
+    else:
+        form = SocialMediaIconsForm()
 
-    return render(request, template)
+    template = "./management/management-forms.html"
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @staff_member_required
