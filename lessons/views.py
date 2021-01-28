@@ -82,8 +82,14 @@ def lesson(request, lesson_id):
 def categories_management(request):
     """ A view to manage lessons categoires """
 
+    categories = Category.objects.all()
+    social = SocialIcon.objects.all()
+
     template = "lessons/mgmt-categories.html"
-    context = {}
+    context = {
+        'categories': categories,
+        'socials': social,
+    }
 
     return render(request, template, context)
 
@@ -122,8 +128,14 @@ def remove_categories_management(request, category_id):
 def lessons_management(request):
     """ A view to manage lessons """
 
+    all_lessons = Lesson.objects.all()
+    social = SocialIcon.objects.all()
+
     template = "lessons/mgmt-lessons.html"
-    context = {}
+    context = {
+        'all_lessons': all_lessons,
+        'socials': social,
+    }
 
     return render(request, template, context)
 
