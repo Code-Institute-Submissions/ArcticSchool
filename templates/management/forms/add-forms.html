@@ -65,8 +65,8 @@
     {% csrf_token %}
     {{ form.image | as_crispy_field }}
     {{ form.name | as_crispy_field }}
-    {{ form.about | as_crispy_field }}
     {{ form.country | as_crispy_field }}
+    {{ form.about | as_crispy_field }}
     {{ form.open_season | as_crispy_field }}
     {{ form.top_altitude | as_crispy_field }}
     {{ form.bottom_altitude | as_crispy_field }}
@@ -129,7 +129,7 @@
             <button type="reset" class="btn hvr-bounce-to-right red-button">Reset</button>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-            <button type="submit" class="btn hvr-bounce-to-right">Addr</button>
+            <button type="submit" class="btn hvr-bounce-to-right">Add</button>
         </div>
     </div>
 </form>
