@@ -40,7 +40,7 @@ class SocialIcon(models.Model):
         Twitter = 'fa-twitter'
         Instagram = 'fa-instagram'
         TikTok = 'fa-tiktok'
-        Vimeo = 'fa-viemo-v'
+        Vimeo = 'fa-vimeo-v'
 
     class NameChoices(models.TextChoices):
         """ Choices for dropdown list in Social Icons """
@@ -51,7 +51,7 @@ class SocialIcon(models.Model):
         Twitter = 'twitter'
         Instagram = 'instagram'
         TikTok = 'tiktok'
-        Vimeo = 'viemo'
+        Vimeo = 'vimeo'
 
     name = models.TextField(choices=NameChoices.choices,
                             max_length=40, null=False, blank=False, default='Facebook')
