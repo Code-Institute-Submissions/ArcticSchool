@@ -20,18 +20,9 @@ class CategoriesForm(forms.ModelForm):
             set focus on the first field in form """
 
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'name': 'Category Name',
-            'friendly_name': 'Category Visible Name',
-        }
-
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['placeholder'] = '...'
             self.fields[field].widget.attrs['class'] = 'add-form-input'
 
 
@@ -52,28 +43,25 @@ class LessonsForm(forms.ModelForm):
 
         super().__init__(*args, **kwargs)
         placeholders = {
-            'name': 'Lesson Name',
-            'category': 'Category',
-            'level': 'Level',
-            'description': 'Description',
-            'start_date': 'Starting Date',
-            'end_date': 'Finishing Datae',
-            'start_time': 'Start Time',
-            'end_time': 'End Time',
-            'participants': 'Participants',
-            'resort': 'Resort',
-            'price': 'Price',
-            'supper_offer': 'Supper Offer',
-            'image': 'Image',
+            'name': '...',
+            'category': '...',
+            'level': '...',
+            'description': '...',
+            'start_date': 'YYYY-MM-DD',
+            'end_date': 'YYYY-MM-DD',
+            'start_time': 'HH:MM:SS',
+            'end_time': 'HH:MM:SS',
+            'participants': 'Number of Participants',
+            'resort': '...',
+            'price': '150',
+            'supper_offer': 'Yes/No',
+            'image': '...',
         }
 
         self.fields['description'].widget.attrs = {'rows': 3}
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
+            placeholder = placeholders[field]
             if field == 'image' or field == 'level' or field == 'resort' or field =='category' or field =='supper_offer':
                 self.fields[field].widget.attrs['placeholder'] = False
             else:

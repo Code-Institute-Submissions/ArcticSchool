@@ -18,22 +18,11 @@ class InstructorProfileForm(forms.ModelForm):
             set focus on the first field in form """
 
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'name': 'Name and Surname',
-            'age': 'Age',
-            'about': 'About Instructor',
-            'image': 'Image',
-        }
-
         self.fields['about'].widget.attrs = {'rows': 3}
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
             if field == 'image':
                 self.fields[field].widget.attrs['placeholder'] = False
             else:
-                self.fields[field].widget.attrs['placeholder'] = placeholder
+                self.fields[field].widget.attrs['placeholder'] = '...'
             self.fields[field].widget.attrs['class'] = 'add-form-input'

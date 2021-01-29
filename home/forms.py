@@ -20,19 +20,11 @@ class LessonCardsForm(forms.ModelForm):
             set focus on the first field in form """
 
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'title': 'Title',
-            'description': 'Description',
-        }
         self.fields['title'].widget.attrs = {'rows': 1}
         self.fields['description'].widget.attrs = {'rows': 3}
         self.fields['title'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['placeholder'] = '...'
             self.fields[field].widget.attrs['class'] = 'add-form-input'
 
 
@@ -49,25 +41,14 @@ class LevelCardsForm(forms.ModelForm):
             set focus on the first field in form """
 
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'title': 'Level Card Name',
-            'level': 'Level',
-            'description': 'Description',
-        }
-
         self.fields['title'].widget.attrs = {'rows': 1}
         self.fields['description'].widget.attrs = {'rows': 3}
         self.fields['title'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-
             if field == 'level':
                 self.fields[field].widget.attrs['placeholder'] = False
             else:
-                self.fields[field].widget.attrs['placeholder'] = placeholder
+                self.fields[field].widget.attrs['placeholder'] = '...'
             self.fields[field].widget.attrs['class'] = 'add-form-input'
 
 
@@ -83,20 +64,10 @@ class SocialMediaIconsForm(forms.ModelForm):
             set focus on the first field in form """
 
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'name': 'Name',
-            'icon': 'Icon',
-            'url': 'Url Address',
-        }
-
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
             if field == 'url':
-                self.fields[field].widget.attrs['placeholder'] = placeholder
+                self.fields[field].widget.attrs['placeholder'] = '...'
             else:
                 self.fields[field].widget.attrs['placeholder'] = False
             self.fields[field].widget.attrs['class'] = 'add-form-input'

@@ -22,26 +22,23 @@ class ResortForm(forms.ModelForm):
 
         super().__init__(*args, **kwargs)
         placeholders = {
-            'name': 'Resort Name',
-            'country': 'Country',
-            'about': 'About',
+            'name': '...',
+            'country': '...',
+            'about': '...',
             'open_season': 'Open Season (Month - Month)',
-            'top_altitude': 'Top Altitude',
-            'bottom_altitude': 'Bottom Altitude',
-            'resort_altitude': 'Resort Altitude',
+            'top_altitude': '...',
+            'bottom_altitude': '...',
+            'resort_altitude': '...',
             'levels': 'Expected Levels (Advanced, Example, etc.)',
-            'instructors': 'Instructors',
-            'image': 'Image',
+            'instructors': '...',
+            'image': '...',
         }
 
         self.fields['about'].widget.attrs = {'rows': 3}
         self.fields['levels'].widget.attrs = {'rows': 1}
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
+            placeholder = placeholders[field]
             if field == 'image' or field == 'country':
                 self.fields[field].widget.attrs['placeholder'] = False
             else:
