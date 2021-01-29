@@ -127,6 +127,10 @@ body[id*="add"] {
         #div_id_image {
             label {
                 margin-left: 10px;
+
+                &:hover {
+                    color: #f60f13;
+                }
             }
             label:nth-child(1) {
                 background-color: #fcfcfc;
