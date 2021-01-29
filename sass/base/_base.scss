@@ -67,3 +67,9 @@ h6 {
         color: #f60f13;
     }
 }
+
+/* Buttons transition style overwritten - global change  */
+.hvr-bounce-to-right {
+    -webkit-transition-duration: 0.2s !important;
+    transition-duration: 0.2s !important;
+}
