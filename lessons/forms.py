@@ -33,7 +33,6 @@ class CategoriesForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'add-form-input'
-            self.fields[field].label = False
 
 
 class LessonsForm(forms.ModelForm):
@@ -80,4 +79,3 @@ class LessonsForm(forms.ModelForm):
             else:
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'add-form-input'
-            self.fields[field].label = False
