@@ -54,8 +54,8 @@
                     <h4>You have booked this lesson/s</h4>
                     {% for item in order.lineitems.all %}
                     <div class="lesson-container blue-text">
-                        <img src="{{ item.lesson.image.url }}" alt="{{ item.lesson.name }}-image" width="100px"
-                            height="auto">
+                        <img src="{{ item.lesson.image.url }}" alt="{{ item.lesson.name }}-image" width="100%"
+                            height="100%">
                         : {{ item.lesson.name }}
                         Category: {{ item.lesson.category }}
                         Participant/s: {{ item.lesson.participants }}

@@ -45,9 +45,9 @@
                         <div class="info-container">
                             {% if instructor.image %}
                             <img class="card-img-top" src="{{ MEDIA_URL }}{{ instructor.image }}"
-                                alt="{{ instructor.image }}">
+                                alt="{{ instructor.image }}" width="100%" height="100%">
                             {% else %}
-                            <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                            <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" width="100%" height="100%">
                             {% endif %}
                         </div>
                         <div class="card-body">

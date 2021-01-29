@@ -93,9 +93,9 @@
                                     <!-- Card top part -->
                                     <div class="card-head">
                                         {% if lesson.image %}
-                                        <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lesson.name }}">
+                                        <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lesson.name }}" width="100%" height="100%">
                                         {% else %}
-                                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" width="100%" height="100%">
                                         {% endif %}
                                         {% if lesson.supper_offer == True %}
                                         <div class="super-offer-icon">

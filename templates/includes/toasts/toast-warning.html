@@ -21,9 +21,9 @@
             <div class="row">
                 <div class="col-3 my-1">
                     {% if item.lesson.image %}
-                    <img class="w-100 rounded" src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}">
+                    <img class="w-100 rounded" src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" width="100%" height="100%">
                     {% else %}
-                    <img class="w-100 rounded" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image">
+                    <img class="w-100 rounded" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" width="100%" height="100%">
                     {% endif %}
                 </div>
                 <div class="col-9">
