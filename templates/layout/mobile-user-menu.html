@@ -1,76 +1,85 @@
 <!-- When user is logged in -->
 {% if request.user.is_authenticated %}
-<ul class="nav navbar-nav ml-auto my-2">
-    <li class="nav-item">
-        <button class="user-menu-link mr-3 chevron-rotate" type="button" data-toggle="collapse"
-            data-target="#mobileUserMenu" aria-controls="mobileUserMenu" aria-expanded="false"
-            aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>ACCOUNT</button>
-        <div class="collapse navbar-collapse" id="mobileUserMenu">
-            <ul class="nav navbar-nav">
+<li class="nav-item">
+    <button class="user-menu-link mr-3 my-2 chevron-rotate" type="button" data-toggle="collapse"
+        data-target="#mobileUserMenu" aria-controls="mobileUserMenu" aria-expanded="false"
+        aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>ACCOUNT</button>
+    <div class="collapse navbar-collapse" id="mobileUserMenu">
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <a href="{% url 'user_account' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">My
+                    Information</a>
+            </li>
+        </ul>
+        <div>
+            <button class="nav-link mr-3 user-nav-link chevron-rotate" data-toggle="collapse"
+                data-target="#UserMenuBooking" aria-controls="UserMenuManagemenet" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>MY BOOKING
+            </button>
+            <ul class="nav navbar-nav collapse navbar-collapse" id="UserMenuBooking">
                 <li class="nav-item">
-                    <a href="{% url 'user_account' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">My Information</a>
+                    <a href="{% url 'bookings_active' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Active</a>
                 </li>
-                <button class="nav-link mr-3 mt-1 user-nav-link chevron-rotate" navbar-toggler" type="button"
-                    data-toggle="collapse" data-target="#UserMenuBooking" aria-controls="UserMenuBooking"
-                    aria-expanded="false" aria-label="Toggle navigation"><i
-                        class="fas fa-chevron-down mr-2"></i>MY BOOKING</button>
-                <div class="collapse navbar-collapse" id="UserMenuBooking">
-                    <li class="nav-item">
-                        <a href="{% url 'bookings_active' %}"
-                            class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{% url 'bookings_archived' %}"
-                            class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Archived</a>
-                    </li>
-                </div>
+                <li class="nav-item">
+                    <a href="{% url 'bookings_archived' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Archived</a>
+                </li>
             </ul>
-            <!-- If user has super powers - administrator -->
-            {% if request.user.is_superuser %}
-            <div>
-                <ul class="nav navbar-nav">
-                    <button class="nav-link mr-3 user-nav-link chevron-rotate" type="button" data-toggle="collapse"
-                        data-target="#UserMenuManagemenet" aria-controls="UserMenuManagemenet" aria-expanded="false"
-                        aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>MANAGEMENT</button>
-                    <div class="collapse navbar-collapse" id="UserMenuManagemenet">
-                        <li class="nav-item">
-                            <a href="{% url 'categories_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'lessons_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Lessons</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'instructors_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Instructors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'resorts_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Resorts</a>
-                        </li>
-                    </div>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <button class="nav-link mr-3 user-nav-link chevron-rotate" type="button" data-toggle="collapse"
-                        data-target="#UserMenuHomePage" aria-controls="UserMenuHomePage" aria-expanded="false"
-                        aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>HOME PAGE</button>
-                    <div class="collapse navbar-collapse" id="UserMenuHomePage">
-                        <li class="nav-item">
-                            <a href="{% url 'lessons_cards_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Lessons Cards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'level_cards_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Level Cards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'social_media_management' %}" class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Social Media</a>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-            {% endif %}
         </div>
-    </li>
-</ul>
+        <!-- If user has super powers - administrator -->
+        {% if request.user.is_superuser %}
+        <div>
+            <button class="nav-link mr-3 user-nav-link chevron-rotate" data-toggle="collapse"
+                data-target="#UserMenuManagemenet" aria-controls="UserMenuManagemenet" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>MANAGEMENT
+            </button>
+            <ul class="nav navbar-nav collapse navbar-collapse" id="UserMenuManagemenet">
+                <li class="nav-item">
+                    <a href="{% url 'categories_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'lessons_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Lessons</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'instructors_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Instructors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'resorts_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Resorts</a>
+                </li>
+            </ul>
+            <button class="nav-link mr-3 user-nav-link chevron-rotate" data-toggle="collapse"
+                data-target="#UserMenuHomePage" aria-controls="UserMenuHomePage" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>HOME PAGE
+            </button>
+            <ul class="nav navbar-nav collapse navbar-collapse" id="UserMenuHomePage">
+                <li class="nav-item">
+                    <a href="{% url 'lessons_cards_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Lessons
+                        Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'level_cards_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Level
+                        Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'social_media_management' %}"
+                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Social
+                        Media</a>
+                </li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</li>
 <!-- Logout button -->
 <li class="nav-item">
-    <a href="#" class="nav-link mr-3 hvr-bounce-to-top">
+    <div class="nav-link mr-3 hvr-bounce-to-top">
         <form method="post" action="{% url 'account_logout' %}">
             {% csrf_token %}
             {% if redirect_field_value %}
@@ -78,16 +87,15 @@
             {% endif %}
             <button type="submit">LOGOUT</button>
         </form>
-    </a>
+    </div>
 </li>
 <!-- When user is not logged in -->
 {% else %}
-<ul>
-    <li class="nav-item">
-        <a href="{% url 'account_login' %}?next={{ request.path }}" class="nav-link mr-3 hvr-bounce-to-top">LOGIN</a>
-    </li>
-    <li class="nav-item">
-        <a href="{% url 'account_signup' %}?next={{ 'account' }}" class="nav-link special-nav-lnik mr-3 hvr-bounce-to-top-red">REGISTER</a>
-    </li>
-</ul>
+<li class="nav-item">
+    <a href="{% url 'account_login' %}?next={{ request.path }}" class="nav-link mr-3 hvr-bounce-to-top">LOGIN</a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'account_signup' %}?next={{ 'account' }}"
+        class="nav-link special-nav-lnik mr-3 hvr-bounce-to-top-red">REGISTER</a>
+</li>
 {% endif %}

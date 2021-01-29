@@ -64,7 +64,11 @@ class LevelCardsForm(forms.ModelForm):
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+
+            if field == 'level':
+                self.fields[field].widget.attrs['placeholder'] = False
+            else:
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'add-form-input'
             self.fields[field].label = False
 
@@ -93,6 +97,9 @@ class SocialMediaIconsForm(forms.ModelForm):
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field == 'url':
+                self.fields[field].widget.attrs['placeholder'] = placeholder
+            else:
+                self.fields[field].widget.attrs['placeholder'] = False
             self.fields[field].widget.attrs['class'] = 'add-form-input'
             self.fields[field].label = False

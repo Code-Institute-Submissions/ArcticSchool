@@ -33,5 +33,8 @@ class UserDetailsForm(forms.ModelForm):
 
         self.fields['first_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            self.fields[field].widget.attrs['placeholder'] = '...'
+            if field == 'country' or field == 'receiving_newsletter':
+                self.fields[field].widget.attrs['placeholder'] = False
+            else:
+                self.fields[field].widget.attrs['placeholder'] = '...'
             self.fields[field].widget.attrs['class'] = 'user-details-fields'

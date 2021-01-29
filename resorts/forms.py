@@ -42,6 +42,9 @@ class ResortForm(forms.ModelForm):
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field == 'image' or field == 'country':
+                self.fields[field].widget.attrs['placeholder'] = False
+            else:
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'add-form-input'
             self.fields[field].label = False

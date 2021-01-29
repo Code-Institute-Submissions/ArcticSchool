@@ -35,16 +35,14 @@
         <div class="row mt-2">
             <div class="col">
                 {% if grand_total %}
-                <strong>
-                    <p class="m-0 text-black">Total:
+                    <p class="m-0 text-black font-weight-bold">Total:
                         <span class="float-right">£{{ grand_total|floatformat:2 }}</span>
                     </p>
                     {% if discount > 0 %}
-                    <p class="mt-1 mb-2 small-discount">Discount:
+                    <p class="mt-1 mb-2 small-discount font-weight-bold">Discount:
                         <span class="float-right">£{{ discount|floatformat:2 }}</span>
                     </p>
                     {% endif %}
-                </strong>
                 {% endif %}
                 {% if total <= discount_threshold %} <p class="my-2 spent-more-text">Spend more than
                     <strong>£{{ discount_threshold }}</strong><br class="d-block d-sm-none"> to get

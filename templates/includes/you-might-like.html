@@ -8,9 +8,9 @@
                 {% for lesson in lessons %}
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 p-2">
                     <!-- Whole card as link to lesson's detail -->
-                    <a href="{% url 'lesson' lesson.id %}">
-                        <div
-                            class="card shadow-sm {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+                    <div
+                        class="card shadow-sm {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+                        <a href="{% url 'lesson' lesson.id %}">
                             <!-- Image -->
                             {% if lesson.image %}
                             <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lessons.image }}-image">
@@ -29,18 +29,18 @@
                                 <p class="yml-level">Level <span>{{ lesson.level }}</span></p>
                                 <p class="yml-category">Category <span>{{ lesson.category }}</span></p>
                             </div>
-                            <!-- Book now button -->
-                            <div class="buttons">
-                                <form class="form" action="{% url 'add_to_booking' lesson.id %}" method="POST">
-                                    {% csrf_token %}
-                                    <input class="form-control qty_input" type="hidden" name="quantity" value="1"
-                                        min="1" max="1" data-item_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    <button type="submit" class="btn hvr-bounce-to-right">Book Now</button>
-                                </form>
-                            </div>
+                        </a>
+                        <!-- Book now button -->
+                        <div class="buttons">
+                            <form class="form" action="{% url 'add_to_booking' lesson.id %}" method="POST">
+                                {% csrf_token %}
+                                <input class="form-control qty_input" type="hidden" name="quantity" value="1"
+                                    data-item_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <button type="submit" class="btn hvr-bounce-to-right">Book Now</button>
+                            </form>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 {% endfor %}
             </div>

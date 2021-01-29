@@ -7,8 +7,12 @@
     justify-content: center;
     flex-direction: row;
     h1,
-    h6 {
+    h3 h6 {
         margin: 0;
+    }
+
+    h3 {
+        font-size: 2.5rem;
     }
     /* Red booking button */
     .boooking-button {
@@ -21,6 +25,9 @@
         height: 50px;
         background-color: #f60f13;
         opacity: 0.9;
+        align-items: center;
+        justify-content: center;
+        display: flex;
         &:hover {
             opacity: 1;
         }

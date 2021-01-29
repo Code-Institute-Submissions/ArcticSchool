@@ -35,7 +35,7 @@
                             <h5>This lesson is for <span>{{ lesson.category }}</span></h5>
                             <h5>Your level should be, as high as <span>{{ lesson.level }}</span></h5>
                             <!-- Participants -->
-                            <h5>We've got space for <span class="">{{ lesson.participants }}
+                            <h5>We've got space for <span>{{ lesson.participants }}
                                     Participant{% if lesson.participants > 1 %}s{% endif %}</span></h5>
                             <!-- £ Price -->
                             <h5 class="mt-3">{% if lesson.supper_offer == True %}Cheaper Price !{% else %}
@@ -61,16 +61,16 @@
                         <div class="card shadow-sm border-0">
                             <!-- Start Date & Start Time -->
                             <h4>Lesson Starts</h4>
-                            <p class="s-info">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</p>
-                            <p class="s-info">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</p>
+                            <p class="s-info">Date - <span>{{ lesson.start_date|date:"d/M/Y (l)" }}</span></p>
+                            <p class="s-info">Time - <span>{{ lesson.start_time|time:"H:i:s" }}</span></p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <div class="card shadow-sm border-0">
                             <!-- End Date & En Time -->
                             <h4>Lesson Ends</h4>
-                            <p class="s-info">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</p>
-                            <p class="s-info">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</p>
+                            <p class="s-info">Date - <span>{{ lesson.end_date|date:"d/M/Y (l)" }}</span></p>
+                            <p class="s-info">Time - <span>{{ lesson.end_time|time:"H:i:s" }}</span></p>
                         </div>
                     </div>
                 </div>
@@ -93,8 +93,7 @@
                         <!-- Resorts Info -->
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 resort-bottom-sec">
                             <h4 class="">This resort is placed in {{ resort.country.name }}</h4>
-                            <span>{{ resort.about }}</span>
-                            </p>
+                            <p class="mb-3">{{ resort.about }}</p>
                             <p class="s-info">Top Altitude - <span>{{ resort.top_altitude }}</span></p>
                             <p class="s-info">Bottom Altitude - <span>{{ resort.bottom_altitude }}</span></p>
                             <p class="s-info">Resort Altitude - <span>{{ resort.resort_altitude }}</span></p>
@@ -118,8 +117,7 @@
                         <div class="card shadow-sm border-0">
                             <form class="form" action="{% url 'add_to_booking' lesson.id %}" method="POST">
                                 {% csrf_token %}
-                                <input class="form-control qty_input" type="hidden" name="quantity" value="1" min="1"
-                                    max="1" data-lesson_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
+                                <input class="form-control qty_input" type="hidden" name="quantity" value="1" data-lesson_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 <button type="submit" class="btn hvr-bounce-to-right">Book Now</button>
                             </form>

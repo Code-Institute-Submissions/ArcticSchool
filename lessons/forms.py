@@ -68,7 +68,6 @@ class LessonsForm(forms.ModelForm):
             'image': 'Image',
         }
 
-        self.fields['name'].widget.attrs = {'rows': 1}
         self.fields['description'].widget.attrs = {'rows': 3}
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
@@ -76,6 +75,9 @@ class LessonsForm(forms.ModelForm):
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field == 'image' or field == 'level' or field == 'resort' or field =='category' or field =='supper_offer':
+                self.fields[field].widget.attrs['placeholder'] = False
+            else:
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'add-form-input'
             self.fields[field].label = False

@@ -280,7 +280,12 @@ Code Snippet from https://codepen.io/designcouch/pen/Atyop
         color: #f60f13;
     }
 
+    .color-red {
+        color: #f60f13 !important;
+    }
+
     /* Links */
+    div,
     a {
         font-size: 0.85rem;
         color: #000;

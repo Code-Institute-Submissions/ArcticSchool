@@ -24,46 +24,46 @@
                 <div class="dropdown-content shadow-sm">
                     <!-- When user is logged in -->
                     {% if request.user.is_authenticated %}
-                        <h6 class="text-uppercase booking">My Booking</h6>
-                        <a href="{% url 'bookings_active' %}">Active</a>
-                        <a href="{% url 'bookings_archived' %}">Archived</a>
-                        <hr>
-                        <!-- If user has super powers - administrator -->
-                        {% if request.user.is_superuser %}
-                            <h6 class="text-uppercase">Management</h6>
-                            <a href="{% url 'categories_management' %}">Categories</a>
-                            <a href="{% url 'lessons_management' %}">Lessons</a>
-                            <a href="{% url 'instructors_management' %}">Instructors</a>
-                            <a href="{% url 'resorts_management' %}">Resorts</a>
-                            <hr>
-                            <h6 class="text-uppercase">Home Page</h6>
-                            <a href="{% url 'lessons_cards_management' %}">Lessons Cards</a>
-                            <a href="{% url 'level_cards_management' %}">Level Cards</a>
-                            <a href="{% url 'social_media_management' %}">Social Media</a>
-                            <hr>
-                            <!-- Logout button -->
-                            <a href="#" class="dropdown-item">
-                                <form method="post" action="{% url 'account_logout' %}">
-                                    {% csrf_token %}
-                                    {% if redirect_field_value %}
-                                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                                    {% endif %}
-                                    <button type="submit">Logout</button>
-                                </form>
-                            </a>
-                        {% endif %}
+                    <h6 class="text-uppercase booking color-red"> My Booking</h6>
+                    <a href="{% url 'bookings_active' %}">Active</a>
+                    <a href="{% url 'bookings_archived' %}">Archived</a>
+                    <hr>
+                    <!-- If user has super powers - administrator -->
+                    {% if request.user.is_superuser %}
+                    <h6 class="text-uppercase">Management</h6>
+                    <a href="{% url 'categories_management' %}">Categories</a>
+                    <a href="{% url 'lessons_management' %}">Lessons</a>
+                    <a href="{% url 'instructors_management' %}">Instructors</a>
+                    <a href="{% url 'resorts_management' %}">Resorts</a>
+                    <hr>
+                    <h6 class="text-uppercase">Home Page</h6>
+                    <a href="{% url 'lessons_cards_management' %}">Lessons Cards</a>
+                    <a href="{% url 'level_cards_management' %}">Level Cards</a>
+                    <a href="{% url 'social_media_management' %}">Social Media</a>
+                    <hr>
+                    <!-- Logout button -->
+                    <div class="dropdown-item">
+                        <form method="post" action="{% url 'account_logout' %}">
+                            {% csrf_token %}
+                            {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                            {% endif %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </div>
+                    {% endif %}
                     <!-- When user is not logged in -->
                     {% else %}
-                        <a href="{% url 'account_login' %}?next={{ request.path }}" class="dropdown-item login-font">Login</a>
-                        <a href="{% url 'account_signup' %}?next={{ 'account' }}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}?next={{ request.path }}"
+                        class="dropdown-item login-font">Login</a>
+                    <a href="{% url 'account_signup' %}?next={{ 'account' }}" class="dropdown-item">Register</a>
                     {% endif %}
                 </div>
             </div>
         </li>
     </ul>
     <button id="hamburger-button-medium" class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#tabletMenu" aria-controls="tabletMenu" aria-expanded="false"
-        aria-label="Toggle navigation">
+        data-target="#tabletMenu" aria-controls="tabletMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
