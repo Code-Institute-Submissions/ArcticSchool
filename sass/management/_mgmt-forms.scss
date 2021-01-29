@@ -125,10 +125,20 @@ body[id*="add"] {
             width: 100% !important;
             margin-top: 10px;
         }
+
+        select {
+            -webkit-appearance: none;
+        }
+
+        label {
+            color: #31addf;
+            margin-bottom: 0;
+            margin-top: 5px;
+        }´
     }
 
     /* Footer */
     footer {
-        flex-shrink:0;
+        flex-shrink: 0;
     }
 }
