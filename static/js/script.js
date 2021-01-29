@@ -60,7 +60,7 @@ $(document).ready(function () {
 	scrollToTopButton.onclick = function (e) {
 		e.preventDefault();
 		scrollToTop();
-	}
+	};
 
 	/**
 	 * This function will rotate chevron element when user menu link is clicked

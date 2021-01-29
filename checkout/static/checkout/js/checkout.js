@@ -1,7 +1,7 @@
 $(document).ready(
     // Run check all fields on document ready
     checkAllFields()
-)
+);
 /**
 * This funtcion will change Country field syle
 * when value is different than default
@@ -9,7 +9,7 @@ $(document).ready(
 let countrySelected = $('#id_country').val();
 if (!countrySelected) {
     $('#id_country').css('color', '#ced4da');
-};
+}
 $('#id_country').change(function () {
     countrySelected = $(this).val();
     if (!countrySelected) {
@@ -25,12 +25,12 @@ $('#id_country').change(function () {
  */
 function checkAllFields() {
     $('#payment-form input[required]').each(function () {
-        if ($(this).val() != '') {
+        if ($(this).val() !== '') {
             $('#submit-button').prop('disabled', false);
         }
         else {
             $('#submit-button').prop('disabled', true);
-            return false
+            return false;
         }
     });
 }
@@ -40,12 +40,12 @@ function checkAllFields() {
  * fielsd are properly filled in
  */
 $('#payment-form input[required]').change(function () {
-    if ($(this).val() != '') {
+    if ($(this).val() !== '') {
         $('#submit-button').prop('disabled', false);
         checkAllFields();
     }
     else {
         $('#submit-button').prop('disabled', true);
-        return false
+        return false;
     }
 });

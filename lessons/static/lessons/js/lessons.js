@@ -3,10 +3,10 @@
  */
 let categoryClass = $('div .category-block').length;
 //check if categoryClass result is odd - if odd make it even
-if (categoryClass % 2 != 0) {
-    categoryClass = categoryClass + 1
+if (categoryClass % 2 !== 0) {
+    categoryClass = categoryClass + 1;
 }
-categoryClass = categoryClass / 2
+categoryClass = categoryClass / 2;
 $("div .category-block").css({ height: `calc((100vh - 59px) / ${categoryClass})` });
 
 /**
@@ -29,7 +29,7 @@ $('#lessons-container').each(function () {
 $(window).scroll(function () {
     let scroll = $(window).scrollTop();
     // top section height
-    let top_section_height = $(".about-lessons-result").height()
+    let top_section_height = $(".about-lessons-result").height();
     //>=, not <=
     if (scroll >= top_section_height) {
         //clearHeader, not clearheader - caps H
@@ -49,7 +49,7 @@ $(function () {
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".card:hidden").slice(0, 12).slideDown();
-        if ($(".card:hidden").length == 0) {
+        if ($(".card:hidden").length === 0) {
             $("#load").fadeOut('slow');
         }
 
@@ -94,7 +94,7 @@ function check_count() {
         $('.show-more').addClass('show-disable');
         $('.visible-cards-count').html('0');
     }
-};
+}
 
 /**
  * This function will reload Lessons page and display/filter lessons with selected Sort Option only
@@ -114,7 +114,7 @@ $('#sort-selector').change(function () {
         currentUrl.searchParams.delete("direction");
         window.location.replace(currentUrl);
     }
-})
+});
 
 // Levels checkbox listener
 /**
@@ -130,37 +130,6 @@ $('input[name=level_checkbox]').change(function () {
         } else {
         }
     });
-});
-
-/**
- * This function will add special id to anchor element to set 'category-selected' style
- */
-$(function () {
-    let pathname = window.location.href;
-    let category_in = pathname.search("category");
-    // check if path name contains
-    if (pathname.search("=") < 0) { } else {
-        pathname = pathname.split('=')[1];
-        let last_sign = pathname.search("&");
-
-        if (last_sign <= 0) {
-            // add categroy.name-selected class to element when window href doesn't contains category or filtering
-            category_selected = pathname + '-selected';
-            $('.pathname').html(pathname);
-            let my_id = '#' + pathname;
-            $(my_id).addClass('category-selected');
-        } else {
-            // add category.name-selected class to element when category is filtered
-            category_selected = pathname.substring(0, last_sign); + '-selected';
-            $('.pathname').html(category_selected);
-            let my_id = '#' + category_selected;
-            if (category_in == -1) {
-                $('#all_lessons').addClass('category-selected');
-            } else {
-                $(my_id).addClass('category-selected');
-            }
-        }
-    }
 });
 
 /**
