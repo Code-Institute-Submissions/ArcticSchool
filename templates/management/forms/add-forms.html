@@ -20,7 +20,13 @@
     {% csrf_token %}
     {{ form.image | as_crispy_field }}
     {{ form.name | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.category | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.level | as_crispy_field }}
     {{ form.description | as_crispy_field }}
     {{ form.start_date | as_crispy_field }}
@@ -28,8 +34,14 @@
     {{ form.start_time | as_crispy_field }}
     {{ form.end_time | as_crispy_field }}
     {{ form.participants | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.resort | as_crispy_field }}
     {{ form.price | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.supper_offer | as_crispy_field }}
     <!-- Buttons -->
     <div class="row">
@@ -65,6 +77,9 @@
     {% csrf_token %}
     {{ form.image | as_crispy_field }}
     {{ form.name | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.country | as_crispy_field }}
     {{ form.about | as_crispy_field }}
     {{ form.open_season | as_crispy_field }}
@@ -104,6 +119,9 @@
 <form action="{% url 'add_level_cards_management' %}" method="POST">
     {% csrf_token %}
     {{ form.title | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.level | as_crispy_field }}
     {{ form.description | as_crispy_field }}
     <!-- Buttons -->
@@ -120,7 +138,13 @@
 <!-- Social Media Icon Form -->
 <form action="{% url 'add_social_media_management' %}" method="POST">
     {% csrf_token %}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.name | as_crispy_field }}
+    <div class="from-group arrow-icon">
+        <i class="fas fa-angle-down blue-text"></i>
+    </div>
     {{ form.icon | as_crispy_field }}
     {{ form.url | as_crispy_field }}
     <!-- Buttons -->
