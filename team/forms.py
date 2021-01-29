@@ -13,6 +13,10 @@ class InstructorProfileForm(forms.ModelForm):
         model = InstructorProfile
         fields = ('name', 'age', 'about', 'image',)
 
+        labels = {
+            'image': 'Add Image',
+        }
+
     def __init__(self, *args, **kwargs):
         """ Add placeholders and classes, remove auto-generated lables,
             set focus on the first field in form """

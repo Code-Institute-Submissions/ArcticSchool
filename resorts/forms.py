@@ -15,6 +15,9 @@ class ResortForm(forms.ModelForm):
                   'open_season', 'top_altitude',
                   'bottom_altitude', 'resort_altitude',
                   'levels', 'instructors', 'image',)
+        labels = {
+            'image': 'Add Image',
+        }
 
     def __init__(self, *args, **kwargs):
         """ Add placeholders and classes, remove auto-generated lables,

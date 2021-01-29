@@ -36,6 +36,9 @@ class LessonsForm(forms.ModelForm):
             'start_time', 'end_time', 'participants',
             'resort', 'price', 'supper_offer', 'image',
         )
+        labels = {
+            'image':'Add Image',
+        }
 
     def __init__(self, *args, **kwargs):
         """ Add placeholders and classes, remove auto-generated lables,
