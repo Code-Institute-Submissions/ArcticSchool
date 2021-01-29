@@ -87,13 +87,13 @@
             border-radius: inherit;
         }
 
-        .btn-white{
+        .btn-white {
             background-color: #fff;
         }
     }
 
     /* Footer style */
     footer {
-        flex-shrink: none;
+        flex-shrink: 0;
     }
 }

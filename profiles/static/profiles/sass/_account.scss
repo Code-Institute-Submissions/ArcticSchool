@@ -154,7 +154,7 @@
     }
 
     footer {
-        flex-shrink: none;
+        flex-shrink: 0;
     }
 
     @media (max-width: 768px) {

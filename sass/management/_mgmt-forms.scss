@@ -1,5 +1,4 @@
 /* Management Forms */
-
 body[id*="edit"],
 body[id*="add"] {
     /* Main page style */
@@ -126,17 +125,10 @@ body[id*="add"] {
             width: 100% !important;
             margin-top: 10px;
         }
-        /* Add Forms */
-        .add-forms {
-        }
-
-        /* Edit Forms */
-        .edit-forms {
-        }
     }
 
     /* Footer */
     footer {
-        flex-shrink: none;
+        flex-shrink:0;
     }
 }
