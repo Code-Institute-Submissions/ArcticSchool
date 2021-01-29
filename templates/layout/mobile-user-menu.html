@@ -11,30 +11,32 @@
                     Information</a>
             </li>
         </ul>
-        <div>
+        <div class="grey-links">
             <button class="nav-link mr-3 user-nav-link chevron-rotate" data-toggle="collapse"
                 data-target="#UserMenuBooking" aria-controls="UserMenuManagemenet" aria-expanded="false"
                 aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>MY BOOKING
             </button>
-            <ul class="nav navbar-nav collapse navbar-collapse" id="UserMenuBooking">
-                <li class="nav-item">
-                    <a href="{% url 'bookings_active' %}"
-                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{% url 'bookings_archived' %}"
-                        class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Archived</a>
-                </li>
-            </ul>
+            <div class="grey-links">
+                <ul class="collapse navbar-collapse" id="UserMenuBooking">
+                    <li class="nav-item">
+                        <a href="{% url 'bookings_active' %}"
+                            class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'bookings_archived' %}"
+                            class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Archived</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- If user has super powers - administrator -->
         {% if request.user.is_superuser %}
-        <div>
+        <div class="grey-links">
             <button class="nav-link mr-3 user-nav-link chevron-rotate" data-toggle="collapse"
                 data-target="#UserMenuManagemenet" aria-controls="UserMenuManagemenet" aria-expanded="false"
                 aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>MANAGEMENT
             </button>
-            <ul class="nav navbar-nav collapse navbar-collapse" id="UserMenuManagemenet">
+            <ul class="collapse navbar-collapse" id="UserMenuManagemenet">
                 <li class="nav-item">
                     <a href="{% url 'categories_management' %}"
                         class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Categories</a>
@@ -56,7 +58,7 @@
                 data-target="#UserMenuHomePage" aria-controls="UserMenuHomePage" aria-expanded="false"
                 aria-label="Toggle navigation"><i class="fas fa-chevron-down mr-2"></i>HOME PAGE
             </button>
-            <ul class="nav navbar-nav collapse navbar-collapse" id="UserMenuHomePage">
+            <ul class="collapse navbar-collapse" id="UserMenuHomePage">
                 <li class="nav-item">
                     <a href="{% url 'lessons_cards_management' %}"
                         class="nav-link nav-link-mobile mr-3 hvr-bounce-to-top">Lessons

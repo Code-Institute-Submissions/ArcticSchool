@@ -82,4 +82,13 @@ input[type="submit"] {
     button {
         color: #000;
     }
+
+    .grey-links {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        .navbar-collapse {
+            align-items: initial !important;
+        }
+    }
 }
