@@ -162,8 +162,7 @@ Red will stand out and notify customer about something important on the page, so
 
 To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast color schemes generator!
 
-If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
-[ColorPallet](https://github.com/KarolSliwka/ArcticSchool/tree/main/wireframes/colour-pallete.png)
+If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000) or view localy [ColorPalette](https://github.com/KarolSliwka/ArcticSchool/blob/main/wireframes/colour-palette.png)
 
 <img src="https://www.abovewave.kylos.pl/ArcticSchool/Arcitic_Coloristic.png" style="widt:100%;" alt="Arctic School Coloristic">
 
@@ -353,7 +352,7 @@ Newsletter Choices
 ### Languages
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - In this project I've decided not to use any CSS preprocessors to improve my skills on CSS.
+- [SCSS](https://sass-lang.co) (CSS extension language)
 - [JavaScript](https://www.javascript.com)
 - [Python](https://www.python.org)
 - [Jinja](https://jinja.palletsprojects.com/en/2.10.x/)
@@ -376,11 +375,11 @@ To create this web application, I've decided to change my IDE from [AWS Cloud 9]
 
 Also I've used tools listed below :
 
-- [Git] - Version Control
-- [GitHub] - Store Remote Repository
-- [Heroku] - Project Hosting
-- [PIP] - Installation of Tools
-- [Boto3] - AWS Compatibility
+- [Git](https://git-scm.com) - Version Control
+- [GitHub](https://github.com) - Store Remote Repository
+- [Heroku](https://www.heroku.com) - Project Hosting
+- [PIP](https://pypi.org/project/pip/) - Installation of Tools
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - AWS Compatibility
 - [Axure RP9](https://www.axure.com) - To Create Wireframes
 - [AWS S3 Bucket](https://aws.amazon.com/s3/) - Store Media and Static Files (Production)
 - [Adobe Photoshop 2021](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1jtO-lYjtAhWRtu0KHVSdBuIYABAMGgJkZw&ae=2&ohost=www.google.com&cid=CAESQeD26XjYo-QzyoB2wcpxICKBRcP9GrB4c8gAn9paIaX33r0xVThzoIuEVAd5W9NMGzIpEnaxYR6rGHmVm3Xs6HqK&sig=AOD64_0qloXz9J7Jl2Hmpb5xL3Ar0APH5w&q&adurl&ved=2ahUKEwiXncq-lYjtAhV-ShUIHTryBD0Q0Qx6BAgSEAE&dct=1) - creating and editing images/logotype/icons.
@@ -405,8 +404,6 @@ Arctic School Web App contains 8 applications `home`, `lessons`(contains lessons
 
 ### Features Left to Implement
 
-There are some features that I considered were of secondary importance and I have not implemented them yet due to time constraints, but intend to do so in future when I will be able to dedicate more time to them. Most of these features are displayed in my [original wireframes](https://github.com/irinatu17/Art-of-Tea/tree/master/wireframes).
-
 #### Social account login (Google and Facebook)
 
 This feature allows users to login by using their social account. This will changed user experience and make the login process easy and simple.
@@ -423,7 +420,7 @@ Other small features are going to be implemented in feature, **Filtering Lessons
 
 ## Testing
 
-Testing information can be found in a separate file - [Testing.md](https://github.com/KarolSliwka/ArcticSchool/tree/main/wireframes/TESTING.md)
+Testing information can be found in a separate file - [Testing.md](https://github.com/KarolSliwka/ArcticSchool/blob/main/TESTING.md)
 
 ---
 
