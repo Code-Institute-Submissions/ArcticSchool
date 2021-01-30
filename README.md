@@ -228,8 +228,6 @@ County | county | models.CharField | max_length=80, null=True, blank=True
 Country | country | CountryField | blank_label='Select Country', null=True, blank=True
 Receiving Newsletter | receiving_newsletter | models.CharField | max_length=3, choices=newsletter_choices, blank=True, null=True
 
-Newsletter Choices | newsletter_choices | ('Yes', 'Yes'), ('No', 'No')
-
 #### Leesons App
 
 ##### Lesson
@@ -340,6 +338,11 @@ Name Choices
 - Instagram = 'instagram'
 - TikTok = 'tiktok'
 - Vimeo = 'vimeo'
+
+Newsletter Choices
+
+- ('Yes', 'Yes')
+- ('No', 'No')
 
 ---
 
