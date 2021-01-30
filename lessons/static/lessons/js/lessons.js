@@ -33,10 +33,12 @@ $(window).scroll(function () {
     //>=, not <=
     if (scroll >= top_section_height) {
         //clearHeader, not clearheader - caps H
-        $(".filter-box").addClass("fixed-filters");
+        $(".top-filter").addClass("fixed-filters shadow-sm");
+        $(".filter-box").addClass("pt-4");
     }
     else {
-        $(".filter-box").removeClass("fixed-filters");
+        $(".top-filter").removeClass("fixed-filters shadow-sm");
+        $(".filter-box").removeClass("pt-4");
     }
 });
 
@@ -59,7 +61,7 @@ $(function () {
         // check visible card count
         check_count();
         change_load_number();
-        getQueryVariable();
+        //getQueryVariable();
     });
     // run check count function
     check_count();
@@ -99,7 +101,7 @@ function check_count() {
 /**
  * This function will reload Lessons page and display/filter lessons with selected Sort Option only
  */
-$('#sort-selector').change(function () {
+$('.sort-selector').change(function () {
     let selector = $(this);
     let currentUrl = new URL(window.location);
     let selectedVal = selector.val();
@@ -114,22 +116,6 @@ $('#sort-selector').change(function () {
         currentUrl.searchParams.delete("direction");
         window.location.replace(currentUrl);
     }
-});
-
-// Levels checkbox listener
-/**
- * This functill listen to filter - level checkbox change.
- */
-$('input[name=level_checkbox]').change(function () {
-    let currentUrl = new URL(window.location);
-    $('input[type=checkbox]').each(function () {
-        if (this.checked) {
-            let lvl_label = '"#' + $(this).next('label').text() + '"';
-            console.log(lvl_label);
-
-        } else {
-        }
-    });
 });
 
 /**
