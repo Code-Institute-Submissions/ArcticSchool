@@ -15,11 +15,11 @@
                     class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}"
                     href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
             </li>
-            {% for category in categories %}
+            {% for category in categories_list %}
             <li class="category-li">
                 <a class="category-link shadow-sm" id="{{ category.name }}"
                     href="{% url 'lessons' %}?category={{ category.name }}">
-                    {{ category.name }}
+                    {{ category.name }} ({{ category.lesson__count }})
                 </a>
             </li>
             {% endfor %}

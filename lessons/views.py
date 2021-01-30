@@ -1,5 +1,7 @@
 """ Views Lessons App """
 import random
+from typing import Counter
+from django.db.models.aggregates import Count
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
@@ -45,10 +47,14 @@ def lessons(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    # Get number of lessons in each category
+    categories_list = Category.objects.annotate(Count('lesson'))
+
     context = {
         'socials': social,
         'lessons': lessons,
         'categories': categories,
+        'categories_list':categories_list,
         'levels': levels,
         'all_lessons': all_lessons,
         'current_sorting': current_sorting,
