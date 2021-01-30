@@ -1,0 +1,53 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+    <!-- Category -->
+    <div class="filter-box">
+        <div class="search-from">
+            <form action="" method="POST" id="search-form">
+                <input class="" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <ul class="p-0">
+            <li class="category-li">
+                <a id="all_lessons"
+                    class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}"
+                    href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
+            </li>
+            {% for category in categories %}
+            <li class="category-li">
+                <a class="category-link shadow-sm" id="{{ category.name }}"
+                    href="{% url 'lessons' %}?category={{ category.name }}">
+                    {{ category.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul class="p-0">
+        <div class="filter-container">
+            <!-- Code used from Code Institute learning materials -->
+            <select id="sort-selector" class="custom-select custom-select-sm selector-border
+                {% if current_sorting == 'None_None' %}selector-border-none{% endif %}">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
+                    by...</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+                    Price (low to high)</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+                    Price (high to low)</option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>
+                    Name (A-Z)</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                    Name (Z-A)</option>
+            </select>
+        </div>
+        <div class="filter-container">
+            <div class="filter-label">Levels</div>
+            {% for level in levels %}
+            <div class="m-0">
+                <input type="checkbox" name="level_checkbox" id="{{ level.level }}" value="{{ level.level }}">
+                <label class="text-uppercase" for="{{ level.level }}">{{ level.title }}</label>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

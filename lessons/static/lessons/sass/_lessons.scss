@@ -84,6 +84,47 @@
         color: #000;
         margin-bottom: 2rem;
 
+        /* Search box */
+        .search-from {
+            margin-bottom: 0.85rem;
+            height: 100%;
+
+            /* Style the search field */
+            form {
+                input[type="search"] {
+                    color: #848484;
+                    padding: 7px 4px 7px 15px;
+                    font-size: 1rem;
+                    border: 1px solid #1ca5dc;
+                    border-radius: 10px 0 0 10px;
+                    border-right: 0;
+                    float: left;
+                    display: flex;
+                    width: 80%;
+                    outline: none;
+                }
+                button {
+                    display: flex;
+                    justify-content: center;
+                    width: 20%;
+                    padding: 11px;
+                    background: #1ca5dc;
+                    color: #fff;
+                    font-size: 1rem;
+                    border: 1px solid #1ca5dc;
+                    border-left: none;
+                    border-radius: 0 10px 10px 0;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-color: #00d4f5;
+                        background: #00d4f5;
+                    }
+                }
+            }
+        }
+
+        /* Categories buttons and filter box */
         .filter-container {
             margin-top: 1.5rem;
         }
