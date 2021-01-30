@@ -13,15 +13,17 @@ $("div .category-block").css({ height: `calc((100vh - 59px) / ${categoryClass})`
  * This function will equalize lessons cards height - solution found on
  * https://stackoverflow.com/questions/11688250/setting-equal-heights-for-divs-with-jquery
  */
-$('#lessons-container').each(function () {
-    let highestCard = 0;
-    $('.card', this).each(function () {
-        if ($(this).height() > highestCard) {
-            highestCard = $(this).height();
-        }
+window.onload = function () {
+    $('#lessons-container').each(function () {
+        let highestCard = 0;
+        $('.card', this).each(function () {
+            if ($(this).height() > highestCard) {
+                highestCard = $(this).height();
+            }
+        });
+        $('.card', this).height(highestCard);
     });
-    $('.card', this).height(highestCard);
-});
+}
 /**
 * This function will add class to side navigation when scrolled to predefined point
 */
