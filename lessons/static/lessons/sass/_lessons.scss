@@ -419,13 +419,10 @@
         }
     }
 
-    .btn-blue {
-        margin-top: 15px;
-    }
-
     .fixed-filters {
         padding-left: 0.9rem !important;
         padding-right: 0.9rem !important;
+        transition: top 0.3s;
     }
 }
 
