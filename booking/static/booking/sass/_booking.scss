@@ -213,11 +213,11 @@
             }
         }
     }
-}
 
-@media (max-width: 768px) {
-    h2,
-    h3 {
-        text-align: center;
+    @media (max-width: 768px) {
+        h2,
+        h3 {
+            text-align: center;
+        }
     }
 }

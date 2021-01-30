@@ -76,7 +76,7 @@
             align-items: center;
         }
         .hr-line {
-            border-top: 1px solid rgba(0,0,0,0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             padding-top: 15px;
             margin-top: 15px;
         }
@@ -126,15 +126,14 @@
         margin-top: 5px;
         background-color: #fff;
     }
-}
+    @media (max-width: 737px) {
+        .br-small {
+            display: flex !important;
+            text-align: center;
+        }
 
-@media (max-width: 737px) {
-    .br-small {
-        display: flex !important;
-        text-align: center;
-    }
-
-    .about-hr {
-        width: 80% !important;
+        .about-hr {
+            width: 80% !important;
+        }
     }
 }

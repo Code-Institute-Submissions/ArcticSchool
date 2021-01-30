@@ -60,11 +60,11 @@
         font-weight: 400;
         color: #059cd9;
     }
-}
 
-@media (max-width: 420px) {
-    h1 {
-        font-size: 2rem;
-        text-align: center;
+    @media (max-width: 420px) {
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 }
