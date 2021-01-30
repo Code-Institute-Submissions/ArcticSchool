@@ -14,7 +14,7 @@ class LevelCard(models.Model):
     title = models.TextField(max_length=40)
     level = models.CharField(choices=LevelChoices.choices,
                              default=LevelChoices.Level_1, max_length=1)
-    description = models.TextField(max_length=130)
+    description = models.TextField(max_length=300)
 
     def __str__(self):
         return self.title
@@ -23,7 +23,7 @@ class LevelCard(models.Model):
 class LessonCard(models.Model):
     """ Lessons Information Cards Model """
     title = models.TextField(max_length=40)
-    description = models.TextField(max_length=130)
+    description = models.TextField(max_length=300)
 
     def __str__(self):
         return self.title

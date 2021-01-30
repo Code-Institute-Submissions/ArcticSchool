@@ -32,6 +32,23 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Icons](#icons)
     - [Framework](#framework)
     - [Wireframes](#wireframes)
+  - [Information Architecture](#information-architecture)
+    - [Database choice](#database-choice)
+    - [Data Modelling](#data-modelling)
+      - [Profiles App](#profiles-app)
+        - [User Profile](#user-profile)
+      - [Leesons App](#leesons-app)
+        - [Lesson](#lesson)
+        - [Category](#category)
+      - [Team App](#team-app)
+        - [Instructors](#instructors)
+      - [Resorts App](#resorts-app)
+        - [Resort](#resort)
+      - [Home App](#home-app)
+        - [Level Cards](#level-cards)
+        - [Lesson Cards (why our lessons)](#lesson-cards-why-our-lessons)
+        - [Social Media Icons](#social-media-icons)
+        - [Choices](#choices)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries and Frameworks](#libraries-and-frameworks)
@@ -144,6 +161,7 @@ Red will stand out and notify customer about something important on the page, so
 To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast color schemes generator!
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000)
+[ColorPallet](https://github.com/KarolSliwka/ArcticSchool/tree/main/wireframes/colour-pallete.png)
 
 <img src="https://www.abovewave.kylos.pl/ArcticSchool/Arcitic_Coloristic.png" style="widt:100%;" alt="Arctic School Coloristic">
 
@@ -165,7 +183,7 @@ I have also used a [Fontawesome](https://fontawesome.com) for handy and most com
 
 From the first time when I've started to using [jQuery](https://jquery.com), I just felt in love with this JavaScript Library designed to simplify tree traversal and manipulation. By using it I've created lots of different mouse events, css animiation and other very nice looking features. Because of jQuery I believe user interraction with the page is on the next level. This is making my project more attractive for users and make their experience better.
 
-I have used [Bootstrap v4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly desinged and customized responsive application with mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which hepled me create nice pages layout and structure. I've used components to create navbar, cards, forms etc.
+I have used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly desinged and customized responsive application with mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which hepled me create nice pages layout and structure. I've used components to create navbar, cards, forms etc.
 
 ### Wireframes
 
@@ -173,10 +191,155 @@ To create wireframes I've used [Axure RP9](https://www.axure.com) software.
 If you don't want to buy the software, you can use the 30 days free trail version (Exactly like I did).
 
 To veiw all wireframes for this project please use this link -
-[Arctic School Wireframes](https://2u83gc.axshare.com) \
-Please use side navigation to view all wireframes and interactive connections.
+[Arctic School Wireframes](https://github.com/KarolSliwka/ArcticSchool/tree/main/wireframes)
 
 __*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes.
+
+---
+
+## Information Architecture
+
+### Database choice
+
+During the development I worked with **sqlite3** databases, installed with Django.
+For production I've used a **PostgreSQL** database which is provided in Heroku as add-on.
+
+- The **User model** I have used in this project was provided by Django Allauth. It is a part of default `django.contrib.auth.models`.
+
+### Data Modelling
+
+#### Profiles App
+
+##### User Profile
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+User | user | OneToOneField 'User' | on_delete=models.CASCADE
+Full Name | full_name | CharField | max_length=200, null=True, blank=True
+First Name | first_name | models.CharField | max_length=100, null=True, blank=True
+Last Name | last_name | models.CharField | max_length=100, null=True, blank=True
+Email Address | email_address | models.EmailField | max_length=254, null=False, blank=True
+Phone Number | phone_number | models.CharField | max_length=20, null=True, blank=True
+Street Address 1 | street_address1 | models.CharField | max_length=80, null=True, blank=True
+Street Address 2 | street_address2 | models.CharField | max_length=80, null=True, blank=True
+Postcode | postcode | models.CharField | max_length=20, null=True, blank=True
+Town or City | town_or_city | models.CharField | max_length=40, null=True, blank=True
+County | county | models.CharField | max_length=80, null=True, blank=True
+Country | country | CountryField | blank_label='Select Country', null=True, blank=True
+Receiving Newsletter | receiving_newsletter | models.CharField | max_length=3, choices=newsletter_choices, blank=True, null=True
+
+Newsletter Choices | newsletter_choices | ('Yes', 'Yes'), ('No', 'No')
+
+#### Leesons App
+
+##### Lesson
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254
+Category | category | models.ForeignKey 'Category' | null=True, blank=False, on_delete=models.PROTECT
+Level | level | models.ForeignKey 'LevelCard' | null=True, blank=False, on_delete=models.PROTECT
+Description | description | models.TextField | null=True, blank=True
+Start Date | start_date | models.DateField | null=True, blank=False
+End Date | end_date | models.DateField | null=True, blank=False
+Start Time | start_time | models.TimeField | auto_now=False, auto_now_add=False
+End Time | end_time | models.TimeField | auto_now=False, auto_now_add=False
+Participants | participants | models.IntegerField | null=True, blank=False
+Resort | resort | models.ForeignKey 'Resort' | null=True, blank=False, on_delete=models.PROTECT
+Price | price | models.DecimalField | max_digits=6, decimal_places=2, null=True, blank=False
+Supper Offer | supper_offer | models.BooleanField | null=True, blank=True, default=False
+Image | image | models.ImageField | upload_to="lessons", null=True, blank=True
+
+##### Category
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | CharField | max_length=254
+Friendly Name | friendly_name | CharField | max_length=254, null=True, blank=False
+
+#### Team App
+
+##### Instructors
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=254, blank=False
+Age | age | models.CharField | max_length=2, null=True, blank=False
+About | about | models.TextField | null=True, blank=False
+Image | image | models.ImageField | upload_to="instructors",null=True, blank=True
+
+#### Resorts App
+
+##### Resort
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.CharField | max_length=120
+Country | country | CountryField | max_length=200, blank_label="(Select Country)"
+About | about | models.TextField | max_length=500
+Open Season | open_season | models.CharField | max_length=120, default="December - April"
+Top Altitude | top_altitude | models.IntegerField | default=0
+Bottom Altitude | bottom_altitude | models.IntegerField | default=0
+Resort Altitude | resort_altitude | models.IntegerField | default=0
+Levels | levels | models.TextField
+Instrutors | instructors | models.IntegerField | default=0
+Image| image | models.ImageField | upload_to="resorts", null=True, blank=True
+
+#### Home App
+
+##### Level Cards
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Title | title | models.TextField | max_length=40
+Level | level | models.CharField | choices=LevelChoices.choices, default=LevelChoices.Level_1, max_length=1
+Description | description | models.TextField | max_length=300
+
+##### Lesson Cards (why our lessons)
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Title | title | models.TextField | max_length=40
+Description | description | models.TextField | max_length=300
+
+##### Social Media Icons
+
+| **Name** | **Database Key** | **Field Type** | **Validation** |
+--- | --- | --- | ---
+Name | name | models.TextField | choices=NameChoices.choices, max_length=40, null=False, blank=False, default='Facebook'
+Icon | icon | models.CharField | choices=LevelChoices.choices, max_length=30
+Url Address | url | models.URLField | max_length=1024, default='', null=True, blank=True
+
+##### Choices
+
+Level Choices
+
+- Level_1 = '1'
+- Level_2 = '2'
+- Level_3 = '3'
+- Level_4 = '4'
+
+Level Choices
+
+- Facebook = 'fa-facebook-f'
+- YouTube = 'fa-youtube'
+- Pintereset = 'fa-pinterest-p'
+- Snapchat = 'fa-snapchat-ghost'
+- Twitter = 'fa-twitter'
+- Instagram = 'fa-instagram'
+- TikTok = 'fa-tiktok'
+- Vimeo = 'fa-vimeo-v'
+
+Name Choices
+
+- Facebook = 'facebook'
+- YouTube = 'youtube'
+- Pintereset = 'pinterest'
+- Snapchat = 'snapchat'
+- Twitter = 'twitter'
+- Instagram = 'instagram'
+- TikTok = 'tiktok'
+- Vimeo = 'vimeo'
 
 ---
 
@@ -192,7 +355,7 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Libraries and Frameworks
 
-- [Bootstrap v4.5](https://getbootstrap.com)
+- [Bootstrap](https://getbootstrap.com)
 - [Fontawesome](https://fontawesome.com)
 - [Google Fonts](https://fonts.google.com)
 - [Django](https://www.djangoproject.com)
@@ -213,8 +376,8 @@ Also I've used tools listed below :
 - [Heroku] - Project Hosting
 - [PIP] - Installation of Tools
 - [Boto3] - AWS Compatibility
-- [Axure RP9](https://www.axure.com)  - To Create Wireframes
-- [AWS S3 Bucket] - Store Media and Static Files (Production)
+- [Axure RP9](https://www.axure.com) - To Create Wireframes
+- [AWS S3 Bucket](https://aws.amazon.com/s3/) - Store Media and Static Files (Production)
 - [Adobe Photoshop 2021](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi1jtO-lYjtAhWRtu0KHVSdBuIYABAMGgJkZw&ae=2&ohost=www.google.com&cid=CAESQeD26XjYo-QzyoB2wcpxICKBRcP9GrB4c8gAn9paIaX33r0xVThzoIuEVAd5W9NMGzIpEnaxYR6rGHmVm3Xs6HqK&sig=AOD64_0qloXz9J7Jl2Hmpb5xL3Ar0APH5w&q&adurl&ved=2ahUKEwiXncq-lYjtAhV-ShUIHTryBD0Q0Qx6BAgSEAE&dct=1) - creating and editing images/logotype/icons.
 
 To create colour pallete and image compressing I've used :
@@ -240,6 +403,8 @@ __*All images in README file are hosted on my private server.*__
 ---
 
 ## Testing
+
+Testing information can be found in a separate file - [Testing.md](https://github.com/KarolSliwka/ArcticSchool/tree/main/wireframes/TESTING.md)
 
 ---
 
