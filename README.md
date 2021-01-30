@@ -65,6 +65,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Local Deployment](#local-deployment)
     - [Deployment on Heroku pages](#deployment-on-heroku-pages)
   - [Credits](#credits)
+    - [Code](#code)
     - [Content and Media](#content-and-media)
     - [Acknowledgements](#acknowledgements)
   - [Contact](#contact)
@@ -498,6 +499,12 @@ To deploy your project please use following steps:
 
 ## Credits
 
+### Code
+
+- Project was developed by following [Code Institute](https://codeinstitute.net/) video course 'Boutique Ado Django Mini-Project'.
+- [Stack Overflow](https://stackoverflow.com/) for finding solutions or hints how to solve issues and how to make it work.
+- I referred to the [Django](https://docs.djangoproject.com/en/3.1/) documentation sources during the development.
+
 ### Content and Media
 
 - Whole website content was written by the project author.
@@ -516,6 +523,12 @@ To deploy your project please use following steps:
 - SVG Background graphics - [SVGBackgrounds](https://www.svgbackgrounds.com/#large-triangles) and [LoadingIO](https://loading.io) - highly recommended.
 
 ### Acknowledgements
+
+I would like to say 'Thank You' to everyone who helped me throughout the development of this project:
+
+- [Simen Daehlin](https://github.com/Eventyret) for his support, help, patience and guidance, very useful tips and advice! Also for  not only beeing a Mentor but an amazing Friend!
+- [Code Institute](https://codeinstitute.net) Amazing people! For their help, assistance and support when I had the most challenging times in my life.
+- Also I would like to thank my close friends and family who never stopped believing I can finish this course and become a Developer!
 
 ---
 
