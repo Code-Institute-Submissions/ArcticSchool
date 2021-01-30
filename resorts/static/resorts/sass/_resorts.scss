@@ -34,45 +34,39 @@
         }
     }
 
-    .resorts-container {
-        background: linear-gradient(90deg, #31addf, #1ca5dc, #059cd9);
-        border-top: 3px solid #31addf;
-        border-bottom: 3px solid #059cd9;
-        padding: 1.25rem;
-
-        .image-container {
-            align-items: center;
-            display: flex;
-        }
-
-        img {
-            max-width: 100%;
-            border: 10px solid #fff;
-            border-radius: 25px;
-        }
-    }
-
-    /* Reverse resort style */
-    .reverse-background {
-        background: linear-gradient(90deg, #059cd9, #1ca5dc, #31addf);
-    }
-
-    /* Headings and paragraphs */
-    .resort-info {
-
-        h3 {
-            margin-top: 20px;
-            span {
-                font-size: 1rem;
+    /* Blue container */
+    .blue-container {
+        background-color: #31aadf;
+        height: 100%;
+        /* Card */
+        .card {
+            padding: 1.25rem;
+            border-radius: 10px;
+            img {
+                max-width: 100%;
+                border-radius: 10px;
+                object-fit: cover;
             }
-        }
+            /* Headings and paragraphs */
+            .resort-info {
+                color: #000;
+                h3 {
+                    color: #059cd9;
+                    margin-top: 20px;
+                    font-size: 2.5rem;
+                    span {
+                        font-size: 1rem;
+                    }
+                }
 
-        p{
-            font-weight: 500;
+                p {
+                    font-weight: 500;
 
-            span {
-                font-style: italic;
-                font-weight: 300;
+                    span {
+                        font-style: italic;
+                        font-weight: 300;
+                    }
+                }
             }
         }
     }
