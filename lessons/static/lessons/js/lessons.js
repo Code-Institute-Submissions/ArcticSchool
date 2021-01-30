@@ -41,7 +41,7 @@ if ($(window).width() > 575) {
             $(".top-filter").removeClass("fixed-filters shadow-sm");
             $(".filter-box").removeClass("pt-4");
         }
-    }
+    };
 }
 
 /**
@@ -59,7 +59,7 @@ if ($(window).width() < 575) {
             $(".filter-box").removeClass("pt-4");
         }
         prevScrollpos = currentScrollPos;
-    }
+    };
 }
 
 /**
