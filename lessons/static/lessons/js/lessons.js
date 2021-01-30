@@ -133,13 +133,44 @@ $('input[name=level_checkbox]').change(function () {
 });
 
 /**
+ * This function will add special id to anchor element to set 'category-selected' style
+ */
+$(function () {
+    let pathname = window.location.href;
+    let category_in = pathname.search("category");
+    // check if path name contains
+    if (pathname.search("=") < 0) { } else {
+        pathname = pathname.split('=')[1];
+        let last_sign = pathname.search("&");
+
+        if (last_sign <= 0) {
+            // add categroy.name-selected class to element when window href doesn't contains category or filtering
+            category_selected = pathname + '-selected';
+            $('.pathname').html(pathname);
+            let my_id = '#' + pathname;
+            $(my_id).addClass('category-selected');
+        } else {
+            // add category.name-selected class to element when category is filtered
+            category_selected = pathname.substring(0, last_sign); + '-selected';
+            $('.pathname').html(category_selected);
+            let my_id = '#' + category_selected;
+            if (category_in == -1) {
+                $('#all_lessons').addClass('category-selected');
+            } else {
+                $(my_id).addClass('category-selected');
+            }
+        }
+    }
+});
+
+/**
  * This function will toggle discount bar and change hide element
  */
 $('#close-discount').click(function () {
     $('#discount-banner').animate({
-        height: [ "toggle", "swing" ],
+        height: ["toggle", "swing"],
         opacity: "swing"
-      });
+    });
     // set close discount value to true
     sessionStorage.setItem('display_discount', 'False');
 });
