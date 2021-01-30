@@ -53,7 +53,9 @@ def lessons(request):
             return redirect(reverse('lessons'))
 
         queries = Q(name__icontains=query) | Q(
-            description__icontains=query) | Q(category__name__icontains=query) | Q(level__title__icontains=query)
+            description__icontains=query) | Q(
+                category__name__icontains=query) | Q(
+                    level__title__icontains=query)
         lessons = lessons.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -69,6 +71,7 @@ def lessons(request):
         'levels': levels,
         'all_lessons': all_lessons,
         'current_sorting': current_sorting,
+        'query_text': query,
     }
 
     return render(request, 'lessons/lessons.html', context)
