@@ -1,0 +1,73 @@
+<div class="container-fluid top-filter">
+    <div class="container filter-box">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 col-xl-6 search-from">
+                <form method="GET" action="{% url 'lessons' %}" id="search-from">
+                    <input type="text" name="q" placeholder="Search" aria-label="Search">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <p class="text-success query-text m-0 mt-1">
+                        {% if query_text != None %}
+                        {{ lessons|length }} Lesson{% if lessons|length != 1 %}s{% endif %}
+                        {% if query_text %} found for<span class="text-dark">
+                            <strong>"{{ query_text|truncatechars:24 }}"</strong></span>
+                        {% endif %}
+                        {% endif %}
+                    </p>
+                </form>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6 col-xl-6">
+                <div class="filter-container">
+                    <!-- Code used from Code Institute learning materials -->
+                    <select id="sort-selector" class="sort-selector custom-select custom-select-sm selector-border
+                    {% if current_sorting == 'None_None' %}selector-border-none{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
+                            by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+                            Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+                            Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>
+                            Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                            Name (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-6 col-xl-6 mb-3">
+                <button class="btn hvr-bounce-to-right btn-blue" type="button" data-toggle="collapse"
+                    data-target="#filter-box" aria-expanded="false" aria-controls="collapseExample">
+                    Categories
+                </button>
+            </div>
+            <div class="collapse" id="filter-box">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <ul class="p-0">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                <li class="category-li">
+                                    <a id="all_lessons"
+                                        class="category-link shadow-sm {% if request.get_full_path == '/lessons/' %}category-selected{% endif %}"
+                                        href="{% url 'lessons' %}">All Lessons ({{ all_lessons.count }})</a>
+                                </li>
+                            </div>
+                            {% for category in categories_list %}
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                                <li class="category-li">
+                                    <a class="category-link shadow-sm" id="{{ category.name }}"
+                                        href="{% url 'lessons' %}?category={{ category.name }}">
+                                        {{ category.name }} ({{ category.lesson__count }})
+                                    </a>
+                                </li>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

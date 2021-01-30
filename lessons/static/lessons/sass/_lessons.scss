@@ -99,9 +99,9 @@
             form {
                 input[type="text"] {
                     color: #848484;
-                    padding: 7px 4px 7px 15px;
+                    padding: 6px 0 6px 15px;
                     font-size: 1rem;
-                    border: 1px solid #1ca5dc;
+                    border: 2px solid #1ca5dc;
                     border-radius: 10px 0 0 10px;
                     border-right: 0;
                     float: left;
@@ -135,7 +135,7 @@
         }
 
         .custom-select-sm {
-            height: calc(2em + 0.5rem + 2px);
+            height: calc(2em + 0.7rem + 2px);
             padding-left: 1rem;
         }
 
@@ -390,8 +390,22 @@
     }
 }
 
-.blue-box {
-    background-color: lightblue;
+.btn-blue {
+    width: 100%;
+    border: 1px solid #00d4f5;
+    color: #00d4f5;
+    height: 41px;
+    border-radius: 10px;
+
+    &.hvr-bounce-to-right {
+        border-radius: 10px;
+    }
+
+    &.hvr-bounce-to-right:before {
+        background: #00d4f5;
+        border: 1px solid #fff;
+        border-radius: inherit;
+    }
 }
 
 @media (max-width: 576px) {
@@ -403,6 +417,15 @@
             bottom: 0;
             right: 0;
         }
+    }
+
+    .btn-blue {
+        margin-top: 15px;
+    }
+
+    .fixed-filters {
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
     }
 }
 
