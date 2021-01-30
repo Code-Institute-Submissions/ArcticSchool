@@ -26,21 +26,41 @@ $('#lessons-container').each(function () {
 /**
 * This function will add class to side navigation when scrolled to predefined point
 */
-$(window).scroll(function () {
-    let scroll = $(window).scrollTop();
-    // top section height
-    let top_section_height = $(".about-lessons-result").height();
-    //>=, not <=
-    if (scroll >= top_section_height) {
-        //clearHeader, not clearheader - caps H
-        $(".top-filter").addClass("fixed-filters shadow-sm");
-        $(".filter-box").addClass("pt-4");
+if ($(window).width() > 575) {
+    window.onscroll = function () {
+        let scroll = $(window).scrollTop();
+        // top section height
+        let top_section_height = $(".about-lessons-result").height();
+        //>=, not <=
+        if (scroll >= top_section_height) {
+            //clearHeader, not clearheader - caps H
+            $(".top-filter").addClass("fixed-filters shadow-sm");
+            $(".filter-box").addClass("pt-4");
+        }
+        else {
+            $(".top-filter").removeClass("fixed-filters shadow-sm");
+            $(".filter-box").removeClass("pt-4");
+        }
     }
-    else {
-        $(".top-filter").removeClass("fixed-filters shadow-sm");
-        $(".filter-box").removeClass("pt-4");
+}
+
+/**
+ *This function will show and hide searchbox and filters and small devices´
+ */
+if ($(window).width() < 575) {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            $(".top-filter").addClass("fixed-filters shadow-sm");
+            $(".filter-box").addClass("pt-4");
+        } else {
+            $(".top-filter").removeClass("fixed-filters shadow-sm");
+            $(".filter-box").removeClass("pt-4");
+        }
+        prevScrollpos = currentScrollPos;
     }
-});
+}
 
 /**
  * This function will show more elements.cards
