@@ -10,7 +10,7 @@
 </div>
 <!-- Main container -->
 <h1 class="d-none">Lessons</h1>
-<div id="lessons-container">
+<div id="lessons-container" role="main">
     <!-- About lessons promo container -->
     <div class="about-lessons-result">
         <div class="lessons-bg"></div>
@@ -34,70 +34,75 @@
                 <div class="page-info">
                     <p class="counter-lessons"></p>
                 </div>
-                <!-- Lessons cards container -->
-                <div class="row justify-content-between">
-                    <!-- Filters container -->
-                    {% include 'lessons/filters.html' %}
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
-                        <div class="row">
-                            {% for lesson in lessons %}
+                <!-- Filters container -->
+                <div class="d-block d-lg-none">
+                    <!-- Display side bar filter only on large and extra large devices -->
+                    {% include 'lessons/mobile-filters.html' %}
+                </div>
+                <div class="d-none d-lg-block d-xl-block">
+                    <!-- Display side bar filter only on large and extra large devices -->
+                    {% include 'lessons/top-filters.html' %}
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="row">
+                        {% for lesson in lessons %}
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 extra-padding id-{{ lesson.level }}">
                             <div
-                                class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 extra-padding id-{{ lesson.level }}">
-                                <div
-                                    class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
-                                    <!-- Card top part -->
-                                    <div class="card-head">
-                                        {% if lesson.image %}
-                                        <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lesson.name }}"
-                                            width="100%" height="100%">
-                                        {% else %}
-                                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" width="100%"
-                                            height="100%">
-                                        {% endif %}
-                                        {% if lesson.supper_offer == True %}
-                                        <div class="super-offer-icon">
-                                            <p class="super-offer-text">Super Offer!</p>
-                                        </div>
-                                        {% endif %}
+                                class="card {% if lesson.supper_offer == True %}card-super-offer{% else %}shadow-sm{% endif %}">
+                                <!-- Card top part -->
+                                <div class="card-head">
+                                    {% if lesson.image %}
+                                    <img src="{{ MEDIA_URL }}{{ lesson.image }}" alt="{{ lesson.name }}" width="100%"
+                                        height="100%">
+                                    {% else %}
+                                    <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" width="100%"
+                                        height="100%">
+                                    {% endif %}
+                                    {% if lesson.supper_offer == True %}
+                                    <div class="super-offer-icon">
+                                        <p class="super-offer-text">Super Offer!</p>
                                     </div>
-                                    <!-- Card bottom part -->
-                                    <div class="card-body">
-                                        <!-- Lesson details -->
-                                        <h1>{{ lesson.name }}</h1>
-                                        <p>Level
-                                            <span>{{ lesson.level }}</span>
-                                        </p>
-                                        <p>Participants
-                                            <span>{{ lesson.participants }}</span>
-                                        </p>
-                                        <p>Price
-                                            <span>£{{ lesson.price }}</span>
-                                        </p>
-                                        <!-- Buttons section -->
-                                        <div class="buttons">
-                                            <a href="{% url 'lesson' lesson.id %}"
-                                                class="btn hvr-bounce-to-right">Details</a>
-                                            <form class="form" action="{% url 'add_to_booking' lesson.id %}"
-                                                method="POST">
-                                                {% csrf_token %}
-                                                <input class="form-control qty_input" type="hidden" name="quantity"
-                                                    value="1" data-item_id="{{ lesson.id }}"
-                                                    id="id_qty_{{ lesson.id }}">
-                                                <input type="hidden" name="redirect_url"
-                                                    value="{{ request.get_full_path }}">
-                                                <button type="submit" class="btn hvr-bounce-to-right">Book Now</button>
-                                            </form>
-                                        </div>
+                                    {% endif %}
+                                </div>
+                                <!-- Card bottom part -->
+                                <div class="card-body">
+                                    <!-- Lesson details -->
+                                    <h1>{{ lesson.name }}</h1>
+                                    <p>Level
+                                        <span>{{ lesson.level }}</span>
+                                    </p>
+                                    <p>Participants
+                                        <span>{{ lesson.participants }}</span>
+                                    </p>
+                                    <p>Price
+                                        <span>£{{ lesson.price }}</span>
+                                    </p>
+                                    <!-- Buttons section -->
+                                    <div class="buttons">
+                                        <a href="{% url 'lesson' lesson.id %}"
+                                            class="btn hvr-bounce-to-right">Details</a>
+                                        <form class="form" action="{% url 'add_to_booking' lesson.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <input class="form-control qty_input" type="hidden" name="quantity"
+                                                value="1" data-item_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
+                                            <input type="hidden" name="redirect_url"
+                                                value="{{ request.get_full_path }}">
+                                            <button type="submit" class="btn hvr-bounce-to-right">Book Now</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            {% endfor %}
                         </div>
-                        <!-- Show more lessons container -->
+                        {% endfor %}
+                    </div>
+                    <!-- Show more lessons container -->
+                    <div class="row">
                         {% if lessons.count %}
                         <div class="show-more">
-                            <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More (<span
-                                    class="visible-cards-count"></span>)</a>
+                            <p>
+                                <a href="#" id="loadMore"><i class="fas fa-angle-double-down"></i>Load More (<span
+                                        class="visible-cards-count"></span>)</a>
+                            </p>
                             <p class="page-results"><span class="cards-count">
                                     {% if lessons.count <= 12 %} {{ lessons.count }} {% else %}12 {% endif %}</span>
                                         from <span class="total-count">{{ lessons.count }}</span> lessons</p>
@@ -113,8 +118,11 @@
         </div>
     </div>
 </div>
-<!-- Footer -->
-{% include 'layout/footer.html' %}
+
+<div class="mt-auto">
+    <!-- Footer -->
+    {% include 'layout/footer.html' %}
+</div>
 
 {% endblock %}
 
