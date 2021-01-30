@@ -1,7 +1,7 @@
 """ Views Lessons App """
 import random
-from typing import Counter
 from django.db.models.aggregates import Count
+from django.db.models import Q
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
@@ -22,6 +22,7 @@ def lessons(request):
     levels = LevelCard.objects.all()
 
     query = None
+    categories = None
     sort = None
     direction = None
 
@@ -45,6 +46,16 @@ def lessons(request):
             lessons = lessons.filter(category__name__in=categories)
             categories = Category.objects.all()
 
+        if 'q' in request.GET:
+            query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('lessons'))
+
+        queries = Q(name__icontains=query) | Q(
+            description__icontains=query) | Q(category__name__icontains=query) | Q(level__title__icontains=query)
+        lessons = lessons.filter(queries)
+
     current_sorting = f'{sort}_{direction}'
 
     # Get number of lessons in each category
@@ -54,7 +65,7 @@ def lessons(request):
         'socials': social,
         'lessons': lessons,
         'categories': categories,
-        'categories_list':categories_list,
+        'categories_list': categories_list,
         'levels': levels,
         'all_lessons': all_lessons,
         'current_sorting': current_sorting,
@@ -85,7 +96,7 @@ def lesson(request, lesson_id):
 
 
 # Categories Management
-@staff_member_required
+@ staff_member_required
 def categories_management(request):
     """ A view to manage lessons categoires """
 
@@ -101,7 +112,7 @@ def categories_management(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def add_categories_management(request):
     """ Management view to add lesson category """
 
@@ -125,7 +136,7 @@ def add_categories_management(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def edit_categories_management(request, category_id):
     """ Management view to edit lessons category """
 
@@ -153,7 +164,7 @@ def edit_categories_management(request, category_id):
     return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def remove_categories_management(request, category_id):
     """ Management view to remove lessons category """
 
@@ -165,7 +176,7 @@ def remove_categories_management(request, category_id):
 
 
 # Lessons Management
-@staff_member_required
+@ staff_member_required
 def lessons_management(request):
     """ A view to manage lessons """
 
@@ -181,7 +192,7 @@ def lessons_management(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def add_lessons_management(request):
     """ Management view to add lessons """
 
@@ -205,13 +216,13 @@ def add_lessons_management(request):
     return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def edit_lessons_management(request, lesson_id):
     """ Management view to edit lessons """
 
-    lesson = get_object_or_404(Lesson, pk=lesson_id)
+    edit_lesson = get_object_or_404(Lesson, pk=lesson_id)
     if request.method == 'POST':
-        form = LessonsForm(request.POST, request.FILES, instance=lesson)
+        form = LessonsForm(request.POST, request.FILES, instance=edit_lesson)
         if form.is_valid():
             form.save()
             messages.success(
@@ -233,12 +244,12 @@ def edit_lessons_management(request, lesson_id):
     return render(request, template, context)
 
 
-@staff_member_required
+@ staff_member_required
 def remove_lessons_management(request, lesson_id):
     """ Management view to remove lessons """
 
-    lesson = get_object_or_404(Lesson, pk=lesson_id)
-    lesson.delete()
+    removed_lesson = get_object_or_404(Lesson, pk=lesson_id)
+    removed_lesson.delete()
     messages.success(request, 'Lesson removed successfully!')
 
     return redirect(reverse('lessons_management'))
