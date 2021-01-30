@@ -55,8 +55,9 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
     - [Tools](#tools)
     - [Databases](#databases)
   - [Features](#features)
-    - [Existing Features](#existing-features)
     - [Features Left to Implement](#features-left-to-implement)
+      - [Social account login (Google and Facebook)](#social-account-login-google-and-facebook)
+      - [Subscribing Newsletter Form](#subscribing-newsletter-form)
   - [Testing](#testing)
   - [Bugs](#bugs)
     - [Bugs During Development:](#bugs-during-development)
@@ -399,9 +400,23 @@ __*All images in README file are hosted on my private server.*__
 
 ## Features
 
-### Existing Features
+Arctic School Web App contains 8 applications `home`, `lessons`(contains lessons to book), `team`, `resorts`, `booking`, `checkout`, `contact` and `profiles`(contains booking active and archived history + Management/Administartion Pages).
 
 ### Features Left to Implement
+
+There are some features that I considered were of secondary importance and I have not implemented them yet due to time constraints, but intend to do so in future when I will be able to dedicate more time to them. Most of these features are displayed in my [original wireframes](https://github.com/irinatu17/Art-of-Tea/tree/master/wireframes).
+
+#### Social account login (Google and Facebook)
+
+This feature allows users to login by using their social account. This will changed user experience and make the login process easy and simple.
+
+#### Subscribing Newsletter Form
+
+Newsletter form is only a visual prototype. It hasn't got a real action to sign customers for a newsletter.
+All customers are singed autmatically to subscribing newsletter when registering.
+This will allow users to subscribe without creating account on webiste.
+
+Other small features are going to be implemented in feature, **Filtering Lessons** by Level, **Real Time Chat** also I would like to change **Management/Adminstartion Pages** style and **Forms** usability.
 
 ---
 
