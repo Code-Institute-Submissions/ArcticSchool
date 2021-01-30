@@ -91,7 +91,7 @@
 
             /* Style the search field */
             form {
-                input[type="search"] {
+                input[type="text"] {
                     color: #848484;
                     padding: 7px 4px 7px 15px;
                     font-size: 1rem;
@@ -120,6 +120,10 @@
                         border-color: #00d4f5;
                         background: #00d4f5;
                     }
+                }
+                /* Query result text */
+                .query-text {
+                    margin: 10px 0 0 15px;
                 }
             }
         }

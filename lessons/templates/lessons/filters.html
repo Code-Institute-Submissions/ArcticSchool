@@ -2,11 +2,19 @@
     <!-- Category -->
     <div class="filter-box">
         <div class="search-from">
-            <form action="" method="POST" id="search-form">
-                <input class="" type="search" name="search" placeholder="Search" aria-label="Search">
-                <button class="" type="submit">
+            <form method="GET" action="{% url 'lessons' %}" id="search-from">
+                <input type="text" name="q" placeholder="Search" aria-label="Search">
+                <button type="submit">
                     <i class="fas fa-search"></i>
                 </button>
+                <p class="text-success query-text">
+                    {% if query_text != None %}
+                        {{ lessons|length }} Lesson{% if lessons|length != 1 %}s{% endif %}
+                        {% if query_text %} found for <br><span class="text-dark">
+                            <strong>"{{ query_text|truncatechars:24 }}"</strong></span>
+                        {% endif %}
+                    {% endif %}
+                    </p>
             </form>
         </div>
         <ul class="p-0">
