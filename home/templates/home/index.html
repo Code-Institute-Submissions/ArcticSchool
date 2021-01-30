@@ -7,8 +7,7 @@
 
 <h1 class="d-none">Home page</h1>
 <!-- Top container with social media links -->
-<section id="top-bg" class="bg-section">
-  <h2 class="d-none">Top Section</h2>
+<section id="top-bg" class="bg-section" onload="LessonCardSize();">
   <div class="container-fluid h-100">
     <div class="interactive-top row h-100">
       <!-- Main section container -->
@@ -117,12 +116,10 @@
         {% for lesson in lessons %}
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-0">
           <div class="card text-center">
-            <div class="card-body">
-              <div class="white-border shadow-sm">
-                <h5 class="card-title">{{ lesson.title }}</h5>
-                <hr>
-                <p class="card-text font-weight-light text-left">{{ lesson.description }}</p>
-              </div>
+            <div class="card-body shadow-sm">
+              <h5 class="card-title">{{ lesson.title }}</h5>
+              <hr>
+              <p class="card-text font-weight-light text-left">{{ lesson.description }}</p>
             </div>
           </div>
         </div>
@@ -132,7 +129,7 @@
   </div>
 </section>
 <!-- Booking reminder banner section -->
-  {% include 'includes/booking-banner.html' %}
+{% include 'includes/booking-banner.html' %}
 <!-- What is my level section -->
 <section id="my-level">
   <div class="container">
@@ -157,4 +154,8 @@
 </section>
 {% include 'layout/footer.html' %}
 
+{% endblock %}
+{% block extra_js %}
+{{ block.supper }}
+<script src="{% static 'home/js/home.js' %}"></script>
 {% endblock %}

@@ -22,7 +22,6 @@ $('#lessons-container').each(function () {
     });
     $('.card', this).height(highestCard);
 });
-
 /**
 * This function will add class to side navigation when scrolled to predefined point
 */
