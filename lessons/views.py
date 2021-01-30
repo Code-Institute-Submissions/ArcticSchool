@@ -48,15 +48,15 @@ def lessons(request):
 
         if 'q' in request.GET:
             query = request.GET['q']
-        if not query:
-            messages.error(request, "You didn't enter any search criteria!")
-            return redirect(reverse('lessons'))
-
-        queries = Q(name__icontains=query) | Q(
-            description__icontains=query) | Q(
+            if query != "":
+                queries = Q(name__icontains=query) | Q(
+                description__icontains=query) | Q(
                 category__name__icontains=query) | Q(
-                    level__title__icontains=query)
-        lessons = lessons.filter(queries)
+                level__title__icontains=query)
+                lessons = lessons.filter(queries)
+            else:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect( request.path )
 
     current_sorting = f'{sort}_{direction}'
 
