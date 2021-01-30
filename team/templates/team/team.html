@@ -40,24 +40,28 @@
         <div class="container card-container">
             <div class="row">
                 {% for instructor in instructors %}
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 card">
-                    <div class="main-card shadow-sm">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-3">
+                    <div class="main-card shadow">
                         <div class="info-container">
                             {% if instructor.image %}
-                            <img class="card-img-top" src="{{ MEDIA_URL }}{{ instructor.image }}"
+                            <img class="card-img-top shadow-sm" src="{{ MEDIA_URL }}{{ instructor.image }}"
                                 alt="{{ instructor.image }}" width="100%" height="100%">
                             {% else %}
-                            <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" width="100%" height="100%">
+                            <img class="card-img-top" src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image"
+                                width="100%" height="100%">
                             {% endif %}
                         </div>
                         <div class="card-body">
                             <hr class="white-hr">
-                            <h5 class="card-title text-underline">{{ instructor.name }}<span class="age">{{ instructor.age }}</span></h5>
-                            <div id="readmore-button-{{ forloop.counter }}" class="collapse">
+                            <h5 class="card-title text-underline">{{ instructor.name }}
+                                <span class="age">{{ instructor.age }}</span>
+                            </h5>
+                            <div id="readmore-button-{{ forloop.counter }}" class="collapse hr-line">
                                 <p class="card-text">{{ instructor.about }}</p>
                             </div>
-                            <button type="button" class="btn hvr-bounce-to-right read-more-button" data-toggle="collapse"
-                                data-target="#readmore-button-{{ forloop.counter }}">About Me</button>
+                            <button type="button" class="btn hvr-bounce-to-right read-more-button"
+                                data-toggle="collapse" data-target="#readmore-button-{{ forloop.counter }}">About
+                                Me</button>
                         </div>
                     </div>
                 </div>
