@@ -136,7 +136,10 @@ $('input[name=level_checkbox]').change(function () {
  * This function will toggle discount bar and change hide element
  */
 $('#close-discount').click(function () {
-    $('#discount-banner').toggle('d-none');
+    $('#discount-banner').animate({
+        height: [ "toggle", "swing" ],
+        opacity: "swing"
+      });
     // set close discount value to true
     sessionStorage.setItem('display_discount', 'False');
 });
