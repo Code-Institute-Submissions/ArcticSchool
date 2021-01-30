@@ -1,5 +1,5 @@
 /* Lessons main container */
-#lessons{
+#lessons {
     margin-top: 59px;
     display: flex;
     flex-direction: column;
@@ -392,6 +392,18 @@
 
 .blue-box {
     background-color: lightblue;
+}
+
+@media (max-width: 576px) {
+    .show-more {
+        flex-direction: column;
+
+        .page-results {
+            position: relative;
+            bottom: 0;
+            right: 0;
+        }
+    }
 }
 
 @media (min-width: 768px) {
