@@ -1,5 +1,12 @@
 # Testing
 
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Validators](#validators)
+  - [Compatibility and Responsiveness](#compatibility-and-responsiveness)
+  - [Bugs](#bugs)
+    - [Bugs During Development](#bugs-during-development)
+
 ## Manual Testing
 
 ---
@@ -73,5 +80,5 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
 ---
 
 <div align="right">
-    <b><a href="#arctic-school-">Back To Top</a></b>
+    <b><a href="#testing">Back To Top</a></b>
 </div>
