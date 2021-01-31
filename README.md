@@ -594,12 +594,12 @@ DATABASES = {
 - 13: After all is set remove your "POSTGRESS URL" so nobody will se your Database Url when deployed pushed to GitHub while Deploying on Heroku.
 
 - 14: Click the deploy button on the Heroku Pages dashboard or simply run
+
 ```bash
 git push origin <your branch name>
 ```
 
 - 15: Arctic School App has been deployed the Heroku Pages, Enjoy!;
-
 
 ---
 
