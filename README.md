@@ -1,8 +1,8 @@
 # Arctic School
 
-Our school name doesn't mean, we are the coldest people on the earth... We are happy, funny and we've got big warm hearts, waiting for you. Our passion is to help you in your new beautiful journey with learnign how to snowbaording. Our worlds best trainers/teachers are here for you!
+Our school name doesn't mean, we are the coldest people on the earth... We are happy, funny and we've got big warm hearts, waiting for you. Our passion is to help you in your new beautiful journey by learning how to snowboarding. Our world's best trainers/teachers are here for you!
 
-_"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."_\
+_"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet, the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."_\
 **Jeremy Jones**
 
 ![Arctic School Mockup](https://raw.githubusercontent.com/KarolSliwka/ArcticSchool/main/wireframes/mockup.png)
@@ -79,68 +79,68 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 - People who want to learn snowboarding - Age is not a limit!
 - People who want to improve their snowboarding skills.
-- People interested in winter time activities.
-- People who want to try something new in their live.
+- People interested in wintertime activities.
+- People who want to try something new in their lives.
 - People who are passionate about snowboarding.
-- People who want to be trained by the top class world instructors.
-- People who want to be trained safely, well motivated and achive their goals.
+- People who want to be trained by top-class world instructors.
+- People who want to be trained safely, well-motivated, and achieve their goals.
 - People who want to have fun.
 - People who want to feel a bit of adrenaline while training on the highest level.
 
 #### Users
 
 - Get information about lesson/s provided in offers.
-- Purchase selected lesson/s in easy and secure way.
+- Purchase selected lesson/s in an easy and secure way.
 - Contact website owner/administrator for more information about lesson/s, if needed.
-- Get information about COVID-19, all restrictions and protection information.
+- Get information about COVID-19, all restrictions, and protection information.
 
 #### Site Owner/Business
 
 - Engage people to start learning and discover their new limits.
 - Engage people to do outdoor winter sports.
 - Help people improve their snowboarding skills.
-- Let people know about 'Arctic School' - real school for everybody, "Age is not a limit!".
-- Provide fully secure, well designed and easy to use e-commerce platform to purchase snowboarding lesson/s.
-- Make profit from selling/providing lesson/s for customers from whole world.
+- Let people know about 'Arctic School' - a real school for everybody, "Age is not a limit!".
+- Provide a fully secure, well designed, and easy to use an e-commerce platform to purchase snowboarding lesson/s.
+- Make profit from selling/providing lesson/s for customers from the whole world.
 
 ### User Stories
 
 #### Common User Stories
 
-- As a User, I want to be able to access webiste from my phone as I'm using it most often, also from desktop and tablet.
-- As a User, I want to be notified when I successfully finished registration process.
+- As a User, I want to be able to access the website from my phone as I'm using it most often, also from desktop and tablet.
+- As a User, I want to be notified when I successfully finished the registration process.
 - As a User, I expect nice and clean website navigation so I can easily move around all pages.
-- As a User, I want to find more infomration abuot company, to understand more about what they are doing, where lesson/s take place, how flexible thier are with providing lesson/s.
-- As a User, I want to be able to access company social media links, so I can read more about events, new lesson/s, sales or promo codes.
-- As a User, I want to be able to contact the owner/lesson/s provider, so I can ask questions or write additional query about their services.
-- As a User, I want to be able to view all lesson/s details such as: image (if there is one), description, time, who will be my instructor, skills level, time and price, so that I can choose the best lesson type.
-- As a User, I want to be able to search from all the lesson/s, filter and adjust price value to fina a specific to pick one I can afford.
+- As a User, I want to find more information about the company, to understand more about what they are doing, where lesson/s take place, how flexible they are with providing lesson/s.
+- As a User, I want to be able to access company social media links, so I can read more about events, new lesson/s, sales, or promo codes.
+- As a User, I want to be able to contact the owner/lesson/s provider, so I can ask questions or write an additional query about their services.
+- As a User, I want to be able to view all lesson/s details such as image (if there is one), description, time, who will be my instructor, skills level, time, and price, so that I can choose the best lesson type.
+- As a User, I want to be able to search from all the lesson/s, filter, and adjust price value to fina a specific to pick one I can afford.
 - As a User, I want to be able to view my chosen lesson/s, total price in the cart before purchasing, so I can make my last changes if needed.
-- As a User, I expect to purchase lesson/s in safe and secure way by using card method payments.
+- As a User, I expect to purchase lesson/s in a safe and secure way by using card method payments.
 - As a User, I want to receive email confirmations after I successfully purchased my lesson/s.
-- As a User, I want to receive email reminder of upcoming lesson/s, so I can prepare myself.
-- As a User, I want to be able to rent additional snowboard equipment, If my is damaged or I forgot to pack it before attending the lesson/s.
+- As a User, I want to receive an email reminder of upcoming lesson/s, so I can prepare myself.
+- As a User, I want to be able to rent additional snowboard equipment, If it is damaged or I forgot to pack it before attending the lesson/s.
 
 #### New Users
 
 - As a User, I want to be able to view all lesson/s and make a safe purchase.
-- As a User, I want to be able to create my own account, which will give me possibility store, view and edit my profile information.
+- As a User, I want to be able to create my own account, which will give me the possibility to store, view, and edit my profile information.
 
 #### Returning Users
 
 - As a User, I want to be able to login back anytime.
-- As a User, I want to be able to make quicker pruchases for lesson/s by using previously saved personal information.
-- As a User, I want to be able to change my password from my profile account, in case I my account was hacked, to protect my personal details.
-- As a User, I want to be able to fully changed my personal details, home address, name (in case I'm married now), phone number, e-mail address etc.
+- As a User, I want to be able to make quick purchases for lesson/s by using previously saved personal information.
+- As a User, I want to be able to change my password from my profile account, in case my account was hacked, to protect my personal details.
+- As a User, I want to be able to fully changed my personal details, home address, name (in case I'm married now), phone number, e-mail address, etc.
 - As a User, I want to be able to view my ordering history.
 
 ### Site Owner Goals
 
-- To provide creative, safe and interactive lessons for customer/s.
-- To have a well design, with easy to use interface so the custmoer/s will not feel frustraied when using they're using website.
-- To receive email from website users/customers when they fill out online contact form, so I can replay on their queries
-- To have possibility to Add, Edit and Delete lesson/s.
-- To be able to provide secure payment method for my clients/website users.
+- To provide creative, safe, and interactive lessons for customer/s.
+- To have a good design, with easy to use interface so the custmoer/s will not feel frustrated when using they're using the website.
+- To receive email from website users/customers when they fill out the online contact form, so I can replay their queries
+- To have the possibility to Add, Edit, and Delete lesson/s.
+- To be able to provide a secure payment method for my clients/website users.
 - To have a secure admin interface, easy to use. Important thing is, this interface must be available only for admins.
 
 ---
@@ -149,50 +149,50 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 
 ### Logotype
 
-I've used [Provicali](https://www.dafont.com/provicali.font) to create a logotype..
+I've used [Provicali](https://www.dafont.com/provicali.font) to create a logotype.
 
 ### Colors
 
-Whole application coloristic was selected based on the projecet name and my personal style of design. Name **Arcitc** will always reminds us winter and cold climate. That's why I've decided to use two main colors: white and blue. I've also used different additonals tones of blue color to accent different elements of page. To break white and blue colors I've used black and tones of black colour.
+The whole application coloristic was selected based on the project name and my personal style of design. Name **Arctic** will always remind us of winter and cold climate. That's why I've decided to use two main colors: white and blue. I've also used different additional tones of blue color to accent different elements of the page. To break white and blue colors I've used black and tones of black color.
 
 After testing different coloristic to break out the blues and whites, I've decided to add another color: red.
-Red will stand out and notify customer about something important on the page, something they should look at.
+Red will stand out and notify customers about something important on the page, something they should look at.
 
-To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast color schemes generator!
+To create a color pallet I've used [Coolors.co](https://coolors.co) - super fast color schemes generator!
 
-If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000) or view localy [ColorPalette](https://github.com/KarolSliwka/ArcticSchool/blob/main/wireframes/colour-palette.png)
+If you want to copy my color pallet scheme, please use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000) or view locally [ColorPalette](https://github.com/KarolSliwka/ArcticSchool/blob/main/wireframes/colour-palette.png)
 
 ![Arctic School Coloristic](https://raw.githubusercontent.com/KarolSliwka/ArcticSchool/main/wireframes/colour-palette.png)
 
 ### Fonts
 
-In this project I've decied to use two different fonts.
-Fonts have been selected carefully to separate main titles from contet text. This should help user read the smaller text on different type of devices
+In this project, I've decided to use two different fonts.
+Fonts have been selected carefully to separate main titles from the content text. This should help the user read the smaller text on a different type of devices
 
-As a main title and subtitle font I've used -
+As the main title and subtitle font, I've used -
 [Montserrat](https://fonts.google.com/specimen/Montserrat?thickness=7&preview.text=&preview.text_type=custom&query=Montserrat) font. \
-For other text I've used - [Lato](https://fonts.google.com/specimen/Lato?thickness=7&preview.text=&preview.text_type=custom&query=Lato) font.
+For other text, I've used - [Lato](https://fonts.google.com/specimen/Lato?thickness=7&preview.text=&preview.text_type=custom&query=Lato) font.
 
 ### Icons
 
-I've used different type, shapes and style of icons in this project to separate important elements from main content. Part of my icons are static files which you can download by registering on [icons8](https://icons8.com/icons). \
+I've used different types, shapes, and styles of icons in this project to separate important elements from the main content. Part of my icons is static files which you can download by registering on [icons8](https://icons8.com/icons). \
 I have also used a [Fontawesome](https://fontawesome.com) for handy and most common icons.
 
 ### Framework
 
-From the first time when I've started to using [jQuery](https://jquery.com), I just felt in love with this JavaScript Library designed to simplify tree traversal and manipulation. By using it I've created lots of different mouse events, css animiation and other very nice looking features. Because of jQuery I believe user interraction with the page is on the next level. This is making my project more attractive for users and make their experience better.
+From the first time when I've started using [jQuery](https://jquery.com), I just fell in love with this JavaScript library designed to simplify tree traversal and manipulation. By using it I've created lots of different mouse events, CSS animation, and other very nice-looking features. Because of jQuery, I believe user interaction with the page is on the next level. This is making my project more attractive for users and make their experience better.
 
-I have used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly desinged and customized responsive application with mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which hepled me create nice pages layout and structure. I've used components to create navbar, cards, forms etc.
+I have used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly designed and customized responsive applications with a mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which helped me create nice pages layout and structure. I've used components to create navbar, cards, forms, etc.
 
 ### Wireframes
 
 To create wireframes I've used [Axure RP9](https://www.axure.com) software.
-If you don't want to buy the software, you can use the 30 days free trail version (Exactly like I did).
+If you don't want to buy the software, you can use the 30 days free trial version (Exactly like I did).
 
-To veiw all wireframes for this project please use this link -
+To view all wireframes for this project please use this link -
 [Arctic School Wireframes](https://github.com/KarolSliwka/ArcticSchool/tree/main/wireframes)
 
-__*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I belive some wireframes may change through the development process and several improvements can have place, such as buttons style, images position, text style or user small user interface changes.
+__*Note:*__ To create this project I am fighting with myself to decide which style will suit this project the most. That's why, I believe some wireframes may change through the development process and several improvements could be done, such as buttons style, image position, text style, or user small user interface changes.
 
 ---
 
@@ -200,8 +200,8 @@ __*Note:*__ To create this project I am fighting with myself to decide which sty
 
 ### Database choice
 
-During the development I worked with **sqlite3** databases, installed with Django.
-For production I've used a **PostgreSQL** database which is provided in Heroku as add-on.
+During the development, I worked with **sqlite3** databases, installed with Django.
+For production, I've used a **PostgreSQL** database which is provided in Heroku as an add-on.
 
 - The **User model** I have used in this project was provided by Django Allauth. It is a part of default `django.contrib.auth.models`.
 
@@ -371,7 +371,7 @@ Newsletter Choices
 
 To create this web application, I've decided to change my IDE from [AWS Cloud 9](https://aws.amazon.com/cloud9/) to [VS Code](https://code.visualstudio.com).
 
-Also I've used tools listed below :
+Also, I've used the tools listed below :
 
 - [Git](https://git-scm.com) - Version Control
 - [GitHub](https://github.com) - Store Remote Repository
@@ -387,7 +387,7 @@ To create colour pallete and image compressing I've used :
 - [Coolors.co](https://coolors.co)
 - [TinyPng](https://tinypng.com)
 
-__*All images in README file are hosted on my private server.*__
+__*All images in the README file is hosted on my private server.*__
 
 ### Databases
 
@@ -404,15 +404,15 @@ Arctic School Web App contains 8 applications `home`, `lessons`(contains lessons
 
 #### Social account login (Google and Facebook)
 
-This feature allows users to login by using their social account. This will changed user experience and make the login process easy and simple.
+This feature allows users to log in by using their social accounts. This will change the user experience and make the login process easy and simple.
 
 #### Subscribing Newsletter Form
 
-Newsletter form is only a visual prototype. It hasn't got a real action to sign customers for a newsletter.
-All customers are singed autmatically to subscribing newsletter when registering.
-This will allow users to subscribe without creating account on webiste.
+The newsletter form is only a visual prototype. It hasn't got a real action to sign customers for a newsletter.
+All customers have signed automatically to subscribing newsletter when registering.
+This will allow users to subscribe without creating an account on a website.
 
-Other small features are going to be implemented in feature, **Filtering Lessons** by Level, **Real Time Chat** also I would like to change **Management/Adminstartion Pages** style and **Forms** usability.
+Other small features are going to be implemented in feature, **Filtering Lessons** by Level, **Real-Time Chat** also I would like to change **Management/Administration Pages** style and **Forms** usability.
 
 ---
 
@@ -429,7 +429,7 @@ It is hosted on the Heroku Pages, with static files hosted in AWS S3 Basket.
 
 ### Local Deployment
 
-To run this project you have to installed these tools and create accounts on platforms listed below, if haven't got.
+To run this project you have to install these tools and create accounts on the platforms listed below if haven't got them.
 
 #### Tools to be installed
 
@@ -448,7 +448,7 @@ To run this project you have to installed these tools and create accounts on pla
 
 ### Deployment on Heroku pages
 
-To deploy your project please use following steps:
+To deploy your project please use the following steps:
 
 ---
 
@@ -457,23 +457,23 @@ To deploy your project please use following steps:
 ### Code
 
 - Project was developed by following [Code Institute](https://codeinstitute.net/) video course 'Boutique Ado Django Mini-Project'.
-- [Stack Overflow](https://stackoverflow.com/) for finding solutions or hints how to solve issues and how to make it work.
+- [Stack Overflow](https://stackoverflow.com/) for finding solutions or hints on how to solve issues and how to make it work.
 - I referred to the [Django](https://docs.djangoproject.com/en/3.1/) documentation sources during the development.
 
 ### Content and Media
 
 - Whole website content was written by the project author.
 - Project logo was created by the project author in Photoshop by using [Provicali Font](https://www.dafont.com/provicali.font) and some special layer effects.
-- Favicon was created from exisitng logotype by the author as basic icon 64px x 64px via using the [Realfavicongenerator](https://realfavicongenerator.net).
+- Favicon was created from the existing logotype by the author as a basic icon 64px x 64px via using the [Realfavicongenerator](https://realfavicongenerator.net).
 - Images and icons used in this project were taken from :
-  - [Unsplash.com](https://unsplash.com/s/photos/snowboard)
-  - [Pexels](https://www.pexels.com)
-  - [Icons8](https://icons8.com)
+- [Unsplash.com](https://unsplash.com/s/photos/snowboard)
+- [Pexels](https://www.pexels.com)
+- [Icons8](https://icons8.com)
 
 - Scroll down button code snippet was taken from [Codepen/nxworld](https://codepen.io/nxworld/pen/OyRrGy)
 - Particles library - example used was created by [Mamboleoo](https://codepen.io/Mamboleoo) - [code snippet](https://codepen.io/Mamboleoo/pen/obWGYr), edited to match an author design.
-- Navbar links hover sryle - code used from [Hoover.css](https://ianlunn.github.io/Hover). Code was edited to match an author design.
-- [Hero pattern](https://www.heropatterns.com) was used to create background pattern in promo banner section.
+- Navbar links hover style - code used from [Hoover.css](https://ianlunn.github.io/Hover). Code was edited to match an author's design.
+- [Hero pattern](https://www.heropatterns.com) was used to create a background pattern in the promo banner section.
 - Mountains graphic - [Twentypine](http://www.twentypine.com)
 - SVG Background graphics - [SVGBackgrounds](https://www.svgbackgrounds.com/#large-triangles) and [LoadingIO](https://loading.io) - highly recommended.
 
@@ -481,21 +481,21 @@ To deploy your project please use following steps:
 
 I would like to say 'Thank You' to everyone who helped me throughout the development of this project:
 
-- [Simen Daehlin](https://github.com/Eventyret) for his support, help, patience and guidance, very useful tips and advice! Also for  not only beeing a Mentor but an amazing Friend!
-- [Code Institute](https://codeinstitute.net) Amazing people! For their help, assistance and support when I had the most challenging times in my life.
+- [Simen Daehlin](https://github.com/Eventyret) for his support, help, patience and guidance, very useful tips and advice! Also for not only being a Mentor but an amazing Friend!
+- [Code Institute](https://codeinstitute.net) Amazing people! For their help, assistance, and support when I had the most challenging times in my life.
 - Also I would like to thank my close friends and family who never stopped believing I can finish this course and become a Developer!
 
 ---
 
 ## Contact
 
-If you've got any questions about this project please contact me via email: *<a href="mailto:contact@karolsliwka.com">contact@karolsliwka.com</a>*
+If you've got any questions about this project please contact me via email: *contact@karolsliwka.com*
 
-If you're intersted in my other projects please visit
+If you're interested in my other projects please visit
 
 - [Mariocarparts.co.uk](https://mariocarparts.co.uk) - First online store project on Shopify platform.
 - [Balticgold.co.uk](https://balticgold.co.uk) - Second online store project on Shopify platform (my personal store).
-- [Spsservice.uk](https://spsservice.uk) - First website created at the begining of the Code Institute course, static only (hosted on personal server).
+- [Spsservice.uk](https://spsservice.uk) - First website created at the beginning of the Code Institute course, static only (hosted on the personal server).
 
 ---
 
