@@ -59,6 +59,8 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
   - [Testing](#testing)
   - [Deployment](#deployment)
     - [Local Deployment](#local-deployment)
+      - [Tools to be installed](#tools-to-be-installed)
+      - [Accounts to be created](#accounts-to-be-created)
     - [Deployment on Heroku pages](#deployment-on-heroku-pages)
   - [Credits](#credits)
     - [Code](#code)
@@ -422,7 +424,27 @@ Testing information can be found in a separate file - [Testing.md](https://githu
 
 ## Deployment
 
+The Arctic School project was developed [VS Code](https://code.visualstudio.com) and using Git & GitHub for version control
+It is hosted on the Heroku Pages, with static files hosted in AWS S3 Basket.
+
 ### Local Deployment
+
+To run this project you have to installed these tools and create accounts on platforms listed below, if haven't got.
+
+#### Tools to be installed
+
+- IDE - I've used [VS Code](https://code.visualstudio.com)
+- [Git](https://git-scm.com)
+- [Pip](https://pip.pypa.io/en/stable/installing/)
+- [PipEnv](https://pypi.org/project/pipenv/)
+- [Python3](https://www.python.org/download/releases/3.0/)
+
+#### Accounts to be created
+
+- [Stripe](https://stripe.com/en-ie)
+- [Goole Mail](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
+- [AWS](https://aws.amazon.com)
+- [Amazon Simple Storage Service (S3)](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
 
 ### Deployment on Heroku pages
 
