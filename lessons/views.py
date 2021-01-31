@@ -92,7 +92,7 @@ def lesson(request, lesson_id):
             'socials': social,
             'lesson': selected_lesson,
             'resort': resort,
-            'random_lessons' : Lesson.objects.count()
+            'random_lessons' : Lesson.objects.count(),
         }
     else:
         random_lessons = random.sample(all_lessons, 4)
@@ -101,7 +101,9 @@ def lesson(request, lesson_id):
             'lesson': selected_lesson,
             'resort': resort,
             'lessons': random_lessons,
+            'random_lessons' : Lesson.objects.count(),
         }
+    print(Lesson.objects.count())
 
     return render(request, 'lessons/lesson.html', context)
 
