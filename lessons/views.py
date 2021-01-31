@@ -253,7 +253,11 @@ def remove_lessons_management(request, lesson_id):
     """ Management view to remove lessons """
 
     removed_lesson = get_object_or_404(Lesson, pk=lesson_id)
-    removed_lesson.delete()
+    if removed_lesson.image:
+        removed_lesson.image.delete()
+        removed_lesson.delete()
+    else:
+        removed_lesson.delete()
     messages.success(request, 'Lesson removed successfully!')
 
     return redirect(reverse('lessons_management'))

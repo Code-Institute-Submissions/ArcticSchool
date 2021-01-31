@@ -2,19 +2,16 @@
 
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
+    - [Responsiveness](#responsiveness)
     - [Navigation](#navigation)
     - [Home Page](#home-page)
     - [Lessons Page](#lessons-page)
-    - [Team Page](#team-page)
-    - [Resorts Page](#resorts-page)
     - [Booking Page](#booking-page)
-      - [Empty](#empty)
-      - [When Booked](#when-booked)
+    - [Checkout Page](#checkout-page)
+    - [Checkout Success Page](#checkout-success-page)
     - [Contact Page](#contact-page)
-      - [My Bookings](#my-bookings)
-      - [Active Bookings Page](#active-bookings-page)
-      - [Archived Bookings Page](#archived-bookings-page)
-      - [Booking Review Page](#booking-review-page)
+    - [My Bookings](#my-bookings)
+      - [Active / Archived Booking Pages - Booking Review Page](#active--archived-booking-pages---booking-review-page)
     - [Account Page](#account-page)
     - [Authentication pages (Allauth)](#authentication-pages-allauth)
     - [Management/Administration (CRUD)](#managementadministration-crud)
@@ -39,37 +36,126 @@
 
 ## Manual Testing
 
+### Responsiveness
+
+- **User story being tested**:
+*As a User, I want to be able to access the website from my phone as I'm using it most often, also from desktop and tablet.*
+- **Owner story being tested**:
+*To have a good design, with easy to use interface so the custmoer/s will not feel frustrated when using they're using the website.*
+- **Test**:
+  - each page of the website was created based on mobile-first responsive web design approach, next on tablets and desktop devices
+  - more information about responsiveness testing can be found in [Compatibility and Responsiveness](#compatibility-and-responsiveness) section
+- **Results**: Few examples from lots of different minor issues: wrong size of images displayed, style of Lesson Cards buttons different across all devices.
+- **Verdict**: The issues were fixed, the test passed.
+
 ### Navigation
+
+- **User story being tested**:
+*As a User, I expect nice and clean website navigation so I can easily move around all pages.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 ### Home Page
 
+- **User stories being tested**:
+*As a User, I want to find more information about the company, to understand more about what they are doing, where lesson/s take place, how flexible they are with providing lesson/s.*
+*As a User, I want to be able to access company social media links, so I can read more about events, new lesson/s, sales, or promo codes.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
+
 ### Lessons Page
 
-### Team Page
+- **User stories being tested**:
+*As a User, I want to be able to search from all the lesson/s, filter, and adjust price value to fina a specific to pick one I can afford.*
+*As a User, I want to be able to view all lesson/s and make a safe purchase.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
-### Resorts Page
+#### Lesson Page
+
+- **User story being tested**:
+*As a User, I want to be able to view all lesson/s details such as image (if there is one), description, time, who will be my instructor, skills level, time, and price, so that I can choose the best lesson type.*
+- **Owner story being tested**:
+*To provide creative, safe, and interactive lessons for customer/s.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 ### Booking Page
 
-#### Empty
+- **User story being tested**:
+*As a User, I want to be able to view my chosen lesson/s, total price in the cart before purchasing, so I can make my last changes if needed.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
-#### When Booked
+### Checkout Page
+
+- **User stories being tested**:
+*As a User, I expect to purchase lesson/s in a safe and secure way by using card method payments.*
+*As a User, I want to be able to make quick purchases for lesson/s by using previously saved personal information.*
+- **Owner story being tested**:
+*To be able to provide a secure payment method for my clients/website users*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
+
+### Checkout Success Page
+
+- **User story being tested**:
+*As a User, I want to receive email confirmations after I successfully purchased my lesson/s.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 ### Contact Page
 
-#### My Bookings
+- **User story being tested**:
+*As a User, I want to be able to contact the owner/lesson/s provider, so I can ask questions or write an additional query about their services.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
-#### Active Bookings Page
+### My Bookings
 
-#### Archived Bookings Page
+#### Active / Archived Booking Pages - Booking Review Page
 
-#### Booking Review Page
+- **User story being tested**:
+*As a User, I want to be able to view my ordering history.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 ### Account Page
 
+- **User stories being tested**:
+*As a User, I want to be able to login back anytime.*
+*As a User, I want to be able to fully changed my personal details, home address, name (in case I'm married now), phone number, e-mail address, etc.*
+
 ### Authentication pages (Allauth)
 
+- **User storie being tested**:
+*As a User, I want to be notified when I successfully finished the registration process.*
+*As a User, I want to be able to create my own account, which will give me the possibility to store, view, and edit my profile information.*
+*As a User, I want to be able to change my password from my profile account, in case my account was hacked, to protect my personal details.*
+- **Test**:
+- **Results**:
+- **Verdict**: Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
+
 ### Management/Administration (CRUD)
+
+- **Admin & Owner stories being tested**:
+*To have the possibility to Add, Edit, and Delete lesson/s.*
+*To have a secure admin interface, easy to use. Important thing is, this interface must be available only for admins.*
+- **Test**:
+  * Remove instance from database
+- **Results**:
+  * Instance removed successfuly. Unfortunatelly when instance has a image, image wasn't removed.
+- **Verdict**: Added if statment to modules `if instance.image - exists` than `instance.image.delete()` ,bug was fixed. 
+  Tests passed, works as expected, no bugs were found during the testing. Functionality covered.
 
 ---
 
@@ -131,7 +217,7 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
 #### Django-responsive
 
 - **Bug** : Issues with setting up django-responsive2, show different navigation bar on different device size.
-- **Fix**: Removed all django-responsive2 code and information. I've asked Code Institute - Tutors section for help/solution, advice given : try to use Bootstrap breakpoints and classes instead of django-responsive2. \
+- **Fix**: Removed all `django-responsive2` code and information. I've asked Code Institute - Tutors section for help/solution, advice given : try to use Bootstrap breakpoints and classes instead of django-responsive2. \
   Display classes applied to index.html header code.
 - **Verdict**: Result as expected. Different navigation bars presented on different device size.
 
@@ -149,14 +235,14 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
 
 #### Fixture and migrations issue
 
-- **Bug**: ./manage.py loaddata fiel.json command not working and showin the error message. I couldn't make a migrations properly.
-- **Fix**: Command found on [https://stackoverflow.com](https://stackoverflow.com) ./manage.py migrate --run-syn
+- **Bug**: `./manage.py loaddata file-name.json` command not working and showin the error message. I couldn't make a migrations properly.
+- **Fix**: Command found on [https://stackoverflow.com](https://stackoverflow.com) `./manage.py migrate --run-syn`
 - **Verdict**: Database synchronized, all unmigrated migrations applied. Fixtures loaded. Working as expected. Beautifully !
 
 #### Team cards - read more button
 
 - **Bug**: When button is clicked on random card, description on all cards is shoew.
-- **Fix**: Forloop iterate number added to ID and target ID -  '{{ forloop.counter }}'
+- **Fix**: Forloop iterate number added to ID and target `ID -  '{{ forloop.counter }}`'
 - **Verdict**: Dropdown description field shows only on card where button was clicked. Work as expected!
 
 #### Relation does not exist error in Django when deployed
@@ -168,13 +254,13 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
 #### User Form not updated while payment is proccessed
 
 - **Bug**: While making payment user form details form should be updated
-- **Fix**: I have added two print statement when form suppoused to be validated. I've received message for 'else' = not valid. To get more info I have searched in Django dosc., I've used {{ form.error }} in as messages to see what is creating my issue when form is validated. Solution! Required newsletter field changed to not be required anymore.
+- **Fix**: I have added two print statement when form suppoused to be validated. I've received message for `'else' = not` valid. To get more info I have searched in Django dosc., I've used `{{ form.error }}` in as messages to see what is creating my issue when form is validated. Solution! Required newsletter field changed to not be required anymore.
 - **Verdict**: Form validation = passed! User details form updated.
 
 #### Sass compiler stopped working main.scss file update stopped
 
 - **Bug**: When editing other files than main.scss while using sass compiler is working on file, save is not updating.
-- **Fix**: Import files names have been chagned from example.scss to _example.scss .
+- **Fix**: Import files names have been chagned from example.scss to `_example.scss` .
 - **Verdict**: This will inform compiler these files are partials for main.scss file and they will be import corretly. Main.scss file updated as expected. Css.map  file is not created anymore based on compiler settings.
 
 #### Adding or Editing Lessons, Instructor Profiles, Resorts

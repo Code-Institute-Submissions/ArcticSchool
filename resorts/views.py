@@ -95,7 +95,11 @@ def remove_resorts_management(request, resort_id):
     """ Management view to remove resort """
 
     resort = get_object_or_404(Resort, pk=resort_id)
-    resort.delete()
+    if resort.image:
+        resort.image.delete()
+        resort.delete()
+    else:
+        resort.delete()
     messages.success(request, 'Resort removed successfully!')
 
     return redirect(reverse('resorts_management'))

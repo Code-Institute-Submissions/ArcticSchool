@@ -90,7 +90,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 #### Users
 
 - Get information about lesson/s provided in offers.
-- Purchase selected lesson/s in an easy and secure way.
+- Purchase selected lesson/s easily and securely.
 - Contact website owner/administrator for more information about lesson/s, if needed.
 - Get information about COVID-19, all restrictions, and protection information.
 
@@ -116,7 +116,7 @@ _"The attraction of snowboarding is the freedom it gives you. With a snowboard o
 - As a User, I want to be able to view all lesson/s details such as image (if there is one), description, time, who will be my instructor, skills level, time, and price, so that I can choose the best lesson type.
 - As a User, I want to be able to search from all the lesson/s, filter, and adjust price value to fina a specific to pick one I can afford.
 - As a User, I want to be able to view my chosen lesson/s, total price in the cart before purchasing, so I can make my last changes if needed.
-- As a User, I expect to purchase lesson/s in a safe and secure way by using card method payments.
+- As a User, I expect to purchase lesson/s safely and securely by using card method payments.
 - As a User, I want to receive email confirmations after I successfully purchased my lesson/s.
 - As a User, I want to receive an email reminder of upcoming lesson/s, so I can prepare myself.
 - As a User, I want to be able to rent additional snowboard equipment, If it is damaged or I forgot to pack it before attending the lesson/s.
@@ -182,7 +182,7 @@ I have also used a [Fontawesome](https://fontawesome.com) for handy and most com
 
 From the first time when I've started using [jQuery](https://jquery.com), I just fell in love with this JavaScript library designed to simplify tree traversal and manipulation. By using it I've created lots of different mouse events, CSS animation, and other very nice-looking features. Because of jQuery, I believe user interaction with the page is on the next level. This is making my project more attractive for users and make their experience better.
 
-I have used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly designed and customized responsive applications with a mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which helped me create nice pages layout and structure. I've used components to create navbar, cards, forms, etc.
+I have used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) to build quickly designed and customized responsive applications with a mobile-first approach. Bootstrap is providing sass variables and mixins, responsive grid system which helped me create a nice page layout and structure. I've used components to create navbar, cards, forms, etc.
 
 ### Wireframes
 
@@ -412,7 +412,8 @@ The newsletter form is only a visual prototype. It hasn't got a real action to s
 All customers have signed automatically to subscribing newsletter when registering.
 This will allow users to subscribe without creating an account on a website.
 
-Other small features are going to be implemented in feature, **Filtering Lessons** by Level, **Real-Time Chat** also I would like to change **Management/Administration Pages** style and **Forms** usability.
+Other small features are going to be implemented in feature, **Filtering Lessons** by Level, **Real-Time Chat**, **Email Remainder - Upcoming Lessons** and **Rent Equipment Page** .also I would like to change **Management/Administration Pages** style and **Forms** usability.
+
 
 ---
 

@@ -97,8 +97,12 @@ def edit_instructors_management(request, instructor_id):
 def remove_instructors_management(request, instructor_id):
     """ Management view to remove instructor card """
 
-    instructor_profile = get_object_or_404(InstructorProfile, pk=instructor_id)
-    instructor_profile.delete()
+    instructor_profile = get_object_or_404(InstructorProfile,  pk=instructor_id)
+    if instructor_profile.image:
+        instructor_profile.image.delete()
+        instructor_profile.delete()
+    else:
+        instructor_profile.delete()
     messages.success(request, 'Instructor Card removed successfully!')
 
     return redirect(reverse('instructors_management'))
