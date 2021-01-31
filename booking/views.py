@@ -6,18 +6,21 @@ from home.models import SocialIcon
 from lessons.models import Lesson
 
 
-
 def booking(request):
     """ A view to return booking page """
 
     social = SocialIcon.objects.all()
     lessons = list(Lesson.objects.all())
-    random_lessons = random.sample(lessons, 12)
-
-    context = {
-        'socials': social,
-        'lessons': random_lessons,
-    }
+    if SocialIcon.objects.count() <= 0:
+        random_lessons = random.sample(lessons, 12)
+        context = {
+            'socials': social,
+            'lessons': random_lessons,
+        }
+    else:
+        context = {
+            'socials': social,
+        }
 
     return render(request, 'booking/booking.html', context)
 

@@ -1,224 +1,234 @@
 /* Booking main container */
-#booking-page {
-    /* Booking baner */
-    .booking-banner {
-        height: 300px;
-        width: 320px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
+#booking {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
-        /* Title */
-        h2 {
-            margin: 0;
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #059cd9;
-            text-shadow: 5px 5px rgba(204, 204, 204, 0.65);
-        }
-        /* Separating bootom line */
-        hr {
-            height: 10px;
-            width: 100%;
-            background-color: #059cd9;
-            border-radius: 10px;
-            margin-top: 10px;
-            box-shadow: 5px 5px rgba(204, 204, 204, 0.65);
-        }
-    }
+    #booking-page {
+        /* Booking baner */
+        .booking-banner {
+            height: 300px;
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
 
-    /* Container */
-    .booking-container {
-        h2 {
-            color: #f60f13;
-        }
-        h3 {
-            color: #f60f13;
-            span {
-                font-size: 1rem;
-                color: #000;
-                font-weight: 300;
-            }
-        }
-
-        h4 {
-            display: none;
-        }
-
-        .totals-text {
-            h5 {
-                color: #000;
-                font-size: 1.25rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .discount-text {
-                text-decoration: underline;
-                color: #cbcbcb;
-            }
-
-            .big-text {
-                color: #f60f13;
-                font-size: 1.5rem;
-            }
-
-            .spent-more-text {
-                color: #fff;
-                background-color: #31addf;
-                padding: 0.5rem;
-                border-radius: 10px;
-                max-width: 350px;
-                text-align: center;
-                margin-left: auto;
-            }
-        }
-
-        /* You might like includes - margin */
-        .yml {
-            margin-bottom: 40px;
-        }
-    }
-
-    /* You might like inckudes - main style */
-    .card {
-        border-radius: 10px;
-        border: 2px solid #fafafa;
-        margin-bottom: 1rem;
-
-        /* Buttons */
-        .btn {
-            width: 100%;
-            border: 1px solid #f60f13;
-            color: #f60f13;
-
-            &:active,
-            &:focus {
-                color: #fff;
-            }
-        }
-        /* Buttons hover */
-        .hvr-bounce-to-right:hover {
-            color: #fff !important;
-        }
-        .hvr-bounce-to-right:before {
-            background: #f60f13;
-            border: 1px solid #fff;
-            border-radius: inherit;
-        }
-
-        .btn-blue {
-            border: 1px solid #00d4f5;
-            color: #00d4f5;
-
-            &.hvr-bounce-to-right:before {
-                background: #00d4f5;
-            }
-        }
-    }
-
-    /* Booking - Booked lessons present in table */
-    #booking-table {
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        .card {
-            border: 1px solid #ebebeb;
-
-            /* Card head */
-            .card-head {
-                padding: 0.85rem;
-            }
-            /* Image */
-            img {
-                height: 100%;
-                width: 100%;
-                border-radius: 10px;
-            }
-
-            /* Heading and paragraphs */
-            padding: 0.85rem;
-            h1 {
-                font-size: 1.5rem;
+            /* Title */
+            h2 {
+                margin: 0;
+                font-size: 3.5rem;
+                font-weight: 900;
                 color: #059cd9;
+                text-shadow: 5px 5px rgba(204, 204, 204, 0.65);
             }
-            p {
-                font-size: 1rem;
-                font-family: "Lato", sans-serif;
-                color: #000;
-                font-weight: 500;
-                margin-bottom: 0.25rem;
+            /* Separating bootom line */
+            hr {
+                height: 10px;
+                width: 100%;
+                background-color: #059cd9;
+                border-radius: 10px;
+                margin-top: 10px;
+                box-shadow: 5px 5px rgba(204, 204, 204, 0.65);
+            }
+        }
 
+        /* Container */
+        .booking-container {
+            h2 {
+                color: #f60f13;
+            }
+            h3 {
+                color: #f60f13;
                 span {
+                    font-size: 1rem;
+                    color: #000;
                     font-weight: 300;
-                    white-space: nowrap;
                 }
             }
 
-            .price {
-                color: #f60f13;
+            h4 {
+                display: none;
             }
-            /* Remove button */
-            .btn-grey {
-                color: #adadad;
-                border-color: #adadad;
+
+            .totals-text {
+                h5 {
+                    color: #000;
+                    font-size: 1.25rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                .discount-text {
+                    text-decoration: underline;
+                    color: #cbcbcb;
+                }
+
+                .big-text {
+                    color: #f60f13;
+                    font-size: 1.5rem;
+                }
+
+                .spent-more-text {
+                    color: #fff;
+                    background-color: #31addf;
+                    padding: 0.5rem;
+                    border-radius: 10px;
+                    max-width: 350px;
+                    text-align: center;
+                    margin-left: auto;
+                }
+            }
+
+            /* You might like includes - margin */
+            .yml {
+                margin-bottom: 40px;
+            }
+        }
+
+        /* You might like inckudes - main style */
+        .card {
+            border-radius: 10px;
+            border: 2px solid #fafafa;
+            margin-bottom: 1rem;
+
+            /* Buttons */
+            .btn {
+                width: 100%;
+                border: 1px solid #f60f13;
+                color: #f60f13;
+
+                &:active,
+                &:focus {
+                    color: #fff;
+                }
+            }
+            /* Buttons hover */
+            .hvr-bounce-to-right:hover {
+                color: #fff !important;
+            }
+            .hvr-bounce-to-right:before {
+                background: #f60f13;
+                border: 1px solid #fff;
+                border-radius: inherit;
+            }
+
+            .btn-blue {
+                border: 1px solid #00d4f5;
+                color: #00d4f5;
 
                 &.hvr-bounce-to-right:before {
-                    background-color: #adadad;
+                    background: #00d4f5;
+                }
+            }
+        }
+
+        /* Booking - Booked lessons present in table */
+        #booking-table {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .card {
+                border: 1px solid #ebebeb;
+
+                /* Card head */
+                .card-head {
+                    padding: 0.85rem;
+                }
+                /* Image */
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                /* Heading and paragraphs */
+                padding: 0.85rem;
+                h1 {
+                    font-size: 1.5rem;
+                    color: #059cd9;
+                }
+                p {
+                    font-size: 1rem;
+                    font-family: "Lato", sans-serif;
+                    color: #000;
+                    font-weight: 500;
+                    margin-bottom: 0.25rem;
+
+                    span {
+                        font-weight: 300;
+                        white-space: nowrap;
+                    }
+                }
+
+                .price {
+                    color: #f60f13;
+                }
+                /* Remove button */
+                .btn-grey {
+                    color: #adadad;
+                    border-color: #adadad;
+
+                    &.hvr-bounce-to-right:before {
+                        background-color: #adadad;
+                    }
+                }
+
+                /* Supper offer - star icon */
+                .card-super-offer {
+                    position: absolute;
+                    top: -20px;
+                    right: -25px;
+                    font-size: 3rem;
+                    color: gold;
+                    -webkit-text-stroke-width: 3px;
+                    -webkit-text-stroke-color: #fff;
+                    transform: rotate(-90deg);
+                    -webkit-transform: rotate(-90deg);
+                    -moz-transform: rotate(-90deg);
+                    -ms-transform: rotate(-90deg);
+                    -o-transform: rotate(-90deg);
                 }
             }
 
-            /* Supper offer - star icon */
-            .card-super-offer {
-                position: absolute;
-                top: -20px;
-                right: -25px;
-                font-size: 3rem;
-                color: gold;
-                -webkit-text-stroke-width: 3px;
-                -webkit-text-stroke-color: #fff;
-                transform: rotate(-90deg);
-                -webkit-transform: rotate(-90deg);
-                -moz-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                -o-transform: rotate(-90deg);
+            /* Buttons */
+            .btn {
+                width: 100%;
+                border: 1px solid #f60f13;
+                color: #f60f13;
+
+                &:active,
+                &:focus {
+                    color: #fff;
+                }
+            }
+            .hvr-bounce-to-right:hover {
+                color: #fff !important;
+            }
+            .hvr-bounce-to-right:before {
+                background: #f60f13;
+                border: 1px solid #fff;
+                border-radius: inherit;
+            }
+
+            .btn-blue {
+                border: 1px solid #00d4f5;
+                color: #00d4f5;
+
+                &.hvr-bounce-to-right:before {
+                    background: #00d4f5;
+                }
             }
         }
 
-        /* Buttons */
-        .btn {
-            width: 100%;
-            border: 1px solid #f60f13;
-            color: #f60f13;
-
-            &:active,
-            &:focus {
-                color: #fff;
-            }
-        }
-        .hvr-bounce-to-right:hover {
-            color: #fff !important;
-        }
-        .hvr-bounce-to-right:before {
-            background: #f60f13;
-            border: 1px solid #fff;
-            border-radius: inherit;
-        }
-
-        .btn-blue {
-            border: 1px solid #00d4f5;
-            color: #00d4f5;
-
-            &.hvr-bounce-to-right:before {
-                background: #00d4f5;
+        @media (max-width: 768px) {
+            h2,
+            h3 {
+                text-align: center;
             }
         }
     }
 
-    @media (max-width: 768px) {
-        h2,
-        h3 {
-            text-align: center;
-        }
+    footer {
+        flex-shrink: 0;
     }
 }

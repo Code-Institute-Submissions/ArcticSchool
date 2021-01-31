@@ -6,7 +6,7 @@
 {% block content %}
 
 <!-- Main container -->
-<div id="booking-page">
+<div id="booking-page" role="main">
     <!-- Top banner -->
     <div class="container booking-banner">
         <h2>Booking..</h2>
@@ -47,8 +47,10 @@
     </div>
 </div>
 
-<!-- Footer -->
-{% include 'layout/footer.html' %}
+<div class="mt-auto">
+    <!-- Footer -->
+    {% include 'layout/footer.html' %}
+</div>
 
 {% endblock %}
 
