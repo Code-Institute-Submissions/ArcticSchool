@@ -22,4 +22,4 @@ window.onload = function () {
         });
         $('.card-body', this).height(highestCard);
     });
-}
+};

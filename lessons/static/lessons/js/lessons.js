@@ -23,7 +23,7 @@ window.onload = function () {
         });
         $('.card', this).height(highestCard);
     });
-}
+};
 /**
 * This function will add class to side navigation when scrolled to predefined point
 */
@@ -36,11 +36,11 @@ if ($(window).width() > 575) {
         if (scroll >= top_section_height) {
             //clearHeader, not clearheader - caps H
             $(".top-filter").addClass("fixed-filters shadow-sm");
-            $(".filter-box").addClass("pt-4");
+            $(".filter-box").addClass("py-4");
         }
         else {
             $(".top-filter").removeClass("fixed-filters shadow-sm");
-            $(".filter-box").removeClass("pt-4");
+            $(".filter-box").removeClass("py-4");
         }
     };
 }
@@ -154,15 +154,15 @@ $(function () {
             // add categroy.name-selected class to element when window href doesn't contains category or filtering
             category_selected = pathname + '-selected';
             $('.pathname').html(pathname);
-            let my_id = '#' + pathname;
+            let my_id = '.' + pathname;
             $(my_id).addClass('category-selected');
         } else {
             // add category.name-selected class to element when category is filtered
             category_selected = pathname.substring(0, last_sign); + '-selected';
             $('.pathname').html(category_selected);
-            let my_id = '#' + category_selected;
+            let my_id = '.' + category_selected;
             if (category_in == -1) {
-                $('#all_lessons').addClass('category-selected');
+                $('.all-lessons').addClass('category-selected');
             } else {
                 $(my_id).addClass('category-selected');
             }

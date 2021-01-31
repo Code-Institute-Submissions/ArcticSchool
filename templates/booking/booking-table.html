@@ -13,9 +13,9 @@
                     <!-- Magic Padding Container -->
                     <div class="p-1">
                         {% if item.lesson.image %}
-                        <img src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" class="shadow-sm" width="100%" height="100%">
+                        <img src="{{ item.lesson.image.url }}" alt="image-{{ item.lesson.name }}" class="shadow-sm">
                         {% else %}
-                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" class="lesson-image shadow-sm" width="100%" height="100%">
+                        <img src="{{MEDIA_URL}}graphics/no_image.png" alt="no-image" class="lesson-image shadow-sm">
                         {% endif %}
                     </div>
                     <!-- Magic Padding Container End -->
