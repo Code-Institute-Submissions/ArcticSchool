@@ -87,14 +87,21 @@ def lesson(request, lesson_id):
     selected_lesson = get_object_or_404(Lesson, pk=lesson_id)
     resort = resorts.get(name=selected_lesson.resort)
 
-    random_lessons = random.sample(all_lessons, 4)
-
-    context = {
-        'socials': social,
-        'lesson': selected_lesson,
-        'resort': resort,
-        'lessons': random_lessons,
-    }
+    if Lesson.objects.count() < 4:
+        context = {
+            'socials': social,
+            'lesson': selected_lesson,
+            'resort': resort,
+            'random_lessons' : Lesson.objects.count()
+        }
+    else:
+        random_lessons = random.sample(all_lessons, 4)
+        context = {
+            'socials': social,
+            'lesson': selected_lesson,
+            'resort': resort,
+            'lessons': random_lessons,
+        }
 
     return render(request, 'lessons/lesson.html', context)
 

@@ -128,8 +128,10 @@
             </div>
         </div>
     </div>
+    {% if random_lessons >= 4 %}
     <!-- You might like -->
     {% include 'includes/you-might-like.html' %}
+    {% endif %}
 </div>
 <!-- Footer -->
 {% include 'layout/footer.html' %}
