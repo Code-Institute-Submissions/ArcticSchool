@@ -289,7 +289,7 @@
     "model": "lessons.Lesson",
     "fields": {
       "name": "Single Lessons for Adults",
-      "category": 4,
+      "category": 2,
       "level": 3,
       "description":  "This lesson is for Adults",
       "start_date": "2021-01-13",
@@ -308,7 +308,7 @@
     "model": "lessons.Lesson",
     "fields": {
       "name": "Double Lessons for Adults",
-      "category": 4,
+      "category": 2,
       "level": 2,
       "description":  "This lesson is for Adults",
       "start_date": "2021-01-10",
@@ -327,7 +327,7 @@
     "model": "lessons.Lesson",
     "fields": {
       "name": "Tripple Lessons for Adults",
-      "category": 4,
+      "category": 2,
       "level": 1,
       "description":  "This lesson is for Adults",
       "start_date": "2021-01-10",
