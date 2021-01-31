@@ -7,6 +7,7 @@
     - [CSS](#css)
     - [JavaScript](#javascript)
     - [Python](#python)
+    - [Debug = True](#debug--true)
   - [Compatibility and Responsiveness](#compatibility-and-responsiveness)
   - [Bugs](#bugs)
     - [Bugs During Development](#bugs-during-development)
@@ -18,6 +19,7 @@
       - [Relation does not exist error in Django when deployed](#relation-does-not-exist-error-in-django-when-deployed)
       - [User Form not updated while payment is proccessed](#user-form-not-updated-while-payment-is-proccessed)
       - [Sass compiler stopped working main.scss file update stopped](#sass-compiler-stopped-working-mainscss-file-update-stopped)
+      - [Adding or Editing Lessons, Instructor Profiles, Resorts](#adding-or-editing-lessons-instructor-profiles-resorts)
 
 ## Manual Testing
 
@@ -49,6 +51,9 @@ For more information about Const, Let and Future JS you can use [BabelJS](https:
 
 All Python files were validated by using online code validator [Pep8](http://pep8online.com).
 File changes were made to make the code PEP8 compliant where possible.
+
+### Debug = True
+
 
 ---
 
@@ -112,6 +117,12 @@ Verdict? Don't waist your time trying re-invent the wheel. Take a small break an
 - **Bug**: When editing other files than main.scss while using sass compiler is working on file, save is not updating.
 - **Fix**: Import files names have been chagned from example.scss to _example.scss .
 - **Verdict**: This will inform compiler these files are partials for main.scss file and they will be import corretly. Main.scss file updated as expected. Css.map  file is not created anymore based on compiler settings.
+
+#### Adding or Editing Lessons, Instructor Profiles, Resorts
+
+- **Bug**: When adding/editing Lesson, Instructor Profile Card or Resorts on Management Pages images weren't uploading to Database.
+- **Fix**: HTML `<form>` enctype attribute  `enctype="multipart/form-data"` added to Add/Edit Management Forms
+- **Verdict**: Images uploading and changing correctly.
 
 ---
 
