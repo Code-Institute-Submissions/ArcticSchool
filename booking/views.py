@@ -11,15 +11,15 @@ def booking(request):
 
     social = SocialIcon.objects.all()
     lessons = list(Lesson.objects.all())
-    if SocialIcon.objects.count() <= 0:
+    if Lesson.objects.count() <= 0:
+        context = {
+            'socials': social,
+        }
+    else:
         random_lessons = random.sample(lessons, 12)
         context = {
             'socials': social,
             'lessons': random_lessons,
-        }
-    else:
-        context = {
-            'socials': social,
         }
 
     return render(request, 'booking/booking.html', context)
