@@ -1,4 +1,4 @@
-""" Checkout application views """
+""" Checkout App Views """
 import json
 import stripe
 

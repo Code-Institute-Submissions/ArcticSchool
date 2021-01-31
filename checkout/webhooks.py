@@ -5,7 +5,7 @@ from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 
 import stripe
-from checkout.webhooks_handler import StripeWH_Handler
+from checkout.webhooks_handler import StripeWhHandler
 
 
 
@@ -36,7 +36,7 @@ def webhook(request):
         return HttpResponse(content=e, status=400)
 
     # Set up a webhook handler
-    handler = StripeWH_Handler(request)
+    handler = StripeWhHandler(request)
 
     # Map webhook events to relevant handler functions
     event_map = {

@@ -1,17 +1,16 @@
-""" """
+""" Webhooks Handlers for Checkout App """
 
 import json
 import time
 
 from django.http import HttpResponse
-from django.contrib import messages
 
 from checkout.models import Order, OrderLineItem
 from lessons.models import Lesson
 
 
-class StripeWH_Handler:
-    """Handle Stripe webhooks"""
+class StripeWhHandler:
+    """ Handle Stripe webhooks """
 
     def __init__(self, request):
         self.request = request
@@ -90,8 +89,6 @@ class StripeWH_Handler:
                             quantity=quantity,
                         )
                         order_line_item.save()
-                    else:
-                        messages.error('Something whent wrong..')
             except Exception as e:
                 if order:
                     order.delete()

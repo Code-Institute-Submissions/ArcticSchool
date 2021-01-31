@@ -1,4 +1,4 @@
-""" Models for Checkout app """
+""" Models for Checkout App """
 
 import uuid
 
@@ -14,9 +14,7 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
-    """
-    This is ored model used to create orders
-    """
+    """ This is ored model used to create orders """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
@@ -70,8 +68,7 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    """
-    This is a function which will create
+    """ This is a function which will create
     a single item on order
     """
     order = models.ForeignKey(Order, null=False, blank=False,

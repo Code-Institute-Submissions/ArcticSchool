@@ -4,8 +4,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "childrens",
-      "friendly_name": "Children",
-      "order": 3
+      "friendly_name": "Children"
     }
   },
   {
@@ -13,8 +12,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "adult",
-      "friendly_name": "Adult",
-      "order": 4
+      "friendly_name": "Adult"
     }
   },
   {
@@ -22,8 +20,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "elderly",
-      "friendly_name": "Elderly",
-      "order": 5
+      "friendly_name": "Elderly"
     }
   },
   {
@@ -31,8 +28,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "family_friends",
-      "friendly_name": "Family & Friends",
-      "order": 6
+      "friendly_name": "Family & Friends"
     }
   },
   {
@@ -40,8 +36,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "expert_riders",
-      "friendly_name": "Expert Riders",
-      "order": 7
+      "friendly_name": "Expert Riders"
     }
   },
   {
@@ -49,8 +44,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "group",
-      "friendly_name": "Group Lessons",
-      "order": 8
+      "friendly_name": "Group Lessons"
     }
   },
   {
@@ -58,8 +52,7 @@
     "model": "lessons.Category",
     "fields": {
       "name": "private",
-      "friendly_name": "Private Lessons",
-      "order": 8
+      "friendly_name": "Private Lessons"
     }
   }
 ]

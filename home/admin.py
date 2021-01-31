@@ -1,4 +1,4 @@
-""" App registered in Administration from Home page """
+""" Apps registered in Administration from Home App """
 from django.contrib import admin
 from .models import LevelCard, LessonCard, SocialIcon
 

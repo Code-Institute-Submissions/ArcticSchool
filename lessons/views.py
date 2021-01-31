@@ -50,13 +50,14 @@ def lessons(request):
             query = request.GET['q']
             if query != "":
                 queries = Q(name__icontains=query) | Q(
-                description__icontains=query) | Q(
-                category__name__icontains=query) | Q(
-                level__title__icontains=query)
+                    description__icontains=query) | Q(
+                    category__name__icontains=query) | Q(
+                    level__title__icontains=query)
                 lessons = lessons.filter(queries)
             else:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect( request.path )
+                messages.error(
+                    request, "You didn't enter any search criteria!")
+                return redirect(request.path)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -99,7 +100,7 @@ def lesson(request, lesson_id):
 
 
 # Categories Management
-@ staff_member_required
+@staff_member_required
 def categories_management(request):
     """ A view to manage lessons categoires """
 
@@ -115,7 +116,7 @@ def categories_management(request):
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def add_categories_management(request):
     """ Management view to add lesson category """
 
@@ -139,7 +140,7 @@ def add_categories_management(request):
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def edit_categories_management(request, category_id):
     """ Management view to edit lessons category """
 
@@ -167,7 +168,7 @@ def edit_categories_management(request, category_id):
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def remove_categories_management(request, category_id):
     """ Management view to remove lessons category """
 
@@ -179,7 +180,7 @@ def remove_categories_management(request, category_id):
 
 
 # Lessons Management
-@ staff_member_required
+@staff_member_required
 def lessons_management(request):
     """ A view to manage lessons """
 
@@ -195,7 +196,7 @@ def lessons_management(request):
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def add_lessons_management(request):
     """ Management view to add lessons """
 
@@ -219,7 +220,7 @@ def add_lessons_management(request):
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def edit_lessons_management(request, lesson_id):
     """ Management view to edit lessons """
 
@@ -247,7 +248,7 @@ def edit_lessons_management(request, lesson_id):
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def remove_lessons_management(request, lesson_id):
     """ Management view to remove lessons """
 

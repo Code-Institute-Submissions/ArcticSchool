@@ -1,4 +1,4 @@
-""" Administration settings for Lessons App """
+""" Apps registered in Administration from Lessons App """
 from django.contrib import admin
 from .models import Category, Lesson
 

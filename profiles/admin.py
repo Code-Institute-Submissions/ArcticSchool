@@ -1,4 +1,4 @@
-""" This module contains registered UserProfile administration """
+""" This module contains registered UserProfile Administration """
 from django.contrib import admin
 from .models import UserProfile
 

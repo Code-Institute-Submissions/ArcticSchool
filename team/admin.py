@@ -1,3 +1,4 @@
+""" Apps registered in Administration from Team App """
 from django.contrib import admin
 from .models import InstructorProfile
 
@@ -5,6 +6,7 @@ from .models import InstructorProfile
 
 
 class InstructorProfileAdmin(admin.ModelAdmin):
+    """ Instructor Profiles admin list display and ordering """
     list_display = (
         'name',
         'age',

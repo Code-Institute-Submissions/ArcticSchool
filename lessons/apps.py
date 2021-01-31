@@ -1,7 +1,7 @@
-""" Lessons app configuration """
+""" Lessons App Configuration """
 from django.apps import AppConfig
 
 
 class LessonsConfig(AppConfig):
-    """ Lessons app name """
+    """ Lessons App Name """
     name = 'lessons'

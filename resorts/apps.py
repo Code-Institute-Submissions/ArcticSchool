@@ -1,6 +1,6 @@
-""" Resorts app configuration """
+""" Resorts App Configuration """
 from django.apps import AppConfig
 
 class ResortsConfig(AppConfig):
-    """ Reosrts app name """
+    """ Reosrts App Name """
     name = 'resorts'

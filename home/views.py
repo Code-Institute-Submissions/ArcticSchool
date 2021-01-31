@@ -5,6 +5,7 @@ from django.contrib import messages
 from home.forms import LessonCardsForm, LevelCardsForm, SocialMediaIconsForm
 from .models import LevelCard, LessonCard, SocialIcon
 
+
 def index(request):
     """ A view to return index page """
 
@@ -46,7 +47,8 @@ def add_lessons_cards_management(request):
         form = LessonCardsForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Why Our Lesson Card added successfully!')
+            messages.success(
+                request, 'Why Our Lesson Card added successfully!')
             return redirect(reverse('lessons_cards_management'))
         else:
             messages.error(
@@ -84,7 +86,7 @@ def edit_lessons_cards_management(request, card_id):
     template = "./management/management-forms.html"
     context = {
         'form': form,
-        'card':card,
+        'card': card,
     }
 
     return render(request, template, context)
@@ -164,7 +166,7 @@ def edit_level_cards_management(request, level_id):
     template = "./management/management-forms.html"
     context = {
         'form': form,
-        'level':level,
+        'level': level,
     }
 
     return render(request, template, context)
@@ -242,13 +244,13 @@ def edit_social_media_management(request, social_id):
     template = "./management/management-forms.html"
     context = {
         'form': form,
-        'social':social,
+        'social': social,
     }
 
     return render(request, template, context)
 
 
-@ staff_member_required
+@staff_member_required
 def remove_social_media_management(request, social_id):
     """ Management view to remove social media """
 

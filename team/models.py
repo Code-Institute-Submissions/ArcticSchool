@@ -1,9 +1,11 @@
+""" Team App Models """
 from django.db import models
 
 # Create your models here.
 
 
 class InstructorProfile(models.Model):
+    """ Instructor Profile Card Model """
     class Meta:
         verbose_name_plural = 'Instructors Profiles'
 

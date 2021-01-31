@@ -23,7 +23,7 @@ def booking(request):
 
 
 def add_to_booking(request, lesson_id):
-    """ Add a quantity of the specified lesson to the booking_bag """
+    """ A view to add a quantity of the specified lesson to the booking_bag """
 
     lesson = Lesson.objects.get(pk=lesson_id)
     quantity = int(request.POST.get('quantity'))
@@ -43,7 +43,7 @@ def add_to_booking(request, lesson_id):
 
 
 def remove_from_booking(request, lesson_id):
-    """ Remove lesson from the booking 'bag' """
+    """ A view to remove lesson from the booking 'bag' """
 
     try:
         lesson = Lesson.objects.get(pk=lesson_id)
@@ -62,7 +62,7 @@ def remove_from_booking(request, lesson_id):
 
 
 def clear_booking(request):
-    """ A view to clear whole content from booking """
+    """ A view to clear whole content from booking 'bag' """
 
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})

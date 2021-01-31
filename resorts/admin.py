@@ -1,4 +1,4 @@
-""" Resorts administration settings """
+""" This module contains registered Resort Administration """
 from django.contrib import admin
 from .models import Resort
 # Register your models here.

@@ -1,4 +1,4 @@
-""" This module containes contanct form in contact view """
+""" Contact App Views """
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.shortcuts import render, redirect

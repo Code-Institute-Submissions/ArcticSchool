@@ -1,4 +1,4 @@
-""" This module contains Contact Form """
+""" Contact App Forms """
 from django import forms
 
 
