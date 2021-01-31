@@ -309,14 +309,14 @@ Url Address | url | models.URLField | max_length=1024, default='', null=True, bl
 
 ##### Choices
 
-Level Choices
+Level Choices for Level Cards
 
 - Level_1 = '1'
 - Level_2 = '2'
 - Level_3 = '3'
 - Level_4 = '4'
 
-Level Choices
+Level Choices for Social Media Icons
 
 - Facebook = 'fa-facebook-f'
 - YouTube = 'fa-youtube'
@@ -327,7 +327,7 @@ Level Choices
 - TikTok = 'fa-tiktok'
 - Vimeo = 'fa-vimeo-v'
 
-Name Choices
+Name Choices for Social Media Icons
 
 - Facebook = 'facebook'
 - YouTube = 'youtube'
@@ -414,7 +414,6 @@ This will allow users to subscribe without creating an account on a website.
 
 Other small features are going to be implemented in feature, **Filtering Lessons** by Level, **Real-Time Chat**, **Email Remainder - Upcoming Lessons** and **Rent Equipment Page** .also I would like to change **Management/Administration Pages** style and **Forms** usability.
 
-
 ---
 
 ## Testing
@@ -447,9 +446,95 @@ To run this project you have to install these tools and create accounts on the p
 - [AWS](https://aws.amazon.com)
 - [Amazon Simple Storage Service (S3)](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
 
+
+Clone this repository direclty into the editor. Paste the following command into your terminal
+
+```bash
+git clone https://github.com/KarolSliwka/ArcticSchool.git
+```
+
+Instal packases from Pipfile
+
+```bash
+pipenv install
+```
+
+You can also add package to your new created project by typing into your terminal. This will create a Pipfile if doesn't exist.
+
+```bash
+pipenv install <package>
+```
+
+Next you have to activate the Pipenv shell by typing into your terminal
+
+```bash
+pipenv shell
+python --version
+```
+
+You have to setup your environmental variables.
+You can do it by adding variables to your settings.json file which can be found in .vscode folder.
+
+```python
+"DEVELOPMENT": "True",
+"AWS_ACCESS_KEY_ID": "YOUR-AWS_ACCESS_KEY_ID",
+"AWS_SECRET_ACCESS_KEY": "YOUR-AWS_SECRET_ACCESS_KEY",
+"EMAIL_HOST_PASSWORD": "YOUR-EMAIL_HOST_PASSWORD",
+"EMAIL_HOST_USER": "YOUR-EMAIL_HOST_USER",
+"SECRET_KEY": "YOUR-SECRET_KEY,
+"STRIPE_PUBLIC_KEY": "YOUR-DSTRIPE_PUBLIC_KEY",
+"STRIPE_SECRET_KEY": "YOUR-STRIPE_SECRET_KEY",
+"STRIPE_WH_SECRET": "YOUR-STRIPE_WH_SECRET",
+```
+
+
+
+
+
+
+
+
+
 ### Deployment on Heroku pages
 
 To deploy your project please use the following steps:
+
+- 1: Create a **requirements.txt** file using command below.
+
+```bash
+pipenv lock -r > requirements.txt
+```
+
+- 2: Create a **Procfile** file using command below.
+
+```bash
+echo web: python3 app.py > Procfile
+```
+
+- 3: Push all files to your git repository.
+``` git push origin master ``` - your master branch
+- 4: Create a new application for this project on the Heroku Pages. Click on 'New App' button and follow steps to create new app.
+- 5: Select your deployment method by clicking on the **deployment** method button.
+- 7: You can either follow Heroku Git deployment method or GitHub connect (I did it  this time - project is deployed automatically when master branch is pushed to repository)
+- 6: Set the following config variables:
+
+**Key**|**Value**
+:-----:|:-----:
+AWS_ACCESS_KEY_ID|YOUR-AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY|YOUR-AWS_SECRET_ACCESS_KEY
+BUCKET_S3|True
+DATABASE_URL|YOUR-DATABASE_URL
+EMAIL_HOST_PASSWORD|YOUR-EMAIL_HOST_PASSWORD
+EMAIL_HOST_USER|YOUR-EMAIL_HOST_USER
+SECRET_KEY|YOUR-SECRET_KEY
+STRIPE_PUBLIC_KEY|YOUR-STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY|YOUR-STRIPE_SECRET_KEY
+STRIPE_WH_SECRET|YOUR-STRIPE_WH_SECRET
+
+- 7: Remember to add an Add-on Heroku Postgres, select Hobby Dev - Free and click Provision button to add it into your heroku app project.
+- 8: To setup your DATABASE_URL you have to copy Postgres database URL into your variable key value
+- 9: Click the deploy button on the Heroku Pages dashboard.
+- 10: The site has been deployed the Heroku Pages, Enjoy!;
 
 ---
 
