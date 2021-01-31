@@ -16,7 +16,7 @@
 </form>
 {% elif 'lessons/edit' in request.path %}
 <!-- Lessons Form -->
-<form action="{% url 'edit_lessons_management' lesson.id %}" method="POST">
+<form action="{% url 'edit_lessons_management' lesson.id %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.image | as_crispy_field }}
     {{ form.name | as_crispy_field }}
@@ -55,7 +55,7 @@
 </form>
 {% elif 'instructors/edit' in request.path %}
 <!-- Instructor Profiles Cards Form -->
-<form action="{% url 'edit_instructors_management' instructor.id %}" method="POST">
+<form action="{% url 'edit_instructors_management' instructor.id %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.image | as_crispy_field }}
     {{ form.name | as_crispy_field }}
@@ -73,7 +73,7 @@
 </form>
 {% elif 'resorts/edit' in request.path %}
 <!-- Resorts Form -->
-<form action="{% url 'edit_resorts_management' resort.id %}" method="POST">
+<form action="{% url 'edit_resorts_management' resort.id %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.image | as_crispy_field }}
     {{ form.name | as_crispy_field }}
