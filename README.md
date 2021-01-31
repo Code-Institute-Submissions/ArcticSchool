@@ -526,7 +526,6 @@ Now when all set up is done you can use
 The administration panel has to be accessed by adding /admin into the URL path.
 To login to administration use your superuser credentials.
 
-
 ### Deployment on Heroku pages
 
 To deploy your project please use the following steps:
@@ -564,9 +563,43 @@ STRIPE_SECRET_KEY|YOUR-STRIPE_SECRET_KEY
 STRIPE_WH_SECRET|YOUR-STRIPE_WH_SECRET
 
 - 7: Remember to add an Add-on Heroku Postgres, select Hobby Dev - Free and click Provision button to add it into your heroku app project.
-- 8: To setup your DATABASE_URL you have to copy Postgres database URL into your variable key value
-- 9: Click the deploy button on the Heroku Pages dashboard.
-- 10: The site has been deployed the Heroku Pages, Enjoy!;
+- 8: To setup your DATABASE_URL you have to copy Postgres database URL into your variable key value in Heroku Config Vars in Settings tab.
+- 9: You have to temporary comment out current database in settings file or simply paste code below
+
+```bash
+DATABASES = {
+        'default': dj_database_url.parse('POSTGRESS URL')
+    }
+```
+
+- 10: You have to migrate database models to the Postgress database by runnig following commands in your terminal
+
+```bash
+./manage.py makemigrations
+./manage.py migrate
+```
+
+- 11: When migrations are created you have to load data fixtures(categories, levels, resorts, lessons, social-icons, why-lessons, instructors ) in this order to the database
+
+```bash
+./manage.py loaddata <fixture_name>
+```
+
+- 12: When all database is setup and fixtures are loaded. You have to create a superuser to access the administration panel. Use the command below to create superuser and follow the instructions displayed on the screen.
+
+```bash
+./manage.py createsuperuser
+```
+
+- 13: After all is set remove your "POSTGRESS URL" so nobody will se your Database Url when deployed pushed to GitHub while Deploying on Heroku.
+
+- 14: Click the deploy button on the Heroku Pages dashboard or simply run
+```bash
+git push origin <your branch name>
+```
+
+- 15: Arctic School App has been deployed the Heroku Pages, Enjoy!;
+
 
 ---
 
