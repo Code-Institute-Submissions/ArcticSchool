@@ -2,6 +2,22 @@
 
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
+    - [Navigation](#navigation)
+    - [Home Page](#home-page)
+    - [Lessons Page](#lessons-page)
+    - [Team Page](#team-page)
+    - [Resorts Page](#resorts-page)
+    - [Booking Page](#booking-page)
+      - [Empty](#empty)
+      - [When Booked](#when-booked)
+    - [Contact Page](#contact-page)
+      - [My Bookings](#my-bookings)
+      - [Active Bookings Page](#active-bookings-page)
+      - [Archived Bookings Page](#archived-bookings-page)
+      - [Booking Review Page](#booking-review-page)
+    - [Account Page](#account-page)
+    - [Authentication pages (Allauth)](#authentication-pages-allauth)
+    - [Management/Administration (CRUD)](#managementadministration-crud)
   - [Validators](#validators)
     - [HTML](#html)
     - [CSS](#css)
@@ -22,6 +38,38 @@
       - [Adding or Editing Lessons, Instructor Profiles, Resorts](#adding-or-editing-lessons-instructor-profiles-resorts)
 
 ## Manual Testing
+
+### Navigation
+
+### Home Page
+
+### Lessons Page
+
+### Team Page
+
+### Resorts Page
+
+### Booking Page
+
+#### Empty
+
+#### When Booked
+
+### Contact Page
+
+#### My Bookings
+
+#### Active Bookings Page
+
+#### Archived Bookings Page
+
+#### Booking Review Page
+
+### Account Page
+
+### Authentication pages (Allauth)
+
+### Management/Administration (CRUD)
 
 ---
 
@@ -54,10 +102,21 @@ File changes were made to make the code PEP8 compliant where possible.
 
 ### Debug = True
 
+While developing app, local debugger: `debug=True` was on.
+Everytime when application has an error, debugger was displaying error message page.
+Thanks to that I could catch all errors and fix them staright away.
 
 ---
 
 ## Compatibility and Responsiveness
+
+This website had been being tested during the development on Safari Browser by Web Development Tools.
+
+Mostly I've used Web Inspector and Responsive Design Mode to preview different webpages across various screen sizes, orientations, and resolutions, as well as custom viewports and user agents.
+
+It also been tested on different browsers such as: Google Chrome or Mozzila FireFox.
+
+I have used powerfull online screen resizer and resposnivness tester [BlueTree Screenfly](https://bluetree.ai/screenfly/) Strongly recommended for everyone who want's easly test responsivity
 
 ---
 
