@@ -447,37 +447,41 @@ To run this project you have to install these tools and create accounts on the p
 - [AWS](https://aws.amazon.com)
 - [Amazon Simple Storage Service (S3)](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
 
+Before cloning the repository make sure you have got installed Python & Pip
 
-Clone this repository direclty into the editor. Paste the following command into your terminal
+```bash
+python --version
+```
+
+If Pip is not installed then you have to install it
+
+```bash
+install pipenv
+````
+
+also, you can upgrade your pipenv at any time using the following code
+
+```bash
+upgrade pipenv
+```
+
+Clone this repository directly into the editor. Paste the following command into your terminal
 
 ```bash
 git clone https://github.com/KarolSliwka/ArcticSchool.git
 ```
 
-Instal packases from Pipfile
-
-```bash
-pipenv install
-```
-
-You can also add package to your new created project by typing into your terminal. This will create a Pipfile if doesn't exist.
-
-```bash
-pipenv install <package>
-```
-
-Next you have to activate the Pipenv shell by typing into your terminal
+Next, you have to activate the Pipenv shell by typing it into your terminal
 
 ```bash
 pipenv shell
-python --version
 ```
 
-You have to setup your environmental variables.
-You can do it by adding variables to your settings.json file which can be found in .vscode folder.
+You have to set up your environmental variables.
+You can do it by adding variables to your settings.json file which can be found in the .vscode folder.
 
 ```python
-"DEVELOPMENT": "True",
+"DEVELOPMENT": "",
 "AWS_ACCESS_KEY_ID": "YOUR-AWS_ACCESS_KEY_ID",
 "AWS_SECRET_ACCESS_KEY": "YOUR-AWS_SECRET_ACCESS_KEY",
 "EMAIL_HOST_PASSWORD": "YOUR-EMAIL_HOST_PASSWORD",
@@ -488,12 +492,39 @@ You can do it by adding variables to your settings.json file which can be found 
 "STRIPE_WH_SECRET": "YOUR-STRIPE_WH_SECRET",
 ```
 
+The next step is to install all requirements from the rquirements.txt file by using this command
 
+```bash
+python -m pip install -r requirements.txt
+```
 
+In your IDE terminal migrate the models to create a database by using these commands
 
+```bash
+./manage.py makemigrations
+./manage.py migrate
+```
 
+When migrations are created you have to load data fixtures(categories, levels, resorts, lessons, social-icons, why-lessons, instructors ) in this order to the database
 
+```bash
+./manage.py loaddata <fixture_name>
+```
 
+When all database is setup and fixtures are loaded. You have to create a superuser to access the administration panel. Use the command below to create superuser and follow the instructions displayed on the screen.
+
+```bash
+./manage.py createsuperuser
+```
+
+Now when all set up is done you can use
+
+```bash
+./manage.py runserver
+```
+
+The administration panel has to be accessed by adding /admin into the URL path.
+To login to administration use your superuser credentials.
 
 
 ### Deployment on Heroku pages
