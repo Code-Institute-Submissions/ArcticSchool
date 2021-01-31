@@ -186,7 +186,8 @@ I have used [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introd
 
 ### Wireframes
 
-To create wireframes I've used [Axure RP9](https://www.axure.com) software.
+I have been told that everything I have created in [Axure RP9](https://www.axure.com) wasn't a wireframes but prototypes.
+To recreate all wireframes I've used [Balsamiq.com](https://balsamiq.com) software.
 If you don't want to buy the software, you can use the 30 days free trial version (Exactly like I did).
 
 To view all wireframes for this project please use this link -
