@@ -3,6 +3,10 @@
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
   - [Validators](#validators)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
   - [Compatibility and Responsiveness](#compatibility-and-responsiveness)
   - [Bugs](#bugs)
     - [Bugs During Development](#bugs-during-development)
@@ -20,6 +24,31 @@
 ---
 
 ## Validators
+
+### HTML
+
+All the HTML files were validated by using online code validator [W3C HTML Validation Service](https://validator.w3.org).
+Errors found were about IMG 'hegiht, width' attributes missing. Wrong code scope by using UL and DIV's, also duplicated ID's were found.
+Code was checked and all errors and warning were corrected, code is valid with no errors and warnings on all pages.
+
+### CSS
+
+All the SCSS and Main.min.css file were validated by using online code validator [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator).
+There were several errors and warning found. There are warnings for colors contrast according to background that can be ignored.
+Also there are warnings about -webkit- as validator is catching it as 'an unknown vendor extension'.
+
+### JavaScript
+
+All the Java Script files were validated by using online code validator [Beautifytools.com](http://beautifytools.com/javascript-validator.php).
+Missing semicolons were added at the end of functions. 'Const' and 'Let' warning can be ingored.
+Validator is showing message 'is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).' all Const's and Let's will be converted to Var's by browser.
+Code is syntactically valid.
+For more information about Const, Let and Future JS you can use [BabelJS](https://babeljs.io)
+
+### Python
+
+All Python files were validated by using online code validator [Pep8](http://pep8online.com).
+File changes were made to make the code PEP8 compliant where possible.
 
 ---
 
