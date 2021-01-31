@@ -150,9 +150,13 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        if " " in profile.full_name:
-            first_name = profile.full_name.split()[0]
-            last_name = profile.full_name.split()[-1]
+        if profile.full_name:
+            if " " in profile.full_name:
+                first_name = profile.full_name.split()[0]
+                last_name = profile.full_name.split()[-1]
+            else:
+                first_name = ""
+                last_name = ""
         else:
             first_name = ""
             last_name = ""
