@@ -1,13 +1,11 @@
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/Arctic_Logo.png" style="widt:50%;" alt="Arctic School Coloristic">
-
 # Arctic School
-
-![ArcticSchoolMockup](https://www.abovewave.kylos.pl/ArcticSchool/Arctic_Mockup.png)
 
 Our school name doesn't mean, we are the coldest people on the earth... We are happy, funny and we've got big warm hearts, waiting for you. Our passion is to help you in your new beautiful journey with learnign how to snowbaording. Our worlds best trainers/teachers are here for you!
 
 _"The attraction of snowboarding is the freedom it gives you. With a snowboard on your feet the sky is the limit. You can do anything and go anywhere. This is not just for pro riders. It is for everyone."_\
 **Jeremy Jones**
+
+![Arctic School Mockup](https://raw.githubusercontent.com/KarolSliwka/ArcticSchool/main/wireframes/mockup.png)
 
 ---
 
@@ -162,7 +160,7 @@ To create colour pallet I've used [Coolors.co](https://coolors.co) - super fast 
 
 If you want to copy my colour pallet scheme, pelase use this link [ArcticSchoolColors](https://coolors.co/ffffff-9deefb-00d4f5-31addf-1ca5dc-059cd9-000000) or view localy [ColorPalette](https://github.com/KarolSliwka/ArcticSchool/blob/main/wireframes/colour-palette.png)
 
-<img src="https://www.abovewave.kylos.pl/ArcticSchool/Arcitic_Coloristic.png" style="widt:100%;" alt="Arctic School Coloristic">
+![Arctic School Coloristic](https://raw.githubusercontent.com/KarolSliwka/ArcticSchool/main/wireframes/colour-palette.png)
 
 ### Fonts
 
